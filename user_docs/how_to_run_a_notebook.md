@@ -13,9 +13,9 @@
  
 #### Select Multiple Cells in Non-Edit Mode
 1. Select a cell in non-edit mode
-1. 'Shift + J' or 'Shift + Down-Arrow' selects additional cells below
-1. 'Shift + K' or 'Shift + Up-Arrow' selects additional cells above
-1. Perform batch operations on selected cells
+- 'Shift + J' or 'Shift + Down-Arrow' selects additional cells below
+- 'Shift + K' or 'Shift + Up-Arrow' selects additional cells above
+- Perform batch operations on selected cells
 
  | ![Multpile selected cells](assets/select_mult_cells.png) | 
  |:-------------:|
