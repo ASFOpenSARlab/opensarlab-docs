@@ -37,6 +37,10 @@
  
  
 ## Running Cells
+ | ![Clicking the Run button to run a cell](assets/cell_numbers.png) | 
+ |:-------------:|
+ | *Since code cells may be run in any order, they are numbered in the order they were run.* |
+
 ### Run a Single Code or Markdown Cell
 #### With the Run Button
 1. Select a cell in edit or non-edit mode
