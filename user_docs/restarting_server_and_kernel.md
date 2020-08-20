@@ -2,11 +2,7 @@
 
 ## Restarting The OpenSARlab Server
 ### Why?
-Restarting the server triggers the git puller to run. Perhaps you have deleted or altered a 
-notebook in the ASF notebook library and want to retrieve the original. Maybe you know that a 
-notebook update was just made and you would like to immediately pull in changes from the 
-[asf-jupyter-notebook repo](https://github.com/asfadmin/asf-jupyter-notebooks). A quick solution in 
-either of those cases is to restart your server.
+Restarting the server triggers the git puller to run. Perhaps you have deleted or altered a notebook in the ASF notebook library and want to retrieve the original. Maybe you know that a notebook update was just made and you would like to immediately pull in changes from the [asf-jupyter-notebook repo](https://github.com/asfadmin/asf-jupyter-notebooks). A quick solution in either of those cases is to restart your server.
 
 Note: If you are comfortable with git, you could instead do a git pull from 
 [the terminal](OpenSARlab_terminal.md) or in a notebook. 
@@ -56,16 +52,9 @@ Note: If you are comfortable with git, you could instead do a git pull from
 
 ## Restarting a Jupyter Notebook Kernel
 ### Why?
-As you run code cells in a notebook, initialized variables and their assigned values are stored in 
-memory. If you decide to start over and re-run a previously run notebook, without first restarting 
-the kernel, all of the previously defined variables and values will still persist in memory. 
-Not only are they using up some of an instance's limited memory allotment, but previously 
-defined values may cause unintended results when re-running the code. The solution is to restart the 
-kernel, clearing notebook data stored in memory.
+As you run code cells in a notebook, initialized variables and their assigned values are stored in memory. If you decide to start over and re-run a previously run notebook, without first restarting the kernel, all of the previously defined variables and values will still persist in memory. Not only are they using up some of an instance's limited memory allotment, but previously defined values may cause unintended results when re-running the code. The solution is to restart the kernel, clearing notebook data stored in memory.
 
-Example: Imagine a notebook that builds a string, which starts empty and then has substrings
-systematically appended to it. When re-running this notebook, the string will no longer start
-empty and the resultant string will contain an unintended substring at its start.
+Example: Imagine a notebook that builds a string, which starts empty and then has substrings systematically appended to it. When re-running this notebook, the string will no longer start empty and the resultant string will contain an unintended substring at its start.
 
 ### How?
 #### Select "Restart", "Restart & Clear Output", or "Restart & Run All" From The Kernel Menu

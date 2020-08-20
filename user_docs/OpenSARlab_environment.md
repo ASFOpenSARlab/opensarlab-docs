@@ -7,29 +7,19 @@
 
 
 ## OpenSARlab Environment
-Every OpenSARlab user has access to an Amazon AWS EC2 instance. Individual instances are shared
-among groups of 1 - 3 users, depending on demand.
+Every OpenSARlab user has access to an Amazon AWS EC2 instance. Individual instances are shared among groups of 1 - 3 users, depending on demand.
 
 ### Operating System
 - Ubuntu 18.04
 
 ### Volume (storage)
-OpenSARlab uses Amazon AWS EBS volumes, mounted to user servers' home directories for storage. 
-A snapshot of each volume is taken everyday at 10:00 UTC. Only the most recent snapshot is retained.
-Any volumes unused for two days are destroyed, with the latest snapshot retained as a backup.
-Upon the next login, a new EBS volume is created from the snapshot. This can take some time (tens of minutes) 
-and users may notice that notebooks load slowly during this period. The important takeaway is that user storage is 
-persistent; you will not lose saved work.
+OpenSARlab uses Amazon AWS EBS volumes, mounted to user servers' home directories for storage. A snapshot of each volume is taken everyday at 10:00 UTC. Only the most recent snapshot is retained. Any volumes unused for two days are destroyed, with the latest snapshot retained as a backup. Upon the next login, a new EBS volume is created from the snapshot. This can take some time (tens of minutes) and users may notice that notebooks load slowly during this period. The important takeaway is that user storage is persistent; you will not lose saved work.
 
-It is incumbent upon users to manage their storage. Using up all your storage space will 
-result in the inability to login to OpenSARlab. Please contact an OpenSARlab administrator
-if this occurs.
+It is incumbent upon users to manage their storage. Using up all your storage space will result in the inability to login to OpenSARlab. Please contact an [OpenSARlab administrator](uaf-jupyterhub-asf@alaska.edu) if this occurs. 
 - 500GB Amazon AWS EBS volume (volume size subject to change)
 
 ### Memory (RAM)
-As previously mentioned, EC2 instances are shared among users. This happens behind the scenes and is
-generally not noticeable when using OpenSARlab, with the exception of memory availability. The amount 
-of memory available to each user fluctuates with overall use on an instance, and may vary from 6GB to 16GB.
+As previously mentioned, EC2 instances are shared among users. This happens behind the scenes and is generally not noticeable when using OpenSARlab, with the exception of memory availability. The amount of memory available to each user fluctuates with overall use on an instance, and may vary from 6GB to 16GB.
 - 6GB • 16GB 
 
 ### Privileges
@@ -54,7 +44,6 @@ of memory available to each user fluctuates with overall use on an instance, and
 - netcdf4
 - numpy
 - opencv
-- python 2.7.17
 - python 3.7.6
 - python-pyproj
 - scikit-image
