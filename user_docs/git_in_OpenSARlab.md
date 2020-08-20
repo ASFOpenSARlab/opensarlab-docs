@@ -4,7 +4,7 @@
 ASF's OpenSARlab Jupyter Notebook library lives in the 
 [asf-jupyter-notebooks GitHub repository](https://github.com/asfadmin/asf-jupyter-notebooks).
 
-A git puller pulls in any changes to the repo each time a user's OpenSARlab server starts up. 
+A [smart git puller](https://jupyterhub.github.io/nbgitpuller/) pulls in any changes to the repo each time a user's OpenSARlab server starts up. 
 If a user has made changes to a notebook and the same notebook has been updated by ASF in the 
 asf-jupyter-notebooks repo, the user will end up with two copies of that notebook. The user's
 version of the notebook will have a timestamp appended to its name and the notebook with the 
