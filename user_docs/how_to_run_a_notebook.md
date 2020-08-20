@@ -1,7 +1,7 @@
 # How to Run a Jupyter Notebook
 
-### Before we get started, what is a Jupyter Notebook?
-- [Intro to Jupyter Notebooks](jupyter_notebook_intro.md)
+### Before we get started, what is Jupyter Notebook?
+- [Intro to Jupyter Notebook](jupyter_notebook_intro.md)
 
 ## Selecting Cells
 #### Select a Single Cell in Non-Edit Mode
