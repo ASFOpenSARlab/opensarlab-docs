@@ -25,9 +25,9 @@ OpenSARlab EC2 instances are shared among 1-3 users. The memory available to eac
 #### I am receiving a "No space left on device" error.
 OpenSARlab users have access to a finite amount of storage space ([details here](OpenSARlab_environment.md)). It is up to users to manage their storage. If you receive such a warning while logged into OpenSARlab, it is highly recommended that you immediately free up space by deleting un-needed files. If your server shuts down while there is no available space, it will not have the space needed to restart again and you will be locked out of your account. 
 
-If you you become locked out of your account, contact an [OpenSARlab administrator](uaf-jupyterhub-asf@alaska.edu) for help. They will have to assign just enough memory to allow you to login and delete files.
+If you you become locked out of your account, contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help. They will have to assign just enough memory to allow you to login and delete files.
 
-If you do not have any extraneous files to delete and feel that you really do need additional space to do your work, contact an [OpenSARlab administrator](uaf-jupyterhub-asf@alaska.edu) and request an increased storage limit. Limits will only be increased if there is a demonstrable need.
+If you do not have any extraneous files to delete and feel that you really do need additional space to do your work, contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) and request an increased storage limit. Limits will only be increased if there is a demonstrable need.
 
 
 #### My server won't start and I cannot access OpenSARlab.
