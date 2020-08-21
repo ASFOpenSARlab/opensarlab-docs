@@ -1,6 +1,6 @@
-# Restarting The OpenSARlab Server and Notebook Kernel
+# Restarting the OpenSARlab Server and Notebook Kernel
 
-## Restarting The OpenSARlab Server
+## Restarting the OpenSARlab Server
 ### Why?
 Restarting the server triggers the git puller to run. Perhaps you have deleted or altered a notebook in the ASF notebook library and want to retrieve the original. Maybe you know that a notebook update was just made and you would like to immediately pull in changes from the [asf-jupyter-notebook repo](https://github.com/asfadmin/asf-jupyter-notebooks). A quick solution in either of those cases is to restart your server.
 

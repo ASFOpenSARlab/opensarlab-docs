@@ -1,4 +1,4 @@
-# Using The Terminal in OpenSARlab
+# Using the Terminal in OpenSARlab
 
 ### Open a Terminal
 | ![Opening a terminal with the "New" menu in the JupyterHub GUI file manager.](assets/open_terminal.png) | 

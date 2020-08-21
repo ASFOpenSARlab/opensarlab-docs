@@ -1,4 +1,4 @@
-# OpenSARlab Environment and Account Lifecycle
+# The OpenSARlab Environment and Account Lifecycle
 ## Account Lifecycle
 - Accounts will be deactivated on the 46th day of inactivity
 - Warning emails are sent to inactive users after 30, 37, 41, 43, and 45 days
@@ -13,7 +13,7 @@ Every OpenSARlab user has access to an Amazon AWS EC2 instance. Individual insta
 - Ubuntu 18.04
 
 ### Volume (storage)
-OpenSARlab uses Amazon AWS EBS volumes, mounted to user servers' home directories for storage. A snapshot of each volume is taken everyday at 10:00 UTC. Only the most recent snapshot is retained. Any volumes unused for two days are destroyed, with the latest snapshot retained as a backup. Upon the next login, a new EBS volume is created and data is populated from the snapshot. While the volume is created and becomes usable very quickly, populating it with data from the snapshot can take some time (tens of minutes) and users may notice that notebooks load slowly during this period. The important takeaway is that user storage is persistent; you will not lose saved work.
+OpenSARlab uses Amazon AWS EBS volumes, mounted to user servers' home directories for storage. A snapshot of each volume is taken everyday at 10:00 UTC. Only the most recent snapshot is retained. Any volumes unused for two days are destroyed, with the latest snapshot retained as a backup. **If a volume has been destroyed**, a new EBS volume is created upon the next login, and it is populated with data from the snapshot. While the volume is created and becomes usable very quickly, populating it with data from the snapshot can take some time (tens of minutes) and users may notice that notebooks load slowly during this period. The important takeaway is that user storage is persistent; you will not lose saved work.
 
 It is incumbent upon users to manage their storage. Using up all your storage space will result in the inability to login to OpenSARlab. Please contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) if this occurs. 
 - 500GB Amazon AWS EBS volume (volume size subject to change)

@@ -2,7 +2,7 @@
 
 Jupyter Notebook magic commands provide shortcuts and functionality to the notebooks, above what can be done with straight Python code. An exhaustive list of magics can be found in the [IPython docs](https://ipython.readthedocs.io/en/stable/interactive/magics.html). 
 
-In OpenSARlab, we use a relatively small selection of magics, which fall into two categories: line magics and cell magics. We also frequently use Ipython's shell assignment syntax.
+While all all magics are available to users, in OpenSARlab we tend to use a relatively small selection of them. These fall into two categories: line magics and cell magics. We also frequently use Ipython's shell assignment syntax.
 
 ## IPython Shell Assignment with "!"
 In IPython syntax the exclamation mark allows users to run shell commands from inside a Jupyter Notebook code cell.
@@ -18,7 +18,7 @@ Line magics start with a single "%" and effect only the line on which they are u
 Allows **non-interactive** matplotlib plots to be displayed in a notebook.
 
 ### %matplotlib notebook
-Allows **interactive** matplotlib plots to be displayed and interacted with in a notebook.
+Allows **interactive** matplotlib plots to be displayed and interacted with inside of a notebook.
 
 ### %df
 This is a custom magic written for OpenSARlab. It uses the python function shutil.disk_usage() to check the state of storage on user volumes. 
@@ -27,7 +27,6 @@ This is a custom magic written for OpenSARlab. It uses the python function shuti
 - "%df --raw" returns a raw data object
 - "%df --on" returns a string in GB after every subsequent code cell is run
 - "%df --off" turns "%df --on" back off
-- "%df -p /" allows the user to set the path to the volume partition to check
 - "%df -v" prints additional debugging text 
 
 ## Cell Magics
