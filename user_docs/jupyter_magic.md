@@ -2,7 +2,7 @@
 
 Jupyter Notebook magic commands provide shortcuts and functionality to the notebooks, above what can be done with straight Python code. An exhaustive list of magics can be found in the [IPython docs](https://ipython.readthedocs.io/en/stable/interactive/magics.html). 
 
-While all all magics are available to users, in OpenSARlab we tend to use a relatively small selection of them. These fall into two categories: line magics and cell magics. We also frequently use Ipython's shell assignment syntax.
+While all magics are available to users, in OpenSARlab we tend to use a relatively small selection of them. These fall into two categories: line magics and cell magics. We also frequently use Ipython's shell assignment syntax.
 
 ## IPython Shell Assignment with "!"
 In IPython syntax the exclamation mark allows users to run shell commands from inside a Jupyter Notebook code cell.
