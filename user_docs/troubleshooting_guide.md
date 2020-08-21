@@ -10,6 +10,7 @@
 - [My code requires a different version of a software package than what is currently installed in OpenSARlab.](#my-code-requires-a-different-version-of-a-software-package-than-what-is-currently-installed-in-opensarlab)
 - [I am having trouble setting up a web server and developing my web app in OpenSARlab.](#i-am-having-trouble-setting-up-a-web-server-and-developing-my-web-app-in-opensarlab)
 - [A notebook won't load. A new browser tab opens and shows the JupyterHub header, but no notebook appears.](#a-notebook-wont-load-a-new-browser-tab-opens-and-shows-the-jupyterhub-header-but-no-notebook-appears)
+- [My issue is not on this list](#my-issue-is-not-on-this-list)
 
 ## Why did the kernel die while running a notebook?
  | ![A dead notebok kernel notification.](assets/kernel_death.png) | 
@@ -20,10 +21,10 @@
 
 ## I successfully ran a notebook earlier on the same data but now it is killing the kernel.
 
-OpenSARlab EC2 instances are shared among 1-3 users. The memory available to each user on an instance varies with overall activity on the EC2. It is likely that there was enough memory available for your process the time you attempted it, but there wasn't on the subsequent attempt. More details on the OpenSARlab user environment can be found [here](OpenSARlab_environment.md).
+OpenSARlab EC2 instances are shared among 1-3 users. The memory available to each user on an instance varies with overall activity on the EC2. It is likely that there was enough memory available for your process the first time you attempted it, but there wasn't on the subsequent attempt. More details on the OpenSARlab user environment can be found [here](OpenSARlab_environment.md).
 
 ## I am receiving a "No space left on device" error.
-OpenSARlab users have access to a finite amount of storage space ([details here](OpenSARlab_environment.md)). It is up to users to manage their storage. If you receive such a warning while logged into OpenSARlab, it is highly recommended that you immediately free up space by deleting un-needed files. If your server shuts down while there is no available space, it will not have the space needed to restart again and you will be locked out of your account. 
+OpenSARlab users have access to a finite amount of storage space ([details here](OpenSARlab_environment.md)). It is up to users to manage their storage. If you receive a storage space warning while logged into OpenSARlab, it is highly recommended that you immediately free up space by deleting un-needed files. If your server shuts down while there is no available space, it will not have the space needed to restart again and you will be locked out of your account. 
 
 If you you become locked out of your account, contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help. They will assign just enough extra storage to allow you to login and delete files.
 
@@ -39,9 +40,9 @@ Click the event log arrow beneath the server startup progress bar to view the de
  |:-------------:|
  | *Click the event log arrow beneath the server startup progress bar.* |
  
- If the problem is related to the git puller, you will see details regarding which file or files are causing the conflict in the event log. Note the file names and locations for later, and then logout of OpenSARlab.
+ If the problem is related to the git puller, you will find details regarding which file or files are causing the conflict in the event log. If the problem is not related to the git puller, contact an [OpenSARlab Administrator](mailto:uaf-jupyterhub-asf@alaska.edu).
  
- If the problem is not related to the git puller, contact an [OpenSARlab Administrator](mailto:uaf-jupyterhub-asf@alaska.edu).
+ If the problem is git puller related, note the names and locations of the offending files and logout of OpenSARlab.
  
  | ![The logout button is located at the top right of the screen.](assets/logout_server_screen.png) | 
  |:-------------:|
@@ -77,7 +78,7 @@ Click the event log arrow beneath the server startup progress bar to view the de
 
 When your OpenSARlab server starts up, a git puller runs, bringing in any updates made to the [ASF notebook library](https://github.com/asfadmin/asf-jupyter-notebooks). If a change has been made to a notebook by both the user and by ASF, both will be saved. The ASF version will retain its original name. The user edited version will have a timestamp appended to its name. The edited notebook you are missing is likely in the location where you expect it but has a recent timestamp appended to its name.  
 
-##One of my notebooks looks like it has a mix of code from various versions of the notebook.
+## One of my notebooks looks like it has a mix of code from various versions of the notebook.
 
 We have seen this happen occasionally and it stems from issues with the [smart git puller](https://jupyterhub.github.io/nbgitpuller/). The best option is to delete the notebook and [restart your OpenSARlab server](restarting_server_and_kernel.md). The notebook will be replaced with a fresh copy from the [ASF notebook library](https://github.com/asfadmin/asf-jupyter-notebooks).
 
@@ -87,12 +88,16 @@ We have seen this happen occasionally and it stems from issues with the [smart g
 
 ## My code requires a different version of a software package than what is currently installed in OpenSARlab.
 
-Install the required version of a pip installable package to your .local directory. This can be done from the [terminal](OpenSARlab_terminal.md) with the command "pip install --user .
+Install the required version of a pip installable package to your .local directory. This can be done from the [terminal](OpenSARlab_terminal.md) with the command "pip install --user package_name==0.1.2" (using the correct package name and version number).
 
 ## I am having trouble setting up a web server and developing my web app in OpenSARlab.
+
 This cannot be done in OpenSARlab. You will need to develop your app in an environment where you can run your web server.
 
 ## A notebook won't load. A new browser tab opens and shows the JupyterHub header, but no notebook appears. 
 
-This is caused by the slow loading of a large notebook. If you run a notebook and close it without first clearing all code cell output, the file size can increase substantially. A small, 40KB notebook can turn into a 60MB file if its output is left in place. The notebook will eventually load. You may need to reload your browser window if it times out. 
+This is caused by the slow loading of a large notebook. If you run a notebook and close it without first clearing all code cell output, the file size can increase substantially. A 40KB notebook can grow to 60MB+ file if its output is left in place. The notebook will eventually load. You may need to reload your browser window if it times out. 
 
+## My issue is not on this list
+
+If you have encountered an issue not covered in this document, please contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
