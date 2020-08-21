@@ -11,4 +11,4 @@
 1. [Restarting the OpenSARlab Server and Notebook Kernel](restarting_server_and_kernel.md)
 1. [Managing Jupyter Notebook Extensions](jupyter_notebook_extensions.md)
 1. [Installing Software in OpenSARlab](installing_software_in_OpenSARlab.md)
-1. [Troublshooting Guide](troubleshooting_guide.md)
+1. [Troubleshooting Guide](troubleshooting_guide.md)
