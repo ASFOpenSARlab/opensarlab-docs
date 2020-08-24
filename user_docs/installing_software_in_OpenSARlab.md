@@ -3,9 +3,8 @@
 # Installing Software in OpenSARlab
 
 ## pip
-You can install pip packages to your /home/jovyan/.local/lib/python3.7/site-packages directory with either of the following commands:
-- python3.7 -m pip install --user package_name
-- pip install --user package_name
+You can install pip packages to your /home/jovyan/.local/lib/python3.7/site-packages directory with the following command:
+- python -m pip install --user package_name
 
 It is important to use the  --user argument. This will install the package to your .local directory, avoiding any permission issues, and insuring that the package installation will persist when the OpenSARlab server restarts (so you don't have to reinstall it every time). 
 
