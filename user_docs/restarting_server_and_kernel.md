@@ -1,3 +1,5 @@
+[![OpenSARlab Header](assets/OSL_user_guide_header.png)](OpenSARlab_user_guide.md)
+
 # Restarting the OpenSARlab Server and Notebook Kernel
 
 ## Restarting the OpenSARlab Server

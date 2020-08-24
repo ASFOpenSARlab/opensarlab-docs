@@ -1,4 +1,4 @@
-# OpenSARlab User Guide
+![OpenSARlab Header](assets/OSL_user_guide_header.png)
  
 ## Table of Contents
 

@@ -1,3 +1,5 @@
+[![OpenSARlab Header](assets/OSL_user_guide_header.png)](OpenSARlab_user_guide.md)
+
 # Jupyter Line and Cell Magics, and IPython Syntax
 
 Jupyter Notebook magic commands provide shortcuts and functionality to the notebooks, above what can be done with straight Python code. An exhaustive list of magics can be found in the [IPython docs](https://ipython.readthedocs.io/en/stable/interactive/magics.html). 

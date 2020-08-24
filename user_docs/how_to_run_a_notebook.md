@@ -1,6 +1,4 @@
-![ASF logo](assets/asf-logo-blue-nav.png =50x50)
-
-![ASF logo](assets/asf-logo-blue-nav.png | width=50)
+[![OpenSARlab Header](assets/OSL_user_guide_header.png)](OpenSARlab_user_guide.md)
 
 # How to Run a Jupyter Notebook
 

@@ -1,3 +1,5 @@
+[![OpenSARlab Header](assets/OSL_user_guide_header.png)](OpenSARlab_user_guide.md)
+
 # Managing Jupyter Notebook Extensions
 As an OpenSARlab user, you have access to all of the notebook extensions available in the nbextensions package. A detailed list of included extensions is available [here](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions.html).
 

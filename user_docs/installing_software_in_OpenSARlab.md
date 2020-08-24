@@ -1,3 +1,5 @@
+[![OpenSARlab Header](assets/OSL_user_guide_header.png)](OpenSARlab_user_guide.md)
+
 # Installing Software in OpenSARlab
 
 ## pip
@@ -9,7 +11,7 @@ It is important to use the  --user argument. This will install the package to yo
 
 Note that pip packages in the .local directory will supersede other versions of the same package installed elsewhere.   
 
-## Conda 
+## conda 
 You can try to install conda packages using the command:
 - conda install --use-local package_name
 

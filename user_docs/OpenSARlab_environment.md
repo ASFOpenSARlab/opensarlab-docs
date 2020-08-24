@@ -1,3 +1,5 @@
+[![OpenSARlab Header](assets/OSL_user_guide_header.png)](OpenSARlab_user_guide.md)
+
 # The OpenSARlab Environment and Account Lifecycle
 ## Account Lifecycle
 - Accounts will be deactivated on the 46th day of inactivity
