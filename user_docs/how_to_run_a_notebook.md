@@ -1,3 +1,7 @@
+![ASF logo](assets/asf-logo-blue-nav.png =50x50)
+
+![ASF logo](assets/asf-logo-blue-nav.png | width=50)
+
 # How to Run a Jupyter Notebook
 
 ### Before we get started, what is Jupyter Notebook?
