@@ -10,14 +10,6 @@ It is important to use the  --user argument. This will install the package to yo
 
 Note that pip packages in the .local directory will supersede other versions of the same package installed elsewhere.   
 
-## conda 
-You can try to install conda packages using the command:
-- conda install --use-local package_name
-
-This will install to the /opt/conda/lib/python3.7/site-packages directory but may fail if conda needs to alter a dependency for which you do not have write permissions. 
-
-Note that you will have to reinstall conda packages after a server restart. 
-
 ## apt and apt-get
 Users cannot install software in OpenSARlab using apt or apt-get.
 
