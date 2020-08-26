@@ -1,4 +1,4 @@
-[![OpenSARlab Header](assets/OSL_user_guide_header.png)](OpenSARlab_user_guide.md)
+[![OpenSARlab Header](../assets/OSL_user_guide_header.png)](../OpenSARlab_user_guide.md)
 
 # Troubleshooting Guide
 
@@ -15,7 +15,7 @@
 - [My issue is not on this list](#my-issue-is-not-on-this-list)
 
 ## Why did the kernel die while running a notebook?
- | ![A dead notebok kernel notification.](assets/kernel_death.png) | 
+ | ![A dead notebok kernel notification.](../assets/kernel_death.png) | 
  |:-------------:|
  | *The message that appears when a notebook kernel dies* |
  
@@ -38,7 +38,7 @@ This issue typically stems from unexpected behavior on the part of the [smart gi
 
 Click the event log arrow beneath the server startup progress bar to view the details of any git puller conflicts.
 
- | ![The event log can be viewed on the server startup screen.](assets/event_log.png) | 
+ | ![The event log can be viewed on the server startup screen.](../assets/event_log.png) | 
  |:-------------:|
  | *Click the event log arrow beneath the server startup progress bar.* |
  
@@ -46,13 +46,13 @@ Click the event log arrow beneath the server startup progress bar to view the de
  
  If the problem is git puller related, note the names and locations of the offending files and logout of OpenSARlab.
  
- | ![The logout button is located at the top right of the screen.](assets/logout_server_screen.png) | 
+ | ![The logout button is located at the top right of the screen.](../assets/logout_server_screen.png) | 
  |:-------------:|
  | *Click the logout button at the top of the screen* |
  
  After logging out, the startup screen will reload. Select the "General SAR processing (without git puller)" server option and click the start button. 
  
- | ![The "General SAR processing (without git puller)" server option is below the "General SAR processing" option.](assets/server_options_no_git_puller.png) | 
+ | ![The "General SAR processing (without git puller)" server option is below the "General SAR processing" option.](../assets/server_options_no_git_puller.png) | 
  |:-------------:|
  | *Select the "General SAR processing (without git puller)" server option and click the start button* |
  
@@ -64,13 +64,13 @@ Click the event log arrow beneath the server startup progress bar to view the de
  
  Logout of OpenSARlab.
  
- | ![The logout button is located at the top right of the screen.](assets/logout.png) | 
+ | ![The logout button is located at the top right of the screen.](../assets/logout.png) | 
  |:-------------:|
  | *Click the logout button at the top right of the screen* |
  
  Log back in, using the "General SAR processing" server option.
  
- | ![The "General SAR processing" server option is the first option on the server option screen.](assets/server_options.png) | 
+ | ![The "General SAR processing" server option is the first option on the server option screen.](../assets/server_options.png) | 
  |:-------------:|
  | *Select the "General SAR processing" option and click start* |
  

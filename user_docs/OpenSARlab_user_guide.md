@@ -2,13 +2,13 @@
  
 ## Table of Contents
 
-1. [A Light Introduction to Jupyter Notebook](jupyter_notebook_intro.md)
-1. [How to Run a Jupyter Notebook](how_to_run_a_notebook.md)
-1. [Jupyter Line and Cell Magics, and IPython Syntax](jupyter_magic.md)
-1. [The OpenSARlab Environment and Account Lifecycle](OpenSARlab_environment.md)
-1. [Git in OpenSARlab](git_in_OpenSARlab.md)
-1. [Using the Terminal in OpenSARlab](OpenSARlab_terminal.md)
-1. [Restarting the OpenSARlab Server and Notebook Kernel](restarting_server_and_kernel.md)
-1. [Managing Jupyter Notebook Extensions](jupyter_notebook_extensions.md)
-1. [Installing Software in OpenSARlab](installing_software_in_OpenSARlab.md)
-1. [Troubleshooting Guide](troubleshooting_guide.md)
+1. [A Light Introduction to Jupyter Notebook](guides/jupyter_notebook_intro.md)
+1. [How to Run a Jupyter Notebook](guides/how_to_run_a_notebook.md)
+1. [Jupyter Line and Cell Magics, and IPython Syntax](guides/jupyter_magic.md)
+1. [The OpenSARlab Environment and Account Lifecycle](guides/OpenSARlab_environment.md)
+1. [Git in OpenSARlab](guides/git_in_OpenSARlab.md)
+1. [Using the Terminal in OpenSARlab](guides/OpenSARlab_terminal.md)
+1. [Restarting the OpenSARlab Server and Notebook Kernel](guides/restarting_server_and_kernel.md)
+1. [Managing Jupyter Notebook Extensions](guides/jupyter_notebook_extensions.md)
+1. [Installing Software in OpenSARlab](guides/installing_software_in_OpenSARlab.md)
+1. [Troubleshooting Guide](guides/troubleshooting_guide.md)

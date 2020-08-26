@@ -1,4 +1,4 @@
-[![OpenSARlab Header](assets/OSL_user_guide_header.png)](OpenSARlab_user_guide.md)
+[![OpenSARlab Header](../assets/OSL_user_guide_header.png)](../OpenSARlab_user_guide.md)
 
 # Git in OpenSARlab
 

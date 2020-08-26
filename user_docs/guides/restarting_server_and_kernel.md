@@ -1,4 +1,4 @@
-[![OpenSARlab Header](assets/OSL_user_guide_header.png)](OpenSARlab_user_guide.md)
+[![OpenSARlab Header](../assets/OSL_user_guide_header.png)](../OpenSARlab_user_guide.md)
 
 # Restarting the OpenSARlab Server and Notebook Kernel
 
@@ -12,43 +12,43 @@ Note: If you are comfortable with git, you could instead do a git pull from
 ### How?
 #### Click The Control Panel Button
 
-| ![Click the Control Panel button](assets/control_panel.png) | 
+| ![Click the Control Panel button](../assets/control_panel.png) | 
 |:-------------:|
 | *Click the Control Panel button at the top right of the file manager or in an open notebook* |
 
 #### Click The Stop My Server Button
 
-| ![Click the Stop My Server button](assets/stop_my_server.png) | 
+| ![Click the Stop My Server button](../assets/stop_my_server.png) | 
 |:-------------:|
 | *Click the Stop My Server button that appears* |
 
 #### Click The Start My Server Button
 
-| ![Click the Start My Server button](assets/start_my_server.png) | 
+| ![Click the Start My Server button](../assets/start_my_server.png) | 
 |:-------------:|
 | *Click the Start My Server button, which may take a few seconds to appear* |
 
 #### Click The Launch Server Button
 
-| ![Click the Launch Server button](assets/launch_server.png) | 
+| ![Click the Launch Server button](../assets/launch_server.png) | 
 |:-------------:|
 | *Click the Launch Server button appears* |
 
 #### Select a Server Option and Click Start
 
-| ![Select a server option and click the start button](assets/server_options.png) | 
+| ![Select a server option and click the start button](../assets/server_options.png) | 
 |:-------------:|
 | *Select a server option and click the start button* |
 
 #### Wait For the Server To Start
 
-| ![Wait for the server to start](assets/server_status.png) | 
+| ![Wait for the server to start](../assets/server_status.png) | 
 |:-------------:|
 | *Wait for the server to start* |
 
 #### Optional: Click The Event Log Arrow For Detailed Startup Status Information
 
-| ![Click the event log arrow](assets/event_log.png) | 
+| ![Click the event log arrow](../assets/event_log.png) | 
 |:-------------:|
 | *Click the event log arrow to view logs documenting the status of the startup process* |
 
@@ -61,7 +61,7 @@ Example: Imagine a notebook that builds a string, which starts empty and then ha
 ### How?
 #### Select "Restart", "Restart & Clear Output", or "Restart & Run All" From The Kernel Menu
 
-| ![Select restart and clear all from the kernel menu](assets/restart_clear_all.png) | 
+| ![Select restart and clear all from the kernel menu](../assets/restart_clear_all.png) | 
 |:-------------:|
 | *For most use cases, select "Restart & Clear Output"* |
 

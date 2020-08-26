@@ -1,4 +1,4 @@
-[![OpenSARlab Header](assets/OSL_user_guide_header.png)](OpenSARlab_user_guide.md)
+[![OpenSARlab Header](../assets/OSL_user_guide_header.png)](../OpenSARlab_user_guide.md)
 
 # How to Run a Jupyter Notebook
 
@@ -9,7 +9,7 @@
 #### Select a Single Cell in Non-Edit Mode
 - Click to the left of a cell
 
- | ![Selected cell in non-edit mode](assets/select_cell_non_edit_mode.png) | 
+ | ![Selected cell in non-edit mode](../assets/select_cell_non_edit_mode.png) | 
  |:-------------:|
  | *A selected cell in non-edit mode is surrounded by a box with a blue left edge* |
  
@@ -19,27 +19,27 @@
 - 'Shift + K' or 'Shift + Up-Arrow' selects additional cells above
 - Perform batch operations on selected cells
 
- | ![Multpile selected cells](assets/select_mult_cells.png) | 
+ | ![Multpile selected cells](../assets/select_mult_cells.png) | 
  |:-------------:|
  | *Multiple selected cells are surrounded by a blue highlighted box* |
 
 #### Select a Code Cell in Edit Mode
 - Click inside a cell
 
- | ![Selected code cell in edit mode](assets/select_cell_edit_mode.png) | 
+ | ![Selected code cell in edit mode](../assets/select_cell_edit_mode.png) | 
  |:-------------:|
  | *A selected cell in non-edit mode is surrounded by a box with a green left edge* |
  
 #### Select a Markdown Cell in Edit Mode
 - Double click inside a cell
 
- | ![Markdown cell in edit mode](assets/markdown_cell_edit_mode.png) | 
+ | ![Markdown cell in edit mode](../assets/markdown_cell_edit_mode.png) | 
  |:-------------:|
  | *A markdown cell in edit mode is surrounded by a box with a green left edge* |
  
  
 ## Running Cells
- | ![Clicking the Run button to run a cell](assets/cell_numbers.png) | 
+ | ![Clicking the Run button to run a cell](../assets/cell_numbers.png) | 
  |:-------------:|
  | *Since code cells may be run in any order, they are numbered in the order they were run.* |
 
@@ -48,7 +48,7 @@
 1. Select a cell in edit or non-edit mode
 1. Click the Run button
 
- | ![Clicking the Run button to run a cell](assets/run_button.png) | 
+ | ![Clicking the Run button to run a cell](../assets/run_button.png) | 
  |:-------------:|
  | *Click the Run button to run a selected cell* |
  
