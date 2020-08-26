@@ -9,8 +9,7 @@ Logging out will not shut down the server. If the server is inactive for an hour
 
 Do your part to reduce resource use and ease the burden on the environment by shutting down your server when you are finished working for the day. 
 
-## Why Doesn't OpenSARlab Shut Down the Server Automatically Upon Logout?
-In some instances you may need to leave your server running, which is perfectly acceptable. Perhaps you have a notebook performing a very time intensive analysis and wish to let it run overnight.
+**In some instances you may need to leave your server running, which is perfectly acceptable. Perhaps you have a notebook performing a very time intensive analysis and wish to let it run overnight.**
 
 ## How to Shut Down The Server
 
