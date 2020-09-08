@@ -11,7 +11,7 @@ Do your part to reduce resource use and ease the burden on the environment by sh
 
 **In some instances you may need to leave your server running, which is perfectly acceptable. Perhaps you have a notebook performing a very time intensive analysis and wish to let it run overnight.**
 
-## How to Shut Down The Server
+## How to Shut Down The Server and Logout
 
 #### Click The Control Panel Button
 
@@ -24,5 +24,12 @@ Do your part to reduce resource use and ease the burden on the environment by sh
 | ![Click the Stop My Server button](../assets/stop_my_server.png) | 
 |:-------------:|
 | *Click the Stop My Server button that appears* |
+
+#### Click The Logout Button
+
+| ![Click the Logout button](../assets/logout_2.png) | 
+|:-------------:|
+| *Click the Logout button* |
+
 
  
