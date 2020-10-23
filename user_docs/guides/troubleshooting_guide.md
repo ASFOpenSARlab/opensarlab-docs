@@ -1,5 +1,7 @@
 [![OpenSARlab Header](../assets/OSL_user_guide_header.png)](../OpenSARlab_user_guide.md)
 
+[Return to Table of Contents](OpenSARlab_user_guide.md)
+
 # Troubleshooting Guide
 
 - [Why did the kernel die while running a notebook?](#why-did-the-kernel-die-while-running-a-notebook)

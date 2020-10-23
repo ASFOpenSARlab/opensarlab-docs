@@ -1,5 +1,7 @@
 [![OpenSARlab Header](../assets/OSL_user_guide_header.png)](../OpenSARlab_user_guide.md)
 
+[Return to Table of Contents](OpenSARlab_user_guide.md)
+
 # Logging Out of OpenSARlab and Shutting Down the Server
 
 When you are ready to stop working in OpenSARlab, it is best practice to shut down your server and also logout.

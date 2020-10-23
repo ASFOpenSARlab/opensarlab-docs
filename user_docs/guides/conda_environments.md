@@ -1,5 +1,7 @@
 [![OpenSARlab Header](../assets/OSL_user_guide_header.png)](../OpenSARlab_user_guide.md)
 
+[Return to Table of Contents](OpenSARlab_user_guide.md)
+
 # Creating and Using Conda Environments in OpenSARlab
 
 Users can create and use conda environments in OpenSARlab, but they will not persist after the sever shuts down. They will need to be recreated during subsequent OpenSARlab sessions.
