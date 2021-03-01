@@ -50,5 +50,4 @@ Take our publicly accessible codebase and create your own, self-managed deployme
 
 ## Contact Us
 
-Have questions, suggestions, or need advice? We would love to hear from you! [Send an email](
-uaf-jupyterhub-asf@alaska.edu)
+Have questions, suggestions, or need advice? We would love to hear from you! Send an email at <uaf-jupyterhub-asf@alaska.edu>.
