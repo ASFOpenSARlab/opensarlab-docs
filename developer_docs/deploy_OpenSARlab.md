@@ -219,6 +219,7 @@ Note: Most IDEs have functionality to easily locate and organize TODOs. Searchin
         1. Change the profile description
         1. Change the extra_labels and node_selector server_types to match the server_type used in the profiles LaunchConfiguration in cloudformation.yaml
         1. Adjust the path to the postStart lifecycle hook
+        1. Adjust the kubespawner_override args --NotebookApp.jinja_template_vars PROFILE_NAME to the correct profile name
         1. Adjust the mem_limit
             1. The maximum amount of memory available to each user
             1. <= memory available for EC2 type
