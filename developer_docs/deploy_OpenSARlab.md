@@ -565,7 +565,44 @@ Take care of odds and ends
             1. Test notebooks as needed
             1. Confirm that notifications appear
         1. Repeat for each profile
-                
+1. Configure your local K8s config so you can manage your EKS cluster with kubectl
+    1. Add your AWS user to the trust relationship of the <deployment_name>-cluster-access IAM role
+        1. Navigate to the AWS IAM console
+            1. Click the "Roles" link from the sidebar menu
+                1. Select the <deployment_name>-cluster-access IAM role
+                    1. Click the "Trust relationships" tab
+                    1. Click the "Edit trust relationship" button
+                        1. Add your AWS user ARN
+                        1. Example json:
+                            1. ```json
+                                {
+                                 "Version": "2008-10-17",
+                                 "Statement": [
+                                   {
+                                     "Effect": "Allow",
+                                     "Principal": {
+                                       "AWS": [
+                                         "arn:aws:iam::<account_#>:user/<username>"
+                                       ]
+                                     },
+                                     "Action": "sts:AssumeRole"
+                                   }
+                                 ]
+                                }
+                               ```      
+                        1. Click the "Update Trust Policy" button          
+    1. Add an AWS <deployment_name>-cluster-access profile on your local machine
+        1. Example profile:
+            1. ```yaml
+                [profile <deployment_name>-cluster-access]
+                source_profile = your_source_profile
+                region = your_region
+                role_arn = arn:aws:iam::<AWS_account_id>:role/<deployment_name>-cluster-access              
+                ```
+    1. Run the helps/get_eks_kubeconfig.sh script in the opensarlab-cluster repo
+        1. Note: you will use this a lot and it may be helpful to create an alias in ~/.bash_aliases
+    1. Use kubectl
+    
 Destroy Deployments
 --------------------
 
