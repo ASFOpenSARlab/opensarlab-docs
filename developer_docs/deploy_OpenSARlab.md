@@ -140,28 +140,26 @@ Images can be used by multiple profiles**
 Note: It is easiest to work in your local repo and push your changes when you're done.
 
 1. Duplicate the images/sar directory and rename it, using your chosen image name
-1. Create and add any additional custom jupyter magic commands to the jupyter-hooks/custom_magics directory
-1. Add any additional scripts you may have created for use in your image to the scripts directory
-1. Add any image test scripts to tests directory
-1. rename images/sar to images/<new_image_name> or create a new renamed duplicate of that directory
+    1. Create and add any additional custom jupyter magic commands to the jupyter-hooks/custom_magics directory
+    1. Add any additional scripts you may have created for use in your image to the scripts directory
+    1. Add any image test scripts to tests directory
     1. Edit images/<new_image_name>/jupyter-hooks/sar.sh
         1. Rename sar.sh to <new_image_name>.sh
         1. Copy any additional custom Jupyter magic scripts to $HOME/.ipython/image_default/startup/ (alongside 00-df.py)
         1. Edit the repos being pulled to suit your deployment and image needs
     1. Edit images/<new_image_name>/build.sh
         1. Change 6 $DOCKER_REGISTRY namespaces from "sar" to your image namespace
-1. Repeat the previous step, adding scripts for any additional images
+    1. Repeat the previous step, adding scripts for any additional images
 1. Edit cf-container.yaml
     1. SARRepository 
         1. Change the resource name (SARRepository) so it makes sense given the image that will use it
         1. Change the "/sar" portion of RepositoryName to use a namespace matching your image name
     1. Pipeline
-        1. - Name: !Sub ${AWS::StackName}-Build-Images
+        1. Name: !Sub ${AWS::StackName}-Build-Images
             1. Change "- Name: images-sar" to "- Name: images-<image_namespace>"
             1. EnvironmentVariables
                 1. Change the IMAGE_NAME value from "sar" to "<image_namespace">
         1. Add stages for any additional images
-1. Edit 
 1. Edit dockerfile
     1. Adjust the packages in the 2nd apt install command to suit your image needs
     1. Add any pip packages you wish installed in the base conda environment
@@ -172,7 +170,7 @@ Note: It is easiest to work in your local repo and push your changes when you're
     1. Run any tests for this image that you added to the tests directory
 1. Remove the images/sar directory and sar.sh test script, unless you plan to use the sar image
 1. Add a test script for your image
-    1. use sar,sh as an example
+    1. use sar.sh as an example
     1. name it <image_namespace>.sh
 1. Edit tests/finale.sh
     1. Delete "bash sar.sh" if not using it
