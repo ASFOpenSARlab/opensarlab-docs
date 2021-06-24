@@ -24,7 +24,7 @@ simplifies billing for each group, and allows for easy cleanup at the end of a p
 In the following instructions, replace any occurrence of "<deployment_name>" with the deployment name you have chosen.
 
 **Make your deployment name lowercase and use no special characters other than dashes (-). It will be used to
-generate part of the Cognito callback URL**    
+generate part of the Cognito callback URL and CloudFormation stack names also follow the same naming convention.**    
 
 Take AWS SES out of sandbox
 --------------------
@@ -88,7 +88,7 @@ formatted calendar should work as well**
 1. Create a public iCal formatted calendar
 1. The iCal formatted url will be needed in later
 1. Notification calendar events must be properly formatted.
-    1. Formatting details available [here](TODO)
+    1. Formatting details available in the [Take care of odds and ends](#Take-care-of-odds-and-ends) section
 
 Store your CA certificate
 --------------------
