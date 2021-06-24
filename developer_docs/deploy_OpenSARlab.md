@@ -2,20 +2,20 @@
 Deploying OpenSARlab to an AWS account
 =====================
 
-1. [Take AWS SES out of sandbox](#Take AWS SES out of sandbox)
-1. [Create an AWS Cost Allocation Tag](#Create an AWS Cost Allocation Tag)
-1. [Add dockerhub credentials to AWS Secrets Manager](#Add dockerhub credentials to AWS Secrets Manager)
-1. [Setup an iCal calendar for notifications](#Setup an iCal calendar for notifications)
-1. [Store your CA certificate](#Store your CA certificate)
-1. [Prepare CodeCommit Repos](#Prepre CodeCommit repos)
-1. [Create an S3 bucket to hold the lambda handler script](#Create an S3 bucket to hold the lambda handler script)
-1. [Customize opensarlab_container code for deployment](#Customize opensarlab_container code for deployment)
-1. [Customize opensarlab_cluster code for deployment](#Customize opensarlab_cluster code for deployment)
-1. [Build the Cognito CloudFormation stack](#Build the Cognito CloudFormation stack)
-1. [Build the container CloudFormation stack](#Build the container CloudFormation stack)
-1. [Build the cluster CloudFormation stack](#Build the cluster CloudFormation stack)
-1. [Take care of odds and ends](#Take care of odds and ends)
-1. [Destroy Deployments](#Destroy Deployments)
+1. [Take AWS SES out of sandbox](#Take-AWS-SES-out-of-sandbox)
+1. [Create an AWS Cost Allocation Tag](#Create-an-AWS-Cost-Allocation-Tag)
+1. [Add dockerhub credentials to AWS Secrets Manager](#Add-dockerhub-credentials-to-AWS-Secrets-Manager)
+1. [Setup an iCal calendar for notifications](#Setup-an-iCal-calendar-for-notifications)
+1. [Store your CA certificate](#Store-your-CA-certificate)
+1. [Prepare CodeCommit Repos](#Prepre-CodeCommit-repos)
+1. [Create an S3 bucket to hold the lambda handler script](#Create-an-S3-bucket-to-hold-the-lambda-handler-script)
+1. [Customize opensarlab_container code for deployment](#Customize-opensarlab_container-code-for-deployment)
+1. [Customize opensarlab_cluster code for deployment](#Customize-opensarlab_cluster-code-for-deployment)
+1. [Build the Cognito CloudFormation stack](#Build-the-Cognito-CloudFormation-stack)
+1. [Build the container CloudFormation stack](#Build-the-container-CloudFormation-stack)
+1. [Build the cluster CloudFormation stack](#Build-the-cluster-CloudFormation-stack)
+1. [Take care of odds and ends](#Take-care-of-odds-and-ends)
+1. [Destroy Deployments](#Destroy-Deployments)
 
 **A note about deployments:** A deployment of OpenSARlab refers to a standalone instance of OpenSARlab.
 If you are setting up OpenSARlab for several classes and/or collaborative groups with disparate needs or funding sources,
