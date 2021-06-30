@@ -19,7 +19,7 @@ jobs:
           auto-update-conda: true
           python-version: 3.8
           activate-environment: osl-docs
-          environment-file: osl-docs/environment.yml
+          environment-file: environment.yml
 
       - name: deploy to github.io
         if: github.ref == 'refs/heads/main'
