@@ -19,6 +19,7 @@ jobs:
         with:
           repository: ASFOpenSARlab/ASFOpenSARlab.github.io
           path: ASFOpenSARlab.github.io
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: conda-incubator/setup-miniconda@v2
         with:
