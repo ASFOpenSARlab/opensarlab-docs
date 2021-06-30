@@ -1,0 +1,30 @@
+name: Deploy to Github.io
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    name: Build site and deploy
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: opensarlab-docs
+
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-update-conda: true
+          python-version: 3.8
+          activate-environment: osl-docs
+          environment-file: osl-docs/environment.yml
+
+      - name: deploy to github.io
+        if: github.ref == 'refs/heads/main'
+        shell: bash -l {0}
+        run: |
+          cd ASFOpenSARlab.github.io
+          mkdocs gh-deploy  --force --config-file ../opensarlab-docs/mkdocs.yml --remote-branch main
+          
