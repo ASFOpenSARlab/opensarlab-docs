@@ -1,0 +1,23 @@
+site_name: OpenSARlab-Docs
+site_url: https://osl-docs.asf.alaska.edu/
+site_author: ASF OpenSARlab Team
+site_description: The Alaska Satellite Facility's OpenSARlab
+
+theme:
+  name: asf-theme
+#  logo:
+  icon:
+    repo: fontawesome/brands/github-alt
+  features:
+    - navigation.instant
+
+repo_url: https://github.com/ASFOpenSARlab
+repo_name: ASF OpenSARlab
+edit_uri: ''
+
+nav:
+  - Home: index.md
+  - User Guide: user.md
+  - Developer Guide: dev.md
+  - Release Notes: release_notes.md
+

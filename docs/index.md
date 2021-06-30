@@ -1,8 +1,8 @@
-# OpenSARlab
+# Welcome to OpenSARlab
 
-***Alaska Satellite Facility's OpenSARlab***
+## What is OpenSARlab?
 
-OpenSARlab is a service providing users with persistent, customizable computing environments. It insures that groups of scientists and students have access to identical environments, containing the same software, running on the same hardware. It operates in the cloud, which means anyone with a moderately reliable internet connection can access their development environment. OpenSARlab sits alongside ASF's data archives in AWS, allowing for low latency transfer of large data products.
+OpenSARlab is a service providing users with persistent, cloud-based, customizable computing environments. It insures that groups of scientists and students have access to identical environments, containing the same software, running on the same hardware. It operates in the cloud, which means anyone with a moderately reliable internet connection can access their development environment. OpenSARlab sits alongside ASF's data archives in AWS, allowing for low latency transfer of large data products.
 
 OpenSARlab is a deployable service that creates an autoscaling Kubernetes cluster in Amazon AWS, running JupyterHub. Users have access to customizable environments running JupyterLab via authenticated accounts with persistent storage.
 
@@ -20,7 +20,7 @@ OpenSARlab addresses the following issues that often arise when developing SAR d
 * SAR data products are often quite large, which leads to slow, expensive data transfers
 * SAR scientists with limited resources may lack access to the hardware required for analysis
 
-## How will OpenSARlab benefit the class or training I am teaching?
+## How will OpenSARlab benefit the class or training I am planning?
 OpenSARlab alleviates some of the pitfalls commonly encountered when teaching software development and data science in any field:
 
  * Teaching is often interrupted when students work in varying environments, requiring valuable instructor time to help set up their systems so they may complete their assignments.
@@ -30,7 +30,7 @@ OpenSARlab alleviates some of the pitfalls commonly encountered when teaching so
 
 ## How is OpenSARlab different from Binder?
 
-- Persistent, authenticated user accounts
+- Authenticated user accounts
 - User group management 
 - Persistent user storage
 - Cost reducing storage management features
@@ -50,4 +50,6 @@ Take our publicly accessible codebase and create your own, self-managed deployme
 
 ## Contact Us
 
-Have questions, suggestions, or need advice? We would love to hear from you! Send an email at <uaf-jupyterhub-asf@alaska.edu>.
+Have questions, suggestions, or need advice? We would love to hear from you! 
+
+Email us at <uaf-jupyterhub-asf@alaska.edu>.

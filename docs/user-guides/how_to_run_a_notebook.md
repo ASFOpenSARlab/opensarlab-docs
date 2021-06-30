@@ -1,6 +1,4 @@
-[![OpenSARlab Header](../assets/OSL_user_guide_header.png)](../OpenSARlab_user_guide.md)
-
-[Return to Table of Contents](../OpenSARlab_user_guide.md)
+[Return to Table of Contents](../user.md)
 
 # How to Run a Jupyter Notebook
 

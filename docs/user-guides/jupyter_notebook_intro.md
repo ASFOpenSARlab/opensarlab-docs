@@ -1,9 +1,7 @@
-[![OpenSARlab Header](../assets/OSL_user_guide_header.png)](../OpenSARlab_user_guide.md)
-
-[Return to Table of Contents](../OpenSARlab_user_guide.md)
+[Return to Table of Contents](../user.md)
 
 # A Light Introduction to Jupyter Notebook
-https://jupyter.org/
+[https://jupyter.org/](https://jupyter.org/)
 
 Jupyter Notebook is a web application that allows users to display interactive, runnable code cells (typically written in Python) alongside markdown cells containing explanatory text, formulas, hyperlinks, tables, pseudocode, and images. Jupyter Notebook provides an ideal format for teaching/learning coding concepts, prototyping algorithms, and collaborating on Python projects. 
 

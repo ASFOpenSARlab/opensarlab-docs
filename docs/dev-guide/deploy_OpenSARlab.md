@@ -1,21 +1,7 @@
+[Return to Developer Guide](../dev.md)
 
-Deploying OpenSARlab to an AWS account
+Deploy OpenSARlab to an AWS account
 =====================
-
-1. [Take AWS SES out of sandbox](#Take-AWS-SES-out-of-sandbox)
-1. [Create an AWS Cost Allocation Tag](#Create-an-AWS-Cost-Allocation-Tag)
-1. [Add dockerhub credentials to AWS Secrets Manager](#Add-dockerhub-credentials-to-AWS-Secrets-Manager)
-1. [Setup an iCal calendar for notifications](#Setup-an-iCal-calendar-for-notifications)
-1. [Store your CA certificate](#Store-your-CA-certificate)
-1. [Prepare CodeCommit Repos](#Prepre-CodeCommit-repos)
-1. [Create an S3 bucket to hold the lambda handler script](#Create-an-S3-bucket-to-hold-the-lambda-handler-script)
-1. [Customize opensarlab_container code for deployment](#Customize-opensarlab_container-code-for-deployment)
-1. [Customize opensarlab_cluster code for deployment](#Customize-opensarlab_cluster-code-for-deployment)
-1. [Build the Cognito CloudFormation stack](#Build-the-Cognito-CloudFormation-stack)
-1. [Build the container CloudFormation stack](#Build-the-container-CloudFormation-stack)
-1. [Build the cluster CloudFormation stack](#Build-the-cluster-CloudFormation-stack)
-1. [Take care of odds and ends](#Take-care-of-odds-and-ends)
-1. [Destroy Deployments](#Destroy-Deployments)
 
 **A note about deployments:** A deployment of OpenSARlab refers to a standalone instance of OpenSARlab.
 If you are setting up OpenSARlab for several classes and/or collaborative groups with disparate needs or funding sources,
@@ -196,7 +182,7 @@ Note: Most IDEs have functionality to easily locate and organize TODOs. Searchin
     1. Add the ICAL_URL of your notification calendar
 1. notifications/dockerfile
     1. Add your organization's name as MAINTAINER
-1. cloudformation.yaml
+1. cf-cluster.yaml
     1. Add a NodeInstanceType parameter for every EC2 type
         1. must be alphanumeric
     1. Remove the example NodeInstanceTypePROFILE1 resource
@@ -215,7 +201,7 @@ Note: Most IDEs have functionality to easily locate and organize TODOs. Searchin
         1. Change the name of the profile being search for in group_list
         1. Change the display_name
         1. Change the profile description
-        1. Change the extra_labels and node_selector server_types to match the server_type used in the profiles LaunchConfiguration in cloudformation.yaml
+        1. Change the extra_labels and node_selector server_types to match the server_type used in the profiles LaunchConfiguration in cf-cluster.yaml
         1. Adjust the path to the postStart lifecycle hook
         1. Adjust the kubespawner_override args --NotebookApp.jinja_template_vars PROFILE_NAME to the correct profile name
         1. Adjust the mem_limit

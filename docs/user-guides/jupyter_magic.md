@@ -1,6 +1,4 @@
-[![OpenSARlab Header](../assets/OSL_user_guide_header.png)](../OpenSARlab_user_guide.md)
-
-[Return to Table of Contents](../OpenSARlab_user_guide.md)
+[Return to Table of Contents](../user.md)
 
 # Jupyter Line and Cell Magics, and IPython Syntax
 
@@ -12,7 +10,7 @@ While all magics are available to users, in OpenSARlab we tend to use a relative
 In IPython syntax the exclamation mark allows users to run shell commands from inside a Jupyter Notebook code cell.
 Simply start a line of code with "!" and it will run the command in the shell. 
 
-Example: "!pwd" will print the current working directory.
+Example: ```!pwd``` will print the current working directory.
 
 ## Line Magics
 
@@ -37,8 +35,10 @@ This is a custom magic written for OpenSARlab. It uses the python function shuti
 
 Cell magics start with "%%" and effect the contents of an entire cell. 
 
-### %%javascript and %%js
-Runs a code cell of javascript code.
+### %%javascript or %%js
+Runs a code cell of javascript code. 
+
+Note: leave a blank line above the magic command at the top of the code cell.
 
 ### %%capture
 Runs the cell but captures all output. We typically use this to suppress the display of a matplotlib plot we do not wish to show.
