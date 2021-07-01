@@ -3,7 +3,7 @@ name: Deploy to Github.io
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   build_and_deploy:
@@ -13,24 +13,21 @@ jobs:
       - uses: actions/checkout@v2
         with:
           path: opensarlab-docs
-          
+
       - uses: conda-incubator/setup-miniconda@v2
         with:
           auto-update-conda: true
           python-version: 3.8
           activate-environment: osl-docs
           environment-file: opensarlab-docs/environment.yml
-      
-      - uses: actions/checkout@v2
-        if: github.ref == 'refs/heads/main'
-        with:
-          repository: ASFOpenSARlab/ASFOpenSARlab.github.io
-          path: ASFOpenSARlab.github.io
-          token: ${{ secrets.OPENSARLAB_BOT_ACCESS }}
 
-      - name: deploy to github.io
-        if: github.ref == 'refs/heads/main'
+      - name: Deploy test website
+        if: github.ref == 'refs/heads/dev'
         shell: bash -l {0}
         run: |
-          cd ASFOpenSARlab.github.io
-          mkdocs gh-deploy  --force --config-file ../opensarlab-docs/mkdocs.yml --remote-branch main
+          cd opensarlab-docs
+          # Remove conflicting CNAME for project site
+          rm docs/CNAME
+          # Set site URL for dev site
+          sed -i 's|site_url: https://opensarlab-docs.asf.alaska.edu/|site_url: https://opensarlab-docs.asf.alaska.edu/opensarlab-docs/|' mkdocs.yml
+          mkdocs gh-deploy --force
