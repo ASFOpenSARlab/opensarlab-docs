@@ -21,12 +21,6 @@ jobs:
           activate-environment: opensarlab-docs
           environment-file: opensarlab-docs/environment.yml
 
-      - uses: actions/checkout@v2
-        with:
-          repository: ASFHyP3/ASFHyP3.github.io
-          path: ASFHyP3.github.io
-          token: ${{ secrets.TOOLS_BOT_PAK }}
-
       - name: Deploy test website
         shell: bash -l {0}
         run: |
