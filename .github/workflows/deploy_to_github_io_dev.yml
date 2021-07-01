@@ -22,7 +22,6 @@ jobs:
           environment-file: opensarlab-docs/environment.yml
 
       - name: Deploy test website
-        if: github.ref == 'refs/heads/dev'
         shell: bash -l {0}
         run: |
           cd opensarlab-docs
