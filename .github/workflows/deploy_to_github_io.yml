@@ -22,14 +22,12 @@ jobs:
           environment-file: opensarlab-docs/environment.yml
       
       - uses: actions/checkout@v2
-        if: github.ref == 'refs/heads/main'
         with:
           repository: ASFOpenSARlab/ASFOpenSARlab.github.io
           path: ASFOpenSARlab.github.io
           token: ${{ secrets.OPENSARLAB_BOT_ACCESS }}
 
       - name: deploy to github.io
-        if: github.ref == 'refs/heads/main'
         shell: bash -l {0}
         run: |
           cd ASFOpenSARlab.github.io
