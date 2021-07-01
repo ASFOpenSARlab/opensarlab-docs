@@ -83,7 +83,7 @@ An example of how you might get into trouble would be a code cell that creates a
 
 ## Clearing Cell Output Before Closing
 
-It is best practice to clear all code cells output prior to closing or saving a notebook. Leaving the output in place can lead to a tenfold increase in a notebook's file size. Not only does this use up more of you volume, it leads to slow notebook loading times (especially if you have a slow internet connection).
+It is best practice to clear all code cells output prior to closing or saving a notebook. Leaving the output in place can lead to a tenfold increase in a notebook's file size. Not only does this use up more of your volume, it leads to slow notebook loading times (especially if you have a slow internet connection).
 
 
  

@@ -17,7 +17,25 @@ edit_uri: ''
 
 nav:
   - Home: index.md
-  - User Guide: user.md
-  - Developer Guide: dev.md
-  - Release Notes: release_notes.md
+  - User Guide:
+    - user.md
+    - Jupyter Notebook Intro: user-guides/jupyter_notebook_intro.md
+    - Running Jupyter Notebook: user-guides/how_to_run_a_notebook.md
+    - Jupyter Magic Commands: user-guides/jupyter_magic.md
+    - OpenSARlab Account Details: user-guides/OpenSARlab_enviornment.md
+    - Git in OpenSARlab: user-guides/git_in_OpenSARlab.md
+    - OpenSARlab Terminal: user-guides/OpenSARlab_terminal.md
+    - OpenSARlab Servers and Kernels: user-guides/restarting_server_and_kernel.md
+    - Jupyter Notebook Extensions: user-guides/jupyer_notebook_extensions.md
+    - Installing Software in OpenSARlab: user-guides/installing_software_in_OpenSARlab.md
+    - Conda Environments: user-guides/conda_environments.md
+    - Logging Out and Server Shutdown: user-guides/logging_out_and_server_shutdown.md
+    - Troubleshooting Guide: user-guides/troubleshooting_guide.md
+  - Developer Guide:
+    - dev.md
+    - System Diagram: assets/system_diagrams/OpenSARlab_system_diagram_June_2021.png
+    - Deploy OpenSARlab to AWS: dev-guides/deploy_OpenSARlab.md
+  - Release Notes:
+    - release_notes.md
+    - June 2021: release-notes/release_06-2021.md
 
