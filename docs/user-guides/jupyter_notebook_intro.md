@@ -13,15 +13,19 @@ Markdown cells contain documentation in Markdown, HTML, and/or Latex. They may c
 
 -  To enter edit mode in a markdown cell, double click it.
 
-| ![An un-run markdown cell.](../assets/markdown_cell_edit_mode.png) | 
-|:-------------:|
-| *A markdown cell in edit mode* |
- 
+ ![An un-run markdown cell.](../assets/markdown_cell_edit_mode.png) 
+
+*A markdown cell in edit mode*
+
+---
+
 - To move past or display a markdown cell's content, run it. 
  
-| ![A run markdown cell.](../assets/markdown_run.png) | 
-|:-------------:|
-| *A run markdown cell* |
+![A run markdown cell.](../assets/markdown_run.png)
+
+*A run markdown cell*
+
+---
  
 ### Code Cells
  Code cells contain editable, runnable Python code. You  can run them in any order, any number of times.
@@ -29,6 +33,8 @@ Markdown cells contain documentation in Markdown, HTML, and/or Latex. They may c
  The ability to run and rerun code cells in arbitrary order can be helpful but can also cause  problems. For instance, recycled variables can end up with unexpected values if cells are
  run in an order not intended by a notebook's author.
  
-| ![A code cell.](../assets/code_cell.png) | 
-|:-------------:|
-| *A code cell* |
+ ![A code cell.](../assets/code_cell.png)
+
+*A code cell*
+
+---
