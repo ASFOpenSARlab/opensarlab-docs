@@ -26,7 +26,7 @@ jobs:
         with:
           repository: ASFOpenSARlab/ASFOpenSARlab.github.io
           path: ASFOpenSARlab.github.io
-          token: ${{ secrets.OPENSARLAB_BOT_SECRET }}
+          ssh-key: ${{ secrets.OPENSARLAB_BOT_SECRET }}
 
       - name: deploy to github.io
         if: github.ref == 'refs/heads/main'
