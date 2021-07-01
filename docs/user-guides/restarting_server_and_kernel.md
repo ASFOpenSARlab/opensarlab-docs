@@ -12,33 +12,43 @@ Note: If you are comfortable with git, you could instead do a git pull from
 ### How?
 #### Click The Control Panel Button
 
-| ![Click the Control Panel button](../assets/control_panel.png) | 
-|:-------------:|
-| *Click the Control Panel button at the top right of the file manager or in an open notebook* |
+![Click the Control Panel button](../assets/control_panel.png)
+
+*Click the Control Panel button at the top right of the file manager or in an open notebook*
+
+---
 
 #### Click The Stop My Server Button
 
-| ![Click the Stop My Server button](../assets/stop_my_server.png) | 
-|:-------------:|
-| *Click the Stop My Server button that appears* |
+![Click the Stop My Server button](../assets/stop_my_server.png)
+
+*Click the Stop My Server button that appears*
+
+---
 
 #### Click The Start My Server Button
 
-| ![Click the Start My Server button](../assets/start_my_server.png) | 
-|:-------------:|
-| *Click the Start My Server button, which may take a few seconds to appear* |
+![Click the Start My Server button](../assets/start_my_server.png)
+
+*Click the Start My Server button, which may take a few seconds to appear*
+
+---
 
 #### Click The Launch Server Button
 
-| ![Click the Launch Server button](../assets/launch_server.png) | 
-|:-------------:|
-| *Click the Launch Server button appears* |
+![Click the Launch Server button](../assets/launch_server.png)
+
+*Click the Launch Server button appears*
+
+---
 
 #### Select a Server Option and Click Start
 
-| ![Select a server option and click the start button](../assets/server_options.png) | 
-|:-------------:|
-| *Select a server option and click the start button* |
+![Select a server option and click the start button](../assets/server_options.png)
+
+*Select a server option and click the start button*
+
+---
 
 #### Wait For the Server To Start
 
@@ -48,9 +58,11 @@ Note: If you are comfortable with git, you could instead do a git pull from
 
 #### Optional: Click The Event Log Arrow For Detailed Startup Status Information
 
-| ![Click the event log arrow](../assets/event_log.png) | 
-|:-------------:|
-| *Click the event log arrow to view logs documenting the status of the startup process* |
+![Click the event log arrow](../assets/event_log.png)
+
+*Click the event log arrow to view logs documenting the status of the startup process*
+
+---
 
 ## Restarting a Jupyter Notebook Kernel
 ### Why?
@@ -61,9 +73,11 @@ Example: Imagine a notebook that builds a string, which starts empty and then ha
 ### How?
 #### Select "Restart", "Restart & Clear Output", or "Restart & Run All" From The Kernel Menu
 
-| ![Select restart and clear all from the kernel menu](../assets/restart_clear_all.png) | 
-|:-------------:|
-| *For most use cases, select "Restart & Clear Output"* |
+![Select restart and clear all from the kernel menu](../assets/restart_clear_all.png)
+
+*For most use cases, select "Restart & Clear Output"*
+
+---
 
 - "Restart" will restart the kernel but leave old code cell output in place.
 - "Restart & Clear Output" restarts the kernel and removes old code cell output. **This is generally the preferred option.**

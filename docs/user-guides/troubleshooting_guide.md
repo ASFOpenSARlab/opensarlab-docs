@@ -3,9 +3,11 @@
 # Troubleshooting Guide
 
 ## Why did the kernel die while running a notebook?
- | ![A dead notebok kernel notification.](../assets/kernel_death.png) | 
- |:-------------:|
- | *The message that appears when a notebook kernel dies* |
+![A dead notebok kernel notification.](../assets/kernel_death.png)
+
+*The message that appears when a notebook kernel dies*
+
+---
  
  The kernel will die if you run out of available memory to complete a running process. This most frequently occurs when running a time-series or change detection algorithm on a data stack that is either too deep or covers too large an area-of-interest for OpenSARlab to handle. Try running the notebook on some combination of a shallower data stack and/or a smaller area-of-interest. This may take some experimentation because memory is shared among users and the amount available fluctuates. To work with a deep stack covering an extensive AOI, you may need to tile up your data for the analysis and mosaic them later. 
 
@@ -14,9 +16,11 @@
 OpenSARlab EC2 instances are shared among 1-3 users. The memory available to each user on an instance varies with overall activity on the EC2. It is likely that there was enough memory available for your process the first time you attempted it, but there wasn't on the subsequent attempt. More details on the OpenSARlab user environment can be found [here](OpenSARlab_environment.md).
 
 ## When I open a notebook, I receive "Kernel not found" message.
- | ![A kernel not found notification.](../assets/kernel_not_found.png) | 
- |:-------------:|
- | *The message that appears when a notebook kernel cannot be found* |
+![A kernel not found notification.](../assets/kernel_not_found.png)
+
+*The message that appears when a notebook kernel cannot be found*
+
+---
  
  You have either not yet created the required conda environment or there is a mix-up between the environment name and prefix. If you think you did already install the environment, select it from the pull-down menu and click the "Set Kernel" button. If you have not yet created it, use the notebook located here to do so: ```/home/jovyan/conda_environments/Create_OSL_Conda_Environments.ipynb```
 
@@ -33,23 +37,29 @@ This issue typically stems from unexpected behavior on the part of the [smart gi
 
 Click the event log arrow beneath the server startup progress bar to view the details of any git puller conflicts.
 
- | ![The event log can be viewed on the server startup screen.](../assets/event_log.png) | 
- |:-------------:|
- | *Click the event log arrow beneath the server startup progress bar.* |
+![The event log can be viewed on the server startup screen.](../assets/event_log.png)
+
+*Click the event log arrow beneath the server startup progress bar.*
+
+---
  
  If the problem is related to the git puller, you will find details regarding which file or files are causing the conflict in the event log. If the problem is not related to the git puller, contact an [OpenSARlab Administrator](mailto:uaf-jupyterhub-asf@alaska.edu).
  
  If the problem is git puller related, note the names and locations of the offending files and logout of OpenSARlab.
  
- | ![The logout button is located at the top right of the screen.](../assets/logout_server_screen.png) | 
- |:-------------:|
- | *Click the logout button at the top of the screen* |
+ ![The logout button is located at the top right of the screen.](../assets/logout_server_screen.png)
+ 
+ *Click the logout button at the top of the screen*
+ 
+ ---
  
  After logging out, the startup screen will reload. Select the "General SAR processing (without git puller)" server option and click the start button. 
  
- | ![The "General SAR processing (without git puller)" server option is below the "General SAR processing" option.](../assets/server_options_no_git_puller.png) | 
- |:-------------:|
- | *Select the "General SAR processing (without git puller)" server option and click the start button* |
+ ![The "General SAR processing (without git puller)" server option is below the "General SAR processing" option.](../assets/server_options_no_git_puller.png)
+
+ *Select the "General SAR processing (without git puller)" server option and click the start button*
+ 
+ ---
  
  The server should now load and you will have access to your account. Navigate to the locations of the conflicting files. There are three options for dealing with each of the offending files:
  
@@ -59,15 +69,19 @@ Click the event log arrow beneath the server startup progress bar to view the de
  
  Logout of OpenSARlab.
  
- | ![The logout button is located at the top right of the screen.](../assets/logout.png) | 
- |:-------------:|
- | *Click the logout button at the top right of the screen* |
+ ![The logout button is located at the top right of the screen.](../assets/logout.png)
+
+ *Click the logout button at the top right of the screen*
+ 
+ ---
  
  Log back in, using the "General SAR processing" server option.
  
- | ![The "General SAR processing" server option is the first option on the server option screen.](../assets/server_options.png) | 
- |:-------------:|
- | *Select the "General SAR processing" option and click start* |
+ ![The "General SAR processing" server option is the first option on the server option screen.](../assets/server_options.png)
+
+ *Select the "General SAR processing" option and click start*
+ 
+ ---
  
  The git puller should now run successfully, the server should startup, and you should have restored access to OpenSARlab, receiving any updates to the [ASF notebook library](https://github.com/asfadmin/asf-jupyter-notebooks).
 
