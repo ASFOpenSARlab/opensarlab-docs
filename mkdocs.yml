@@ -26,7 +26,7 @@ nav:
     - Git in OpenSARlab: user-guides/git_in_OpenSARlab.md
     - OpenSARlab Terminal: user-guides/OpenSARlab_terminal.md
     - OpenSARlab Servers and Kernels: user-guides/restarting_server_and_kernel.md
-    - Jupyter Notebook Extensions: user-guides/jupyer_notebook_extensions.md
+    - Jupyter Notebook Extensions: user-guides/jupyter_notebook_extensions.md
     - Installing Software in OpenSARlab: user-guides/installing_software_in_OpenSARlab.md
     - Conda Environments: user-guides/conda_environments.md
     - Logging Out and Server Shutdown: user-guides/logging_out_and_server_shutdown.md
