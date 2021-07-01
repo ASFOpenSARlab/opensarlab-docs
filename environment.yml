@@ -1,4 +1,4 @@
-name: osl-docs
+name: opensarlab-docs
 channels:
   - conda-forge
   - nodefaults

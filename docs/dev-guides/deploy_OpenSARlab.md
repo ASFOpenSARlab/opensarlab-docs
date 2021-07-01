@@ -665,13 +665,42 @@ to proceed. Empty them and let CloudFormation delete them for you.
                 1. Click the "Events" tab
                 1. Monitor the stack deletion progress
                     1. Click the refresh button periodically since the console doesn't update events automatically
+1. Delete EBS snapshots
+    1. Navigate to the AWS EC2 console
+        1. Click the "Snapshots" link in the sidebar menu
+            1. Filter by osl-stackname: <deployment_name>
+                1. **Double check that you filtered for the correct deployment!**
+            1. Select all snapshots
+            1. Select "Delete" from the "Actions" menu
+            1. Confirm by clicking the "Yes, delete" button
+1. Delete EBS volumes
+    1. Navigate to the AWS EC2 console
+        1. Click the "Volumes" link in the sidebar menu
+            1. Filter by osl-stackname: <deployment_name>
+                1. **Double check that you filtered for the correct deployment!**
+            1. Select all volumes
+            1. Select "Delete volumes" from the "Actions" menu
+            1. Confirm by clicking the "Yes, delete" button             
 1. (Optional) Delete the <deployment_name>-cluster and <deployment_name>-container CodeCommit repositories
     1. CodeCommit repos are cheap
         1. If you think you may re-deploy the same deployment, you may want to ease future work by leaving these repos in place
+        1. You could also download a zip of your repos, store them in S3, and then delete them
     1. Navigate to the AWS CodeCommit console
         1. Check the box next to the <deployment_name>-container repo
         1. Click the "Delete repository" button
             1. Confirm the deletion by typing "delete" in the provided field     
             1. Click the "Delete" button
         1. Repeat the above steps for the <deployment_name>-cluster repo
+1. Confirm that all resources have been deleted
+    1. Wait a day for deleted resources to update in the tag editor
+    1. Navigate to the AWS Resource Groups and Tag Editor console
+        1. Select the "Tag Editor" link in the sidebar menu
+            1.  Tags:
+                1. Key: 
+                    1. Cost allocation tag
+                1. Value:
+                    1. <deployment_name>
+            1. Click the "Search resources" button
+            1. Identify and delete any remaining resources
+    
                               
