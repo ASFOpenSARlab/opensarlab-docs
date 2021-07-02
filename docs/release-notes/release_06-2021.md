@@ -33,14 +33,14 @@ OpenSARlab previously had conda installed but it was only used as a package mana
     - this location is on the user volume, so changes persist after server restarts
 - New OpenSARlab users are prompted to select the environments they would like pre-built for them when signing up for an account
     - unselected environments may always be added later
-- Current users must build their own environments using the provided [notebook](../../conda_environments/Create_OSL_Conda_Environments.ipynb) and accompanying environment.yml files
+- Current users must build their own environments using the provided [notebook](https://github.com/ASFOpenSARlab/opensarlab-envs/blob/main/Create_OSL_Conda_Environments.ipynb) and accompanying environment.yml files
 - Python kernels from the appropriate environments have been pre-selected for all notebooks and saved in their metadata
     - if the needed environment doesn't yet exist, users will be prompted to change the kernel to one that does
     - Note that an incorrect environment will likely be missing needed software and be incapable of running a notebook for which it was not intended
-        - Instead, create the needed environment using this [notebook](../../conda_environments/Create_OSL_Conda_Environments.ipynb)
+        - Instead, create the needed environment using this [notebook](https://github.com/ASFOpenSARlab/opensarlab-envs/blob/main/Create_OSL_Conda_Environments.ipynb)
 - Code has been added to each notebook to check that it is running in the correct environment
     - Warnings explain how to change to the correct environment if it has been created but the notebook isn't using it
-    - Warnings direct users to a [notebook](../../conda_environments/Create_OSL_Conda_Environments.ipynb) to create the environment if it does not yet exist
+    - Warnings direct users to a [notebook](https://github.com/ASFOpenSARlab/opensarlab-envs/blob/main/Create_OSL_Conda_Environments.ipynb) to create the environment if it does not yet exist
 - There is also a minimal environment called "scratch" that is intended for user adaptation and experimentation
     - This has been added for quick and easy access but users may add as many custom environments as they like
     
@@ -49,7 +49,7 @@ OpenSARlab previously had conda installed but it was only used as a package mana
 You will encounter environment warnings in the notebooks. You will not have access to the software needed to run the notebooks, which will trigger errors (ModuleNotFoundError).
 
 ### I don't want to wait for the notebooks to yell at me and give me environment warnings. How can I create the environments I'd like right now?
-Good choice! Head over to [Create_OSL_Conda_Environments.ipynb](../../conda_environments/Create_OSL_Conda_Environments.ipynb) and run the notebook. You will be prompted to select an environment from a list of options. Rerun the notebook for every environment you wish to add.
+Good choice! Head over to [Create_OSL_Conda_Environments.ipynb](https://github.com/ASFOpenSARlab/opensarlab-envs/blob/main/Create_OSL_Conda_Environments.ipynb) and run the notebook. You will be prompted to select an environment from a list of options. Rerun the notebook for every environment you wish to add.
 
 ## nbgitpuller Patch
 
