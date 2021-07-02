@@ -22,7 +22,7 @@ nav:
     - Jupyter Notebook Intro: user-guides/jupyter_notebook_intro.md
     - Running Jupyter Notebook: user-guides/how_to_run_a_notebook.md
     - Jupyter Magic Commands: user-guides/jupyter_magic.md
-    - OpenSARlab Account Details: user-guides/OpenSARlab_enviornment.md
+    - OpenSARlab Account Details: user-guides/OpenSARlab_environment.md
     - Git in OpenSARlab: user-guides/git_in_OpenSARlab.md
     - OpenSARlab Terminal: user-guides/OpenSARlab_terminal.md
     - OpenSARlab Servers and Kernels: user-guides/restarting_server_and_kernel.md
