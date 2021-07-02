@@ -18,6 +18,7 @@ edit_uri: ''
 nav:
   - Home: index.md
   - User Guide:
+    - user.md
     - Jupyter Notebook Intro: user-guides/jupyter_notebook_intro.md
     - Running Jupyter Notebook: user-guides/how_to_run_a_notebook.md
     - Jupyter Magic Commands: user-guides/jupyter_magic.md
