@@ -7,7 +7,7 @@ Deploy OpenSARlab to an AWS account
 If you are setting up OpenSARlab for several classes and/or collaborative groups with disparate needs or funding sources,
 it may be useful to give them each their own standalone deployment. This separates user group authentication, 
 simplifies billing for each group, and allows for easy cleanup at the end of a project or class (just delete the deployment).
-In the following instructions, replace any occurrence of "<deployment_name>" with the deployment name you have chosen.
+In the following instructions, replace any occurrence of "\<deployment_name\>" with the deployment name you have chosen.
 
 **Make your deployment name lowercase and use no special characters other than dashes (-). It will be used to
 generate part of the Cognito callback URL and CloudFormation stack names also follow the same naming convention.**    
@@ -88,26 +88,26 @@ TODO Do this differently
 
 **All the public OpenSARlab repos are in the [ASFOpenSARlab](https://github.com/ASFOpenSARlab) Github Org**
 
-1. Create a <deployment_name>-container CodeCommit repo in your AWS account
-1. Create a <deployment_name>-cluster CodeCommit repo
-1. Clone the <deployment_name>-container and <deployment_name>-cluster repos to your local computer using ssh
-1. cd into your local <deployment_name>-container repo
-    1. add ASFOpenSARlab/opensarlab-container as a remote on your local <deployment_name>-container repo
+1. Create a \<deployment_name\>-container CodeCommit repo in your AWS account
+1. Create a \<deployment_name\>-cluster CodeCommit repo
+1. Clone the \<deployment_name\>-container and \<deployment_name\>-cluster repos to your local computer using ssh
+1. cd into your local \<deployment_name\>-container repo
+    1. add ASFOpenSARlab/opensarlab-container as a remote on your local \<deployment_name\>-container repo
         1. `git remote add github https://github.com/ASFOpenSARlab/opensarlab-container.git`
-    1. Pull the remote  opensarlab-container repo into your local <deployment_name>-container repo
+    1. Pull the remote  opensarlab-container repo into your local \<deployment_name\>-container repo
         1. `git pull github main`
-    1. Create a main branch in the <deployment_name>-container repo
+    1. Create a main branch in the \<deployment_name\>-container repo
         1. `git checkout -b main`
-    1. Push to the remote <deployment_name>-container repo
+    1. Push to the remote \<deployment_name\>-container repo
         1. `git push origin main`
-1. cd into your local <deployment_name>-cluster repo
-    1. add ASFOpenSARlab/opensarlab-cluster as a remote on your local <deployment_name>-cluster repo
+1. cd into your local \<deployment_name\>-cluster repo
+    1. add ASFOpenSARlab/opensarlab-cluster as a remote on your local \<deployment_name\>-cluster repo
         1. `git remote add github https://github.com/ASFOpenSARlab/opensarlab-cluster.git`
-    1. Pull the remote  opensarlab-cluster repo into your local <deployment_name>-cluster repo
+    1. Pull the remote  opensarlab-cluster repo into your local \<deployment_name\>-cluster repo
         1. `git pull github main`
-    1. Create a main branch in the <deployment_name>-cluster repo
+    1. Create a main branch in the \<deployment_name\>-cluster repo
         1. `git checkout -b main`
-    1. Push to the remote <deployment_name>-cluster repo
+    1. Push to the remote \<deployment_name\>-cluster repo
         1. `git push origin main`
         
 **You should now have container and cluster repos in CodeCommit that are duplicates of those found in ASFOpenSARlab** 
@@ -115,7 +115,7 @@ TODO Do this differently
 Create an S3 bucket to hold the lambda handler script
 --------------------
 
-1. Create an S3 bucket in your AWS account called <deployment_name>-lambda
+1. Create an S3 bucket in your AWS account called \<deployment_name\>-lambda
     1. Alternatively, you could use the same bucket to hold lambdas for multiple deployments
 
 Customize opensarlab_container code for deployment
@@ -214,7 +214,7 @@ Note: Most IDEs have functionality to easily locate and organize TODOs. Searchin
             1. Even if not sharing nodes, do not guarantee all available memory
                 1. The node requires some memory for setup (varies and may take some trial and error to figure out how much to reserve)
         1. Adjust the cpu_guarantee (or mem_guarantee)
-            1. The minimum EC2 cpu units guaranteed to each user
+            1. The minimum EC2 cpu units guaranteed to each user (as a float, not a string)
             1. If there aren't enough cpu units left on a node for the next user, the autoscaler will spin up a new node
             1. Use the cpu_guarantee to determine how nodes should be shared among users
             1. Even if not sharing nodes, do not guarantee all available cpus
@@ -230,7 +230,7 @@ Note: Most IDEs have functionality to easily locate and organize TODOs. Searchin
     1. Adjust email messages to suit the needs of the deployment
     1. zip the file, creating lambda_handler.py.zip
         1. be sure to keep the ".py" as part of the filename
-    1. Upload the zip to the <deployment_name>-lambda S3 bucket
+    1. Upload the zip to the \<deployment_name\>-lambda S3 bucket
         1. After setting up Cognito for the first time, anytime you make changes to this file you will need to:
             1. Change the name of the zip file
                 1. **Do not change the name of the lambda_handler.py file it contains**
@@ -246,11 +246,11 @@ Build the Cognito CloudFormation stack
     1. Click the "Create stack" button and select "With new resources (standard)"
         1. Page 1 : **Create stack**
             1. Under "Specify template", check "Upload a template file"
-            1. Use the file chooser to select **cf-cognito.py** from your local branch of the <deployment_name>-cluster repo 
+            1. Use the file chooser to select **cf-cognito.py** from your local branch of the \<deployment_name\>-cluster repo 
             1. Click the "Next" button
         1. Page 2: **Specify stack details**
             1. Stack name:
-                1. <deployment_name>-auth
+                1. \<deployment_name\>-auth
                     1. dashes (-) are the only allowed special characters
                     1. lowercase only
             1. AdminEmailAddress:
@@ -263,9 +263,9 @@ Build the Cognito CloudFormation stack
                 1. Enter the deployment domain, if known (i.e. https://deployment_name.your_domain.tdl)
                     1. The placeholder domain can be left in place temporarily if the actual domain is not yet known
             1. CostTagValue
-                1. <deployment_name>
+                1. \<deployment_name\>
             1. EmailLambdaBucketName
-                1. <deployment_name>-lambda
+                1. \<deployment_name\>-lambda
             1. EmailLambdaKeyName
                 1. lambda_handler.py.zip (or whatever you named it)
             1. Click the "Next" button
@@ -274,9 +274,9 @@ Build the Cognito CloudFormation stack
                 1. Key: 
                     1. Cost allocation tag
                 1. Value:
-                    1. <deployment_name>
+                    1. \<deployment_name\>
             1. Click the "Next" button
-        1. Page 4: **Review <deployment_name>-auth**
+        1. Page 4: **Review \<deployment_name\>-auth**
             1. Review and confirm correctness
             1. Check the box next to "I acknowledge that AWS CloudFormation might create IAM resources"
             1. Click the "Create Stack Button"
@@ -296,23 +296,23 @@ Build the container CloudFormation stack
     1. Click the "Create stack" button and select "With new resources (standard)"
         1. Page 1 : **Create stack**
             1. Under "Specify template", check "Upload a template file"
-            1. Use the file chooser to select **cf-container.py** from your local branch of the <deployment_name>-container repo 
+            1. Use the file chooser to select **cf-container.py** from your local branch of the \<deployment_name\>-container repo 
             1. Click the "Next" button
         1. Page 2: **Specify stack details**
             1. Stack name:
-                1. <deployment_name>-container
+                1. \<deployment_name\>-container
             1. CodeCommitSourceBranch:
-                1. The name of the production branch of the <deployment_name>-container CodeCommit repo
+                1. The name of the production branch of the \<deployment_name\>-container CodeCommit repo
             1. CodeCommitSourceRepo:
-                1. <deployment_name>-container
+                1. \<deployment_name\>-container
             1. CostTagValue
-                1. <deployment_name>
+                1. \<deployment_name\>
         1. Page 3: **Configure stack options**
             1. Tags:
                 1. Key: Cost allocation tag
-                1. Value: <deployment_name>
+                1. Value: \<deployment_name\>
             1. Click the "Next" button
-        1. Page 4: **Review <deployment_name>-auth**
+        1. Page 4: **Review \<deployment_name\>-auth**
             1. Review and confirm correctness
             1. Check the box next to "I acknowledge that AWS CloudFormation might create IAM resources"
             1. Click the "Create Stack Button"
@@ -323,12 +323,12 @@ Build the container CloudFormation stack
             1. goto the CloudFormation stacks page 
                 1. select and delete the failed stack before correcting any errors and trying again
     1. When stack creation is complete, open CodePipeline in the AWS console
-        1. Open the <deployment_name>-container-Container-Pipeline pipeline and monitor it as it runs
+        1. Open the \<deployment_name\>-container-Container-Pipeline pipeline and monitor it as it runs
             1. Click the "details" link under each stage action for a closer inspection
             1. If part of the pipeline fails
                 1. Identify the issue from the "details" output
                 1. Correct the code
-                1. Update the <deployment_name>-container repo
+                1. Update the \<deployment_name\>-container repo
                 1. Go to the pipeline
                     1. Click the "Release change" button
                 
@@ -337,18 +337,18 @@ Build the container CloudFormation stack
 
 Build the cluster CloudFormation stack
 --------------------
-**This CloudFormation stack dynamically creates a second CloudFormation stack. You will end up with a <deployment_name> stack and
- a <deployment_name>-cluster stack.**
+**This CloudFormation stack dynamically creates a second CloudFormation stack. You will end up with a \<deployment_name\> stack and
+ a \<deployment_name\>-cluster stack.**
 
 1. Open CloudFormation in the AWS console
     1. Page 1 : **Create stack**
         1. Click the "Create stack" button and select "With new resources (standard)"
         1. Under "Specify template", check "Upload a template file"
-        1. Use the file chooser to select **cf-pipeline.py** from your local branch of the <deployment_name> repo 
+        1. Use the file chooser to select **cf-pipeline.py** from your local branch of the \<deployment_name\> repo 
         1. Click the "Next" button
     1. Page 2: **Specify stack details**
         1. Stack name:
-            1. <deployment_name>-cluster
+            1. \<deployment_name\>-cluster
         1. AdminUserName:
             1. JupyterHub Admin username
                 1. Initial default admin with access to the JupyterHub admin and group pages
@@ -356,34 +356,34 @@ Build the cluster CloudFormation stack
             1. Arn associated with the CA certificate you stored in AWS Certificate Manager
                 1. arn:aws:acm:<region>:<account_#>:certificate/<certificate_id>
         1. CodeCommitRepoName:
-            1. Name of the CodeCommit repo holding your <deployment_name>-cluster code
+            1. Name of the CodeCommit repo holding your \<deployment_name\>-cluster code
         1. CodeCommitBranchName:
             1. Name of the branch holding this deployment's cluster code
         1. ContainerNamespace:
-            1. <deployment_name>-container
+            1. \<deployment_name\>-container
         1. CostTagKey:
             1. Cost allocation tag
         1. CostTagValue:
-            1. <deployment_name>
+            1. \<deployment_name\>
         1. ICALUrl:
             1. The iCal formatted URL of the calendar used for notifications
         1. DeploymentURL:
-            1. Your custom URL (should match DeploymentURL parameter in <deployment_name>-auth stack)
+            1. Your custom URL (should match DeploymentURL parameter in \<deployment_name\>-auth stack)
                 1. If left blank, the default load balancer will be used
                 1. Can be updated later           
         1. OAuthPoolName:
-            1. <deployment_name>-auth 
+            1. \<deployment_name\>-auth 
     1. Page 3: **Configure stack options**
         1. Tags:
             1. Key: Cost allocation tag
-            1. Value: <deployment_name>
+            1. Value: \<deployment_name\>
         1. Click the "Next" button
-    1. Page 4: **Review <deployment_name>-auth**
+    1. Page 4: **Review \<deployment_name\>-auth**
         1. Review and confirm correctness
         1. Check the box next to "I acknowledge that AWS CloudFormation might create IAM resources"
         1. Click the "Create Stack" button
 1. Open CodePipeline in the AWS console
-    1. Open the <deployment_name>-Pipeline pipeline and monitor it as it runs
+    1. Open the \<deployment_name\>-Pipeline pipeline and monitor it as it runs
         1. Click the "details" link under each stage action for a closer inspection
 
 Take care of odds and ends
@@ -392,10 +392,10 @@ Take care of odds and ends
 1. Update the DeploymentURL parameters in 2 CloudFormation stacks with load balancer URL or your custom URL
     1. If you already entered a custom URL when building the stacks, skip this step
     1. If using the load balancer URL
-        1. Find it in the 'Outputs' tab of the CloudFormation console for the <deployment_name>-cluster CloudFormation stack
+        1. Find it in the 'Outputs' tab of the CloudFormation console for the \<deployment_name\>-cluster CloudFormation stack
         1. Note: you will have to prepend "https://" to it
-    1. Update the <deployment_name> stack
-        1. Navigate to the <deployment_name> stack CloudFormation console
+    1. Update the \<deployment_name\> stack
+        1. Navigate to the \<deployment_name\> stack CloudFormation console
         1. Click the 'Update' button
             1. Page 1:
                 1. Leave 'Use current template' selected
@@ -409,27 +409,27 @@ Take care of odds and ends
                 1. Review and confirm correctness
                 1. Check the box next to "I acknowledge that AWS CloudFormation might create IAM resources"
                 1. Click the "Update Stack" button 
-        1. Repeat the above process for the <deployment_name>-auth stack
+        1. Repeat the above process for the \<deployment_name\>-auth stack
 1. Add the cost allocation tag to the EKS cluster
     1. Navigate to the AWS EKS console
     1. click the "Clusters" link in the sidebar menu
-        1. Click on <deployment_name>-cluster
+        1. Click on \<deployment_name\>-cluster
             1. Click the "Tags" tab
                 1. Click the "Manage tags" button
                     1. Click the "Add tag" button
                         1. Key: Cost allocation tag
-                        1. Value: <deployment_name>
+                        1. Value: \<deployment_name\>
 1. Wrap things up in Cognito
     1. Navigate to the AWS Cognito console
     1. Click the "Manage User Pools" button
-        1. Click the "<deployment_name>-auth" user pool button
+        1. Click the "\<deployment_name\>-auth" user pool button
         1. Add the cost allocation tag to the Cognito user pool
             1. Click the "Tags" sidebar menu link
                 1. Click the "Add tag" link
                 1. Tag Key:
                     1. Cost allocation tag
                 1. Tag Value:
-                    1. <deployment_name>
+                    1. \<deployment_name\>
                 1. Click the "Save changes" button
         1. Reset triggers
             1. Cognito triggers can fall out of sync with email and logging lambdas so it is safest to reset them
@@ -438,18 +438,18 @@ Take care of odds and ends
                 1. Click the "Save changes" button
                 1. Click the "Triggers" sidebar menu link
                     1. Pre sign-up:
-                        1. select the <deployment_name>-auth-LogFunction-<random hash> lambda
+                        1. select the \<deployment_name\>-auth-LogFunction-<random hash> lambda
                     1. Pre authentication:
-                        1. select the <deployment_name>-auth-PreAuthFunction-<random hash> lambda
+                        1. select the \<deployment_name\>-auth-PreAuthFunction-<random hash> lambda
                     1. Post authentication:
-                        1. select the <deployment_name>-auth-LogFunction-<random hash> lambda
+                        1. select the \<deployment_name\>-auth-LogFunction-<random hash> lambda
                     1. Post confirmation:
-                        1. select the <deployment_name>-auth-PostEmailVerificationFun-<random hash> lambda
+                        1. select the \<deployment_name\>-auth-PostEmailVerificationFun-<random hash> lambda
                     1. Pre Token Generator:
-                        1. select the <deployment_name>-auth-LogFunction-<random hash> lambda
+                        1. select the \<deployment_name\>-auth-LogFunction-<random hash> lambda
                     1. Leave the remaining triggers set to "none"
                     1. Click the "Save changes" button
-1. Update image tags for every profile in helm_config.yml (<deployment_name>-cluster repository)
+1. Update image tags for every profile in helm_config.yml (\<deployment_name\>-cluster repository)
     1. hub:image:tag
         1. 'latest' will only work for the hub:image:tag on the first build
             1. It is safest to never use the "latest" tag
@@ -462,14 +462,14 @@ Take care of odds and ends
     1. Repeat previous step for each profile
     1. Add, commit, and push changes to CodeCommit
     1. Navigate to the AWS CodePipeline console
-        1. Click the <deployment_name>-Pipeline pipeline
+        1. Click the \<deployment_name\>-Pipeline pipeline
             1. Click the "Release change" button
                 1. Click the "Release" button
                 1. Monitor the pipeline as it builds
 1. Prime the Auto Scaling Group for each profile
     1. Navigate to the AWS EC2 console
         1. Select the "Auto Scaling Groups" sidebar link
-            1. Select <deployment_name>-cluster-AutoScalingGroup<profile_name>-<random_hash>
+            1. Select \<deployment_name\>-cluster-AutoScalingGroup<profile_name>-<random_hash>
                 1. Group details:
                     1. Click the "Edit" button
                         1. Desired capacity:
@@ -508,11 +508,11 @@ Take care of odds and ends
         1. Click the "Sign in" button
             1. Click the "Sign up" link
             1. Username:
-                1. The name used for the AdminUserName parameter of the <deployment_name> CloudFormation stack
+                1. The name used for the AdminUserName parameter of the \<deployment_name\> CloudFormation stack
             1. Name:
                 1. Your name
             1. Email:
-                1. Enter the email address used for the AdminEmailAddress parameter in the <deployment_name>-auth CloudFormation stack
+                1. Enter the email address used for the AdminEmailAddress parameter in the \<deployment_name\>-auth CloudFormation stack
             1. Password:
                 1. A password
             1. Click the "Sign up" button
@@ -550,10 +550,10 @@ Take care of odds and ends
             1. Confirm that notifications appear
         1. Repeat for each profile
 1. Configure your local K8s config so you can manage your EKS cluster with kubectl
-    1. Add your AWS user to the trust relationship of the <deployment_name>-cluster-access IAM role
+    1. Add your AWS user to the trust relationship of the \<deployment_name\>-cluster-access IAM role
         1. Navigate to the AWS IAM console
             1. Click the "Roles" link from the sidebar menu
-                1. Select the <deployment_name>-cluster-access IAM role
+                1. Select the \<deployment_name\>-cluster-access IAM role
                     1. Click the "Trust relationships" tab
                     1. Click the "Edit trust relationship" button
                         1. Add your AWS user ARN
@@ -575,13 +575,13 @@ Take care of odds and ends
                                 }
                                ```      
                         1. Click the "Update Trust Policy" button          
-    1. Add an AWS <deployment_name>-cluster-access profile on your local machine
+    1. Add an AWS \<deployment_name\>-cluster-access profile on your local machine
         1. Example profile:
             1. ```yaml
-                [profile <deployment_name>-cluster-access]
+                [profile \<deployment_name\>-cluster-access]
                 source_profile = your_source_profile
                 region = your_region
-                role_arn = arn:aws:iam::<AWS_account_id>:role/<deployment_name>-cluster-access              
+                role_arn = arn:aws:iam::<AWS_account_id>:role/\<deployment_name\>-cluster-access              
                 ```
     1. Run the helps/get_eks_kubeconfig.sh script in the opensarlab-cluster repo
         1. Note: you will use this a lot and it may be helpful to create an alias in ~/.bash_aliases
@@ -593,7 +593,7 @@ Destroy Deployments
 At the end of a deployment's lifecycle, it is important to destroy it properly so no resources are left in place, 
 costing you money.
 
-Deleting the <deployment_name>-container, <deployment_name>-auth, <deployment_name>-cluster, and <deployment_name> 
+Deleting the \<deployment_name\>-container, \<deployment_name\>-auth, \<deployment_name\>-cluster, and \<deployment_name\> 
 CloudFormation stacks will kill the deployment and remove its resources but there are a couple of prerequisite steps 
 to prepare for proper deletion.
 
@@ -601,74 +601,74 @@ Note: In the steps below, **do not manually delete any S3 buckets after emptying
 CloudFormation stack deletions associated with those buckets will fail and you will have to recreate the empty buckets 
 to proceed. Empty them and let CloudFormation delete them for you.
 
-1. Delete the <deployment_name>-container CloudFormation stack
-    1. Empty the codepipeline-<region>-<deployment_name>-container-container S3 bucket
+1. Delete the \<deployment_name\>-container CloudFormation stack
+    1. Empty the codepipeline-<region>-\<deployment_name\>-container-container S3 bucket
         1. Navigate to the AWS S3 console
-            1. Check the box next to the codepipeline-<region>-<deployment_name>-container-container S3 bucket
+            1. Check the box next to the codepipeline-<region>-\<deployment_name\>-container-container S3 bucket
             1. Click the "Empty" button
                 1. Confirm the deletion of bucket contents by typing "permanently delete" in the provided field
                 1. Click the "Empty" button
     1. Delete ECR repos for each profile
         1. Navigate to the AWS Elastic Container Registry
-        1. Click the box next to the <deployment_name>/<profile_namespace> repository
+        1. Click the box next to the \<deployment_name\>/<profile_namespace> repository
         1. Click the "Delete" button
             1. Confirm the deletion by typing "delete" in the provided field
             1. Click the "Delete" button
         1. Repeat for each profile
-    1. Delete the <deployment_name>-container CloudFormation stack
+    1. Delete the \<deployment_name\>-container CloudFormation stack
         1. Navigate to the AWS CloudFormation console
-            1. Click the box next to the <deployment_name>-container stack
+            1. Click the box next to the \<deployment_name\>-container stack
             1. Click the "Delete" button
                 1. Click the "Delete stack" button
-            1. Click the <deployment_name>-container stack name
+            1. Click the \<deployment_name\>-container stack name
                 1. Click the "Events" tab
                 1. Monitor the stack deletion progress
                     1. Click the refresh button periodically since the console doesn't update events automatically
-1. Delete the <deployment_name>-auth CloudFormation stack
+1. Delete the \<deployment_name\>-auth CloudFormation stack
     1. Navigate to the AWS CloudFormation console
-        1. Click the box next to the <deployment_name>-auth stack
+        1. Click the box next to the \<deployment_name\>-auth stack
         1. Click the "Delete" button
                 1. Click the "Delete stack" button
-        1. Click the <deployment_name>-auth stack name
+        1. Click the \<deployment_name\>-auth stack name
             1. Click the "Events" tab
             1. Monitor the stack deletion progress
                 1. Click the refresh button periodically since the console doesn't update events automatically
-1. Delete the <deployment_name>-cluster CloudFormation stack
+1. Delete the \<deployment_name\>-cluster CloudFormation stack
     1. Navigate to the AWS CloudFormation console
-        1. Click the box next to the <deployment_name>-cluster stack
+        1. Click the box next to the \<deployment_name\>-cluster stack
         1. Click the "Delete" button
                 1. Click the "Delete stack" button
-        1. Click the <deployment_name>-cluster stack name
+        1. Click the \<deployment_name\>-cluster stack name
             1. Click the "Events" tab
             1. Monitor the stack deletion progress
                 1. Click the refresh button periodically since the console doesn't update events automatically
-1. Delete the <deployment_name> CloudFormation stack
+1. Delete the \<deployment_name\> CloudFormation stack
     1. Delete hub and notifications ECR repos
         1. Navigate to the AWS Elastic Container Registry
-        1. Click the box next to the <deployment_name>/hub repository
+        1. Click the box next to the \<deployment_name\>/hub repository
         1. Click the "Delete" button
             1. Confirm the deletion by typing "delete" in the provided field
             1. Click the "Delete" button 
-        1. Repeat the above steps for the <deployment_name>/notifications repository
-    1. Empty the codepipeline-<region>-<deployment_name> S3 bucket
+        1. Repeat the above steps for the \<deployment_name\>/notifications repository
+    1. Empty the codepipeline-<region>-\<deployment_name\> S3 bucket
         1. Navigate to the AWS S3 console
-            1. Check the box next to the codepipeline-<region>-<deployment_name> S3 bucket
+            1. Check the box next to the codepipeline-<region>-\<deployment_name\> S3 bucket
             1. Click the "Empty" button
                 1. Confirm the deletion of bucket contents by typing "permanently delete" in the provided field
                 1. Click the "Empty" button
-    1. Delete the <deployment_name> CloudFormation stack
+    1. Delete the \<deployment_name\> CloudFormation stack
         1. Navigate to the AWS CloudFormation console
-            1. Click the box next to the <deployment_name> stack
+            1. Click the box next to the \<deployment_name\> stack
             1. Click the "Delete" button
                     1. Click the "Delete stack" button
-            1. Click the <deployment_name> stack name
+            1. Click the \<deployment_name\> stack name
                 1. Click the "Events" tab
                 1. Monitor the stack deletion progress
                     1. Click the refresh button periodically since the console doesn't update events automatically
 1. Delete EBS snapshots
     1. Navigate to the AWS EC2 console
         1. Click the "Snapshots" link in the sidebar menu
-            1. Filter by osl-stackname: <deployment_name>
+            1. Filter by osl-stackname: \<deployment_name\>
                 1. **Double check that you filtered for the correct deployment!**
             1. Select all snapshots
             1. Select "Delete" from the "Actions" menu
@@ -676,21 +676,21 @@ to proceed. Empty them and let CloudFormation delete them for you.
 1. Delete EBS volumes
     1. Navigate to the AWS EC2 console
         1. Click the "Volumes" link in the sidebar menu
-            1. Filter by osl-stackname: <deployment_name>
+            1. Filter by osl-stackname: \<deployment_name\>
                 1. **Double check that you filtered for the correct deployment!**
             1. Select all volumes
             1. Select "Delete volumes" from the "Actions" menu
             1. Confirm by clicking the "Yes, delete" button             
-1. (Optional) Delete the <deployment_name>-cluster and <deployment_name>-container CodeCommit repositories
+1. (Optional) Delete the \<deployment_name\>-cluster and \<deployment_name\>-container CodeCommit repositories
     1. CodeCommit repos are cheap
         1. If you think you may re-deploy the same deployment, you may want to ease future work by leaving these repos in place
         1. You could also download a zip of your repos, store them in S3, and then delete them
     1. Navigate to the AWS CodeCommit console
-        1. Check the box next to the <deployment_name>-container repo
+        1. Check the box next to the \<deployment_name\>-container repo
         1. Click the "Delete repository" button
             1. Confirm the deletion by typing "delete" in the provided field     
             1. Click the "Delete" button
-        1. Repeat the above steps for the <deployment_name>-cluster repo
+        1. Repeat the above steps for the \<deployment_name\>-cluster repo
 1. Confirm that all resources have been deleted
     1. Wait a day for deleted resources to update in the tag editor
     1. Navigate to the AWS Resource Groups and Tag Editor console
@@ -699,7 +699,7 @@ to proceed. Empty them and let CloudFormation delete them for you.
                 1. Key: 
                     1. Cost allocation tag
                 1. Value:
-                    1. <deployment_name>
+                    1. \<deployment_name\>
             1. Click the "Search resources" button
             1. Identify and delete any remaining resources
     
