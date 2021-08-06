@@ -42,7 +42,7 @@ OpenSARlab alleviates some of the pitfalls commonly encountered when teaching so
 
 ### As a Paid Service Managed by Alaska Satellite Facility Enterprise
  
-Contact ASF-E to discuss options for setting up an OpenSARlab deployment to suit your needs.
+Contact ASF-E (<uaf-jupyterhub-asf@alaska.edu>) to discuss options for setting up an OpenSARlab deployment to suit your needs.
 
 ### Deploy OpenSARlab to Your Own AWS Account _(Coming Soon)_
 
