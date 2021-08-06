@@ -67,7 +67,7 @@ Note: If you are comfortable with git, you could instead do a git pull from
 ## Changing a Notebook Kernel
 
 ### Why?
-Notebooks in OpenSARlab run in a variety of conda environments. If you a notebook is set to the kernel of the wrong environment, it will likely not have all the needed software packages it requires. 
+Notebooks in OpenSARlab run in a variety of conda environments. If a notebook is set to the kernel of the wrong environment it will likely not have all the needed software packages it requires. 
 
 ### How?
 From the `Kernel` menu, click `Change kernel` and select the desired kernel.
