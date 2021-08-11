@@ -17,10 +17,12 @@ edit_uri: ''
 
 nav:
   - Home: index.md
+  - Troubleshooting Guide: user-guides/troubleshooting_guide.md
   - User Guide:
     - user.md
     - Jupyter Notebook Intro: user-guides/jupyter_notebook_intro.md
     - Running Jupyter Notebook: user-guides/how_to_run_a_notebook.md
+    - Best Practices for Writing Notebooks: user-guides/class_notebooks_best_practices.md
     - Jupyter Magic Commands: user-guides/jupyter_magic.md
     - OpenSARlab Account Details: user-guides/OpenSARlab_environment.md
     - Git in OpenSARlab: user-guides/git_in_OpenSARlab.md
@@ -30,7 +32,6 @@ nav:
     - Installing Software in OpenSARlab: user-guides/installing_software_in_OpenSARlab.md
     - Conda Environments: user-guides/conda_environments.md
     - Logging Out and Server Shutdown: user-guides/logging_out_and_server_shutdown.md
-    - Troubleshooting Guide: user-guides/troubleshooting_guide.md
   - Developer Guide:
     - System Diagram: assets/system_diagrams/OpenSARlab_system_diagram_June_2021.png
     - Deploy OpenSARlab to AWS: dev-guides/deploy_OpenSARlab.md
