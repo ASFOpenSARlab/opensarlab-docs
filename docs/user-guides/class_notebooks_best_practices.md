@@ -47,6 +47,8 @@
 * If you are running a script that requires you to be in a particular working directory, use a context manager to handle directory changes. Write a function like this:
 
     ```python
+    import contextlib
+  
     @contextlib.contextmanager
     def work_dir(work_pth):
         cwd = Path.cwd()
