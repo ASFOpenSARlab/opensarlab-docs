@@ -46,27 +46,27 @@
 
 * If you are running a script that requires you to be in a particular working directory, use a context manager to handle directory changes. Write a function like this:
 
-    ```python
-    import contextlib
+     ```python
+  import contextlib
   
-    @contextlib.contextmanager
-    def work_dir(work_pth):
-        cwd = Path.cwd()
-        os.chdir(work_pth)
-        try:
-            yield
-        finally:
-            os.chdir(cwd)
+  @contextlib.contextmanager
+  def work_dir(work_pth):
+      cwd = Path.cwd()
+      os.chdir(work_pth)
+      try:
+          yield
+      finally:
+          os.chdir(cwd)
     ``` 
 
     Then, call it like this:
-    
+
     ```python
-    with work_dir(work_pth):
+  with work_dir(work_pth):
       !python my_script.py  
     ```
   
-  This will change to the correct working directory, call the script, and then change back to the original directory.
+    This will change to the correct working directory, call the script, and then change back to the original directory.
   
   
 
