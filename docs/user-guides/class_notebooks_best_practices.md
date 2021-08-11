@@ -16,6 +16,11 @@
 * Push the update to your notebook repo.
 * When students pull in your notebook repo, the notebooks will automatically run the correct kernel with no intervention (as long as the required environment has been created).
 
+### Clear Your Notebook Output Before Saving it
+
+* Saving a notebook with output in place increases it's file size substantially and slows down the time it takes to load.
+* [Restart your kernel and clear the notebook output](restarting_server_and_kernel.md) before saving and pushing notebooks to your repo. 
+
 ### Keep your Conda Environment Up to Date
 
 * Libraries and packages installed in your conda environment will be updated over time. If you are using a conda environment used for a previous class or training, test it first to confirm that it still builds properly. 
@@ -30,7 +35,7 @@
 * File sizes for run notebooks containing a lot of output can be quite large. Users with slow internet connections may have difficulty saving notebooks in this state. It can be risky to require that students submit assignments in the form of pre-run notebooks with output in place. Some students may simply not be able to save and turn in their work.
 
     * Consider allowing assignments to be turned in as screenshots pasted into a Word or Google doc and saved as a pdf.
-    * Consider splitting assignments into 2 notebooks, one with content/examples and another for the assignment. Pass all needed data structures from the content notebook to the assignment notebook using a pickle.
+    * Consider splitting assignments into 2 notebooks, one with content/examples and another for the assignment. Pass all needed data structures from the content notebook to the assignment notebook using a [Python pickle](https://docs.python.org/3/library/pickle.html).
     
 ### Avoid Changing Directories in Your Code
 
