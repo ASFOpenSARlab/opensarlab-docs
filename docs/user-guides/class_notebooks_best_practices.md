@@ -13,7 +13,7 @@
 ### Set the Notebook Metadata to Use the Correct Environment
 
 * Open your notebook, change into your conda environment's kernel, and save the notebook.
-* Push the update to your notebook repo
+* Push the update to your notebook repo.
 * When students pull in your notebook repo, the notebooks will automatically run the correct kernel with no intervention (as long as the required environment has been created).
 
 ### Keep your Conda Environment Up to Date
