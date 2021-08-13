@@ -53,22 +53,27 @@
 ### Plan for Students with Poor Internet Access
 ---
 
-* Saving a notebook without first clearing its output will increase the file size substantially. It can be risky to require that students submit assignments by running a notebook, saving it, and submitting it. Some students may not have a strong enough internet connection to save and turn in their work in this manner.
+<!-- edit 6 - first bullet point needs revision as it lacks why having a poor internet access is a risk-->
+* Saving a notebook without clearing its output first will increase the file size substantially. It is risky for students to submit an assignments by running a notebook, saving its result, and submitting afterwards since some students may not have a strong internet connection to save and turn in their work in this manner.
 
-* Consider allowing assignments to be turned in as screenshots pasted into a Word or Google doc and saved as a pdf.
+To avoid issues related to poor internet access, consider following options:
 
-* Consider splitting assignments into 2 notebooks, one with content/examples and another for the assignment. Pass all needed data structures from the content notebook to the assignment notebook using a [Python pickle](https://docs.python.org/3/library/pickle.html).
+* Allow assignments to be turned in as screenshots pasted into a Word,Google doc, etc. and conveted in pdf.
+
+* Split assignments into 2 notebooks: one for content/examples and another one for assignment. Pass required data structures from the content notebook to the assignment notebook using a [Python pickle](https://docs.python.org/3/library/pickle.html).
     
 ### Avoid Changing Directories in Your Code
+---
 
+<!-- edit 7 - first example could be improved with code example rather than verbally expalining them.-->
 * Why?
-    * Jupyter Notebook code cells can be run out of sequence. Users can skip over cells and/or re-run previous cells, which can cause unexpected problems. 
-        * For example: If you create and change into a directory like `some/other/path` in a code cell and it then gets re-run, you will end up in an unexpected directory like `some/other/path/some/other/path`. If you run it a 3rd time, you will end up in `some/other/path/some/other/path/some/other/path`. This will cause breaking code and a lot of confusion for students.
+    * Jupyter Notebook code cells can run its code in out of order. Users can skip over cells and/or re-run previous cells, which can cause unexpected problems. 
+        * For example: Consider a 2 line code that creates ```some/other/path``` and then goes into that directy. If this code gets re-run, you may end up doing same operation over and over with following result: `some/other/path/some/other/path/some/other/path/...`. This will cause breaking code and a confusion for students.
     
-* Where possible, don't change directories. Instead, provide absolute paths to functions that need them.
+* If possible, don't change directories. Instead, provide absolute paths to functions that need them.
 
-* If you are running a script that requires you to be in a particular working directory, use a context manager to handle directory changes. This will change to the correct working directory, call the script, and then change back to the original directory.
-    * Write a function like the example below:
+* If you are running a script that requires you to be in a particular working directory, use a context manager to handle directory changes. This will allow you to change to the correct working directory, call the script, and then change back to the original directory.
+    * For context manager, write a following function first:
 
 ```python
 import contextlib
@@ -83,7 +88,7 @@ def work_dir(work_pth):
       os.chdir(cwd)
 ``` 
 
-* Then, call it using `with`:
+* Then, call it using `with` keyword:
 
 ```python
 with work_dir(work_pth):
