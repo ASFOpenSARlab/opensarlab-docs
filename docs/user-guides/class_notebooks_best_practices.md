@@ -3,10 +3,19 @@
 # Developing Notebooks for Classes or Trainings: Best Practices
 
 ### Provide a Conda Environment Capable of Running the Notebooks
+---
 
-* Provide students with a conda environment that contains all needed software. [Conda Environments in OpenSARlab.](conda_environments.md)
+* Provide students with a conda environment that has everything they need. [Conda Environments in OpenSARlab.](conda_environments.md)
 
-* If you distribute an environment.yml file, students can upload it to the /home/jovyan/conda_environments/Environment_Configs/ directory and then create it using the /home/jovyan/conda_environments/Create_OSL_Conda_Environments.ipynb notebook.
+
+
+* Students can create new enviornment by:
+
+    1. Distributing ```environment.yml``` file
+    2. Upload ```environment.yml``` into following directory: ```/home/jovyan/conda_environments/Environment_Configs/```         
+    3. Create using ```Create_OSL_Conda_Environments.ipynb``` notebook located in ```/home/jovyan/conda_environments```
+
+<!-- * If you distribute an ```environment.yml``` file, students can upload it to the ```/home/jovyan/conda_environments/Environment_Configs/``` directory and then create it using the (```/home/jovyan/conda_environments/Create_OSL_Conda_Environments.ipynb```) notebook. -->
 
 * If dependency conflicts prevent you from installing the software needed to run all your notebooks in a single environment, you will need to create multiple conda environments to run different notebooks.
 
