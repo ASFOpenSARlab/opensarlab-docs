@@ -5,32 +5,37 @@
 ### Provide a Conda Environment Capable of Running the Notebooks
 ---
 
+<!-- edit 1 -->
 * Provide students with a conda environment that has everything they need. [Conda Environments in OpenSARlab.](conda_environments.md)
 
-
-
+<!-- edit 2 -->
+<!-- Note: broken down into multiple parts. May need to revise the objective (i.e. "Students can create new environment"-->
 * Students can create new enviornment by:
 
     1. Distributing ```environment.yml``` file
     2. Upload ```environment.yml``` into following directory: ```/home/jovyan/conda_environments/Environment_Configs/```         
     3. Create using ```Create_OSL_Conda_Environments.ipynb``` notebook located in ```/home/jovyan/conda_environments```
 
-<!-- * If you distribute an ```environment.yml``` file, students can upload it to the ```/home/jovyan/conda_environments/Environment_Configs/``` directory and then create it using the (```/home/jovyan/conda_environments/Create_OSL_Conda_Environments.ipynb```) notebook. -->
-
-* If dependency conflicts prevent you from installing the software needed to run all your notebooks in a single environment, you will need to create multiple conda environments to run different notebooks.
+<!-- edit 3 -->
+<!-- Note:  Broken down into two sentences. May need to revise what user needs to do. -->
+* You may encounter dependency conflicts that can prevent you from installing essential software(s) to run all of your notebooks in a single environment. In such cases, create multiple conda environments to run different notebooks.
 
 ### Set the Notebook Metadata to Use the Correct Environment
+---
 
-* Open your notebook, change into your conda environment's kernel, and save the notebook.
-* Push the update to your notebook repo.
-* When students pull in your notebook repo, the notebooks will automatically run the correct kernel with no intervention (as long as the required environment has been created).
+1. Open your notebook, change into your conda environment's kernel, and save the notebook.
+2. Push the update to your notebook repo.
+3. When students pull in your notebook repo, the notebooks will automatically run the correct kernel with no intervention (as long as the required environment has been created).
 
 ### Clear Your Notebook Output Before Saving it
-
-* Saving a notebook with output in place increases it's file size substantially and slows down the time it takes to load.
+---
+<!-- edit 4 -->
+<!-- Note: not sure "previous output(s)" is the right way to phrase this-->
+* Saving a notebook with previous output(s) increases its file size and slows down the time it takes to load.
 * [Restart your kernel and clear the notebook output](restarting_server_and_kernel.md) before saving and pushing notebooks to your repo. 
 
 ### Keep your Conda Environment Up to Date
+---
 
 * Libraries and packages installed in your conda environment will be updated over time. If you are using a conda environment used for a previous class or training, try re-creating it first to confirm that it still builds without any conflicts.
     * You can use the [Create_OSL_Conda_Environments](https://github.com/ASFOpenSARlab/opensarlab-envs/blob/main/Create_OSL_Conda_Environments.ipynb) in OpenSARlab to create them, which is located in the `/home/jovyan/conda_environments/` directory.
