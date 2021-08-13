@@ -37,16 +37,21 @@
 ### Keep your Conda Environment Up to Date
 ---
 
-* Libraries and packages installed in your conda environment will be updated over time. If you are using a conda environment used for a previous class or training, try re-creating it first to confirm that it still builds without any conflicts.
+* Libraries and packages installed in your conda environment will be updated over time. If you are using a conda environment that was used in a previous class or training, try re-creating it first to confirm that it still builds without any conflicts.
     * You can use the [Create_OSL_Conda_Environments](https://github.com/ASFOpenSARlab/opensarlab-envs/blob/main/Create_OSL_Conda_Environments.ipynb) in OpenSARlab to create them, which is located in the `/home/jovyan/conda_environments/` directory.
 
 
 ### Test Notebooks Ahead of Time.
+---
 
-* If there are assignment sections requiring students to code or refactor code, test the notebook with the correct solutions in place. This will alert you to potential problems which you may not otherwise notice.
-    * Example: The notebook runs the provided code successfully but when the student adds code needed to complete an assignment, there is not enough memory and the kernel crashes.
+<!-- edit 5 -->
+<!-- Note: Previous statement ("in place") was ambigious, hence replaced with "first". Confirm if this is what the initial author intended to do -->
+* If there are assignment sections requiring students to write or refactor code, test the notebook with the correct solutions first. This will alert you for potential issues that you may miss otherwise.
+    * Example: The notebook successfuly runs the provided code during initial run, but it may crash the kernel due to insufficient memory when student adds new code to complete the assignment. 
+    <!-- * Example: The notebook runs the provided code successfully at first, but when student adds code needed to complete an assignment, there is not enough memory and the kernel crashes. -->
 
 ### Plan for Students with Poor Internet Access
+---
 
 * Saving a notebook without first clearing its output will increase the file size substantially. It can be risky to require that students submit assignments by running a notebook, saving it, and submitting it. Some students may not have a strong enough internet connection to save and turn in their work in this manner.
 
