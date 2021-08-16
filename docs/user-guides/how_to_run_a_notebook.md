@@ -86,14 +86,14 @@
 - Select `Restart & Run All` from the Kernel Menu (restarts kernel)
 
 ### Rerunning a Notebook
-It is a recommended to restart the notebook kernel before rerunning a notebook. This is because any initialized variables and data structures from a previous run will be stored in memory, along with their values, which can lead to unintended results.
+It is a recommended to restart the notebook kernel before rerunning a notebook. This is because any initialized variables and data structures from a previous run will be stored in memory along with their values, which can lead to unintended results.
 
 An example of how you might get into trouble would be a code cell that creates a new subdirectory directory in your current working directory called "data" and moves into it. If you start in ~/notebooks, then after running the code cell once, you will be in ~/notebooks/data. If you run the cell a second time, you will be in ~notebooks/data/data. If you keep rerunning the cell, you will find yourself inside a deeply nested data directory, ~notebooks/data/data/data/data/data/data/. 
   
-- Select 'Restart' from the Kernel Menu
-- Select 'Restart & Clear Output' from the Kernel Menu
-- Select 'Restart & Run All' from the Kernel Menu
+- Select `Restart` from the Kernel Menu
+- Select `Restart & Clear Output` from the Kernel Menu
+- Select `Restart & Run All` from the Kernel Menu
 
 ## Clearing Cell Output Before Closing
-
-It is best practice to clear all code cells output prior to closing or saving a notebook. Leaving the output in place can lead to a tenfold increase in a notebook's file size. Not only does this use up more of your volume, it leads to slow notebook loading times (especially if you have a slow internet connection).
+<!-- what is "volume" referring to? -->
+It is recommended to clear every output from each code cells prior to closing or saving a notebook. Leaving the output in place can increase file size of notebook, which will use up more of your volume as well as slower loading time for utlizing notebook (especially if you have a slow internet connection).
