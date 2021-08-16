@@ -88,7 +88,10 @@
 ### Rerunning a Notebook
 It is a recommended to restart the notebook kernel before rerunning a notebook. This is because any initialized variables and data structures from a previous run will be stored in memory along with their values, which can lead to unintended results.
 
-An example of how you might get into trouble would be a code cell that creates a new subdirectory directory in your current working directory called "data" and moves into it. If you start in ~/notebooks, then after running the code cell once, you will be in ~/notebooks/data. If you run the cell a second time, you will be in ~notebooks/data/data. If you keep rerunning the cell, you will find yourself inside a deeply nested data directory, ~notebooks/data/data/data/data/data/data/. 
+*Example of unintended results:* Consider a case where you have a operation that creates a new subdirectory and goes inside. *i.e.* You are in `~/notebooks/` first but will be in `~/notebooks/data/` after running the cell.\
+If you run this cell more than once, you will fid yourself inside a nested directory. *e.g.* Running this cell `n` times will result in `~notebooks/data/data/data/data/data/data/...`.
+
+<!-- An example of how you might get into trouble would be a code cell that creates a new subdirectory directory in your current working directory called "data" and moves into it. If you start in ~/notebooks, then after running the code cell once, you will be in ~/notebooks/data. If you run the cell a second time, you will be in ~notebooks/data/data. If you keep rerunning the cell, you will find yourself inside a deeply nested data directory, ~notebooks/data/data/data/data/data/data/.  -->
   
 - Select `Restart` from the Kernel Menu
 - Select `Restart & Clear Output` from the Kernel Menu
