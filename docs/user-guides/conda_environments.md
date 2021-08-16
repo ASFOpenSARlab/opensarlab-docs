@@ -17,4 +17,4 @@ Following 5 conda environments are provided by ASF to run the notebooks in our l
 <!-- note: Not sure what "This is easily accomplished by running a notebook written for the purpose" is trying to impley -->
 However, these environments are not pre-built and must be created by each user. This is easily accomplished by running a notebook written for the purpose. The notebook can be found in your OpenSARlab account under following path: `/home/jovyan/conda_environments/Create_OSL_Conda_Environments.ipynb`
 
-Users can also create their own custom conda environments in OpenSARlab and use them to run Jupyter Notebooks. Use notebook under ```/home/jovyan/notebooks/OpenSARlab_supplements/Custom_Conda_Environments.ipynb``` in your OpenSARlab account and follow the process. 
+Users can also create their own custom conda environments in OpenSARlab and use them to run Jupyter Notebooks. Use notebook under `home/jovyan/notebooks/OpenSARlab_supplements/Custom_Conda_Environments.ipynb` in your OpenSARlab account and follow the process. 
