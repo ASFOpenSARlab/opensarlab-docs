@@ -17,10 +17,10 @@
  
 #### Select Multiple Cells in Non-Edit Mode
 1. Select a cell in non-edit mode
-2. Select additional cells with:
+1. Select additional cells with:
     - `Shift + J` or `Shift + Down-Arrow` to select additional cells below
     - `Shift + K` or `Shift + Up-Arrow` to select additional cells above
-3. Perform batch operations on selected cells
+1. Perform batch operations on selected cells
 
 ![Multpile selected cells](../assets/select_mult_cells.png)
 
@@ -50,7 +50,7 @@
 ## Running Cells
 ![Clicking the Run button to run a cell](../assets/cell_numbers.png)
 
-*Since code cells may run in any order, they are numbered in the order they ran.*
+*Since code cells may be run in any order, they are numbered in the order they ran.*
  
 ---
 
@@ -73,23 +73,25 @@
 
 ### Run a Cell and every Cell Above or Below It
 - Select a cell in edit or non-edit mode
-    - Select `Run All Above` from the Cell Menu
-    - Select `Run All Below` from the Cell menu
+    - Select `Run All Above` from the "Cell" menu
+    - Select `Run All Below` from the "Cell" menu
 
 ### Run a batch of selected cells
 - Select a group of cells
     - Click the `Run` Button
-    - Select `Run Cells` from the "Cells Menu"
+    - Select `Run Cells` from the "Cell" menu
 
 ### Run an Entire Notebook
-- Select `Run All` from the "Cells Menu" (does not restart the kernel)
-- Select `Restart & Run All` from the Kernel Menu (restarts kernel)
+- Select `Run All` from the "Cell" menu (does not restart the kernel)
+- Select `Restart & Run All` from the "Kernel" Menu (restarts kernel)
 
 ### Rerunning a Notebook
 It is a recommended to restart the notebook kernel before rerunning a notebook. This is because any initialized variables and data structures from a previous run will be stored in memory along with their values, which can lead to unintended results.
 
-*Example of unintended results:* Consider a case where you have a operation that creates a new subdirectory and goes inside. *i.e.* You are in `~/notebooks/` first but will be in `~/notebooks/data/` after running the cell.\
-If you run this cell more than once, you will fid yourself inside a nested directory. *e.g.* Running this cell `n` times will result in `~notebooks/data/data/data/data/data/data/...`.
+*Example of unintended results:* Consider a case where you have an operation that creates a new subdirectory and goes inside. *i.e.* You are in `~/notebooks/` first but will be in `~/notebooks/data/` after running the cell.\
+If you run this cell more than once, you will find yourself inside a nested directory. *e.g.* Running this cell `n` times will result in `~notebooks/data/data/data/data/data/data/...`.
+<!--  use diff example; use appending in list example -->
+
 
 <!-- An example of how you might get into trouble would be a code cell that creates a new subdirectory directory in your current working directory called "data" and moves into it. If you start in ~/notebooks, then after running the code cell once, you will be in ~/notebooks/data. If you run the cell a second time, you will be in ~notebooks/data/data. If you keep rerunning the cell, you will find yourself inside a deeply nested data directory, ~notebooks/data/data/data/data/data/data/.  -->
   

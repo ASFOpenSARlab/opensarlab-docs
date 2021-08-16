@@ -57,6 +57,7 @@ To avoid issues related to poor internet access, consider following options:
 * Why?
     * Users can run Jupyter Notebook code cells in any order. Users can skip over cells and/or re-run previous cells, which can cause unexpected problems. 
         * For example: Consider a 2 line code that creates ```some/other/path``` and then goes into that directy. If this code gets re-run, you may end up doing same operation over and over with following result: `some/other/path/some/other/path/some/other/path/...`. This will cause breaking code and a confusion for students.
+<!--  use diff example; use appending in list example -->
     
 <!-- screenshot here if necessary -->
     
