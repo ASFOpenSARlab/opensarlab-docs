@@ -2,7 +2,9 @@
 
 # Creating and Using Conda Environments in OpenSARlab
 
-OpenSARlab comes with a default base conda environment in which very little software is installed. Users must create conda environments in which to run Jupyter Notebooks or Python scripts.
+OpenSARlab comes with a default base conda environment with minimum amount of software installed. Users must create their own conda environments to run Jupyter Notebooks or Python scripts.
+
+<!-- OpenSARlab comes with a default base conda environment in which very little software is installed. Users must create conda environments in which to run Jupyter Notebooks or Python scripts. -->
 
 There are currently 5 conda environments provided by ASF to run the notebooks in our library:
 
