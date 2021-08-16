@@ -93,12 +93,9 @@ If you run this cell more than once, you will find yourself inside a nested dire
 <!--  use diff example; use appending in list example -->
 
 
-<!-- An example of how you might get into trouble would be a code cell that creates a new subdirectory directory in your current working directory called "data" and moves into it. If you start in ~/notebooks, then after running the code cell once, you will be in ~/notebooks/data. If you run the cell a second time, you will be in ~notebooks/data/data. If you keep rerunning the cell, you will find yourself inside a deeply nested data directory, ~notebooks/data/data/data/data/data/data/.  -->
-  
 - Select `Restart` from the Kernel Menu
 - Select `Restart & Clear Output` from the Kernel Menu
 - Select `Restart & Run All` from the Kernel Menu
 
 ## Clearing Cell Output Before Closing
-<!-- what is "volume" referring to? -->
-It is recommended to clear every output from each code cells prior to closing or saving a notebook. Leaving the output in place can increase file size of notebook, which will use up more of your volume as well as slower loading time for utlizing notebook (especially if you have a slow internet connection).
+It is recommended to clear every output from each code cells prior to closing or saving a notebook. Leaving the output in place can increase file size of notebook, which will use up more of your volume and cause slower notebook loading times (especially if you have a slow internet connection).
