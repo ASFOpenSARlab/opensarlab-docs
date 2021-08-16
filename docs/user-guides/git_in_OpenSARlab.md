@@ -8,19 +8,17 @@ ASF's OpenSARlab Jupyter Notebook library lives in the
 
 ### Gitpuller
 
-A [smart git puller](https://jupyterhub.github.io/nbgitpuller/) pulls any changes to the <!--which repo?--> repo each time a user's OpenSARlab server starts up. 
+A [smart git puller](https://jupyterhub.github.io/nbgitpuller/) pulls any changes to the [notebook repo](https://github.com/ASFOpenSARlab/opensarlab-notebooks) each time a user's OpenSARlab server starts up. 
 
-If a user has made changes to a notebook and the same notebook has been updated by ASF in the `asf-jupyter-notebooks` repo following will occur:
+If a user has made changes to a notebook and the same notebook has been updated by ASF in the `asf-jupyter-notebooks` repo, the following will occur:
  * User will end up with two copies of that notebook.
  * User's version of the notebook will have a timestamp appended to its name. 
  * The notebook with the original, unaltered name will contain the new changes made by ASF.
 
-<!-- e.g. user's version: example_file_08132021:13:25:45
-          original: example_file
-    note: this example may not be necessary
--->
-
-<!-- If a user has made changes to a notebook and the same notebook has been updated by ASF in the asf-jupyter-notebooks repo, user will end up with two copies of that notebook. The user's version of the notebook will have a timestamp appended to its name. The notebook with the original, unaltered name will contain the new changes made by ASF. -->
+*Example:*    
+* Original: `example_file`
+* User's version: `example_file_08132021:13:25:45`
+* Updated by ASF: `example_file`
 
 Please note that the gitpuller will __not__ run if:
 
@@ -37,4 +35,4 @@ Please note that the gitpuller will __not__ run if:
 1. A fresh copy of the repo will be cloned into your account.
 
 ### Using Other Git Repositories in OpenSARlab
-Users can use any repo they wish in OpenSARlab. It is best to clone any additional repos alongside or above the `notebooks` directory, which the `asf-jupyter-notebooks` repo is also stored. This prevents issues that may arise from nesting repositories inside each other. **Clone your repos to `/home/jovyan`**, which can be done [in the terminal](OpenSARlab_terminal.md).
+Users can use any repo they wish in OpenSARlab. It is best to clone any additional repos alongside or above the `notebooks` directory, where the `asf-jupyter-notebooks` repo is also stored. This prevents issues that may arise from nesting repositories inside each other. **Clone your repos to `/home/jovyan`**, which can be done [in the terminal](OpenSARlab_terminal.md).
