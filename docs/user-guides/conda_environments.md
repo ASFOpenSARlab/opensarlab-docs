@@ -6,7 +6,7 @@ OpenSARlab comes with a default base conda environment with minimum amount of so
 
 <!-- OpenSARlab comes with a default base conda environment in which very little software is installed. Users must create conda environments in which to run Jupyter Notebooks or Python scripts. -->
 
-There are currently 5 conda environments provided by ASF to run the notebooks in our library:
+Following 5 conda environments are provided by ASF to run the notebooks in our library:
 
 1. rtc_analysis
 1. insar_analysis
@@ -14,6 +14,7 @@ There are currently 5 conda environments provided by ASF to run the notebooks in
 1. hydrosar
 1. machine learning
 
-These environments are not pre-built and must be created by each user. This is easily accomplished by running a notebook written for the purpose. The notebook can be found in your OpenSARlab account at the path: `/home/jovyan/conda_environments/Create_OSL_Conda_Environments.ipynb`
+<!-- note: Not sure what "This is easily accomplished by running a notebook written for the purpose" is trying to impley -->
+However, these environments are not pre-built and must be created by each user. This is easily accomplished by running a notebook written for the purpose. The notebook can be found in your OpenSARlab account under following path: `/home/jovyan/conda_environments/Create_OSL_Conda_Environments.ipynb`
 
-Users can also create their own custom conda environments in OpenSARlab, and use them to run Jupyter Notebooks. Use the notebook found at this path in your OpenSARlab account to walk through the process: `/home/jovyan/notebooks/OpenSARlab_supplements/Custom_Conda_Environments.ipynb` 
+Users can also create their own custom conda environments in OpenSARlab and use them to run Jupyter Notebooks. Use notebook under ```/home/jovyan/notebooks/OpenSARlab_supplements/Custom_Conda_Environments.ipynb``` in your OpenSARlab account and follow the process. 
