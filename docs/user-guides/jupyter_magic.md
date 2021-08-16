@@ -2,7 +2,7 @@
 
 # Jupyter Line and Cell Magics, and IPython Syntax
 
-Jupyter Notebook magic commands provide shortcuts and functionality to the notebooks in addition to what can be done with standard Python code. An exhaustive list of magic commands can be found in the [IPython docs](https://ipython.readthedocs.io/en/stable/interactive/magics.html). 
+Jupyter Notebook magic commands provide shortcuts and functionality to the notebooks in addition to what can be done with pure Python code. An exhaustive list of magic commands can be found in the [IPython docs](https://ipython.readthedocs.io/en/stable/interactive/magics.html). 
 
 While all magic commands are available to users, we tend to use a relatively small selection of them in OpenSAR lab. 
 
@@ -10,8 +10,6 @@ Magic commands that are frequently used are following:
 - IPython's Shell Assignment Syntax
 - Line Magics
 - Cell Magics
-
-<!-- These fall into two categories: line magics and cell magics. We also frequently use Ipython's shell assignment syntax. -->
 
 ## IPython Shell Assignment with "!"
 ---
@@ -25,6 +23,9 @@ Simply start a line of code with `!` and it will run the command in the shell.
 
 Line magics start with a single `%` and effect only the line on which they are used. 
 
+Following line magics are commonly used:
+
+<!-- backtick the h3? -->
 ### %matplotlib inline
 Allows **non-interactive** matplotlib plots to be displayed in a notebook.
 
