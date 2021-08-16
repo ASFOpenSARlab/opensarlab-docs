@@ -36,7 +36,5 @@ Please note that the gitpuller will __not__ run if:
 1. Restart your server.
 1. A fresh copy of the repo will be cloned into your account.
 
-
-
 ### Using Other Git Repositories in OpenSARlab
-Users can use any repo they wish in OpenSARlab. It is best to clone any additional repos alongside or above the "notebooks" directory, which is where the asf-jupyter-notebooks repo is stored. This avoids issues that will arise from nesting repositories inside each other. **Clone your repos to /home/jovyan**, which is easily done [in the terminal](OpenSARlab_terminal.md)
+Users can use any repo they wish in OpenSARlab. It is best to clone any additional repos alongside or above the `notebooks` directory, which the `asf-jupyter-notebooks` repo is also stored. This prevents issues that may arise from nesting repositories inside each other. **Clone your repos to `/home/jovyan`**, which can be done [in the terminal](OpenSARlab_terminal.md).
