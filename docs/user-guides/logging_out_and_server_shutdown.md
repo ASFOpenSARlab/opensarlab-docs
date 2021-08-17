@@ -2,10 +2,17 @@
 
 # Logging Out of OpenSARlab and Shutting Down the Server
 
-When you are ready to stop working in OpenSARlab, it is best practice to shut down your server and also logout.
+<!-- definitive statement > suggestion  -->
+When you are ready to stop working in OpenSARlab, it is important to shut down your server and also logout.
 
+<!-- Should we still include potential auto shutdown? -->
 ## Why Shut Down the Server?
-Logging out will not shut down the server. If the server is inactive for an hour, it will shut down automatically, but users should not rely upon this feature. If there are any running processes in your account, they will keep the server alive, and it is not always apparent that there is a process running. If you login for the first time in a day or two and notice that a Jupyter Notebook is still running, your server ran that whole time. 
+<!--prev
+ If the server is inactive for an hour, it will shut down automatically, but users should not rely upon this feature.  -->
+
+Always assume that logging out will not shut down the server on its own. While server may shut down automatically after an hour of inactivity, user should not rely on this feature. 
+
+If there are any process running in your account, they will keep your server alive, and it is not always apparent that there is a process running. If you login for the first time in a day or two and notice that a Jupyter Notebook is still running, your server ran that whole time. 
 
 Do your part to reduce resource use and ease the burden on the environment by shutting down your server when you are finished working for the day. 
 
