@@ -27,12 +27,15 @@ Following line magics are commonly used:
 
 <!-- backtick the h3? -->
 ### `%matplotlib inline`
+---
 Allows **non-interactive** `matplotlib plots` to be displayed in a notebook.
 
 ### `%matplotlib notebook`
-Allows **interactive** `matplotlib plots` to be displayed and interacted with inside of a notebook. <!-- within a notebook?  -->
+---
+Allows **interactive** `matplotlib plots` to be displayed and interacted with inside of a Jupyter Notebook. 
 
 ### `%df`
+---
 This is a custom magic written specifically for OpenSARlab. It uses the python function `shutil.disk_usage()` to check the state of storage on user's volumes. 
 
 - `%df` returns a human readable string in GB. 
@@ -47,9 +50,11 @@ This is a custom magic written specifically for OpenSARlab. It uses the python f
 Cell magics start with `%%` and effect the contents of an entire cell. 
 
 ### `%%javascript or %%js`
+---
 Runs a JavaScript code cell. 
 
 *Note:* leave a blank line above the magic command in the beginning of the code cell.
 
 ### `%%capture`
-Runs the cell but captures all output. We typically use this to suppress output of a `matplotlib plot` that the user do no wish to see. <!--the display of a `matplotlib plot` we do not wish to show.-->
+---
+Runs the cell but captures all output. We typically use this to suppress output of a `matplotlib plot` that the user does not wish to see. 
