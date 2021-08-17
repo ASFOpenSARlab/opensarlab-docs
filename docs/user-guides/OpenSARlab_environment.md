@@ -2,9 +2,9 @@
 
 # The OpenSARlab Environment and Account Lifecycle
 ## Account Lifecycle
-- Accounts will be deactivated on the 46th day of inactivity
-- Warning emails are sent to inactive users after 30, 37, 41, 43, and 45 days
-- The user volume and snapshot are permanently destroyed upon account deactivation
+- Accounts will be deactivated on the **46th** day of inactivity.
+- Warning emails are sent to inactive users after **30**, **37**, **41**, **43**, and **45** days.
+- The user volume and snapshot are **permanently destroyed** upon account deactivation.
 
 
 
@@ -12,6 +12,7 @@
 Every OpenSARlab user has access to an Amazon AWS EC2 instance. Individual instances are shared among groups of 1 - 3 users, depending on demand.
 
 ### Operating System
+<!-- Current (Aug. 17, 2021) up-to-date version is 20.04, but not sure if that's the case for OpenSARlab-->
 - Ubuntu 18.04
 
 ### Volume (storage)
