@@ -7,7 +7,7 @@
 Jupyter Notebook is a web application that allows users to display: 
 
 * Interactive and runnable code cells, which is typically written in [Python](https://docs.python.org/3/)
-* [Markdown](https://www.markdownguide.org/) cells containing explanatory text, formulas, hyperlinks, tables, pseudocode, images, etc.
+* [Markdown](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html) cells containing explanatory text, formulas, hyperlinks, tables, pseudocode, images, etc.
 
 Jupyter Notebook provides an ideal format for teaching/learning coding concepts, prototyping algorithms, and collaborating on Python projects. 
 
