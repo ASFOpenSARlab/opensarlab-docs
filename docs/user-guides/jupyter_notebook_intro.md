@@ -15,11 +15,14 @@ Jupyter Notebook provides an ideal format for teaching/learning coding concepts,
  Jupyter Notebook is a web application that allows users to display interactive and runnable code cells (typically written in Python) alongside markdown cells containing explanatory text, formulas, hyperlinks, tables, pseudocode, and images. Jupyter Notebook provides an ideal format for teaching/learning coding concepts, prototyping algorithms, and collaborating on Python projects.  -->
 
 ## Cells
-<!-- bullet points for 2 categories -->
-Jupyter Notebook has 4 cell types. In OpenSARlab, we use two of them, "markdown cells" and "code cells."
+Jupyter Notebook has 4 cell types. In OpenSARlab, we use the following two:
+* Markdown cells
+* Code cells
  
 ### Markdown Cells
-Markdown cells contain documentation in Markdown, HTML, and/or Latex. They may contain text, images, hyperlinks, formulas, tables, pseudocode, plots, and figures. 
+---
+<!-- contain docs of markdown... or able to write in markdown? -->
+Markdown cells contain documentation in Markdown, HTML, and/or LaTeX. They may contain text, images, hyperlinks, formulas, tables, pseudocode, plots, figures, etc. 
 
 -  To enter edit mode in a markdown cell, double click it.
 
@@ -29,6 +32,7 @@ Markdown cells contain documentation in Markdown, HTML, and/or Latex. They may c
 
 ---
 
+<!--  move pass what? -->
 - To move past or display a markdown cell's content, run it. 
  
 ![A run markdown cell.](../assets/markdown_run.png)
@@ -38,10 +42,17 @@ Markdown cells contain documentation in Markdown, HTML, and/or Latex. They may c
 ---
  
 ### Code Cells
- Code cells contain editable, runnable Python code. You  can run them in any order, any number of times.
+---
+ Code cells contain editable and runnable Python code. You can run them in any order for any number of times.
  
- The ability to run and rerun code cells in arbitrary order can be helpful but can also cause  problems. For instance, recycled variables can end up with unexpected values if cells are
- run in an order not intended by a notebook's author.
+ The ability to run/rerun code cells in arbitrary order can be helpful, but it can also cause problems. 
+ 
+*e.g.* Recycled variables may end up with unexpected values if cells are ran in out of order sequence.
+
+<!-- maybe use "incorrect order" instead of out-of-order  -->
+
+ <!--prev 
+ For instance, recycled variables can end up with unexpected values if cells are ran in an order not intended by a notebook's author. -->
  
  ![A code cell.](../assets/code_cell.png)
 
