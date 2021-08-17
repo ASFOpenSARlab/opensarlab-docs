@@ -27,11 +27,12 @@ Do your part to reduce resource use and ease the burden on the environment by sh
 
 ## How to Shut Down The Server and Logout
 
-#### Click The Control Panel Button
+### Click The Control Panel Button
+---
 
 ![Click the Control Panel button](../assets/control_panel.png)
 
-*Click the Control Panel button at the top right of the file manager or in an open notebook*
+*Click the **Control Panel** button at the top right corner of the file manager or in an open notebook.*
 
 ---
 
@@ -39,7 +40,7 @@ Do your part to reduce resource use and ease the burden on the environment by sh
 
 ![Click the Stop My Server button](../assets/stop_my_server.png)
 
-*Click the Stop My Server button that appears*
+*Click the **Stop My Server** button that appears.*
 
 ---
 
@@ -47,7 +48,7 @@ Do your part to reduce resource use and ease the burden on the environment by sh
 
 ![Click the Logout button](../assets/logout_2.png)
 
-*Click the Logout button*
+*Click the **Logout** button.*
 
 ---
 
