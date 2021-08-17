@@ -2,7 +2,7 @@
 
 # Jupyter Line and Cell Magics, and IPython Syntax
 
-Jupyter Notebook magic commands provide shortcuts and functionality to the notebooks in addition to what can be done with pure Python code. An exhaustive list of magic commands can be found in the [IPython docs](https://ipython.readthedocs.io/en/stable/interactive/magics.html). 
+Jupyter Notebook magic commands provide shortcuts and extra functionality to the notebooks in addition to what can be done with pure Python code. An exhaustive list of magic commands can be found in the [IPython docs](https://ipython.readthedocs.io/en/stable/interactive/magics.html). 
 
 While all magic commands are available to users, we tend to use a relatively small selection of them in OpenSAR lab. 
 
@@ -13,7 +13,7 @@ Magic commands that are frequently used are following:
 
 ## IPython Shell Assignment with "!"
 ---
-In IPython syntax the exclamation mark allows users to run shell commands from inside a Jupyter Notebook code cell.
+In IPython syntax, the exclamation mark (!) allows users to run shell commands from inside a Jupyter Notebook code cell.
 Simply start a line of code with `!` and it will run the command in the shell. 
 
 *Example:* ```!pwd``` will print the current working directory.
@@ -30,10 +30,10 @@ Following line magics are commonly used:
 Allows **non-interactive** `matplotlib plots` to be displayed in a notebook.
 
 ### `%matplotlib notebook`
-Allows **interactive** `matplotlib plots` to be displayed and interacted with inside of a notebook.
+Allows **interactive** `matplotlib plots` to be displayed and interacted with inside of a notebook. <!-- within a notebook?  -->
 
 ### `%df`
-This is a custom magic written specifically for OpenSARlab. It uses the python function `shutil.disk_usage()` to check the state of storage on user volumes. 
+This is a custom magic written specifically for OpenSARlab. It uses the python function `shutil.disk_usage()` to check the state of storage on user's volumes. 
 
 - `%df` returns a human readable string in GB. 
 - `%df --raw` returns a raw data object
@@ -52,4 +52,4 @@ Runs a JavaScript code cell.
 *Note:* leave a blank line above the magic command in the beginning of the code cell.
 
 ### `%%capture`
-Runs the cell but captures all output. We typically use this to suppress the display of a `matplotlib plot` we do not wish to show.
+Runs the cell but captures all output. We typically use this to suppress output of a `matplotlib plot` that the user do no wish to see. <!--the display of a `matplotlib plot` we do not wish to show.-->
