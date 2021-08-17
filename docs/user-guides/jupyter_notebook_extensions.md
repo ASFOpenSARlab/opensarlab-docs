@@ -13,7 +13,7 @@ The easiest way to manage notebook extensions is via the `nbextensions` tab.
 
 ---
 
-Once the `nbextensions` tab is open, you can select individual extensions to learn how they function. You can also choose to enable or disable each extension(s).
+Once the `nbextensions` tab is open, you can select individual extensions to learn how they function. You can also choose to enable or disable each extension.
 
 ![Selecting an extension and enabling it.](../assets/manage_extensions.png)
 
