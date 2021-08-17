@@ -2,6 +2,8 @@
 
 # Installing Software in OpenSARlab
 
+<!-- according to GitHub, \<> shows escape slash -->
+
 ## pip
 ### You can install pip packages to your `/home/jovyan/.local/lib/python3.7/site-packages` directory
 1. Open a terminal and use following command:
