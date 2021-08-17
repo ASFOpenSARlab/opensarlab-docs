@@ -3,9 +3,11 @@
 # A Light Introduction to Jupyter Notebook
 [https://jupyter.org/](https://jupyter.org/)
 
-Jupyter Notebook is a web application that allows users to display interactive, runnable code cells (typically written in Python) alongside markdown cells containing explanatory text, formulas, hyperlinks, tables, pseudocode, and images. Jupyter Notebook provides an ideal format for teaching/learning coding concepts, prototyping algorithms, and collaborating on Python projects. 
+<!-- break down into two parts for Python and Markdown -->
+Jupyter Notebook is a web application that allows users to display interactive and runnable code cells (typically written in Python) alongside markdown cells containing explanatory text, formulas, hyperlinks, tables, pseudocode, and images. Jupyter Notebook provides an ideal format for teaching/learning coding concepts, prototyping algorithms, and collaborating on Python projects. 
 
 ## Cells
+<!-- bullet points for 2 categories -->
 Jupyter Notebook has 4 cell types. In OpenSARlab, we use two of them, "markdown cells" and "code cells."
  
 ### Markdown Cells
