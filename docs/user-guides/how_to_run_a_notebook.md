@@ -88,9 +88,9 @@
 ### Rerunning a Notebook
 It is a recommended to restart the notebook kernel before rerunning a notebook. This is because any initialized variables and data structures from a previous run will be stored in memory along with their values, which can lead to unintended results.
 
-*Example of unintended results:* Consider a case where you have an operation that creates a new subdirectory and goes inside. *i.e.* You are in `~/notebooks/` first but will be in `~/notebooks/data/` after running the cell.\
-If you run this cell more than once, you will find yourself inside a nested directory. *e.g.* Running this cell `n` times will result in `~notebooks/data/data/data/data/data/data/...`.
-<!--  use diff example; use appending in list example -->
+*Example of unintended results:* Consider a case where you have a Python list with date specific data, such as weather, stock prices, etc. If you were to append specific day's data, you would do something like `lst.append(today)`. However, running this cell more than once will yield unpredictable result due to duplication of today's data. 
+
+*e.g.* Running this cell `n` times will result in `[day_before, yesterday, today, today, today, today, ...]`.
 
 
 - Select `Restart` from the Kernel Menu

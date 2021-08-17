@@ -56,10 +56,7 @@ To avoid issues related to poor internet access, consider following options:
 
 * Why?
     * Users can run Jupyter Notebook code cells in any order. Users can skip over cells and/or re-run previous cells, which can cause unexpected problems. 
-        * *Example:* Consider a Python list that contain a data specific to each day (e.g. temperature, stock price, etc.). To store today's data, you can use `lst.append(todays_data)`. However, you may end with duplicate data in your list if you run this code multiple times since previous output is preserved and hence you are appending `todays_data` multiple times. This may result in breaking code and/or a confusion for students.
-
-        <!-- * For example: Consider a 2 line code that creates ```some/other/path``` and then goes into that directy. If this code gets re-run, you may end up doing same operation over and over with following result: `some/other/path/some/other/path/some/other/path/...`. This will cause breaking code and a confusion for students. -->
-<!--  use diff example; use appending in list example -->
+        * *Example:* Consider a Python list that contain a data specific to each day (e.g. temperature, stock price, etc.). To store today's data, you can use `lst.append(todays_data)`. However, you may end with duplicate data in your list if you run this code multiple times since previous output is preserved and thus you are appending `todays_data` multiple times. This may result in breaking code and/or a confusion for students.
     
 <!-- screenshot here if necessary -->
     
