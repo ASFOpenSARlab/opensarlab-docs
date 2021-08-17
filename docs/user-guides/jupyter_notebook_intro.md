@@ -3,8 +3,16 @@
 # A Light Introduction to Jupyter Notebook
 [https://jupyter.org/](https://jupyter.org/)
 
-<!-- break down into two parts for Python and Markdown -->
-Jupyter Notebook is a web application that allows users to display interactive and runnable code cells (typically written in Python) alongside markdown cells containing explanatory text, formulas, hyperlinks, tables, pseudocode, and images. Jupyter Notebook provides an ideal format for teaching/learning coding concepts, prototyping algorithms, and collaborating on Python projects. 
+<!-- Which Markdown docs should we introduce? -->
+Jupyter Notebook is a web application that allows users to display: 
+
+* Interactive and runnable code cells, which is typically written in [Python](https://docs.python.org/3/)
+* [Markdown](https://www.markdownguide.org/) cells containing explanatory text, formulas, hyperlinks, tables, pseudocode, images, etc.
+
+Jupyter Notebook provides an ideal format for teaching/learning coding concepts, prototyping algorithms, and collaborating on Python projects. 
+
+<!-- prev
+ Jupyter Notebook is a web application that allows users to display interactive and runnable code cells (typically written in Python) alongside markdown cells containing explanatory text, formulas, hyperlinks, tables, pseudocode, and images. Jupyter Notebook provides an ideal format for teaching/learning coding concepts, prototyping algorithms, and collaborating on Python projects.  -->
 
 ## Cells
 <!-- bullet points for 2 categories -->
