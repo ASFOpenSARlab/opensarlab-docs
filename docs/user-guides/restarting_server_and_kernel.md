@@ -18,7 +18,7 @@ Note: If you are comfortable with git, you could instead do a git pull from
 
 ![Click the Control Panel button](../assets/control_panel.png)
 
-*Click the Control Panel button at the top right of the file manager or in an open notebook*
+*Click the **Control Panel** button at the top right corner of the file manager or in an open notebook*
 
 ---
 
@@ -26,7 +26,7 @@ Note: If you are comfortable with git, you could instead do a git pull from
 
 ![Click the Stop My Server button](../assets/stop_my_server.png)
 
-*Click the Stop My Server button that appears*
+*Click the **Stop My Server** button that appears*
 
 ---
 
@@ -34,7 +34,7 @@ Note: If you are comfortable with git, you could instead do a git pull from
 
 ![Click the Start My Server button](../assets/start_my_server.png)
 
-*Click the Start My Server button, which may take a few seconds to appear*
+*Click the **Start My Server** button, which may take a few seconds to appear*
 
 ---
 
