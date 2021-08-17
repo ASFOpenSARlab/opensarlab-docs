@@ -21,7 +21,7 @@ Do your part to reduce resource use and ease the burden on the environment by sh
 
 ---
 
-#### Click The Stop My Server Button
+### Click The Stop My Server Button
 
 ![Click the Stop My Server button](../assets/stop_my_server.png)
 
@@ -29,7 +29,7 @@ Do your part to reduce resource use and ease the burden on the environment by sh
 
 ---
 
-#### Click The Logout Button
+### Click The Logout Button
 
 ![Click the Logout button](../assets/logout_2.png)
 
