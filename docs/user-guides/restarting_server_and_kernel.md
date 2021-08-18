@@ -72,7 +72,9 @@ A quick solution in either of those cases is to restart your server. Restarting 
 
 ### Why?
 ---
-Notebooks in OpenSARlab run in a variety of conda environments. If a notebook is set to the kernel of the wrong environment it will likely not have all the needed software packages it requires. 
+Notebooks in OpenSARlab run in a variety of [conda](https://docs.conda.io/en/latest/) environments. If a notebook is set to the kernel with the wrong environment, it may not have all the software packages it requires.
+<!--prev
+ If a notebook is set to the kernel with the wrong environment, it will likely not have all the needed software packages it requires.  -->
 
 ### How?
 ---
