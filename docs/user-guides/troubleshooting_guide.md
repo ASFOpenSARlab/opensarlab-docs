@@ -19,7 +19,7 @@ To work with a deep stack covering an extensive AOI, you may need to tile up you
 ## I successfully ran a notebook earlier on the same data but now it is killing the kernel.
 ---
 
-OpenSARlab EC2 instances are shared among 1-3 users. The memory available to each user on an instance varies with overall activity on the EC2. It is likely that there was enough memory available for your process the first time you attempted it, but there wasn't on the subsequent attempt. More details on the OpenSARlab user environment can be found [here](OpenSARlab_environment.md).
+OpenSARlab EC2 instances are shared among 1~3 users. The memory available to each user on an instance varies with overall activity on the EC2. It is likely that there was enough memory available for your process during your first attempt, but there was not enough memory during subsequent attempt. More details on the OpenSARlab user environment can be found [here](OpenSARlab_environment.md).
 
 ## When I open a notebook, I receive "Kernel not found" message.
 ---
