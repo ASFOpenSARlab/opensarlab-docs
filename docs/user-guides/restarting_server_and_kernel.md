@@ -5,66 +5,66 @@
 ## Restarting the OpenSARlab Server
 ### Why?
 ---
-Perhaps you have deleted or altered a notebook in the ASF notebook library and want to retrieve the original. Maybe you know that a notebook update was just made and you would like to immediately pull in changes from the [asf-jupyter-notebook repo](https://github.com/asfadmin/asf-jupyter-notebooks). A quick solution in either of those cases is to restart your server.
+Perhaps you have deleted or altered a notebook in the ASF notebook library and want to retrieve the original. Maybe you know that a notebook update was just made and you would like to immediately pull in changes from the [asf-jupyter-notebook repo](https://github.com/asfadmin/asf-jupyter-notebooks). 
 
-Restarting the server triggers the git puller to run.
+A quick solution in either of those cases is to restart your server. Restarting the server triggers the git puller to run.
 
-Note: If you are comfortable with git, you could instead do a git pull from 
-[the terminal](OpenSARlab_terminal.md) or in a notebook. 
+*Note:* If you are comfortable with git, you could do a git pull from 
+[the terminal](OpenSARlab_terminal.md) or in a notebook instead. 
 
 ### How?
 ---
-#### Click The Control Panel Button
+### Click The Control Panel Button
 
 ![Click the Control Panel button](../assets/control_panel.png)
 
-*Click the **Control Panel** button at the top right corner of the file manager or in an open notebook*
+*Click the `Control Panel` button located at the top right corner of the file manager or in an open notebook*
 
 ---
 
-#### Click The Stop My Server Button
+### Click The Stop My Server Button
 
 ![Click the Stop My Server button](../assets/stop_my_server.png)
 
-*Click the **Stop My Server** button that appears*
+*Click the `Stop My Server` button that appears*
 
 ---
 
-#### Click The Start My Server Button
+### Click The Start My Server Button
 
 ![Click the Start My Server button](../assets/start_my_server.png)
 
-*Click the **Start My Server** button, which may take a few seconds to appear*
+*Click the ``Start My Server`` button, which may take a few seconds to appear*
 
 ---
 
-#### Click The Launch Server Button
+### Click The Launch Server Button
 
 ![Click the Launch Server button](../assets/launch_server.png)
 
-*Click the Launch Server button appears*
+*Click the `Launch Server` button that appears*
 
 ---
 
-#### Select a Server Option and Click Start
+### Select a Server Option and Click Start
 
 ![Select a server option and click the start button](../assets/server_options.png)
 
-*Select a server option and click the start button*
+*Select a `server option` and click the `Start` button*
 
 ---
 
-#### Wait For the Server To Start
+### Wait For the Server To Start
 
 | ![Wait for the server to start](../assets/server_status.png) | 
 |:-------------:|
 | *Wait for the server to start* |
 
-#### Optional: Click The Event Log Arrow For Detailed Startup Status Information
+### Optional: Click The Event Log Arrow For Detailed Startup Status Information
 
 ![Click the event log arrow](../assets/event_log.png)
 
-*Click the `event log` arrow to view logs documenting the status of the startup process*
+*Click the `Event log` arrow to view logs documenting the status of the startup process*
 
 ---
 
@@ -91,7 +91,7 @@ As you run code cells in a notebook, initialized variables and their assigned va
 
 ### How?
 ---
-#### Select `Restart`, `Restart & Clear Output`, or `Restart & Run All` From The Kernel Menu
+### Select `Restart`, `Restart & Clear Output`, or `Restart & Run All` From The Kernel Menu
 
 ![Select restart and clear all from the kernel menu](../assets/restart_clear_all.png)
 
