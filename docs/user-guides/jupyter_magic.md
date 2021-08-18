@@ -2,44 +2,59 @@
 
 # Jupyter Line and Cell Magics, and IPython Syntax
 
-Jupyter Notebook magic commands provide shortcuts and functionality to the notebooks, above what can be done with straight Python code. An exhaustive list of magics can be found in the [IPython docs](https://ipython.readthedocs.io/en/stable/interactive/magics.html). 
+Jupyter Notebook magic commands provide shortcuts and extra functionality to the notebooks in addition to what can be done with pure Python code. An exhaustive list of magic commands can be found in the [IPython docs](https://ipython.readthedocs.io/en/stable/interactive/magics.html). 
 
-While all magics are available to users, in OpenSARlab we tend to use a relatively small selection of them. These fall into two categories: line magics and cell magics. We also frequently use Ipython's shell assignment syntax.
+While all magic commands are available to users, we tend to use a relatively small selection of them in OpenSAR lab. 
+
+Magic commands that are frequently used are following:
+- IPython's Shell Assignment Syntax
+- Line Magics
+- Cell Magics
 
 ## IPython Shell Assignment with "!"
-In IPython syntax the exclamation mark allows users to run shell commands from inside a Jupyter Notebook code cell.
-Simply start a line of code with "!" and it will run the command in the shell. 
+---
+In IPython syntax, the exclamation mark (!) allows users to run shell commands from inside a Jupyter Notebook code cell.
+Simply start a line of code with `!` and it will run the command in the shell. 
 
-Example: ```!pwd``` will print the current working directory.
+*Example:* ```!pwd``` will print the current working directory.
 
 ## Line Magics
+---
 
-Line magics start with a single "%" and effect only the line on which they are used. 
+Line magics start with a single `%` and effect only the line on which they are used. 
 
-### %matplotlib inline
-Allows **non-interactive** matplotlib plots to be displayed in a notebook.
+Following line magics are commonly used:
 
-### %matplotlib notebook
-Allows **interactive** matplotlib plots to be displayed and interacted with inside of a notebook.
+<!-- backtick the h3? -->
+### `%matplotlib inline`
+---
+Allows **non-interactive** `matplotlib plots` to be displayed in a notebook.
 
-### %df
-This is a custom magic written for OpenSARlab. It uses the python function shutil.disk_usage() to check the state of storage on user volumes. 
+### `%matplotlib notebook`
+---
+Allows **interactive** `matplotlib plots` to be displayed and interacted with inside of a Jupyter Notebook. 
 
-- "%df" returns a human readable string in GB. 
-- "%df --raw" returns a raw data object
-- "%df --on" returns a string in GB after every subsequent code cell is run
-- "%df --off" turns "%df --on" back off
-- "%df -v" prints additional debugging text 
+### `%df`
+---
+This is a custom magic written specifically for OpenSARlab. It uses the python function `shutil.disk_usage()` to check the state of storage on user's volumes. 
+
+- `%df` returns a human readable string in GB. 
+- `%df --raw` returns a raw data object
+- `%df --on` returns a string in GB after every subsequent code cell is run
+- `%df --off` turns `%df --on` back off
+- `%df -v` prints additional debugging text 
 
 ## Cell Magics
+---
 
-Cell magics start with "%%" and effect the contents of an entire cell. 
+Cell magics start with `%%` and effect the contents of an entire cell. 
 
-### %%javascript or %%js
-Runs a code cell of javascript code. 
+### `%%javascript or %%js`
+---
+Runs a JavaScript code cell. 
 
-Note: leave a blank line above the magic command at the top of the code cell.
+*Note:* leave a blank line above the magic command in the beginning of the code cell.
 
-### %%capture
-Runs the cell but captures all output. We typically use this to suppress the display of a matplotlib plot we do not wish to show.
-
+### `%%capture`
+---
+Runs the cell but captures all output. We typically use this to suppress output of a `matplotlib plot` that the user does not wish to see. 
