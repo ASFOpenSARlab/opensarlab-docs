@@ -77,50 +77,77 @@ If the problem is:
 
 * Not related to the git puller, contact an [OpenSARlab Administrator](mailto:uaf-jupyterhub-asf@alaska.edu).
  
-<!-- If the problem is git puller related, note the names and locations of the offending files and logout of OpenSARlab. -->
+<!--prev
+If the problem is git puller related, note the names and locations of the offending files and logout of OpenSARlab. -->
  
  ![The logout button is located at the top right of the screen.](../assets/logout_server_screen.png)
  
- *Click the logout button at the top of the screen*
+ *Click the `logout` button located on top right corner of the screen*
  
  ---
  
- After logging out, the startup screen will reload. Select the "General SAR processing (without git puller)" server option and click the start button. 
+ After logging out, the startup screen will reload. Select the `General SAR processing (without git puller)` server option and click the `Start` button. 
  
  ![The "General SAR processing (without git puller)" server option is below the "General SAR processing" option.](../assets/server_options_no_git_puller.png)
 
- *Select the "General SAR processing (without git puller)" server option and click the start button*
+ *Select the `General SAR processing (without git puller)` server option and click the `Start` button*
  
  ---
  
- The server should now load and you will have access to your account. Navigate to the locations of the conflicting files. There are three options for dealing with each of the offending files:
+ The server should now load and you will have access to your account. Go to where the conflicting file(s) are located. There are three options for dealing with each of the offending file(s):
+
+ <!--prev
+  The server should now load and you will have access to your account. Navigate to the locations of the conflicting file(s). There are three options for dealing with each of the offending file(s): -->
  
- 1. Delete the file if there are no changes from the original that you wish to save. 
- 1. Rename the file if there are changes you wish to save.
- 1. From the [terminal](OpenSARlab_terminal.md), run "touch /path/to/your.file" if you wish to try updating the file's timestamp and give the git puller another opportunity to handle the git pull correctly.
+ 1. Delete the file(s) if there are no changes from the original ones that you wish to save. 
+ 1. Rename the file(s) if there are changes you wish to save.
+ 1. If you wish try again using git puller, update the file's timestamp. You can do so by opening the [terminal](OpenSARlab_terminal.md) and run `touch /your_path_1/.../your_path_n/file_name`.
+
+ <!--prev (3rd bullet)
+ 1. From the [terminal](OpenSARlab_terminal.md), run `touch /your_path_1/.../your_path_n/file_name` to update the file's timestamp and give the git puller another opportunity to handle the git pull correctly. -->
  
- Logout of OpenSARlab.
+ Once you are done with one of the above operations, logout of OpenSARlab.
  
  ![The logout button is located at the top right of the screen.](../assets/logout.png)
 
- *Click the logout button at the top right of the screen*
+ *Click the `logout` button located at the top right corner of the screen*
  
  ---
- 
- Log back in, using the "General SAR processing" server option.
+<!--   Maybe remove either "server" or "option" -->
+ Log back in and select `General SAR processing` server option.
  
  ![The "General SAR processing" server option is the first option on the server option screen.](../assets/server_options.png)
 
- *Select the "General SAR processing" option and click start*
+ *Select the `General SAR processing` option and click `Start`*
  
  ---
- 
- The git puller should now run successfully, the server should startup, and you should have restored access to OpenSARlab, receiving any updates to the [ASF notebook library](https://github.com/asfadmin/asf-jupyter-notebooks).
+<!--   4th item may need to be rephrased -->
+ Upon completing above tasks, you may notice that:
+ 1. The git puller runs successfully. 
+ 1. Server starts up properly.
+ 1. Your access rights to OpenSARlab is restored.
+ 1. You are receiving updates to the [ASF notebook library](https://github.com/asfadmin/asf-jupyter-notebooks).
 
-## The edits I made to an ASF notebook have disappeared since the last time I used OpenSARlab.
+ <!--prev
+  The git puller should now run successfully, the server should startup, and you should have restored access to OpenSARlab, receiving any updates to the [ASF notebook library](https://github.com/asfadmin/asf-jupyter-notebooks). -->
+
+<!--  Below statement was not commented out previously. Should we leave it in or keep commented out? -->
+<!-- ## The edits I made to an ASF notebook have disappeared since the last time I used OpenSARlab. -->
 ---
 
-When your OpenSARlab server starts up, a git puller runs, bringing in any updates made to the [ASF notebook library](https://github.com/asfadmin/asf-jupyter-notebooks). If a change has been made to a notebook by both the user and by ASF, both will be saved. The ASF version will retain its original name. The user edited version will have a timestamp appended to its name. The edited notebook you are missing is likely in the location where you expect it but has a recent timestamp appended to its name.  
+When your OpenSARlab server starts up, a git puller will run and pulls in any updates made to the [ASF notebook library](https://github.com/asfadmin/asf-jupyter-notebooks). If a change has been made to a notebook by both the user and ASF, both changes will be saved. The ASF version will retain its original name while the user's version will have a timestamp appended to its name. 
+
+*Example file format:*  
+
+ ```bash
+ ASF edit:  sample_notebook
+ User edit: sample_notebook_08182021_10:00:00
+ ```
+
+If you feel like your notebook is missing, it is likely located in last place you worked in. Do note that your notebook is slightly renamed, hence there is a recent timestamp appended to its name.
+
+<!--prev
+ The edited notebook you are missing is likely in the location where you expect it but has a recent timestamp appended to its name.   -->
 
 ## One of my notebooks looks like it has a mix of code from various versions of the notebook.
 ---
