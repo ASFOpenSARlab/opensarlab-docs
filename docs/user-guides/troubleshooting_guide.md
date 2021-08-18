@@ -9,8 +9,20 @@
 *The message that appears when a notebook kernel dies*
 
 ---
+<!-- need clearification on time-series  -->
+ The kernel will die if you run out of available memory to complete a running process. 
  
- The kernel will die if you run out of available memory to complete a running process. This most frequently occurs when running a time-series or change detection algorithm on a data stack that is either too deep or covers too large an area-of-interest for OpenSARlab to handle. Try running the notebook on some combination of a shallower data stack and/or a smaller area-of-interest. This may take some experimentation because memory is shared among users and the amount available fluctuates. To work with a deep stack covering an extensive AOI, you may need to tile up your data for the analysis and mosaic them later. 
+ This frequently occurs when running a time-series/change detection algorithm on a data statck that is either:
+ - Too deep
+ - Covers too large of an area-of-interest (AOI)
+
+ For OpenSARlab to handle
+
+ <!-- - Running a time-series or change detection algorithm on a data stack that is either too deep or covers too large an area-of-interest for OpenSARlab to handle. -->
+ 
+Try running the notebook on some combination of a shallower data stack and/or a smaller area-of-interest (AOI). This may take some experimentation because memory is shared among users, *i.e.* amount available memory fluctuates. 
+
+To work with a deep stack covering an extensive AOI, you may need to tile up your data for the analysis and mosaic them later. 
 
 ## I successfully ran a notebook earlier on the same data but now it is killing the kernel.
 ---
