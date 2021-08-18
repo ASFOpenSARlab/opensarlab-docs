@@ -40,15 +40,22 @@ You either have:
  
  If you have not yet created it, use the notebook located in following directory: ```/home/jovyan/conda_environments/Create_OSL_Conda_Environments.ipynb```
 
-## I am receiving a "No space left on device" error.
+## I am receiving a `No space left on device` error.
 ---
 OpenSARlab users have access to a finite amount of storage space ([details here](OpenSARlab_environment.md)). 
 
-**It is up to users to manage their storage**. If you receive a storage space warning while logged into OpenSARlab, it is highly recommended free up your space immediately by deleting unnecessary files. <!-- left off here -->If your server shuts down while there is no available space, it will not have the space needed to restart again and you will be locked out of your account. 
+**It is up to users to manage their storage**. 
 
-If you you lock yourself out of your account, contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help. They will assign enough extra storage to allow you to login and delete files.
+If you receive a storage space warning while logged into OpenSARlab, it is highly recommended to free up your space immediately by deleting unnecessary files. If your server shuts down without any available space, server will not restart since it will not have enough space to restart again. This will result in getting your account locked out.
 
-If you do not have any unnecessary files to delete and feel that you really do need additional space to do your work, contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) and request an increased storage limit. Limits will only be increased if there is a demonstrable need.
+<!--prev
+ If your server shuts down while there is no available space, it will not have the space needed to restart again and you will be locked out of your account.  -->
+
+If you do get locked out from your account, contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help. They will assign enough extra storage to your server so that you can login and delete unnecessary files.
+
+If you do not have any files that you can delete and feel that you really do need additional space to do your work, contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) and request for more storage space. 
+
+**Limits will only be increased if there is a demonstrable need.**
 
 
 ## My server won't start and I cannot access OpenSARlab.
