@@ -152,27 +152,38 @@ If you feel like your notebook is missing, it is likely located in last place yo
 ## One of my notebooks looks like it has a mix of code from various versions of the notebook.
 ---
 
-We have seen this happen occasionally and it stems from issues with the [smart git puller](https://jupyterhub.github.io/nbgitpuller/). The best option is to delete the notebook and [restart your OpenSARlab server](restarting_server_and_kernel.md). The notebook will be replaced with a fresh copy from the [ASF notebook library](https://github.com/asfadmin/asf-jupyter-notebooks).
+We have seen this happen occasionally and it due to a issues with the [smart git puller](https://jupyterhub.github.io/nbgitpuller/). The best option is to delete the notebook and [restart your OpenSARlab server](restarting_server_and_kernel.md). The notebook will be replaced with a fresh copy from the [ASF notebook library](https://github.com/asfadmin/asf-jupyter-notebooks).
 
 ## I know there was an update made to an ASF notebook but I still have the old version.
 ---
 
-We have seen this happen occasionally and it stems from issues with the [smart git puller](https://jupyterhub.github.io/nbgitpuller/). The best option is to delete the outdated version of the notebook and [restart your OpenSARlab server](restarting_server_and_kernel.md). The notebook will be replaced with a fresh copy from the [ASF notebook library](https://github.com/asfadmin/asf-jupyter-notebooks).
+We have seen this happen occasionally and it is due to the [smart git puller](https://jupyterhub.github.io/nbgitpuller/). The best option is to delete the outdated version of the notebook and [restart your OpenSARlab server](restarting_server_and_kernel.md). The notebook will be replaced with a fresh copy from the [ASF notebook library](https://github.com/asfadmin/asf-jupyter-notebooks).
 
 ## I am having trouble setting up a web server and developing my web app in OpenSARlab.
 ---
 
-This cannot be done in OpenSARlab. You will need to develop your app in an environment where you can run your web server.
+This cannot be done in OpenSARlab. You will need to do this elsewhere.
+
+<!-- You will need to develop your app in an environment where you can run your web server. -->
 
 ## A notebook won't load. A new browser tab opens and shows the JupyterHub header, but no notebook appears. 
 ---
+This is due to slow loading time caused by large notebook. 
 
-This is caused by the slow loading of a large notebook. If you run a notebook and close it without first clearing all code cell output, the file size can increase substantially. A 40KB notebook can grow to 60MB+ file if its output is left in place. The notebook will eventually load. You may need to reload your browser window if it times out. 
+If you run a notebook and close them without clearing all output from code cell, the file size will increase. While notebook may eventually load, you will need to reload your browser window if it times out. 
+
+*Example: A 40KB notebook can grow over 60MB file if you don't clear its output.* 
+
+<!--prev
+ This is caused by the slow loading of a large notebook. If you run a notebook and close it without first clearing all code cell output, the file size can increase substantially. A 40KB notebook can grow to 60MB+ file if its output is left in place. The notebook will eventually load. You may need to reload your browser window if it times out.  -->
 
 ## My issue is not on this list
 ---
 
-If you have encountered an issue not covered in this document, please contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
+<!--prev
+ If you have encountered an issue not covered in this document,  -->
+
+Please contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
 
 
 
