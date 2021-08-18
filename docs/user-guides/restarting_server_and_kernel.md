@@ -114,4 +114,5 @@ The solution for this is to restart the kernel to clear notebook data that are s
 
 - `Restart` will restart the kernel but leave old code cell output in place.
 - `Restart & Clear Output` restarts the kernel and removes old code cell output. **This is generally the preferred option.**
-- `Restart & Run All` restarts the kernel and runs all the code cells. **This only works if the notebook takes no user input.**
+- `Restart & Run All` restarts the kernel and runs all the code cells. **This only works if the notebook does not require input from user.**
+<!--  require or take? -->
