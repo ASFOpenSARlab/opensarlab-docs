@@ -42,11 +42,13 @@ You either have:
 
 ## I am receiving a "No space left on device" error.
 ---
-OpenSARlab users have access to a finite amount of storage space ([details here](OpenSARlab_environment.md)). It is up to users to manage their storage. If you receive a storage space warning while logged into OpenSARlab, it is highly recommended that you immediately free up space by deleting un-needed files. If your server shuts down while there is no available space, it will not have the space needed to restart again and you will be locked out of your account. 
+OpenSARlab users have access to a finite amount of storage space ([details here](OpenSARlab_environment.md)). 
 
-If you you become locked out of your account, contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help. They will assign just enough extra storage to allow you to login and delete files.
+**It is up to users to manage their storage**. If you receive a storage space warning while logged into OpenSARlab, it is highly recommended free up your space immediately by deleting unnecessary files. <!-- left off here -->If your server shuts down while there is no available space, it will not have the space needed to restart again and you will be locked out of your account. 
 
-If you do not have any extraneous files to delete and feel that you really do need additional space to do your work, contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) and request an increased storage limit. Limits will only be increased if there is a demonstrable need.
+If you you lock yourself out of your account, contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help. They will assign enough extra storage to allow you to login and delete files.
+
+If you do not have any unnecessary files to delete and feel that you really do need additional space to do your work, contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) and request an increased storage limit. Limits will only be increased if there is a demonstrable need.
 
 
 ## My server won't start and I cannot access OpenSARlab.
