@@ -64,7 +64,7 @@ Note: If you are comfortable with git, you could instead do a git pull from
 
 ![Click the event log arrow](../assets/event_log.png)
 
-*Click the event log arrow to view logs documenting the status of the startup process*
+*Click the `event log` arrow to view logs documenting the status of the startup process*
 
 ---
 
@@ -87,18 +87,18 @@ From the `Kernel` menu, click `Change kernel` and select the desired kernel.
 ---
 As you run code cells in a notebook, initialized variables and their assigned values are stored in memory. If you decide to start over and re-run a previously run notebook, without first restarting the kernel, all of the previously defined variables and values will still persist in memory. Not only are they using up some of an instance's limited memory allotment, but previously defined values may cause unintended results when re-running the code. The solution is to restart the kernel, clearing notebook data stored in memory.
 
-Example: Imagine a notebook that builds a string, which starts empty and then has substrings systematically appended to it. When re-running this notebook, the string will no longer start empty and the resultant string will contain an unintended substring at its start.
+*Example:* Imagine a notebook that builds a string, which starts empty and then has substrings systematically appended to it. When re-running this notebook, the string will no longer start empty and the resultant string will contain an unintended substring at its start.
 
 ### How?
 ---
-#### Select "Restart", "Restart & Clear Output", or "Restart & Run All" From The Kernel Menu
+#### Select `Restart`, `Restart & Clear Output`, or `Restart & Run All` From The Kernel Menu
 
 ![Select restart and clear all from the kernel menu](../assets/restart_clear_all.png)
 
-*For most use cases, select "Restart & Clear Output"*
+*For most use cases, select `Restart & Clear Output`*
 
 ---
 
-- "Restart" will restart the kernel but leave old code cell output in place.
-- "Restart & Clear Output" restarts the kernel and removes old code cell output. **This is generally the preferred option.**
-- "Restart & Run All" restarts the kernel and runs all the code cells. **This only works if the notebook takes no user input.**
+- `Restart` will restart the kernel but leave old code cell output in place.
+- `Restart & Clear Output` restarts the kernel and removes old code cell output. **This is generally the preferred option.**
+- `Restart & Run All` restarts the kernel and runs all the code cells. **This only works if the notebook takes no user input.**
