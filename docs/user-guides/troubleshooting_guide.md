@@ -29,7 +29,16 @@ OpenSARlab EC2 instances are shared among 1~3 users. The memory available to eac
 
 ---
  
- You have either not yet created the required conda environment or there is a mix-up between the environment name and prefix. If you think you did already install the environment, select it from the pull-down menu and click the "Set Kernel" button. If you have not yet created it, use the notebook located here to do so: ```/home/jovyan/conda_environments/Create_OSL_Conda_Environments.ipynb```
+You either have:
+ - Not created the required conda environment yet
+ - A mix-up between the environment name and prefix
+
+ <!-- You have either not yet created the required conda environment or there is a mix-up between the environment name and prefix.  -->
+ 
+<!--  need more description on pull-down menu -->
+ If you think you already installed the environment, select it from the pull-down menu and click the `Set Kernel` button. 
+ 
+ If you have not yet created it, use the notebook located in following directory: ```/home/jovyan/conda_environments/Create_OSL_Conda_Environments.ipynb```
 
 ## I am receiving a "No space left on device" error.
 ---
