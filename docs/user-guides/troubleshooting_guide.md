@@ -60,19 +60,24 @@ If you do not have any files that you can delete and feel that you really do nee
 
 ## My server won't start and I cannot access OpenSARlab.
 ---
-This issue typically stems from unexpected behavior on the part of the [smart git puller](https://jupyterhub.github.io/nbgitpuller/).
 
-Click the event log arrow beneath the server startup progress bar to view the details of any git puller conflicts.
+This issue is typically due to an unexpected behavior of the [smart git puller](https://jupyterhub.github.io/nbgitpuller/).
+
+Click the `Event log` arrow beneath the server startup progress bar to view the details of any git puller conflicts.
 
 ![The event log can be viewed on the server startup screen.](../assets/event_log.png)
 
-*Click the event log arrow beneath the server startup progress bar.*
+*Click the `Event log` arrow beneath the server startup progress bar.*
 
 ---
+
+If the problem is:
  
- If the problem is related to the git puller, you will find details regarding which file or files are causing the conflict in the event log. If the problem is not related to the git puller, contact an [OpenSARlab Administrator](mailto:uaf-jupyterhub-asf@alaska.edu).
+*  Related to the git puller, you will find details regarding to which file(s) are causing the conflict in the event log. In such case, note the names and locations of the offending file(s) and logout of OpenSARlab.
+
+* Not related to the git puller, contact an [OpenSARlab Administrator](mailto:uaf-jupyterhub-asf@alaska.edu).
  
- If the problem is git puller related, note the names and locations of the offending files and logout of OpenSARlab.
+<!-- If the problem is git puller related, note the names and locations of the offending files and logout of OpenSARlab. -->
  
  ![The logout button is located at the top right of the screen.](../assets/logout_server_screen.png)
  
