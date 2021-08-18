@@ -10,16 +10,24 @@
 
 ---
 <!-- need clearification on time-series  -->
- The kernel will die if you run out of available memory to complete a running process. This frequently occurs when running a time-series/change detection algorithm on data stack that is either too deep or covers too large of an area-of-interest (AOI) for OpenSARlab to handle.
+ The kernel will die if you run out of available memory to complete a running process. This occurs frequently when running a time-series/change detection algorithm on data stack that is either too deep or covers too large of an area-of-interest (AOI) for OpenSARlab to handle.
  
-Try running the notebook on some combination of a shallower data stack and/or a smaller area-of-interest (AOI). This may take some experimentation because memory is shared among users, *i.e.* amount available memory fluctuates. 
+Try running the notebook on some combination of a shallower data stack and/or a smaller AOI. This may take some experimentation because memory is shared among users, *i.e.* amount of available memory fluctuates. 
 
+<!-- Try running the notebook on some combination of a shallower data stack and/or a smaller area-of-interest (AOI). This may take some experimentation because memory is shared among users, *i.e.* amount available memory fluctuates.  -->
+
+<!-- need clearification on tiling and mosaic -->
 To work with a deep stack covering an extensive AOI, you may need to tile up your data for the analysis and mosaic them later. 
+
+<!-- discuss this summary during revision -->
+*Summary:* If you are running intense program, your kernel might die. Try making your program less intense or optimize your data.
 
 ## I successfully ran a notebook earlier on the same data but now it is killing the kernel.
 ---
 
-OpenSARlab EC2 instances are shared among 1~3 users. The memory available to each user on an instance varies with overall activity on the EC2. It is likely that there was enough memory available for your process during your first attempt, but there was not enough memory during subsequent attempt. More details on the OpenSARlab user environment can be found [here](OpenSARlab_environment.md).
+OpenSARlab EC2 instances are shared among 1~3 users. The memory available to each user depends on overall activity on the EC2. It is likely that there was enough memory available for your process before, but not enough memory during later attempt(s). More details on the OpenSARlab user environment can be found [here](OpenSARlab_environment.md).
+
+<!-- OpenSARlab EC2 instances are shared among 1~3 users. The memory available to each user on an instance varies with overall activity on the EC2. It is likely that there was enough memory available for your process during your first attempt, but there was not enough memory during subsequent attempt. More details on the OpenSARlab user environment can be found [here](OpenSARlab_environment.md). -->
 
 ## When I open a notebook, I receive "Kernel not found" message.
 ---
@@ -38,7 +46,7 @@ You either have:
 <!--  need more description on pull-down menu -->
  If you think you already installed the environment, select it from the pull-down menu and click the `Set Kernel` button. 
  
- If you have not yet created it, use the notebook located in following directory: ```/home/jovyan/conda_environments/Create_OSL_Conda_Environments.ipynb```
+ If you have not created yet, use the notebook located in following directory: ```/home/jovyan/conda_environments/Create_OSL_Conda_Environments.ipynb```
 
 ## I am receiving a `No space left on device` error.
 ---
