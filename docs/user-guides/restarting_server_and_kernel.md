@@ -87,9 +87,20 @@ From the `Kernel` menu, click `Change kernel` and select the desired kernel.
 ## Restarting a Jupyter Notebook Kernel
 ### Why?
 ---
-As you run code cells in a notebook, initialized variables and their assigned values are stored in memory. If you decide to start over and re-run a previously run notebook, without first restarting the kernel, all of the previously defined variables and values will still persist in memory. Not only are they using up some of an instance's limited memory allotment, but previously defined values may cause unintended results when re-running the code. The solution is to restart the kernel, clearing notebook data stored in memory.
+As you run code cells in a notebook, initial variables and their assigned values are stored in memory. If you decide to start over and re-run a previously ran notebook without restarting the kernel, you may encounter some issues. 
 
-*Example:* Imagine a notebook that builds a string, which starts empty and then has substrings systematically appended to it. When re-running this notebook, the string will no longer start empty and the resultant string will contain an unintended substring at its start.
+The issues are caused by previously defined variables and/or values that persists in your memory. This is problematic for various reasons, such as:
+ - They use up instance's limited memory resources.
+ - Increase file size of notebook.
+ - Previously defined values may cause unintended results when re-runing the code.
+
+*Example of unintended results:* Consider a notebook that builds a string, which starts empty and append substrings systematically. When re-running this notebook, the string will no longer start empty and the resultant string will contain an unintended substring at its start.
+
+The solution for this is to restart the kernel to clear notebook data that are stored in memory.
+
+<!-- As you run code cells in a notebook, initialized variables and their assigned values are stored in memory. If you decide to start over and re-run a previously ran notebook, without first restarting the kernel, all of the previously defined variables and values will persist in memory. Not only are they using up some of an instance's limited memory allotment, but previously defined values may cause unintended results when re-running the code. The solution is to restart the kernel, clearing notebook data stored in memory. -->
+
+<!-- *Example:* Imagine a notebook that builds a string, which starts empty and then has substrings systematically appended to it. When re-running this notebook, the string will no longer start empty and the resultant string will contain an unintended substring at its start. -->
 
 ### How?
 ---
