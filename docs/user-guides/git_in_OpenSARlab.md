@@ -12,14 +12,12 @@ A [smart git puller](https://jupyterhub.github.io/nbgitpuller/) pulls any change
 
 If a user has made changes to a notebook and the same notebook has been updated by ASF in the `asf-jupyter-notebooks` repo, the following will occur:
 
-<!-- html incompatibility -->
 - User will end up with two copies of that notebook.
 - User's version of the notebook will have a timestamp appended to its name. 
 - The notebook with the original, unaltered name will contain the new changes made by ASF.
 
 *Example:*    
 
-<!-- html incompatibility -->
 - Original: `example_file`
 - User's version: `example_file_08132021:13:25:45`
 - Updated by ASF: `example_file`
