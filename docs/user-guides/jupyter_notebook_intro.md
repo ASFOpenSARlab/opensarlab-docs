@@ -13,6 +13,7 @@ Jupyter Notebook provides an ideal format for teaching/learning coding concepts,
 <!-- bullet points causes issue on HTML -->
 ## Cells
 Jupyter Notebook has 4 cell types. In OpenSARlab, we use the following two:
+
 - Markdown cells
 - Code cells
  
@@ -28,7 +29,6 @@ Markdown cells contain documentation in Markdown, HTML, and/or LaTeX. They are o
 
 ---
 
-<!-- Bullet point causes issue with HTML -->
 If you:
 
 - Want to proceed through the notebook past the markdown cell.
