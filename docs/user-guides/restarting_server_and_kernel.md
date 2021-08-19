@@ -5,9 +5,15 @@
 ## Restarting the OpenSARlab Server
 ### Why?
 ---
-Perhaps you have deleted or altered a notebook in the ASF notebook library and want to retrieve the original. Maybe you know that a notebook update was just made and you would like to immediately pull in changes from the [asf-jupyter-notebook repo](https://github.com/asfadmin/asf-jupyter-notebooks). 
+Restarting the server triggers the `nbgitpuller` to run.
 
-A quick solution in either of those cases is to restart your server. Restarting the server triggers the git puller to run.
+Consider a case where:
+
+- You have deleted or altered a notebook in the ASF notebook library and want to retrieve the original. 
+- You know that a notebook update was just made and you would like to immediately pull in changes from the [asf-jupyter-notebook repo](https://github.com/asfadmin/asf-jupyter-notebooks). 
+
+A quick solution in either of those cases is to restart your server to run the `nbgitpuller`. 
+
 
 *Note:* If you are comfortable with git, you could do a git pull from 
 [the terminal](OpenSARlab_terminal.md) or in a notebook instead. 
@@ -34,7 +40,7 @@ A quick solution in either of those cases is to restart your server. Restarting 
 
 ![Click the Start My Server button](../assets/start_my_server.png)
 
-*Click the ``Start My Server`` button, which may take a few seconds to appear*
+*Click the `Start My Server` button, which may take a few seconds to appear*
 
 ---
 
@@ -72,9 +78,7 @@ A quick solution in either of those cases is to restart your server. Restarting 
 
 ### Why?
 ---
-Notebooks in OpenSARlab run in a variety of [conda](https://docs.conda.io/en/latest/) environments. If a notebook is set to the kernel with the wrong environment, it may not have all the software packages it requires.
-<!--prev
- If a notebook is set to the kernel with the wrong environment, it will likely not have all the needed software packages it requires.  -->
+Notebooks in OpenSARlab run in a variety of [conda](https://docs.conda.io/en/latest/) environments. If a notebook is set to the kernel of the wrong environment, it may not have all the software packages it requires.
 
 ### How?
 ---
@@ -87,22 +91,18 @@ From the `Kernel` menu, click `Change kernel` and select the desired kernel.
 ## Restarting a Jupyter Notebook Kernel
 ### Why?
 ---
-As you run code cells in a notebook, initial variables and their assigned values are stored in memory. If you decide to start over and re-run a previously ran notebook without restarting the kernel, you may encounter some issues. 
+As you run code cells in a notebook, initialized variables and their assigned values are stored in memory. If you decide to start over and re-run a previously ran notebook without restarting the kernel, you may encounter some issues. 
 
-The issues are caused by previously defined variables and/or values that persists in your memory. This is problematic for various reasons, such as:
+The issues are caused by previously defined variables that persist in your memory. This is problematic for various reasons, such as:
 
 <!-- html incompatibility -->
  - They use up instance's limited memory resources.
  - Increase file size of notebook.
  - Previously defined values may cause unintended results when re-runing the code.
 
-*Example of unintended results:* Consider a notebook that builds a string, which starts empty and append substrings systematically. When re-running this notebook, the string will no longer start empty and the resultant string will contain an unintended substring at its start.
+*Example of unintended results:* Consider a notebook that builds a string, which starts empty and appends substrings systematically. When re-running this notebook, the string will no longer start empty and the resultant string will contain an unintended substring at its start.
 
 The solution for this is to restart the kernel to clear notebook data that are stored in memory.
-
-<!-- As you run code cells in a notebook, initialized variables and their assigned values are stored in memory. If you decide to start over and re-run a previously ran notebook, without first restarting the kernel, all of the previously defined variables and values will persist in memory. Not only are they using up some of an instance's limited memory allotment, but previously defined values may cause unintended results when re-running the code. The solution is to restart the kernel, clearing notebook data stored in memory. -->
-
-<!-- *Example:* Imagine a notebook that builds a string, which starts empty and then has substrings systematically appended to it. When re-running this notebook, the string will no longer start empty and the resultant string will contain an unintended substring at its start. -->
 
 ### How?
 ---
@@ -117,4 +117,3 @@ The solution for this is to restart the kernel to clear notebook data that are s
 - `Restart` will restart the kernel but leave old code cell output in place.
 - `Restart & Clear Output` restarts the kernel and removes old code cell output. **This is generally the preferred option.**
 - `Restart & Run All` restarts the kernel and runs all the code cells. **This only works if the notebook does not require input from user.**
-<!--  require or take? -->
