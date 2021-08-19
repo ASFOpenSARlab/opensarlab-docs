@@ -2,7 +2,7 @@
 
 # Installing Software in OpenSARlab
 
-<!-- according to GitHub, \<> shows escape slash -->
+<!-- Incompatibility still exists even with \ in front of <> -->
 
 ## pip
 ### You can install pip packages to your `/home/jovyan/.local/lib/python3.7/site-packages` directory
