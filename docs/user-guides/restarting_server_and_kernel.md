@@ -90,6 +90,8 @@ From the `Kernel` menu, click `Change kernel` and select the desired kernel.
 As you run code cells in a notebook, initial variables and their assigned values are stored in memory. If you decide to start over and re-run a previously ran notebook without restarting the kernel, you may encounter some issues. 
 
 The issues are caused by previously defined variables and/or values that persists in your memory. This is problematic for various reasons, such as:
+
+<!-- html incompatibility -->
  - They use up instance's limited memory resources.
  - Increase file size of notebook.
  - Previously defined values may cause unintended results when re-runing the code.
