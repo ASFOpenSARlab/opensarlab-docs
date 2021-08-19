@@ -11,14 +11,18 @@ ASF's OpenSARlab Jupyter Notebook library lives in the
 A [smart git puller](https://jupyterhub.github.io/nbgitpuller/) pulls any changes to the [notebook repo](https://github.com/ASFOpenSARlab/opensarlab-notebooks) each time a user's OpenSARlab server starts up. 
 
 If a user has made changes to a notebook and the same notebook has been updated by ASF in the `asf-jupyter-notebooks` repo, the following will occur:
- * User will end up with two copies of that notebook.
- * User's version of the notebook will have a timestamp appended to its name. 
- * The notebook with the original, unaltered name will contain the new changes made by ASF.
+
+<!-- html incompatibility -->
+- User will end up with two copies of that notebook.
+- User's version of the notebook will have a timestamp appended to its name. 
+- The notebook with the original, unaltered name will contain the new changes made by ASF.
 
 *Example:*    
-* Original: `example_file`
-* User's version: `example_file_08132021:13:25:45`
-* Updated by ASF: `example_file`
+
+<!-- html incompatibility -->
+- Original: `example_file`
+- User's version: `example_file_08132021:13:25:45`
+- Updated by ASF: `example_file`
 
 Please note that the gitpuller will __not__ run if:
 
