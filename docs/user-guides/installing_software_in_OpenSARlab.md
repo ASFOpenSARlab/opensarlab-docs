@@ -2,18 +2,17 @@
 
 # Installing Software in OpenSARlab
 
-<!-- Incompatibility still exists even with \ in front of <> -->
-
+<!--  test web formatting with following: /<> -> <> -->
 ## pip
 ### You can install pip packages to your `/home/jovyan/.local/lib/python3.7/site-packages` directory
 1. Open a terminal and use following command:
-    1. `python -m pip install --user \<package_name>`
+    1. `python -m pip install --user <package_name>`
     
 ### To install a pip package inside of a conda environment
 1. Open a terminal and use following command:
     1. ```
-        conda activate \<environment_name>
-        python -m pip install --user \<package_name>
+        conda activate <environment_name>
+        python -m pip install --user <package_name>
        ```   
 
 ## apt and apt-get
@@ -24,12 +23,12 @@ Users can install additional software with conda in OpenSARlab, but it will not 
 
 ### Install conda packages from within a notebook running in an environment
 1. Edit a notebook code cell
-    1. `%conda install \<package_name>`
+    1. `%conda install <package_name>`
 1. Run the code cell
 
 ### Install conda packages from the terminal
 1. Open a terminal
     1. ```
-       conda activate \<environment_name>
-       conda install \<package_name>
+       conda activate <environment_name>
+       conda install <package_name>
        ```
