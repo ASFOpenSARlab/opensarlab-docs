@@ -85,6 +85,8 @@
 - Select `Run All` from the "Cell" menu (does not restart the kernel)
 - Select `Restart & Run All` from the "Kernel" Menu (restarts kernel)
 
+
+<!--  No html issue, but added missing statement -->
 ### Rerunning a Notebook
 It is a recommended to restart the notebook kernel before rerunning a notebook. This is because any initialized variables and data structures from a previous run will be stored in memory along with their values, which can lead to unintended results.
 
@@ -92,6 +94,7 @@ It is a recommended to restart the notebook kernel before rerunning a notebook. 
 
 *e.g.* Running this cell `n` times will result in `[day_before, yesterday, today, today, today, today, ...]`.
 
+To restart notebook, do one of the following:
 
 - Select `Restart` from the Kernel Menu
 - Select `Restart & Clear Output` from the Kernel Menu
