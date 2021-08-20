@@ -22,10 +22,9 @@ If a user has made changes to a notebook and the same notebook has been updated 
 - Updated by user: `sample_notebook__20210616165846.ipynb`
 - Updated by ASF: `sample_notebook.ipynb`
 
-Please note that the `nbgitpuller` will __not__ run if:
+__Please note that the `nbgitpuller` will not run if you are not in the master branch of the asf-jupyter-notebook repo.__
 
-1. You are not in the master branch of the asf-jupyter-notebook repo
-1. A file has been removed from the remote repo but still exists in your local repo
+<!--  So is this saying that if one file is missing from remote then none of the files from remote will be pulled? Thus removing one remote file will sabotage the whole thing? -->
 
 ### What do I do if my git state is broken beyond my ability to repair it?
 
