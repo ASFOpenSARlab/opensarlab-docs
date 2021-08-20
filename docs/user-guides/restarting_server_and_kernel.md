@@ -95,7 +95,6 @@ As you run code cells in a notebook, initialized variables and their assigned va
 
 The issues are caused by previously defined variables that persist in your memory. This is problematic for various reasons, such as:
 
-<!-- html incompatibility -->
  - They use up instance's limited memory resources.
  - Increase file size of notebook.
  - Previously defined values may cause unintended results when re-runing the code.

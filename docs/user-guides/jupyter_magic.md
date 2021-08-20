@@ -6,7 +6,6 @@ Jupyter Notebook magic commands provide shortcuts and extra functionality to the
 
 While all magic commands are available to users, we tend to use a relatively small selection of them in OpenSAR lab. 
 
-<!--  Not compatible with web version-->
 Magic commands that are frequently used are following:
 
 - IPython's Shell Assignment Syntax
@@ -27,7 +26,6 @@ Line magics start with a single `%` and effect only the line on which they are u
 
 Following line magics are commonly used:
 
-<!-- backtick the h3? -->
 ### `%matplotlib inline`
 ---
 Allows **non-interactive** `matplotlib plots` to be displayed in a notebook.

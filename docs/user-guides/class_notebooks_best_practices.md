@@ -4,7 +4,7 @@
 
 ### Provide a Conda Environment Capable of Running the Notebooks
 ---
-<!-- Notes: make consistent with other .md file. Runs fine on web, but not consistent -->
+
 - Provide students with a conda environment that has everything they need. [Conda Environments in OpenSARlab.](conda_environments.md)
 
 - Students can mimic instructor's enviornment by:
@@ -38,7 +38,7 @@
 ---
 
 - If there are assignment sections requiring students to write or refactor code, test the notebook with the correct solutions first. This will alert you to potential issues that you may miss otherwise.
-    - Example: The notebook successfuly runs the instructor provided code, but crashes the kernel due to insufficient memory when students add new code to complete the assignment. 
+    - *Example:* The notebook successfuly runs the instructor provided code, but crashes the kernel due to insufficient memory when students add new code to complete the assignment. 
 
 ### Plan for Students with Poor Internet Access
 ---

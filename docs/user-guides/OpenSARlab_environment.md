@@ -24,13 +24,11 @@ The important takeaway is that user storage is persistent; you will not lose sav
 
 It is users' responsibility to manage their storage. Using up all your storage space will prevent you from logging into OpenSARlab. Please contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) if this occurs. 
 
-<!-- html incompatibility -->
 - 500GB Amazon AWS EBS volume (volume size subject to change) allocated to each user. 
 
 ### Memory (RAM)
 EC2 instances are shared among users. This happens behind the scenes and is generally not noticeable when using OpenSARlab, with the exception of memory availability. The amount of memory available to each user depends on overall use of an instance, and may vary from 6GB to 16GB.
 
-<!-- html incompatibility -->
 - RAM allocated per user: 6GB - 16GB 
 
 ### Privileges
