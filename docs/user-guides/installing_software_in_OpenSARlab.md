@@ -3,7 +3,7 @@
 # Installing Software in OpenSARlab
 
 <!--  test web formatting with following: /<> -> <> -->
-<!--  <> works, but bullet point should match with other format -->
+<!--  <> works, but bullet point should match with other format. Reference best practice guide. -->
 ## pip
 ### You can install pip packages to your `/home/jovyan/.local/lib/python3.7/site-packages` directory
 1. Open a terminal and use following command:
