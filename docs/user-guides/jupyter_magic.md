@@ -50,6 +50,9 @@ This is a custom magic written specifically for OpenSARlab. It uses the python f
 
 Cell magics start with `%%` and effect the contents of an entire cell. 
 
+<!--  example appears to be grouped with descriptions i.e. confusing -->
+### `%matplotlib inline`
+
 ### `%%javascript or %%js`
 ---
 Runs a JavaScript code cell. 
