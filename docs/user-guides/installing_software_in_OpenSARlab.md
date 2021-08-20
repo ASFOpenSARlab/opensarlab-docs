@@ -22,7 +22,7 @@ python -m pip install --user <package_name>
 At this time, users cannot install software in OpenSARlab using `apt` or `apt-get`.
 
 ## conda
-Users can install additional software with conda in OpenSARlab, but it will not persist after the sever shuts down. It will need to be reinstalled during subsequent OpenSARlab sessions. 
+Users can install additional software with conda in OpenSARlab, but it will not persist after the server shuts down. It will need to be reinstalled during subsequent OpenSARlab sessions. 
 
 ### Install conda packages from within a notebook running in an environment
 1. Edit a notebook code cell
