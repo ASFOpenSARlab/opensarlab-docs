@@ -26,6 +26,7 @@ Line magics start with a single `%` and effect only the line on which they are u
 
 Following line magics are commonly used:
 
+<!--  example appears to be grouped with descriptions i.e. confusing -->
 ### `%matplotlib inline`
 ---
 Allows **non-interactive** `matplotlib plots` to be displayed in a notebook.
