@@ -2,6 +2,7 @@
 
 # How to Run a Jupyter Notebook
 
+<!--  I suggest we insert the contents of the notebook intro into running a notebook and move the running a notebook to before conda env. A person needs to know how to run a notebook before doing envs anyway.  -->
 ### Before we get started, what is Jupyter Notebook?
 - [Intro to Jupyter Notebook](jupyter_notebook_intro.md)
 
@@ -86,7 +87,6 @@
 - Select `Restart & Run All` from the "Kernel" Menu (restarts kernel)
 
 
-<!--  No html issue, but added missing statement -->
 ### Rerunning a Notebook
 It is a recommended to restart the notebook kernel before rerunning a notebook. This is because any initialized variables and data structures from a previous run will be stored in memory along with their values, which can lead to unintended results.
 
