@@ -122,11 +122,12 @@ In such cases, note the names and locations of the offending file(s) and logout 
 When your OpenSARlab server starts up, `nbgitpuller` will run and pull in any updates made to the [ASF notebook library](https://github.com/asfadmin/asf-jupyter-notebooks). If a change has been made to a notebook by both the user and ASF, both changes will be saved. The ASF version will retain its original name while the user's version will have a timestamp appended to its name. 
 
 *Example file format:*  
-<!--  code snippet is being mean to web format. Reference best practice guides. -->
- ``` bash
- ASF edit:  sample_notebook.ipynb
 
- User edit: sample_notebook__20210616165846.ipynb
+<!--  code snippet is being mean to web format. Reference best practice guides. -->
+ ```bash
+ASF Edit: sample_notebook.ipynb
+
+User Edit: sample_notebook__20210616165846.ipynb
  ```
 
 If you feel like your notebook is missing, it is likely in its original location with a recent timestamp appended to its name.
