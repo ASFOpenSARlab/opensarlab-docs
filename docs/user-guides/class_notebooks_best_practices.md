@@ -7,7 +7,8 @@
 
 - Provide students with a conda environment that has everything they need. [Conda Environments in OpenSARlab.](conda_environments.md)
 
-- Students can mimic instructor's enviornment by:
+<!--  Typo: can mimic instructor's enviornment (sic)  -->
+- Students can mimic instructor's environment by:
 
     1. Distributing ```environment.yml``` file
     1. Upload ```environment.yml``` into following directory: ```/home/jovyan/conda_environments/Environment_Configs/```         
@@ -47,6 +48,8 @@
 
 To avoid issues related to poor internet access, consider following options:
 
+<!-- Plan for Students with Poor Internet Access. I think another bullet should be added explaining that if notebooks are too big and there is poor internet, the notebook autosave function might fail.   -->
+
 - Allow assignments to be turned in as screenshots pasted into a word processor and converted into pdf.
 
 - Split assignments into 2 notebooks: one for content/examples and another one for assignment. Pass required data structures from the content notebook to the assignment notebook using a [Python pickle](https://docs.python.org/3/library/pickle.html).
@@ -65,8 +68,11 @@ To avoid issues related to poor internet access, consider following options:
 - If you are running a script that requires you to be in a particular working directory, use a context manager to handle directory changes. This will allow you to change to the correct working directory, call the script, and then change back to the original directory.
     - For context manager, write a following function first:
 
+<!--  The path decorator example should include a from pathlib import Path -->
+
 ```python
 import contextlib
+from pathlib import Path
 
 @contextlib.contextmanager
 def work_dir(work_pth):
