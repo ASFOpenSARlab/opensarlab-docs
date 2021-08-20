@@ -123,9 +123,11 @@ When your OpenSARlab server starts up, `nbgitpuller` will run and pull in any up
 
 *Example file format:*  
 
- ``` bash
- ASF edit:  sample_notebook.ipynb
- User edit: sample_notebook__20210616165846.ipynb
+<!--  code snippet is being mean to web format. Reference best practice guides. -->
+ ```bash
+ASF Edit: sample_notebook.ipynb
+
+User Edit: sample_notebook__20210616165846.ipynb
  ```
 
 If you feel like your notebook is missing, it is likely in its original location with a recent timestamp appended to its name.
