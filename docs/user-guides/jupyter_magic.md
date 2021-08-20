@@ -4,7 +4,7 @@
 
 Jupyter Notebook magic commands provide shortcuts and extra functionality to the notebooks in addition to what can be done with pure Python code. An exhaustive list of magic commands can be found in the [IPython docs](https://ipython.readthedocs.io/en/stable/interactive/magics.html). 
 
-While all magic commands are available to users, we tend to use a relatively small selection of them in OpenSAR lab. 
+While all magic commands are available to users, we tend to use a relatively small selection of them in OpenSARlab. 
 
 Magic commands that are frequently used are following:
 
