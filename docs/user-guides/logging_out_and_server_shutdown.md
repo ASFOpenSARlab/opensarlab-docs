@@ -12,7 +12,8 @@ Logging out will not shut down the server on its own. While the server may shut 
 
 While there are any notebooks open in active browser tabs, the server will stay alive.
 
-*Example:* Consider a case where you ran some process, logged out, and decied to log back in for the first time in a few days. Upon logging in, you noticed that the Jupyter Notebook from the previous session is still running. This implies that your server was running for the past few days, which used up unnecessary resources.
+<!-- typo: logged out, and decied (sic) to log back -->
+*Example:* Consider a case where you ran some process, logged out, and decided to log back in for the first time in a few days. Upon logging in, you noticed that the Jupyter Notebook from the previous session is still running. This implies that your server was running for the past few days, which used up unnecessary resources.
 
 Do your part to reduce resource use and ease the burden on the environment by shutting down your server when you are finished working for the day. 
 
