@@ -28,22 +28,19 @@ Following line magics are commonly used:
 
 <!--  example appears to be grouped with descriptions i.e. confusing -->
 ### `%matplotlib inline`
----
-Allows **non-interactive** `matplotlib plots` to be displayed in a notebook.
+- Allows **non-interactive** `matplotlib plots` to be displayed in a notebook.
 
 ### `%matplotlib notebook`
----
-Allows **interactive** `matplotlib plots` to be displayed and interacted with inside of a Jupyter Notebook. 
+- Allows **interactive** `matplotlib plots` to be displayed and interacted with inside of a Jupyter Notebook. 
 
 ### `%df`
----
-This is a custom magic written specifically for OpenSARlab. It uses the python function `shutil.disk_usage()` to check the state of storage on user's volumes. 
+- This is a custom magic written specifically for OpenSARlab. It uses the python function `shutil.disk_usage()` to check the state of storage on user's volumes. 
 
-- `%df` returns a human readable string in GB. 
-- `%df --raw` returns a raw data object
-- `%df --on` returns a string in GB after every subsequent code cell is run
-- `%df --off` turns `%df --on` back off
-- `%df -v` prints additional debugging text 
+    - `%df` returns a human readable string in GB. 
+    - `%df --raw` returns a raw data object
+    - `%df --on` returns a string in GB after every subsequent code cell is run
+    - `%df --off` turns `%df --on` back off
+    - `%df -v` prints additional debugging text 
 
 ## Cell Magics
 ---
@@ -51,14 +48,10 @@ This is a custom magic written specifically for OpenSARlab. It uses the python f
 Cell magics start with `%%` and effect the contents of an entire cell. 
 
 <!--  example appears to be grouped with descriptions i.e. confusing -->
-### `%matplotlib inline`
-
 ### `%%javascript or %%js`
----
-Runs a JavaScript code cell. 
+- Runs a JavaScript code cell. 
 
-*Note:* leave a blank line above the magic command in the beginning of the code cell.
+*Note: leave a blank line above the magic command in the beginning of the code cell.*
 
 ### `%%capture`
----
-Runs the cell but captures all output. We typically use this to suppress output of a `matplotlib plot` that the user does not wish to see. 
+- Runs the cell but captures all output. We typically use this to suppress output of a `matplotlib plot` that the user does not wish to see. 
