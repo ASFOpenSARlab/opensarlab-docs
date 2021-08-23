@@ -20,10 +20,11 @@ nav:
   - Troubleshooting Guide: user-guides/troubleshooting_guide.md
   - User Guide:
     - user.md
-    - Jupyter Notebook Intro: user-guides/jupyter_notebook_intro.md
+    # - Jupyter Notebook Intro: user-guides/jupyter_notebook_intro.md
+    - Running Jupyter Notebook: user-guides/how_to_run_a_notebook.md
     - Conda Environments: user-guides/conda_environments.md
     - Installing Software in OpenSARlab: user-guides/installing_software_in_OpenSARlab.md
-    - Running Jupyter Notebook: user-guides/how_to_run_a_notebook.md
+    # - Running Jupyter Notebook: user-guides/how_to_run_a_notebook.md
     - OpenSARlab Servers and Kernels: user-guides/restarting_server_and_kernel.md
     - Jupyter Magic Commands: user-guides/jupyter_magic.md
     - OpenSARlab Terminal: user-guides/OpenSARlab_terminal.md

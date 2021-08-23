@@ -7,7 +7,8 @@
 
 - Provide students with a conda environment that has everything they need. [Conda Environments in OpenSARlab.](conda_environments.md)
 
-- Students can mimic instructor's enviornment by:
+<!--  Typo: can mimic instructor's enviornment (sic)  -->
+- Students can mimic instructor's environment by:
 
     1. Distributing ```environment.yml``` file
     1. Upload ```environment.yml``` into following directory: ```/home/jovyan/conda_environments/Environment_Configs/```         
@@ -43,9 +44,14 @@
 ### Plan for Students with Poor Internet Access
 ---
 
-- Saving a notebook without clearing its output first will increase the file size substantially. It is risky for students to submit assignments by running notebooks, saving their results, and submitting them afterwards. Students without a strong internet connection may not be able to save and turn in their work in this manner.
+<!-- - Saving a notebook without clearing its output first will increase the file size substantially. It is risky for students to submit assignments by running notebooks, saving their results, and submitting them afterwards. Students without a strong internet connection may not be able to save and turn in their work in this manner. -->
+- Saving a notebook without clearing its output first will increase the file size substantially. 
+- If notebooks are too big and students have poor internet connections, the notebook autosave functionality may fail.
+- Due to above reasons, it is risky for students to submit their assignments by running notebooks, saving their results, and submitting them afterwards. Students without a strong internet connection may not be able to save and turn in their work in this manner.
 
 To avoid issues related to poor internet access, consider following options:
+
+<!-- Plan for Students with Poor Internet Access. I think another bullet should be added explaining that if notebooks are too big and there is poor internet, the notebook autosave function might fail.   -->
 
 - Allow assignments to be turned in as screenshots pasted into a word processor and converted into pdf.
 
@@ -65,8 +71,11 @@ To avoid issues related to poor internet access, consider following options:
 - If you are running a script that requires you to be in a particular working directory, use a context manager to handle directory changes. This will allow you to change to the correct working directory, call the script, and then change back to the original directory.
     - For context manager, write a following function first:
 
+<!--  The path decorator example should include a from pathlib import Path -->
+
 ```python
 import contextlib
+from pathlib import Path
 
 @contextlib.contextmanager
 def work_dir(work_pth):
