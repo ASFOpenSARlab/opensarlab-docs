@@ -24,7 +24,8 @@ At this time, users cannot install software in OpenSARlab using `apt` or `apt-ge
 ## conda
 <!--  The overall sentiment of the paragraph is wrong. You can add software to the conda env that will persist. What will not persist is adding software to the system base env - which users shouldn't really care about anyway. So why even mention that?  -->
 
-Users can install additional software with conda in OpenSARlab, but it will not persist after the server shuts down. It will need to be reinstalled during subsequent OpenSARlab sessions. 
+Users can install additional software with conda in OpenSARlab. 
+Packages installed in the [base conda environment](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-envs) will not persist after the server shuts down. They will need to be reinstalled during subsequent OpenSARlab sessions. However, changes to non-base environments will persist. Therefore, it is recommended to install new packages in your non-base environments instead of in base. 
 
 ### Install conda packages from within a notebook running in an environment
 1. Edit a notebook code cell
