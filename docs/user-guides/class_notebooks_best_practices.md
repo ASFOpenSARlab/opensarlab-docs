@@ -44,7 +44,10 @@
 ### Plan for Students with Poor Internet Access
 ---
 
-- Saving a notebook without clearing its output first will increase the file size substantially. It is risky for students to submit assignments by running notebooks, saving their results, and submitting them afterwards. Students without a strong internet connection may not be able to save and turn in their work in this manner.
+<!-- - Saving a notebook without clearing its output first will increase the file size substantially. It is risky for students to submit assignments by running notebooks, saving their results, and submitting them afterwards. Students without a strong internet connection may not be able to save and turn in their work in this manner. -->
+- Saving a notebook without clearing its output first will increase the file size substantially. 
+- If notebooks are too big and students have poor internet connections, the notebook autosave functionality may fail.
+- Due to above reasons, it is risky for students to submit their assignments by running notebooks, saving their results, and submitting them afterwards. Students without a strong internet connection may not be able to save and turn in their work in this manner.
 
 To avoid issues related to poor internet access, consider following options:
 
