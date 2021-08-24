@@ -36,4 +36,4 @@ __Please note that the `nbgitpuller` will not run if you are not in the main bra
 1. A fresh copy of the repo will be cloned into your account.
 
 ## Using Other Git Repositories in OpenSARlab
-Users can use any repo they wish in OpenSARlab. It is best to clone any additional repos alongside or above the `notebooks` directory, where the `asf-jupyter-notebooks` repo is also stored. This prevents issues that may arise from nesting repositories inside each other. **Clone your repos to `/home/jovyan`**, which can be done [in the terminal](OpenSARlab_terminal.md).
+Users can use any repo they wish in OpenSARlab. It is best to clone any additional repos alongside or above the `notebooks` directory, where the `asf-jupyter-notebooks` repo is stored. This prevents issues that may arise from nesting repositories inside each other. **Clone your repos to `/home/jovyan`**, which can be done [in the terminal](OpenSARlab_terminal.md).
