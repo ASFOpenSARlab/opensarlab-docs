@@ -22,7 +22,7 @@ If a user has made changes to a notebook and the same notebook has been updated 
 - Updated by user: `sample_notebook__20210616165846.ipynb`
 - Updated by ASF: `sample_notebook.ipynb`
 
-__Please note that the `nbgitpuller` will not run if you are not in the master branch of the asf-jupyter-notebook repo.__
+__Please note that the `nbgitpuller` will not run if you are not in the main branch of the asf-jupyter-notebook repo.__
 
 <!--  So is this saying that if one file is missing from remote then none of the files from remote will be pulled? Thus removing one remote file will sabotage the whole thing? -->
 
