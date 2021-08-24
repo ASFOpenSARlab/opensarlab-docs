@@ -118,7 +118,7 @@ In such cases, note the names and locations of the offending file(s) and logout 
 
 ```
 ASF Edit: sample_notebook.ipynb
-User Edit: sample_notebook__20210616165846.ipynb
+User Edit: sample_notebook_20210616165846.ipynb
 ```
 
 - If you feel like your notebook is missing, it is likely in its original location with a recent timestamp appended to its name.
@@ -153,17 +153,18 @@ User Edit: sample_notebook__20210616165846.ipynb
 
 ---
 
+## I tried to run a notebook that downloads products from HyP3 and I get an error
+
+- HyP3v1 (HyP3 beta) has been retired and replaced with an updated [HyP3 API and SDK](https://hyp3-docs.asf.alaska.edu/).
+- Notebooks using the old version of HyP3 **will be removed from the [ASF Jupyter Notebook library](https://github.com/ASFOpenSARlab/opensarlab-notebooks) in GitHub on September 30th 2021.** 
+  - While old notebooks will be removed from GitHub, they will not be deleted from user storage on your OpenSARlab account. If you wish, you may delete them yourself to avoid confusion. 
+- Once you have switched to using the new version of HyP3, you should start using HyP3 notebooks that include "v2" in their filenames.
+  - *Example*: Stop using `Prepare_Data_Stack_HyP3.ipynb` and start using `Prepare_Data_Stack_HyP3_v2.ipynb` 
+
+---
+
 ## My issue is not on this list
 
 - Please contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
 
----
-
-## I tried to run a notebook that downloads products from HyP3 and I get an error
-
-- HyP3v1 (HyP3 beta) has been retired and replaced with an updated [HyP3 API and SDK](https://hyp3-docs.asf.alaska.edu/).
-- We have replaced 
-
-
 <!-- TODO: add documentation in regards to server timeouts -->
-<!-- TODO: add documentation on hyp3v1 -> hyp3v2 -->
