@@ -16,10 +16,14 @@ python -m pip install --user <package_name>
 ```bash
     conda activate <environment_name>
     python -m pip install --user <package_name>
-```   
+```  
+
+--- 
 
 ## apt and apt-get
 At this time, users cannot install software in OpenSARlab using `apt` or `apt-get`.
+
+---
 
 ## conda
 <!--  The overall sentiment of the paragraph is wrong. You can add software to the conda env that will persist. What will not persist is adding software to the system base env - which users shouldn't really care about anyway. So why even mention that?  -->

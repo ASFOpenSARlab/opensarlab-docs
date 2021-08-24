@@ -2,11 +2,11 @@
 
 # Git in OpenSARlab
 
-### ASF's Jupyter Notebook Library
+## ASF's Jupyter Notebook Library
 ASF's OpenSARlab Jupyter Notebook library lives in the 
 [asf-jupyter-notebooks GitHub repository](https://github.com/asfadmin/asf-jupyter-notebooks).
 
-### Gitpuller
+## Gitpuller
 
 A [nbgitpuller](https://jupyterhub.github.io/nbgitpuller/) pulls any changes to the [notebook repo](https://github.com/ASFOpenSARlab/opensarlab-notebooks) each time a user's OpenSARlab server starts up. 
 
@@ -26,7 +26,7 @@ __Please note that the `nbgitpuller` will not run if you are not in the main bra
 
 <!--  So is this saying that if one file is missing from remote then none of the files from remote will be pulled? Thus removing one remote file will sabotage the whole thing? -->
 
-### What do I do if my git state is broken beyond my ability to repair it?
+## What do I do if my git state is broken beyond my ability to repair it?
 
 1. Download or move any files you wish to preserve out of the ```/home/jovyan/notebooks``` directory (or its subdirectories).
 1. Delete the entire `/home/jovyan/notebooks` directory by:
@@ -35,5 +35,5 @@ __Please note that the `nbgitpuller` will not run if you are not in the main bra
 1. Restart your server.
 1. A fresh copy of the repo will be cloned into your account.
 
-### Using Other Git Repositories in OpenSARlab
+## Using Other Git Repositories in OpenSARlab
 Users can use any repo they wish in OpenSARlab. It is best to clone any additional repos alongside or above the `notebooks` directory, where the `asf-jupyter-notebooks` repo is also stored. This prevents issues that may arise from nesting repositories inside each other. **Clone your repos to `/home/jovyan`**, which can be done [in the terminal](OpenSARlab_terminal.md).

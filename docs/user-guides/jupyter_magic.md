@@ -12,21 +12,23 @@ Magic commands that are frequently used are following:
 - Line Magics
 - Cell Magics
 
-## IPython Shell Assignment with `!`
 ---
+
+## IPython Shell Assignment with `!`
+
 In IPython syntax, the exclamation mark (!) allows users to run shell commands from inside a Jupyter Notebook code cell.
 Simply start a line of code with `!` and it will run the command in the shell. 
 
 *Example:* ```!pwd``` will print the current working directory.
 
-## Line Magics
 ---
+
+## Line Magics
 
 Line magics start with a single `%` and effect only the line on which they are used. 
 
 Following line magics are commonly used:
 
-<!--  example appears to be grouped with descriptions i.e. confusing -->
 ### `%matplotlib inline`
 - Allows **non-interactive** `matplotlib plots` to be displayed in a notebook.
 
@@ -42,12 +44,12 @@ Following line magics are commonly used:
     - `%df --off` turns `%df --on` back off
     - `%df -v` prints additional debugging text 
 
-## Cell Magics
 ---
+
+## Cell Magics
 
 Cell magics start with `%%` and effect the contents of an entire cell. 
 
-<!--  example appears to be grouped with descriptions i.e. confusing -->
 ### `%%javascript or %%js`
 - Runs a JavaScript code cell. 
 
