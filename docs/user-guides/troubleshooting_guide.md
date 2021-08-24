@@ -116,8 +116,9 @@ In such cases, note the names and locations of the offending file(s) and logout 
 
 - *Example file format:*  
 
-    ```bash
+    ```
     ASF Edit: sample_notebook.ipynb
+  
     User Edit: sample_notebook__20210616165846.ipynb
     ```
 
@@ -157,5 +158,13 @@ In such cases, note the names and locations of the offending file(s) and logout 
 
 - Please contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
 
+---
+
+## I tried to run a notebook that downloads products from HyP3 and I get an error
+
+- HyP3v1 (HyP3 beta) has been retired and replaced with an updated [HyP3 API and SDK](https://hyp3-docs.asf.alaska.edu/).
+- We have replaced 
+
 
 <!-- TODO: add documentation in regards to server timeouts -->
+<!-- TODO: add documentation on hyp3v1 -> hyp3v2 -->
