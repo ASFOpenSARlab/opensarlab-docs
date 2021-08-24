@@ -116,8 +116,8 @@ In such cases, note the names and locations of the offending file(s) and logout 
 
 - *Example file format:*  
 
-  ```
-  ASF Edit: sample_notebook.ipynb
+  ```bash
+  ASF Edit: sample_notebook.ipynb\n
   User Edit: sample_notebook__20210616165846.ipynb
   ```
 
