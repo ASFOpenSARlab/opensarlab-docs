@@ -48,11 +48,11 @@ Click the **play** button at the top of the notebook or hit `shift + enter`.
  
 ## Code Cells
 
- Code cells contain editable and runnable Python code. You can run them in any order for any number of times.
+Code cells contain editable and runnable Python code. You can run them in any order for any number of times.
  
- The ability to run/rerun code cells in arbitrary order can be helpful, but it can also cause problems. 
+- The ability to run/rerun code cells in arbitrary order can be helpful, but it can also cause problems. 
  
-*e.g.* Recycled variables may end up with unexpected values if cells are run in non-sequential order.
+  - *e.g.* Recycled variables may end up with unexpected values if cells are run in non-sequential order.
 
  ![A code cell.](../assets/code_cell.png)
 
