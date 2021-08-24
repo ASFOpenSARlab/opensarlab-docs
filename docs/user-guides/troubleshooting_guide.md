@@ -116,11 +116,10 @@ In such cases, note the names and locations of the offending file(s) and logout 
 
 - *Example file format:*  
 
-    ```
-    ASF Edit: sample_notebook.ipynb
-  
-    User Edit: sample_notebook__20210616165846.ipynb
-    ```
+```
+ASF Edit: sample_notebook.ipynb
+User Edit: sample_notebook__20210616165846.ipynb
+```
 
 - If you feel like your notebook is missing, it is likely in its original location with a recent timestamp appended to its name.
 
