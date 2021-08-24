@@ -63,9 +63,9 @@ This issue is typically due to an unexpected behavior of the [nbgitpuller](https
 
 - Click the `Event log` arrow beneath the server startup progress bar to view the details of any nbgitpuller conflicts.
 
-    ![The event log can be viewed on the server startup screen.](../assets/event_log.png)
-    
-    *Click the `Event log` arrow beneath the server startup progress bar.*
+![The event log can be viewed on the server startup screen.](../assets/event_log.png)
+
+*Click the `Event log` arrow beneath the server startup progress bar.*
 
 - If the problem is:
  
@@ -74,15 +74,15 @@ In such cases, note the names and locations of the offending file(s) and logout 
 
   - Not related to the `nbgitpuller`, contact an [OpenSARlab Administrator](mailto:uaf-jupyterhub-asf@alaska.edu).
 
-  ![The logout button is located at the top right of the screen.](../assets/logout_server_screen.png)
+![The logout button is located at the top right of the screen.](../assets/logout_server_screen.png)
 
-  *Click the `logout` button located on top right corner of the screen*
+*Click the `logout` button located on top right corner of the screen*
   
 - After logging out, the startup screen will reload. Select the `General SAR processing (without git puller)` server option and click the `Start` button. 
  
-     ![The "General SAR processing (without git puller)" server option is below the "General SAR processing" option.](../assets/server_options_no_git_puller.png)
-    
-     *Select the `General SAR processing (without git puller)` server option and click the `Start` button*
+ ![The "General SAR processing (without git puller)" server option is below the "General SAR processing" option.](../assets/server_options_no_git_puller.png)
+
+ *Select the `General SAR processing (without git puller)` server option and click the `Start` button*
  
 - The server should now load and you will have access to your account. Go to where the conflicting file(s) are located. There are three options for dealing with each of the offending file(s):
  
@@ -92,15 +92,15 @@ In such cases, note the names and locations of the offending file(s) and logout 
 
 - Once you are done with one of the above operations, logout of OpenSARlab.
  
-     ![The logout button is located at the top right of the screen.](../assets/logout.png)
-    
-     *Click the `logout` button located at the top right corner of the screen*
+ ![The logout button is located at the top right of the screen.](../assets/logout.png)
+
+ *Click the `logout` button located at the top right corner of the screen*
  
 - Log back in and select `General SAR processing` server option.
  
-     ![The "General SAR processing" server option is the first option on the server option screen.](../assets/server_options.png)
-    
-     *Select the `General SAR processing` option and click `Start`*
+ ![The "General SAR processing" server option is the first option on the server option screen.](../assets/server_options.png)
+
+ *Select the `General SAR processing` option and click `Start`*
 
 - Upon completing above tasks, you should notice that:
 
