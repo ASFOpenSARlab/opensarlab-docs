@@ -20,16 +20,15 @@ nav:
   - Troubleshooting Guide: user-guides/troubleshooting_guide.md
   - User Guide:
     - user.md
-    # - Jupyter Notebook Intro: user-guides/jupyter_notebook_intro.md
     - Running Jupyter Notebook: user-guides/how_to_run_a_notebook.md
     - Conda Environments: user-guides/conda_environments.md
     - Installing Software in OpenSARlab: user-guides/installing_software_in_OpenSARlab.md
-    # - Running Jupyter Notebook: user-guides/how_to_run_a_notebook.md
     - OpenSARlab Servers and Kernels: user-guides/restarting_server_and_kernel.md
     - Jupyter Magic Commands: user-guides/jupyter_magic.md
     - OpenSARlab Terminal: user-guides/OpenSARlab_terminal.md
     - OpenSARlab Account Details: user-guides/OpenSARlab_environment.md
     - Git in OpenSARlab: user-guides/git_in_OpenSARlab.md
+    - S3 Bucket Access in OpenSARlab: user-guides/s3_buckets.md
     - Jupyter Notebook Extensions: user-guides/jupyter_notebook_extensions.md
     - Best Practices for Writing Notebooks: user-guides/class_notebooks_best_practices.md
     - Logging Out and Server Shutdown: user-guides/logging_out_and_server_shutdown.md
