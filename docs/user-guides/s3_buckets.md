@@ -49,7 +49,7 @@ region = <your bucket's region>
 role_arn = <arn to your iam role>
 ```
 
-   - Save and exit vim
+- Save and exit vim
     
 ### Access a private S3 bucket
 
