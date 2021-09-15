@@ -42,12 +42,12 @@
         - [Vim Command Cheat Sheet](https://vim.rtorr.com/)
     - Add the following to the `config` file
     
-        ```
-        [profile osl]
-        source_profile = default
-        region = <your bucket's region>
-        role_arn = <arn to your iam role>
-        ```
+```
+[profile osl]
+source_profile = default
+region = <your bucket's region>
+role_arn = <arn to your iam role>
+```
 
    - Save and exit vim
     
