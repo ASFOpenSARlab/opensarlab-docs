@@ -17,6 +17,9 @@
 - Download a file from a bucket
     - `aws --no-sign-request --region <bucket's region> s3 cp s3://bucket_name/directory_name/filename destination/path/filename`
 - Upload a file to a bucket
+    - Increase your s3.multipart_threshold to allow uploading up to 5000MB as an anonymous user
+        - Open a terminal
+            - `aws configure set default.s3.multipart_threshold 5000MB`
     - `aws --no-sign-request --region <bucket's region> s3 cp source/path/filename s3://bucket_name/destination/path/filename`
     
 ## Accessing Private S3 Buckets
