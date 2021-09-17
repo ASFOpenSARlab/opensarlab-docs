@@ -2,7 +2,7 @@
 
 ## What is OpenSARlab?
 
-OpenSARlab is a service providing users persistent, cloud-based, customizable computing environments. It insures that groups of scientists and students have access to identical environments, containing the same software, running on the same hardware. It operates in the cloud, which means anyone with a moderately reliable internet connection can access their development environment. OpenSARlab sits alongside ASF's data archives in AWS, allowing for low latency transfer of large data products.
+OpenSARlab is a service providing users persistent, cloud-based, customizable computing environments. Groups of scientists and students have access to identical environments, containing the same software, running on the same hardware. It operates in the cloud, which means anyone with a moderately reliable internet connection can access their development environment. OpenSARlab sits alongside ASF's data archives in AWS, allowing for low latency transfer of large data products.
 
 OpenSARlab is a deployable service that creates an autoscaling Kubernetes cluster in Amazon AWS, running JupyterHub. Users have access to customizable environments running JupyterLab via authenticated accounts with persistent storage.
 
