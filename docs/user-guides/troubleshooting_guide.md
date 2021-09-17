@@ -41,6 +41,13 @@
 
 ---
 
+## I tried to create a new notebook and recieved the error `Forbidden`
+
+![A notebook creation Forbidden error](../assets/forbidden.png)
+
+- This can happen when you have logged out of OpenSARlab and then try to create a new notebook from an OpenSARlab browser tab that was left open.
+- You must log back in before you can create, open, or run a notebook.
+
 ## I am receiving a `No space left on device` error.
 
 OpenSARlab users have access to a finite amount of storage space ([details here](OpenSARlab_environment.md)). 
