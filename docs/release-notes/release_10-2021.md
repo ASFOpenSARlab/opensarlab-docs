@@ -19,4 +19,4 @@
 
 ### Add current profile name to the top of every page
 - Different OpenSARlab profiles allow for varying resource allotments.
-- The current profile name now appears a the top of every OpenSARlab page to serve as a reminder to the user of which profile they are running in. 
+- The current profile name now appears at the top of every OpenSARlab page to serve as a reminder to the user of which profile they are running in. 
