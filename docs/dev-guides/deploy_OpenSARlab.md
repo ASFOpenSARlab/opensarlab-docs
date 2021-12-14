@@ -114,32 +114,13 @@ TODO Do this differently
 
 Customize opensarlab_container code for deployment
 --------------------
-**The opensarlab-container repo contains one example image named "sar", which you can reference when creating new images.
+**The opensarlab-container repo contains one example image named `helloworld`, which you can reference when creating new images.
 Images can be used by multiple profiles**
 
 Note: It is easiest to work in your local repo and push your changes when you're done.
 
-1. Duplicate the images/sar directory and rename it, using your chosen image name
-    1. Create and add any additional custom jupyter magic commands to the jupyter-hooks/custom_magics directory
-    1. Add any additional scripts you may have created for use in your image to the scripts directory
-    1. Add any image test scripts to tests directory
-    1. Edit images/<new_image_name>/jupyter-hooks/sar.sh
-        1. Rename sar.sh to <new_image_name>.sh
-        1. Copy any additional custom Jupyter magic scripts to $HOME/.ipython/image_default/startup/ (alongside 00-df.py)
-        1. Edit the repos being pulled to suit your deployment and image needs
-    1. Edit images/<new_image_name>/build.sh
-        1. Change 6 $DOCKER_REGISTRY namespaces from "sar" to your image namespace
-    1. Repeat the previous step, adding scripts for any additional images
-1. Edit cf-container.yaml
-    1. SARRepository 
-        1. Change the resource name (SARRepository) so it makes sense given the image that will use it
-        1. Change the "/sar" portion of RepositoryName to use a namespace matching your image name
-    1. Pipeline
-        1. Name: !Sub ${AWS::StackName}-Build-Images
-            1. Change "- Name: images-sar" to "- Name: images-<image_namespace>"
-            1. EnvironmentVariables
-                1. Change the IMAGE_NAME value from "sar" to "<image_namespace">
-        1. Add stages for any additional images
+1. Duplicate the images/helloworld directory and rename it, using your chosen image name
+    1. Add any image test scripts to `tests` directory
 1. Edit dockerfile
     1. Adjust the packages in the 2nd apt install command to suit your image needs
     1. Add any pip packages you wish installed in the base conda environment
@@ -163,75 +144,81 @@ Customize opensarlab_cluster code for deployment
 
 Note: Most IDEs have functionality to easily locate and organize TODOs. Searching the code for "TODO" will also work.
 
-1. hub/dockerfile
+1. Create and add any additional custom jupyter magic commands to the `opensarlab/jupyterhub/singleuser/custom_magics` directory
+2. Add any additional scripts you may have created for use in your image to the `opensarlab/jupyterhub/singleuser/hooks` directory
+3. Edit images/<new_image_name>/jupyter-hooks/sar.sh
+    1. Rename sar.sh to <new_image_name>.sh
+    2. Copy any additional custom Jupyter magic scripts to $HOME/.ipython/image_default/startup/ (alongside 00-df.py)
+    3. Edit the repos being pulled to suit your deployment and image needs
+4. hub/dockerfile
     1. Add your organization's name as MAINTAINER
     1. Adjust the images (jpgs, pngs, etc...) and templates being copied to the docker image
-1. hub/etc/jupyterhub/custom/delete_snapshot.py
+5. hub/etc/jupyterhub/custom/delete_snapshot.py
     1. Edit admin email addresses (2 locations)
-1. hub/usr/local/share/jupyterhub/templates/login.html
+6. hub/usr/local/share/jupyterhub/templates/login.html
     1. Edit the images and messages that appear on the login page
-1. hub/usr/local/share/jupyterhub/templates/pending.html
+7. hub/usr/local/share/jupyterhub/templates/pending.html
     1. Edit the message to users that their account is pending approval
-1. notifications/dock
+8. notifications/dock
     1. Add the ICAL_URL of your notification calendar
-1. notifications/dockerfile
+9. notifications/dockerfile
     1. Add your organization's name as MAINTAINER
-1. cf-cluster.yaml
-    1. Add a NodeInstanceType parameter for every EC2 type
-        1. must be alphanumeric
-    1. Remove the example NodeInstanceTypePROFILE1 resource
-    1. Add a LaunchConfiguration for every NodeInstanceType
-        1. must be alphanumeric
-        1. InstanceType should match the NodeInstanceType created above
-        1. The server_type in UserData must match profile's server_type that you will use in helm_config.yaml
-    1. Add an AutoScalingGroup resource for every NodeInstanceType
-        1. must be alphanumeric
-        1. LaunchConfigurationName should match new LaunchConfiguration created above
-    1. Remove the example AutoScalingGroupPROFILE1 resource
-    1. Remove the example LaunchConfigurationPROFILE1 resource
-1. helm_config.yaml
-    1. Add new profiles, using the example PROFILE_1 as a template
-        1. Reference the [kubespawner docs](https://jupyterhub-kubespawner.readthedocs.io/en/latest/spawner.html) for more options and details
-        1. Change the name of the profile being search for in group_list
-        1. Change the display_name
-        1. Change the profile description
-        1. Change the extra_labels and node_selector server_types to match the server_type used in the profiles LaunchConfiguration in cf-cluster.yaml
-        1. Adjust the path to the postStart lifecycle hook
-        1. Adjust the kubespawner_override args --NotebookApp.jinja_template_vars PROFILE_NAME to the correct profile name
-        1. Adjust the mem_limit
-            1. The maximum amount of memory available to each user
-            1. <= memory available for EC2 type
-        1. Adjust the mem_guarantee (or cpu_guarantee)
-            1. The minimum amount of memory guaranteed to each user
-            1. If there is not enough memory on any existing node, the autoscaler will spin up a new node
-            1. Use the mem_guarantee to determine how nodes should be shared among users
-            1. Even if not sharing nodes, do not guarantee all available memory
-                1. The node requires some memory for setup (varies and may take some trial and error to figure out how much to reserve)
-        1. Adjust the cpu_guarantee (or mem_guarantee)
-            1. The minimum EC2 cpu units guaranteed to each user (as a float, not a string)
-            1. If there aren't enough cpu units left on a node for the next user, the autoscaler will spin up a new node
-            1. Use the cpu_guarantee to determine how nodes should be shared among users
-            1. Even if not sharing nodes, do not guarantee all available cpus
-                1. The node requires some memory for setup
-        1. Adjust the storage capacity
-            1. This should match the storage capacity used for all profiles
-            1. You can increase volume sizes at a later date
-            1. Reducing volume sizes is not advised due to a high likelihood of data loss
-    1. Remove the example PROFILE_1
-1. lambda_handler.py
-    1. Lambdas are used by Cognito event triggers for logging and emailing notifications to users and administrators
-    1. Create a lambda_handler.py file based on lambda_handler.py.example
-    1. Adjust email messages to suit the needs of the deployment
-    1. zip the file, creating lambda_handler.py.zip
-        1. be sure to keep the ".py" as part of the filename
-    1. Upload the zip to the `deployment_name`-lambda S3 bucket
-        1. After setting up Cognito for the first time, anytime you make changes to this file you will need to:
-            1. Change the name of the zip file
-                1. **Do not change the name of the lambda_handler.py file it contains**
-            1. Upload it to the lambda S3 bucket
-            1. Update the EmailLambdaKeyName parameter in the cognito CloudFormation template to match the new filename
-            1. After updating the pipeline, set all Cognito triggers to 'None', save them, set them back to the correct lambdas, and save them again
-1. Add, commit, and push changes to the remote CodeCommit repo
+10. cf-cluster.yaml
+     1. Add a NodeInstanceType parameter for every EC2 type
+         1. must be alphanumeric
+     1. Remove the example NodeInstanceTypePROFILE1 resource
+     1. Add a LaunchConfiguration for every NodeInstanceType
+         1. must be alphanumeric
+         1. InstanceType should match the NodeInstanceType created above
+         1. The server_type in UserData must match profile's server_type that you will use in helm_config.yaml
+     1. Add an AutoScalingGroup resource for every NodeInstanceType
+         1. must be alphanumeric
+         1. LaunchConfigurationName should match new LaunchConfiguration created above
+     1. Remove the example AutoScalingGroupPROFILE1 resource
+     1. Remove the example LaunchConfigurationPROFILE1 resource
+11. helm_config.yaml
+     1. Add new profiles, using the example PROFILE_1 as a template
+         1. Reference the [kubespawner docs](https://jupyterhub-kubespawner.readthedocs.io/en/latest/spawner.html) for more options and details
+         1. Change the name of the profile being search for in group_list
+         1. Change the display_name
+         1. Change the profile description
+         1. Change the extra_labels and node_selector server_types to match the server_type used in the profiles LaunchConfiguration in cf-cluster.yaml
+         1. Adjust the path to the postStart lifecycle hook
+         1. Adjust the kubespawner_override args --NotebookApp.jinja_template_vars PROFILE_NAME to the correct profile name
+         1. Adjust the mem_limit
+             1. The maximum amount of memory available to each user
+             1. <= memory available for EC2 type
+         1. Adjust the mem_guarantee (or cpu_guarantee)
+             1. The minimum amount of memory guaranteed to each user
+             1. If there is not enough memory on any existing node, the autoscaler will spin up a new node
+             1. Use the mem_guarantee to determine how nodes should be shared among users
+             1. Even if not sharing nodes, do not guarantee all available memory
+                 1. The node requires some memory for setup (varies and may take some trial and error to figure out how much to reserve)
+         1. Adjust the cpu_guarantee (or mem_guarantee)
+             1. The minimum EC2 cpu units guaranteed to each user (as a float, not a string)
+             1. If there aren't enough cpu units left on a node for the next user, the autoscaler will spin up a new node
+             1. Use the cpu_guarantee to determine how nodes should be shared among users
+             1. Even if not sharing nodes, do not guarantee all available cpus
+                 1. The node requires some memory for setup
+         1. Adjust the storage capacity
+             1. This should match the storage capacity used for all profiles
+             1. You can increase volume sizes at a later date
+             1. Reducing volume sizes is not advised due to a high likelihood of data loss
+     1. Remove the example PROFILE_1
+12. lambda_handler.py
+     1. Lambdas are used by Cognito event triggers for logging and emailing notifications to users and administrators
+     1. Create a lambda_handler.py file based on lambda_handler.py.example
+     1. Adjust email messages to suit the needs of the deployment
+     1. zip the file, creating lambda_handler.py.zip
+         1. be sure to keep the ".py" as part of the filename
+     1. Upload the zip to the `deployment_name`-lambda S3 bucket
+         1. After setting up Cognito for the first time, anytime you make changes to this file you will need to:
+             1. Change the name of the zip file
+                 1. **Do not change the name of the lambda_handler.py file it contains**
+             1. Upload it to the lambda S3 bucket
+             1. Update the EmailLambdaKeyName parameter in the cognito CloudFormation template to match the new filename
+             1. After updating the pipeline, set all Cognito triggers to 'None', save them, set them back to the correct lambdas, and save them again
+13. Add, commit, and push changes to the remote CodeCommit repo
 
 Build the Cognito CloudFormation stack
 --------------------
