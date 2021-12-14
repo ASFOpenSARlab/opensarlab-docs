@@ -112,12 +112,6 @@ TODO Do this differently
         
 **You should now have container and cluster repos in CodeCommit that are duplicates of those found in ASFOpenSARlab** 
 
-Create an S3 bucket to hold the lambda handler script
---------------------
-
-1. Create an S3 bucket in your AWS account called `deployment_name`-lambda
-    1. Alternatively, you could use the same bucket to hold lambdas for multiple deployments
-
 Customize opensarlab_container code for deployment
 --------------------
 **The opensarlab-container repo contains one example image named "sar", which you can reference when creating new images.
