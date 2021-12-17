@@ -1,6 +1,6 @@
 # Welcome to the OpenSARlab User Guide
 
-1. [Jupyter Notebook Intro](user-guides/jupyter_notebook_intro.md)
+1. [Jupyter Notebook Intro](user-guides/how_to_run_a_notebook.md)
 1. [Running Jupyter Notebooks](user-guides/how_to_run_a_notebook.md)
 1. [Jupyter Magic Commands](user-guides/jupyter_magic.md)
 1. [OpenSARlab Account Details](user-guides/OpenSARlab_environment.md)
