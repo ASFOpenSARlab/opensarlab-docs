@@ -142,8 +142,8 @@ Customize opensarlab_cluster code for deployment
    1. Edit `opensarlab/jupyterhub/singleuser/hooks/<image_name>.sh`
        2. Copy any additional custom Jupyter magic scripts to `$HOME/.ipython/image_default/startup/` (alongside 00-df.py)
        3. Edit the repos being pulled to suit your deployment and image needs
-3. Update `opensarlab/opensarlab.yaml` for your deployment
-   1. Reference `opensarlab/opensarlab.example.yaml` to define the required and optional fields in `opensarlab/opensarlab.yaml`
+3. Rename `opensarlab/opensarlab.example.yaml` to  `opensarlab/opensarlab.yaml`
+   1. Use the example notes in `opensarlab/opensarlab.yaml` to define the required and optional fields
 5. Update `opensarlab/jupyterhub/helm_config.yaml`
     1. `singleuser`
        1. Add any needed extraFiles

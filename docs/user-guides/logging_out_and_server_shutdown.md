@@ -10,7 +10,7 @@ When you are ready to stop working in OpenSARlab, it is important to shut down y
 
 <!--  in future, include docs regarding auto shutdown and reference it here -->
 
-- Logging out will not shut down the server on its own. While the server may shut down automatically after an hour of inactivity, users should not rely on this feature. 
+- Logging out will **not** shut down the server on its own. While the server may shut down automatically after an hour of inactivity, users should not rely on this feature. 
 
 - The server will stay alive while there are any notebooks open in active browser tabs.
 
@@ -24,7 +24,28 @@ Do your part to reduce resource use and ease the burden on the environment by sh
 
 ---
 
-## How to Shut Down The Server and Logout
+## How to Shut Down The Server and Logout in Jupyter Lab
+
+1. **Select `Hub Control Panel` from the `File` menu**
+
+    ![Select Hub Control Panel from the File menu](../assets/jlab_hub_control.png)
+
+
+2. **Click The Stop My Server Button**
+
+    ![Click the Stop My Server button](../assets/stop_my_server.png)
+    
+    *Click the **Stop My Server** button that appears.*
+
+
+3. **Click The Logout Button**
+
+    ![Click the Logout button](../assets/logout_2.png)
+    
+    *Click the **Logout** button.*
+
+---
+## How to Shut Down The Server and Logout in Jupyter Notebook
 
 1. **Click The Control Panel Button**
 
@@ -32,11 +53,13 @@ Do your part to reduce resource use and ease the burden on the environment by sh
 
     *Click the **Control Panel** button at the top right corner of the file manager or in an open notebook.*
 
+
 1. **Click The Stop My Server Button**
 
     ![Click the Stop My Server button](../assets/stop_my_server.png)
     
     *Click the **Stop My Server** button that appears.*
+
 
 1. **Click The Logout Button**
 
