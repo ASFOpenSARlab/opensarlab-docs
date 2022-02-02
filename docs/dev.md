@@ -2,4 +2,5 @@
 2. [Deploy OpenSARlab to AWS](dev-guides/deploy_OpenSARlab.md)
 3. [Conda Environment Options](dev-guides/conda_environments.md)
 4. [OpenSARlab Notifications](dev-guides/notifications.md)
-5. [Troubleshooting](dev-guides/troubleshooting.md)
+5. [User Whitelists](dev-guides/whitelist.md)
+6. [Troubleshooting](dev-guides/troubleshooting.md)
