@@ -6,6 +6,8 @@
     - new menus
     - workspaces
     - matplotlib notebook -> matplotlib widget
+    - url-widget
+        - Kernel check code cell changes in notebooks
     - new resource manager location
     - notebook debugger
 - mamba
