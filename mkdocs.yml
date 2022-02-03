@@ -37,7 +37,6 @@ nav:
     - Deploy OpenSARlab to AWS: dev-guides/deploy_OpenSARlab.md
     - Conda Environment Options: dev-guides/conda_environments.md
     - Notifications: dev-guides/notifications.md
-    - User Whitelists: dev-guides/whitelist.md
     - Troubelshooting Guide: dev-guides/troubleshooting.md
   - Release Notes:
     - June 2021: release-notes/release_06-2021.md
