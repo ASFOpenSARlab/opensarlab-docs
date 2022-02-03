@@ -30,6 +30,12 @@ Do your part to reduce resource use and ease the burden on the environment by sh
 
     ![Select Hub Control Panel from the File menu](../assets/jlab_hub_control.png)
 
+    **or**
+
+    **Click the `Shutdown and Logout Page` button in the upper right corner of the screen** 
+
+    ![Click the Shutdown and Logout Page button in the upper right corner of the screen](../assets/shutdown_logout.png)
+
 
 2. **Click The Stop My Server Button**
 
