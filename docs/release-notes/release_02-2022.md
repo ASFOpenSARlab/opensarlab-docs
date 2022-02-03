@@ -10,6 +10,7 @@
   - notebook debugger
 - mamba
 - mamba-gator
+- spellchecker
 - Custom extensions in topbar
   - Shutdown and logout button
-- 
+
