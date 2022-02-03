@@ -41,16 +41,16 @@
 
 ---
 
-## I see one or many `Python 3 (ipykernel)` kernels instead of the kernels for my conda environments that I expect to see. 
+## I see one or many `Python 3` or `Python` kernels instead of the kernels for my conda environments that I expect to see. 
 
 ![An image showing multiple Python3 kernels](../assets/python3_kernels.png)
 
-- The default display name for conda environment kernels is `Python 3`.
+- The default display names for conda environment kernels are `Python 3` or `Python` (depending on when and how they were created).
 - We use the kernda package to change a kernel's display name to that of the environment name.
     - There is code in the Create_OSL_Conda_Environments.ipynb notebook that does this.
     - If you have created an environment without using the Create_OSL_Conda_Environments.ipynb notebook, run the following command in a terminal to change its display name: `mamba run -n <environment name> kernda --display-name <environment name> -o <environment directory>/share/jupyter/kernels/python3/kernel.json`
     - Note: it is important to only run the above kernda command once.
-        - Running it more than once will create a malformed `kernel.json`
+        - Running it more than once will create a malformed `kernel.json`.
         - If you accidentally run it more than once, recreate the environment and try again.
 
 ---
