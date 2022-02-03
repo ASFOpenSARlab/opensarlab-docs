@@ -2,7 +2,7 @@
 
 ### Changes:
 - Ubuntu 20.04.3 LTS
-- Jupyter Lab
+- Jupyter Lab 
   - new menus
   - workspaces
   - matplotlib notebook -> matplotlib widget
@@ -13,4 +13,4 @@
 - spellchecker
 - Custom extensions in topbar
   - Shutdown and logout button
-
+  
