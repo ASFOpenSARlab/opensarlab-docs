@@ -41,7 +41,7 @@
 
 ---
 
-## I see one or many `Python 3` or `Python` kernels instead of the kernels for my conda environments that I expect to see. 
+## I see one or many `Python 3` or `Python` kernels instead of kernels named after conda environments that I expect to see. 
 
 ![An image showing multiple Python3 kernels](../assets/python3_kernels.png)
 
