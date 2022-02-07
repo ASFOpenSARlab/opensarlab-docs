@@ -18,7 +18,7 @@
 
 ## JupyterLab
 
-- There are now JupyterLab profiles available alongside the Classic Jupyter Notebook profiles. Jupyter Lab comes with many more features than Classic Jupyter Notebook (see the [JupyterLab Docs](https://jupyterlab.readthedocs.io/en/stable/user/interface.html))
+- There are now JupyterLab profiles available alongside the Classic Jupyter Notebook profiles. Jupyter Lab comes with many more features than Classic Jupyter Notebook (see the [JupyterLab Docs](https://jupyterlab.readthedocs.io/en/stable/user/interface.html)) for more information.
 - Classic Jupyter Notebook profiles will remain active for 1 month before being deprecated on March 7th.
 
 ## Matplotlib widget
