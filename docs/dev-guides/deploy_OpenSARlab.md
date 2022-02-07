@@ -121,7 +121,7 @@ Note: It is easiest to work in your local repo and push your changes when you're
 
 1. Duplicate the `images/sar` directory and rename it, using your chosen image name
    1. The image name must be alpha-numeric with no whitespaces or special characters
-3. Edit the dockerfile
+1. Edit the dockerfile
     1. Adjust the packages in the 2nd apt install command to suit your image needs
     1. Add any pip packages you wish installed in the base conda environment
     1. Add any conda packages you wish installed in the base conda environment
@@ -129,27 +129,27 @@ Note: It is easiest to work in your local repo and push your changes when you're
         1. If using environment.yml files, store them in an "envs" directory in <image_name>/jupyter-hooks, and they will be copied into the container
             1. RUN conda env create -f /etc/jupyter-hooks/envs/<environment_name>_env.yml --prefix /etc/jupyter-hooks/envs/<environment_name>
     1. Run any tests for this image that you added to the tests directory under `FROM release as testing`
-4. Remove the images/sar directory and sar.sh test script, unless you plan to use the sar image
-5. Add a test script for your image
+1. Remove the images/sar directory and sar.sh test script, unless you plan to use the sar image
+1. Add a test script for your image
     1. use sar.sh as an example
     1. name it <image_namespace>.sh
-7. Add, commit, and push changes to the remote CodeCommit repo
+1. Add, commit, and push changes to the remote CodeCommit repo
 
 Customize opensarlab_cluster code for deployment
 --------------------
 1. Create and add any additional custom jupyter magic commands to the `opensarlab/jupyterhub/singleuser/custom_magics` directory Add any additional scripts you may have created for use in your image to the `opensarlab/jupyterhub/singleuser/hooks` directory
-2. Duplicate `opensarlab/jupyterhub/singleuser/hooks/sar.sh`, renaming it after your image name
+1. Duplicate `opensarlab/jupyterhub/singleuser/hooks/sar.sh`, renaming it after your image name
    1. Edit `opensarlab/jupyterhub/singleuser/hooks/<image_name>.sh`
-       2. Copy any additional custom Jupyter magic scripts to `$HOME/.ipython/image_default/startup/` (alongside 00-df.py)
-       3. Edit the repos being pulled to suit your deployment and image needs
-3. Rename `opensarlab/opensarlab.example.yaml` to  `opensarlab/opensarlab.yaml`
+       1. Copy any additional custom Jupyter magic scripts to `$HOME/.ipython/image_default/startup/` (alongside 00-df.py)
+       1. Edit the repos being pulled to suit your deployment and image needs
+1. Rename `opensarlab/opensarlab.example.yaml` to  `opensarlab/opensarlab.yaml`
    1. Use the example notes in `opensarlab/opensarlab.yaml` to define the required and optional fields
-5. Update `opensarlab/jupyterhub/helm_config.yaml`
+1. Update `opensarlab/jupyterhub/helm_config.yaml`
     1. `singleuser`
        1. Add any needed extraFiles
-    2. `hub`
+    1. `hub`
        1. Add any needed extraFiles
-7. Add, commit, and push changes to the remote CodeCommit repo
+1. Add, commit, and push changes to the remote CodeCommit repo
 
 Build the container CloudFormation stack
 --------------------
@@ -164,13 +164,13 @@ Build the container CloudFormation stack
         1. Page 2: **Specify stack details**
             1. `Stack Name`
                1. Use a recognizable name that makes sense for your deployment
-            2. `CodeCommitSourceRepo`
+            1. `CodeCommitSourceRepo`
                 1. The CodeCommit repo holding the container code (`deployment_name`-container)
-            3. `CodeCommitSourceBranch`
+            1. `CodeCommitSourceBranch`
                 1. The name of the production branch of the `deployment_name`-container CodeCommit repo
-            4. `CostTagKey`
+            1. `CostTagKey`
                1. The cost allocation key you registered for tracking deployment costs
-            5. `CostTagValue`
+            1. `CostTagValue`
                 1. `deployment_name`
         1. Page 3: **Configure stack options**
             1. Tags:
@@ -201,13 +201,13 @@ Build the cluster CloudFormation stack
         1. Page 2: **Specify stack details**
             1. `Stack Name`
                1. Use a recognizable name that makes sense for your deployment
-            2. `CodeCommitRepoName`
+            1. `CodeCommitRepoName`
                 1. The CodeCommit repo holding the container code (`deployment_name`-cluster)
-            3. `CodeCommitBranchName`
+            1. `CodeCommitBranchName`
                 1. The name of the production branch of the `deployment_name`-cluster CodeCommit repo
-            4. `CostTagKey`
+            1. `CostTagKey`
                1. The cost allocation key you registered for tracking deployment costs
-            5. `CostTagValue`
+            1. `CostTagValue`
                 1. `deployment_name`
     1. Page 3: **Configure stack options**
         1. Tags:
@@ -224,7 +224,7 @@ Take care of odds and ends
 
 1. Update `deployment_url` in the cluster repo `opensarlab/opensarlab.yaml` if you started off using `load balancer`
     1. Don't forget to update your DNS record
-3. Add the cost allocation tag to the EKS cluster
+1. Add the cost allocation tag to the EKS cluster
     1. Navigate to the AWS EKS console
     1. click the "Clusters" link in the sidebar menu
         1. Click on cluster stack
@@ -233,7 +233,7 @@ Take care of odds and ends
                     1. Click the "Add tag" button
                         1. Key: Cost allocation tag
                         1. Value: `deployment_name`
-6. Prime the Auto Scaling Group for each profile unless there are active users
+1. Prime the Auto Scaling Group for each profile unless there are active users
     1. Navigate to the AWS EC2 console
         1. Select the "Auto Scaling Groups" sidebar link
             1. Select an autoscaling group
@@ -242,7 +242,7 @@ Take care of odds and ends
                         1. Desired capacity:
                             1. Set to 1
                         1. Click the "Update" button
-7. Create a test notification
+1. Create a test notification
     1. Navigate to your notification calendar
     1. Create an event
         1. Set the event to last as long as you wish the notification to display
@@ -270,7 +270,7 @@ Take care of odds and ends
                         1. red notification
             1. \<message\>
                 1. Your notification message
-8. Sign up with your `admin_user_name` account, sign in, and add groups for each profile and sudo
+1. Sign up with your `admin_user_name` account, sign in, and add groups for each profile and sudo
     1. Open the `deployment_url` in a web browser
         1. Click the "Sign in" button
             1. Click the "Sign up" link
@@ -316,7 +316,7 @@ Take care of odds and ends
             1. Test notebooks as needed
             1. Confirm that notifications appear
         1. Repeat for each profile
-9. Configure your local K8s config so you can manage your EKS cluster with kubectl
+1. Configure your local K8s config so you can manage your EKS cluster with kubectl
     1. Add your AWS user to the trust relationship of the `deployment_name`-cluster-access IAM role
         1. Navigate to the AWS IAM console
             1. Click the "Roles" link from the sidebar menu
