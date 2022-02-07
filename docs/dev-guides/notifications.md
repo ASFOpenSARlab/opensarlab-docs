@@ -24,6 +24,8 @@
                 1. Add links
                     1.  `<a href="https://url.com" target="blank"><span style="color: blue">link</span></a>`
                         1. **Note:** You must unlink the URL using the unlink button in the calendar message tool bar for it to work.
-               
+            1. Turn off text automated formatting
+               1. Select all the text in the message body
+               1. Unselect the formatting button in the message toolbar
         ![Image of a notification event being created in Google Calendar](../assets/notification.png)
         

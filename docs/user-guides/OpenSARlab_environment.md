@@ -12,7 +12,7 @@
 Every OpenSARlab user has access to an Amazon AWS EC2 instance. Individual instances are shared among groups of 1 - 3 users, depending on demand.
 
 #### Operating System
-- Ubuntu 18.04
+- Ubuntu 20.04.3 LTS
 
 <!--  should we include EBS snapshot -->
 #### Volume (storage)

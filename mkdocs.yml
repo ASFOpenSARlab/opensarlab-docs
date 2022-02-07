@@ -35,8 +35,10 @@ nav:
   - Developer Guide:
     - System Diagram: assets/system_diagrams/OpenSARlab_system_diagram_June_2021.png
     - Deploy OpenSARlab to AWS: dev-guides/deploy_OpenSARlab.md
+    - Conda Environment Options: dev-guides/conda_environments.md
     - Notifications: dev-guides/notifications.md
     - Troubelshooting Guide: dev-guides/troubleshooting.md
   - Release Notes:
     - June 2021: release-notes/release_06-2021.md
     - October 2021: release-notes/release_10-2021.md
+    - February 2022: release-notes/release_02-2022.md

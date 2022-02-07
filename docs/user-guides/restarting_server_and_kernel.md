@@ -20,11 +20,24 @@ A quick solution in either of those cases is to restart your server to run the `
 
 #### How?
 
-1. Click The Control Panel Button
+1. **In JupyterLab**, Select `Hub Control Panel` from the `File` menu
+
+    ![Select Hub Control Panel from the File menu](../assets/jlab_hub_control.png)
+
+    or
+
+    Click the `Shutdown and Logout Page` button in the upper right corner of the screen
+
+    ![Click the Shutdown and Logout Page button in the upper right corner of the screen](../assets/shutdown_logout.png)
+
+    **or**
+
+    **In Jupyter Notebook**, Click The Control Panel Button
 
     ![Click the Control Panel button](../assets/control_panel.png)
     
     *Click the `Control Panel` button located at the top right corner of the file manager or in an open notebook*
+
 
 1. Click The Stop My Server Button
 

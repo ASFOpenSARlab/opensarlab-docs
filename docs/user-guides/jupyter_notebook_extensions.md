@@ -1,9 +1,16 @@
 [Return to Table of Contents](../user.md)
 
-# Managing Jupyter Notebook Extensions
-As an OpenSARlab user, you have access to all of the notebook extensions available in the `nbextensions` package. A detailed list of extensions is available [here](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions.html).
+# Managing Jupyter Lab Extensions
+As an OpenSARlab Jupyter Lab user, you have limited access to third-party extensions.
+
+- Server extensions must be installed in the OpenSARlab Docker container and cannot be installed by users.
+- Lab extensions can be installed, enabled, and disabled from the terminal but they will not persist across server restarts and will need to be reinstalled. 
+- If you feel that OpenSARlab is lacking an important Jupyter Lab extension, please contact us to request it at <uaf-jupyterhub-asf@alaska.edu>
 
 ---
+
+# Managing Jupyter Notebook Extensions
+As an OpenSARlab Jupyter Notebook user, you have access to all of the notebook extensions available in the `nbextensions` package. A detailed list of extensions is available [here](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions.html).
 
 ## Enabling and Disabling Extensions
 
