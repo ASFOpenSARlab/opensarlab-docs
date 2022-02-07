@@ -24,7 +24,7 @@
 ## Matplotlib widget
 
 - `matplotlib notebook` has been replaced with `matplotlib widget` for interactive matplotlib plots.
-    - `matplotlib notebook` will not work in JupyterLab, whereas `,matplotlib widget` works in both JupyterLab and Classic Jupyter Notebook.
+    - `matplotlib notebook` will not work in JupyterLab, whereas `matplotlib widget` works in both JupyterLab and Classic Jupyter Notebook.
 
 ## Url-widget
 
@@ -33,8 +33,8 @@
     
 ## New Memory Monitor Location
 
-- JupyterLab comes with a built-in memory monitor, replacing the jupyter-resource-usage extension
-    - The new memory monitor can be foundin the status bar at the bottom of the JupyterLab screen.
+- JupyterLab comes with a built-in memory monitor, replacing the jupyter-resource-usage extension.
+    - The new memory monitor can be found in the status bar at the bottom of the JupyterLab screen.
 
 ![memory monitor](../assets/memory_monitor.png)
 
@@ -47,20 +47,20 @@
 
 ## Mamba
 
-- The [mamba package manager](https://github.com/mamba-org/mamba) is now available in OpenSARlab
+- The [mamba package manager](https://github.com/mamba-org/mamba) is now available in OpenSARlab.
     - Mamba is a multi-threaded "reimplementation of the conda package manager in C++."
-      - It creates environments much more quickly than conda
-- The [opensarlab-envs repo](https://github.com/ASFOpenSARlab/opensarlab-envs) has been updated to use mamba
+      - It creates environments much more quickly than conda.
+- The [opensarlab-envs repo](https://github.com/ASFOpenSARlab/opensarlab-envs) has been updated to use mamba.
 
 ## Mamba Gator is installed
 
 - [mamba gator](https://github.com/mamba-org/gator) provides a GUI for managing conda/mamba environments that is accessible in JupyterLab.
-    - Access mamba gator by selecting the  `Conda Packages Manager` from the `Settings` menu
+    - Access mamba gator by selecting the  `Conda Packages Manager` from the `Settings` menu.
 
 ## Spellchecker
 
-- The [spellchecker extension](https://github.com/jupyterlab-contrib/spellchecker) is installed
-    - Checks spelling in markdown cells.
+- The [spellchecker extension](https://github.com/jupyterlab-contrib/spellchecker) is installed.
+    - It checks spelling in markdown cells.
     - The language may be changed in the status bar at the bottom of the screen.
 
 ![The language may be changed in the status bar at the bottom of the screen](../assets/language.png)
