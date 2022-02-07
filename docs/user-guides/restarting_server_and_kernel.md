@@ -39,37 +39,37 @@ A quick solution in either of those cases is to restart your server to run the `
     *Click the `Control Panel` button located at the top right corner of the file manager or in an open notebook*
 
 
-3. Click The Stop My Server Button
+1. Click The Stop My Server Button
 
     ![Click the Stop My Server button](../assets/stop_my_server.png)
     
     *Click the `Stop My Server` button that appears*
 
-4. Click The Start My Server Button
+1. Click The Start My Server Button
 
     ![Click the Start My Server button](../assets/start_my_server.png)
     
     *Click the `Start My Server` button, which may take a few seconds to appear*
 
-5. Click The Launch Server Button
+1. Click The Launch Server Button
 
     ![Click the Launch Server button](../assets/launch_server.png)
     
     *Click the `Launch Server` button that appears*
 
-6. Select a Server Option and Click Start
+1. Select a Server Option and Click Start
 
     ![Select a server option and click the start button](../assets/server_options.png)
     
     *Select a `server option` and click the `Start` button*
 
-7. Wait For the Server To Start
+1. Wait For the Server To Start
 
     ![Wait for the server to start](../assets/server_status.png)
     
     *Wait for the server to start*
 
-8. *Optional:* Click The Event Log Arrow For Detailed Startup Status Information
+1. *Optional:* Click The Event Log Arrow For Detailed Startup Status Information
 
     ![Click the event log arrow](../assets/event_log.png)
     
