@@ -37,14 +37,14 @@ Do your part to reduce resource use and ease the burden on the environment by sh
     ![Click the Shutdown and Logout Page button in the upper right corner of the screen](../assets/shutdown_logout.png)
 
 
-2. **Click The Stop My Server Button**
+1. **Click The Stop My Server Button**
 
     ![Click the Stop My Server button](../assets/stop_my_server.png)
     
     *Click the **Stop My Server** button that appears.*
 
 
-3. **Click The Logout Button**
+1. **Click The Logout Button**
 
     ![Click the Logout button](../assets/logout_2.png)
     
