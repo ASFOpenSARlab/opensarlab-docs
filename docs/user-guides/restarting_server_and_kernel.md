@@ -20,43 +20,56 @@ A quick solution in either of those cases is to restart your server to run the `
 
 #### How?
 
-1. Click The Control Panel Button
+1. **In JupyterLab**, Select `Hub Control Panel` from the `File` menu
+
+    ![Select Hub Control Panel from the File menu](../assets/jlab_hub_control.png)
+
+    or
+
+    Click the `Shutdown and Logout Page` button in the upper right corner of the screen
+
+    ![Click the Shutdown and Logout Page button in the upper right corner of the screen](../assets/shutdown_logout.png)
+
+    **or**
+
+    **In Jupyter Notebook**, Click The Control Panel Button
 
     ![Click the Control Panel button](../assets/control_panel.png)
     
     *Click the `Control Panel` button located at the top right corner of the file manager or in an open notebook*
 
-1. Click The Stop My Server Button
+
+3. Click The Stop My Server Button
 
     ![Click the Stop My Server button](../assets/stop_my_server.png)
     
     *Click the `Stop My Server` button that appears*
 
-1. Click The Start My Server Button
+4. Click The Start My Server Button
 
     ![Click the Start My Server button](../assets/start_my_server.png)
     
     *Click the `Start My Server` button, which may take a few seconds to appear*
 
-1. Click The Launch Server Button
+5. Click The Launch Server Button
 
     ![Click the Launch Server button](../assets/launch_server.png)
     
     *Click the `Launch Server` button that appears*
 
-1. Select a Server Option and Click Start
+6. Select a Server Option and Click Start
 
     ![Select a server option and click the start button](../assets/server_options.png)
     
     *Select a `server option` and click the `Start` button*
 
-1. Wait For the Server To Start
+7. Wait For the Server To Start
 
     ![Wait for the server to start](../assets/server_status.png)
     
     *Wait for the server to start*
 
-1. *Optional:* Click The Event Log Arrow For Detailed Startup Status Information
+8. *Optional:* Click The Event Log Arrow For Detailed Startup Status Information
 
     ![Click the event log arrow](../assets/event_log.png)
     
