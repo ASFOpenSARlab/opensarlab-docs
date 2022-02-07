@@ -27,7 +27,7 @@ Each option come with benefits and drawbacks.
 ### Drawbacks
 - Increases the time it takes to start an OpenSARlab server
   - Syncing environments from the docker image to `$HOME/.local`, registering their kernels, and running any needed setup scripts all happens at server startup
-- Large environments may overrun the default 20GB volume that comes with each EC2 instance (compute type: BUILD_GENERAL1_SMALL), requiring that larger, more expensive compute types be used.
+- Large environments may overrun the 20GB root volume mounted on each EC2 instance, requiring that larger, more expensive root volume be used.
   - By storing the environment on both user volumes and EC2 node volumes, you effectively double pay for that storage.
 
 ---
