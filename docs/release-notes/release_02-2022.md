@@ -14,7 +14,7 @@
   
 ## Ubuntu 20.04.3 LTS
 
-- JupyterHub is no running on Ubuntu 20.04.3 LTS instead of Ubuntu 18.04
+- JupyterHub is now running on Ubuntu 20.04.3 LTS, updated from Ubuntu 18.04
 
 ## JupyterLab
 
