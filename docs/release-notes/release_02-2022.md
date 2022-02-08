@@ -18,7 +18,7 @@
 
 ## JupyterLab
 
-- There are now JupyterLab profiles available alongside the Classic Jupyter Notebook profiles. Jupyter Lab comes with many more features than Classic Jupyter Notebook (see the [JupyterLab Docs](https://jupyterlab.readthedocs.io/en/stable/user/interface.html)) for more information.
+- There are now JupyterLab profiles available alongside the Classic Jupyter Notebook profiles. JupyterLab comes with many more features than Classic Jupyter Notebook (see the [JupyterLab Docs](https://jupyterlab.readthedocs.io/en/stable/user/interface.html)) for more information.
 - Classic Jupyter Notebook profiles will remain active for 1 month before being deprecated on March 7th.
 
 ## Matplotlib widget
@@ -67,8 +67,8 @@
 
 ## Custom Extensions
 
-- We have added some custom JupyterLab extensions to duplicate custom features previously add in OpenSARlab for Jupyter Notebooks.
+- We have added some custom JupyterLab extensions to duplicate custom features previously added in OpenSARlab for Jupyter Notebooks.
     - [opensarlab-profile-label](https://pypi.org/project/opensarlab-profile-label/) provides the name of the current OpenSARlab profile in the topbar.
     - [opensarlab-doc-link](https://pypi.org/project/opensarlab-doc-link/) provides a link to the [OpenSARlab documentation](https://opensarlab-docs.asf.alaska.edu/) in the topbar.
-    - [opensarlab-controlbtn](https://pypi.org/project/opensarlab-controlbtn/) provides a `Shutdown and Logiut Page` button in the topbar.
+    - [opensarlab-controlbtn](https://pypi.org/project/opensarlab-controlbtn/) provides a `Shutdown and Logout Page` button in the topbar.
     - [opensarlab-notifications](https://pypi.org/project/opensarlab-notifications/) provides similar functionality to the popup notifications used in the OpenSARlab Classic Jupyter Notebook profiles.
