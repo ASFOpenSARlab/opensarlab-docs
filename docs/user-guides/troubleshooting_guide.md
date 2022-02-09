@@ -55,6 +55,17 @@
 
 ---
 
+## My notebook won't open, opens slowly, or won't save
+
+- These are all signs that the notebook contains a lot of output and too large to easily open or save over the internet, in OpenSARlab.
+    - If the notebook won't open or opens very slowly, remove its output by running the following command from a terminal:
+        - `jupyter nbconvert --clear-output --inplace my_notebook.ipynb`
+    - If the notebook is open and you can't save it, select `Restart Kernel and Clear All Outputs` from the `Kernel` menu and try saving it again.
+
+    ![If the notebook is open, select Restart Kernel and Clear All Outputs from the Kernel menu.](../assets/restart_clear_all_jlab.png)
+
+---
+
 ## I tried to create a new notebook and recieved the error `Forbidden`
 
 ![A notebook creation Forbidden error](../assets/forbidden.png)
