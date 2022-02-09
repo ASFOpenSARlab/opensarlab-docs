@@ -256,6 +256,7 @@ Take care of odds and ends
 
                       <message>
                       This is a notification
+                   ```
             1. \<meta\>
                 1. profile:
                     1. Holds the name or names (comma separated) of the profiles where the notification will be displayed
