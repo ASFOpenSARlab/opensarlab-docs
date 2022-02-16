@@ -88,16 +88,17 @@ The following bullet points cover code changes you may need to make to your note
         - `env = !echo $CONDA_PREFIX`
 - The javascript variable `window.location` does not exist in JupyterLab
     - If you need the current url of your Jupyter workspace, install the `url-widget` package in your conda environment and use it to retrieve the url:
-    ```python
-    # In one cell
-    import url_widget as url_w
-    notebook_url = url_w.URLWidget()
-    display(notebook_url)
-    ```
-    ```python
-    # In a following cell
-    notebook_url = notebook_url.value
-    ```
+        ```python
+        # In one cell
+        import url_widget as url_w
+        notebook_url = url_w.URLWidget()
+        display(notebook_url)
+        ```
+      
+        ```python
+        # In a following cell
+        notebook_url = notebook_url.value
+        ```
 - `%matplotlib notebook` does not work for interactive plotting in JupyterLab
     - Instead, use: `%matplotlib widget`
 - `asf_notebook.py` is deprecated and has been replaced with `opensarlab-lib`: [https://github.com/ASFOpenSARlab/opensarlab-lib](https://github.com/ASFOpenSARlab/opensarlab-lib)
