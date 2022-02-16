@@ -91,6 +91,7 @@ The following bullet points cover code changes you may need to make to your note
         - In one cell:
             - ```python
               import url_widget as url_w
+              
               notebook_url = url_w.URLWidget()
               display(notebook_url)
               ```
