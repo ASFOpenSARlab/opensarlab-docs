@@ -11,6 +11,7 @@
 - Mamba Gator
 - Spellchecker
 - Custom extensions
+- Recommended Jupyter Notebook changes related to update
   
 ## Ubuntu 20.04.3 LTS
 
@@ -72,3 +73,37 @@
     - [opensarlab-doc-link](https://pypi.org/project/opensarlab-doc-link/) provides a link to the [OpenSARlab documentation](https://opensarlab-docs.asf.alaska.edu/) in the topbar.
     - [opensarlab-controlbtn](https://pypi.org/project/opensarlab-controlbtn/) provides a `Shutdown and Logout Page` button in the topbar.
     - [opensarlab-notifications](https://pypi.org/project/opensarlab-notifications/) provides similar functionality to the popup notifications used in the OpenSARlab Classic Jupyter Notebook profiles.
+
+## Recommended Jupyter Notebook Changes
+
+The following bullet points cover code changes you may need to make to your notebooks for them to work in JupyterLab
+
+*note: These changes are backwards compatible and updated notebooks will still run in Jupyter Notebook.*
+
+*note: All [ASF notebooks](https://github.com/ASFOpenSARlab/opensarlab-notebooks) have already been updated.*
+
+
+- The javascript variable `Jupyter.notebook.kernel` does not exist in JupyterLab.
+    - If you need a Python variable containing a notebook's current Python kernel, run:
+        - `env = !echo $CONDA_PREFIX`
+- The javascript variable `window.location` does not exist in JupyterLab
+    - If you need the current url of your Jupyter workspace, install the `url-widget` package in your conda environment and use it to retrieve the url:
+```python
+# In one cell
+import url_widget as url_w
+notebook_url = url_w.URLWidget()
+display(notebook_url)
+```
+
+```python
+# In a following cell
+notebook_url = notebook_url.value
+```
+- `%matplotlib notebook` does not work for interactive plotting in JupyterLab
+    - Instead, use: `%matplotlib widget`
+- `asf_notebook.py` is deprecated and has been replaced with `opensarlab-lib`: [https://github.com/ASFOpenSARlab/opensarlab-lib](https://github.com/ASFOpenSARlab/opensarlab-lib)
+    - `asf_notebook.py` still works (with deprecation warnings) but it is not being maintained. 
+    - Install `opensarlab-lib` with one of the following commands:
+        - `python -m pip install opensarlab-lib`
+        - `conda install -n <environment_name> -c conda-forge opensarlab-lib`
+    - Alternatively, you may add `environment.yml` as a dependency and use it instead.
