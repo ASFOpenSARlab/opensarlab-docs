@@ -103,6 +103,7 @@ notebook_url = notebook_url.value
     - Instead, use: `%matplotlib widget`
 - `asf_notebook.py` is deprecated and has been replaced with `opensarlab-lib`: [https://github.com/ASFOpenSARlab/opensarlab-lib](https://github.com/ASFOpenSARlab/opensarlab-lib)
     - `asf_notebook.py` still works (with deprecation warnings) but it is not being maintained. 
-    - Install `opensarlab-lib` with one of the following commands or by adding it to an `environment.yml` as a dependency and use it instead.
+    - Install `opensarlab-lib` with one of the following commands:
         - `python -m pip install opensarlab-lib`
         - `conda install -n <environment_name> -c conda-forge opensarlab-lib`
+    - Alternatively, you may add `environment.yml` as a dependency and use it instead.
