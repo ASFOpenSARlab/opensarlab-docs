@@ -200,7 +200,7 @@ Build the cluster CloudFormation stack
         1. Click the "Next" button
         1. Page 2: **Specify stack details**
             1. `Stack Name`
-               1. Use a recognizable name that makes sense for your deployment
+               1. Use a recognizable name that makes sense for your deployment. **Do not use a stack name that ends in `cluster`, `jupyterhub`, or `cognito`. These are reserved.**
             1. `CodeCommitRepoName`
                 1. The CodeCommit repo holding the container code (`deployment_name`-cluster)
             1. `CodeCommitBranchName`
