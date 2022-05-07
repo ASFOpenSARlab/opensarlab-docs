@@ -6,27 +6,27 @@ _This assumes that the user has an Anaconda.org account and that this account is
 
 1. Create working directory
 
-    ```
+    ```bash
     mkdir conda-mintpy
     cd conda-mintpy
     ```
 
 1. Create conda environment
 
-    ```
+    ```bash
     conda create -n conda-build python=3.10 anaconda-client
     conda activate conda-build
     ```
 
 1. Clone conda feedstock of mintpy. https://github.com/conda-forge/mintpy-feedstock
 
-    ```
+    ```bash
     git clone git@github.com:conda-forge/mintpy-feedstock.git
     ```
 
 1. Clone mintpy code repo. https://github.com/insarlab/mintpy. Only the latest commit is included to speed up download. Drop the `--depth 1` to get the whole history.
 
-    ```
+    ```bash
     git clone --depth 1 git@github.com:insarlab/MintPy.git
     ```
 
@@ -34,19 +34,19 @@ _This assumes that the user has an Anaconda.org account and that this account is
 
     The feedstock is a framework for building. It does not have the source code to build within it. Copy Mintpy source to feedstock recipes.
 
-    ```
+    ```bash
     cp -r MintPy mintpy-feedstock/recipe/MintPy
     ```
 
 1. Make versioning clear and build MintPy from local. The VERSION here is a working example. The actual version is subject to change.
 
-    ```
+    ```text
     VERSION=1.3.3.dev.COMMIT_SHORT_HASH
     ```
 
 1. Edit `mintpy-feedstock/recipe/meta.yaml` 
 
-    ```
+    ```diff
     -{% set version = "1.3.2" %}
     +{% set version = 1.3.3.dev.COMMIT_SHORT_HASH %}
 
@@ -59,7 +59,7 @@ _This assumes that the user has an Anaconda.org account and that this account is
 1. Build. 
     This may take a while.
 
-    ```
+    ```bash
     cd mintpy-feedstock
     python3.10 build-locally.py
     cd ..
@@ -69,7 +69,7 @@ _This assumes that the user has an Anaconda.org account and that this account is
 
 1. Push changes to OpenSARlab conda channel.
 
-    ```
+    ```bash
     # Login to individual account where you are an owner of OpenSARlab org
     anaconda login
 
@@ -79,14 +79,14 @@ _This assumes that the user has an Anaconda.org account and that this account is
 
 1. Download and check version
 
-    ```
+    ```bash
     mamba install -c opensarlab -c conda-forge mintpy=VERSION
     conda list | grep -i mintpy
     ```
 
 1. Cleanup as desired
 
-    ```
+    ```bash
     cd ../
     ls
 
