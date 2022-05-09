@@ -37,7 +37,7 @@ git clone --depth 1 git@github.com:insarlab/MintPy.git
 
 E. Assuming mintpy main is used and is also the latest, we won't make any changes to mintpy
 
-    The feedstock is a framework for building. It does not have the source code to build within it. Copy Mintpy source to feedstock recipes.
+The feedstock is a framework for building. It does not have the source code to build within it. Copy Mintpy source to feedstock recipes.
 
 ```bash
 cp -r MintPy mintpy-feedstock/recipe/MintPy
