@@ -367,10 +367,6 @@ It is essential to destroy a deployment at the end of its life cycle so that no 
 ## **WARNING:** Before deleting the deployments, developers will need to account for the following: 
 
 - When deleting the `CloudFormation` stack, the deletion order matters.
-    <!-- - Following is the recommended way of deleting the CloudFormation stacks:
-    1. `JupyterHub` stack
-    2. `Cluster` stack
-    3. `Pipeline` stack -->
 - Delete some of the `CloudFormation` stacks before deleting ECR.
 - The name of the items you're deleting may differ depending on the deployment you are taking down. For example, your deployment's `CloudFormation` stack may not have a `region` name or may not have a `<deployment-name>-auth` stack.
 - Do **NOT** take down the `Cognito` and `CloudWatch` logs. These are used for statistical analysis later on.
@@ -415,7 +411,6 @@ Follow the below instructions to properly delete these stacks.
     
 _NB: The `<deployment_name>-container` is independent of other stacks, i.e., the deletion order does not matter._
 
-
 1. Empty the `codepipeline-<region>-<deployment_name>-container` S3 bucket
 
 ![empty container in s3](../assets/docs-s3-empty.PNG)
@@ -425,8 +420,6 @@ _NB: The `<deployment_name>-container` is independent of other stacks, i.e., the
     1. Click the `Empty` button
         1. Confirm the deletion of bucket contents by typing `permanently delete` in the provided field
         1. Click the `Empty` button
-
-
 
 ### **2. Delete ECR repos for each profile**
 
@@ -516,45 +509,79 @@ If you are deleting stack 5 (`<deployment_name>`), you will need to follow these
                 1. Click the `Empty` button
 ---
 
-1. Delete EBS snapshots
-    1. Navigate to the AWS EC2 console
-        1. Click the "Snapshots" link in the sidebar menu
-            1. Filter by osl-stackname: `deployment_name`
-                1. **Double check that you filtered for the correct deployment!**
-            1. Select all snapshots
-            1. Select "Delete" from the "Actions" menu
-            1. Confirm by clicking the "Yes, delete" button
-1. Delete EBS volumes
-    1. Navigate to the AWS EC2 console
-        1. Click the "Volumes" link in the sidebar menu
-            1. Filter by osl-stackname: `deployment_name`
-                1. **Double check that you filtered for the correct deployment!**
-            1. Select all volumes
-            1. Select "Delete volumes" from the "Actions" menu
-            1. Confirm by clicking the "Yes, delete" button             
-1. (Optional) Delete the `deployment_name`-cluster and `deployment_name`-container CodeCommit repositories
-    1. CodeCommit repos are cheap
-        1. If you think you may re-deploy the same deployment, you may want to ease future work by leaving these repos in place
-        1. You could also download a zip of your repos, store them in S3, and then delete them
-    1. Navigate to the AWS CodeCommit console
-        1. Check the box next to the `deployment_name`-container repo
-        1. Click the "Delete repository" button
-            1. Confirm the deletion by typing "delete" in the provided field     
-            1. Click the "Delete" button
-        1. Repeat the above steps for the `deployment_name`-cluster repo
+## **Delete EBS Snapshots and Volumes**
+
+To mitigate the cost associated with storage space, it is crucial to deallocate unused resources. The below steps will guide you on how to do so.
+
+---
+
+First, navigate to the AWS EC2 console - this step should be identical for both EBS snapshots and EBS volumes.
+
+![ec2 home screen](../assets/docs-ec2-snap-vol.PNG)
+
+### **Delete EBS snapshots**
+1. Click the _Snapshots_ link in the sidebar menu
+    1. Filter by osl-stackname: `<deployment_name>`
+        1. **Double check that you filtered for the correct deployment!**
+    1. Select all snapshots
+    1. Select `Delete` from the `Actions` menu
+    1. Confirm by clicking the `Yes, delete` button
+
+### **Delete EBS volumes**
+1. Navigate to the AWS EC2 console
+1. Click the _Volumes_ link in the sidebar menu
+    1. Filter by osl-stackname: `<deployment_name>`
+        1. **Double check that you filtered for the correct deployment!**
+    1. Select all volumes
+    1. Select `Delete volumes` from the `Actions` menu
+    1. Confirm by clicking the `Yes, delete` button             
+
+---
+
+## **(Optional) Delete the CodeCommit repositories**
+
+This section will guide you on how to remove the  `<deployment_name>-container` and `<deployment_name>-cluster` repositories located in the CodeCommit.
+
+_**Important Note:**_ Often, it would be in your best interest to preserve the CodeCommit repositories since the cost of maintaining them are minuscule. 
+
+If you believe that you may re-deploy the same deployment, you may want to ease future work in one of the following manners:
+
+1. Leaving these repositories in place, i.e., don't delete them.
+1. Download the zip of your repositories, store them in S3, and then delete them. 
+
+In another word, delete the CodeCommit repositories if and only if you are sure that you don't need them.
+
+---
+
+First, navigate to the AWS CodeCommit console:
+
+![CodeCommit Repos](../assets/docs-codecommit.PNG)
+
+Then delete the `<deployment_name>-container` and `<deployment_name>-cluster` in any order. The deletion process for these two repositories is following:
+
+1. Check the option next to the repository
+1. Click the `Delete repository` button
+1. Confirm the deletion by typing `delete` in the provided field     
+1. Click the `Delete` button
 
 --- 
 
-1. Confirm that all resources have been deleted
-    1. Wait a day for deleted resources to update in the tag editor
-    1. Navigate to the AWS Resource Groups and Tag Editor console
-        1. Select the "Tag Editor" link in the sidebar menu
-            1.  Tags:
-                1. Key: 
-                    1. Cost allocation tag
-                1. Value:
-                    1. `deployment_name`
-            1. Click the "Search resources" button
-            1. Identify and delete any remaining resources
+## **(Optional) Confirm that all resources have been deleted**
+
+Once you've taken down the deployment, you may want to verify the resource usage. 
+
+---
+
+![cost allocation](../assets/docs-cost-allocation.PNG)
+
+1. Wait a day for deleted resources to update in the tag editor
+1. Navigate to the AWS Resource Groups and Tag Editor console
+    1. Select the _Tag Editor_ link in the sidebar menu and fill in the following:
+        1. Regions: `<current-region>`
+        1.  Tags:
+            1. `Key`: Cost allocation tag
+            1. `Value`: `<deployment_name>`
+        1. Click the `Search resources` button
+        1. Identify and delete any remaining resources
     
                               
