@@ -356,9 +356,9 @@ Take care of odds and ends
         1. Note: you will use this a lot and it may be helpful to create an alias in ~/.bash_aliases
     1. Use kubectl
     
----
+<!-- --- -->
 
-# **Destroy Deployments**
+<!-- # **Destroy Deployments**
 
 It is essential to destroy a deployment at the end of its life cycle so that no resources are left in place. With a proper destruction procedure, one can mitigate the accrued cost of AWS. 
 
@@ -582,6 +582,4 @@ Once you've taken down the deployment, you may want to verify the resource usage
             1. `Key`: Cost allocation tag
             1. `Value`: `<deployment_name>`
         1. Click the `Search resources` button
-        1. Identify and delete any remaining resources
-    
-                              
+        1. Identify and delete any remaining resources -->
