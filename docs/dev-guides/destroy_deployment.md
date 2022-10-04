@@ -159,7 +159,7 @@ First, navigate to the AWS EC2 console - this step should be identical for both 
 
 ### **Delete EBS snapshots**
 1. Click the _Snapshots_ link in the sidebar menu
-    1. Filter by `osl-billing`: `<deployment_name>`
+    1. Filter by `<cost allocation tag>`: `<deployment_name>`
         1. **Double check that you filtered for the correct deployment!**
     1. Select all snapshots
     1. Select `Delete` from the `Actions` menu
