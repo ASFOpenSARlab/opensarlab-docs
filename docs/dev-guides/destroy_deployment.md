@@ -10,7 +10,7 @@ It is essential to destroy a deployment at the end of its life cycle so that no 
 
 - When deleting the `CloudFormation` stack, the deletion order matters.
 - Delete some of the `CloudFormation` stacks before deleting ECR.
-- The name of the items you're deleting may differ depending on the deployment you are taking down. For example, your deployment's `CloudFormation` stack may not have a `region` name or may not have a `<deployment-name>-auth` stack.
+- The name of the items you're deleting may differ depending on the deployment you are taking down. For example, your deployment's `CloudFormation` stack may not have a `region` name.
 - Do **NOT** take down the `Cognito` and `CloudWatch` logs. These are used for statistical analysis later on.
 
 ---
@@ -27,7 +27,6 @@ When you first go to CloudFormation, it should look something like the following
 Because the order of removing deployment is essential, you will need to take down the `CloudFormation` stacks first. Deleting the following CloudFormation stacks will kill the deployment and remove its resources:
 
 - `<deployment_name>-container`
-- `<deployment_name>-auth`
 - `<deployment_name>-cluster`
 - `deployment_name`
 
@@ -63,17 +62,24 @@ _NB: The `<deployment_name>-container` is independent of other stacks, i.e., the
         1. Confirm the deletion of bucket contents by typing `permanently delete` in the provided field
         1. Click the `Empty` button
 
-### **2. Delete ECR repos for each profile**
+### **2. Delete ECR repos**
 
 1. Navigate to the AWS Elastic Container Registry
 
+![empty ECR](../assets/docs-empty-ecr.PNG)
+
+2. Before deleting the ECR, you will need to empty them first.
+    1. Click the repository name first and go to the individual ECR repository.
+    1. Select all items by clicking the first box.
+    1. Select `delete` and confirm the deletion.
+
 ![delete ECR](../assets/docs-ecr-delete.PNG)
 
-2. Click the option next to the `<deployment_name>/<profile_namespace>` repository
-3. Click the `Delete` button
+3. Go back to the ECR Registry and click the option next to the empty `<deployment_name>/<profile_namespace>` repository
+4. Click the `Delete` button
     1. Confirm the deletion by typing `delete` in the provided field
     1. Click the `Delete` button
-4. Repeat for each profiles
+5. Repeat for each profiles
 
 
 ### **3. Delete the `<deployment_name>-container` CloudFormation stack**
@@ -101,17 +107,15 @@ Unlike the `container` stack, the deletion order matters for the rest. On the br
 
 Specifically, you will need to delete your stacks in the following order:
 
-1. `<deployment_name>-auth` stack (if applicable)
-2. `<deployment_name>-jupyterhub` stack
-3. `<deployment_name>-cluster` stack
-4. *`<deployment_name>-cluster-pipeline` stack
-5. *`<deployment_name>` stack (if applicable)
+1. `<deployment_name>-jupyterhub` stack
+2. `<deployment_name>-cluster` stack
+3. *`<deployment_name>-cluster-pipeline` stack
 
 _NB:*These stacks have additional steps._
 
 **WARNING: As mentioned earlier, do NOT delete the `<deployment_name>-cognito` stack.**
 
-In above order, follow these steps (except for stack 4 and 5):
+In above order, follow these steps (except for stack 3):
 
 1. Delete the `<deployment_name>-<stack_name>` CloudFormation stack
     1. Navigate to the AWS CloudFormation console
@@ -124,31 +128,23 @@ In above order, follow these steps (except for stack 4 and 5):
                 1. Click the refresh button periodically since the console doesn't update events automatically
 
 
-If you are deleting stack 4 (`<deployment_name>-cluster-pipeline`), you will need to follow these steps first before deleting the stack:
+If you are deleting stack 3 (`<deployment_name>-cluster-pipeline`), you will need to follow these steps first before deleting the stack:
+
+1. Delete `hub` and `notifications` ECR repos
+    1. Navigate to the AWS Elastic Container Registry
+    1. Delete `<deployment_name>/hub` and `<deployment_name>/notifications` repository.
+
+    _NB: Refer to the **Delete ECR Repos** section for how to delete ECR repos._
 
 
-1. Navigate to the AWS S3 console
-    1. If exists, click the `<region>-<deployment_name>-lambda` S3 bucket option.
-    1. Click the `Empty` button
-        1. Confirm the deletion of bucket contents by typing `permanently delete` in the provided field
+1. Empty the `codepipeline` and `lambda` S3 bucket
+    1. Navigate to the AWS S3 console
+        1. Check the box next to the `codepipeline-<region>-<deployment_name>` S3 bucket
         1. Click the `Empty` button
-
-If you are deleting stack 5 (`<deployment_name>`), you will need to follow these steps first before deleting the stack:
-
-1. Delete the `deployment_name` CloudFormation stack
-    1. Delete hub and notifications ECR repos
-        1. Navigate to the AWS Elastic Container Registry
-        1. Click the box next to the `deployment_name`/hub repository
-        1. Click the `Delete` button
-            1. Confirm the deletion by typing "delete" in the provided field
-            1. Click the `Delete` button 
-        1. Repeat the above steps for the `deployment_name`/notifications repository
-    1. Empty the `codepipeline-<region>-<deployment_name>` S3 bucket
-        1. Navigate to the AWS S3 console
-            1. Check the box next to the `codepipeline-<region>-<deployment_name>` S3 bucket
+            1. Confirm the deletion of bucket contents by typing `permanently delete` in the provided field
             1. Click the `Empty` button
-                1. Confirm the deletion of bucket contents by typing `permanently delete` in the provided field
-                1. Click the `Empty` button
+        1. Repeat the same process for the `<region>-<deployment_name>-lambda`
+
 ---
 
 ## **Delete EBS Snapshots and Volumes**
@@ -163,7 +159,7 @@ First, navigate to the AWS EC2 console - this step should be identical for both 
 
 ### **Delete EBS snapshots**
 1. Click the _Snapshots_ link in the sidebar menu
-    1. Filter by osl-stackname: `<deployment_name>`
+    1. Filter by `osl-billing`: `<deployment_name>`
         1. **Double check that you filtered for the correct deployment!**
     1. Select all snapshots
     1. Select `Delete` from the `Actions` menu
@@ -225,3 +221,18 @@ Once you've taken down the deployment, you may want to verify the resource usage
             1. `Value`: `<deployment_name>`
         1. Click the `Search resources` button
         1. Identify and delete any remaining resources
+
+---
+
+## **Delete Calendar**
+
+Now that you are done with taking down the deployment, you will need to delete the calendar notifications.
+
+---
+
+![delete calendar](../assets/docs-calendar.PNG)
+
+1. Go to your Google Calendar
+1. Choose a deployment you wish to remove
+1. Open `Settings and Sharing`
+1. Click `Delete` under **Remove calendar**
