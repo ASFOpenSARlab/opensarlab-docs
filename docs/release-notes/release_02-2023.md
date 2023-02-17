@@ -6,6 +6,7 @@
 - [Automatic Authentication](#automatic-authentication)
 - [User Access](#user-access)
 - [IP Filter](#ip-filter)
+- [User Request]()
 - [Multi Download](#multi-download)
 - [Kernel Usage](#kernel-usage)
 - [Recommended Jupyter Notebook Changes](#recommended-jupyter-notebook-changes)
@@ -33,6 +34,12 @@
 ## **IP Filter**
 
 - OpenScienceLab will prevent users in one of NASA’s [designated countries list](https://www.nasa.gov/sites/default/files/atoms/files/designated_country_list_6.10.2022.pdf) from creating an account so that we are compliant with NASA’s security protocol.
+
+## **User Request**
+- Users can send a request to the OpenScienceLab team from the portal. 
+
+![user request](../assets/user_request.PNG)
+
 
 ## **Multi Download**
 - Users can download multiple files at once through OpenScienceLab.
