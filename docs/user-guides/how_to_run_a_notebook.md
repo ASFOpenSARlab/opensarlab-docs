@@ -1,6 +1,14 @@
 [Return to Table of Contents](../user.md)
 
-# How to Run a Jupyter Notebook
+# Getting Started
+- [A Light Introduction to Jupyter Notebook](#a-light-introduction-to-jupyter-notebook)
+    - [Markdown Cells](#markdown-cells)
+    - [Code Cells](#code-cells)
+- [Summary and Demo]()
+
+---
+
+<!-- # How to Run a Jupyter Notebook -->
 
 <!--  I suggest we insert the contents of the notebook intro into running a notebook and move the running a notebook to before conda env. A person needs to know how to run a notebook before doing envs anyway.  -->
 
@@ -10,43 +18,35 @@
 # A Light Introduction to Jupyter Notebook
 [Jupyter Notebook](https://jupyter.org/) is a web application that allows users to display: 
 
-* Interactive and runnable code cells, which is typically written in [Python](https://docs.python.org/3/)
+* Interactive and runnable code cells, typically written in [Python](https://docs.python.org/3/)
 * [Markdown](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html) cells containing explanatory text, formulas, hyperlinks, tables, pseudocode, images, etc.
 
 Jupyter Notebook provides an ideal format for teaching/learning coding concepts, prototyping algorithms, and collaborating on Python projects. 
 
-While Jupyter Notebook has 4 cell types, we use the following two for the OpenSARlab:
+While Jupyter Notebook has four cell types, we use the following two for the OpenSciencelab:
 
-- Markdown cells
-- Code cells
----
-
-## Markdown Cells
+## _Markdown Cells_
 
 Markdown cells contain documentation in Markdown, HTML, and/or LaTeX. They are often used to display text, images, hyperlinks, formulas, tables, pseudocode, plots, figures, etc. 
 
--  To enter edit mode in a markdown cell, double click it.
+- To enter edit mode in a markdown cell, double-click the cell.
 
- ![An un-run markdown cell.](../assets/markdown_cell_edit_mode.png) 
+ ![An un-run markdown cell.](../assets/markdown_cell_edit_mode.gif) 
 
-*A markdown cell in edit mode*
+_A markdown cell in edit mode_
 
+If you wish to proceed through the notebook past the markdown cell or run a markdown cell's code to display its formatted contents, you can:
+- Click the **play** button at the top of the notebook
+- Use the `shift + enter` shortcut key.
 
-If you:
-
-- Want to proceed through the notebook past the markdown cell.
-- Run a markdown cell's code to display its formatted contents.
-
-Click the **play** button at the top of the notebook or hit `shift + enter`.
  
-![A run markdown cell.](../assets/markdown_run.png)
+![A run markdown cell.](../assets/markdown_run.gif)
 
 *A run markdown cell*
-<!--  maybe include image of actually hitting "play" button -->
 
----
- 
-## Code Cells
+**NB**: The cell will automatically move to the next cell after being run.
+
+## _Code Cells_
 
 Code cells contain editable and runnable Python code. You can run them in any order for any number of times.
  
