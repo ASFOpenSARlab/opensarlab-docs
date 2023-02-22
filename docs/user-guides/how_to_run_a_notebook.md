@@ -4,6 +4,17 @@
 - [A Light Introduction to Jupyter Notebook](#a-light-introduction-to-jupyter-notebook)
     - [Markdown Cells](#markdown-cells)
     - [Code Cells](#code-cells)
+- [Detailed Instructions on Running Jupyter Notebook](#detailed-instructions-on-running-jupyter-notebook)
+    - [Selecting Cells](#selecting-cells)
+        - [Edit Mode vs Non-Edit Mode](#edit-mode-vs-non-edit-mode)
+        - [Select Individual Cell (Non-Edit Mode)](#select-individual-cell-non-edit-mode)
+        - [Select Multiple Cells (Non-Edit Mode)](#select-multiple-cells-non-edit-mode)
+        - [Select Cell (Edit Mode)](#select-cell-edit-mode)
+        - [Select a Markdown Cell (Edit Mode)](#select-a-markdown-cell-edit-mode)
+    - [Running Cells](#running-cells)
+        - [Run a Single Cell](#run-a-single-cell)
+        - [Run Multiple Cells](#run-multiple-cells)
+        - [Rerunning a Notebook](#rerunning-a-notebook)
 - [Summary and Demo]()
 
 ---
@@ -44,7 +55,7 @@ If you wish to proceed through the notebook past the markdown cell or run a mark
 
 *A run markdown cell*
 
-**NB**: The cell will automatically move to the next cell after being run.
+**NB**: The cell will automatically move to the next cell if you are using the **play** button to run the cell.
 
 ## _Code Cells_
 
@@ -60,94 +71,137 @@ Code cells contain editable and runnable Python code. You can run them in any or
 
 ---
 
-## Selecting Cells
-### Select a Single Cell in Non-Edit Mode
-- Click to the left of a cell
+# Detailed Instructions on Running Jupyter Notebook
 
-![Selected cell in non-edit mode](../assets/select_cell_non_edit_mode.png)
+Now that users have a basic understandings of Jupyter notebook, users can use below manual as a refernce for detailed use.
 
-*A selected cell in non-edit mode is surrounded by a box with a blue left edge*
+## **Selecting Cells**
+
+Users may select cells individually or in a batch; users can then run the selected cells.
+
+### **Edit Mode vs Non-Edit Mode**
+Before we discuss cell selection, it may be helpful to learn the difference between the _edit_ mode and _non-edit_ mode.
+
+- **Edit Mode**: If you select a cell using edit mode, you may edit the code and Markdown written on that cell. You can choose the cell in the _edit_ mode by clicking inside the cell box.
+
+
+- **Non-Edit Mode**: If you select the cell outside of the code/Markdown box, you will be selecting the cell in a _non-edit_ mode.
+
+While the difference is subtle, it is crucial to know the different modes because some hotkeys are unavailable in the _edit_ mode. For instance, the `shift + j` command will allow you to select multiple cells in the _non-edit_ mode, but this does not work in the _edit_ mode.
+
+---
+
+### **Select Individual Cell (Non-Edit Mode)**
+- Click on the left side of the cell.
+
+![Selected individual cell](../assets/select_cell_non_edit_mode.gif)
+
+A selected cell displays a blue horizontal line on the left edge. Markdown cell will have an additional shaded area that is directly next to the cell. For a visual example, please refer to the _hiding cells_ section.
+
+**NB**: It is crucial to **avoid clicking** the _blue_ edge as well as the shaded area that is directly next to the cell. We will discuss this in a later section.
 
 ---
  
-### Select Multiple Cells in Non-Edit Mode
+### **Select Multiple Cells (Non-Edit Mode)**
 1. Select a cell in non-edit mode
-1. Select additional cells with:
-    - `Shift + J` or `Shift + Down-Arrow` to select additional cells below
-    - `Shift + K` or `Shift + Up-Arrow` to select additional cells above
-1. Perform batch operations on selected cells
+1. Select multiple cells with:
+    - `shift + j` or `shift + Down-Arrow` to select additional cells below
+    - `shift + k` or `shift + Up-Arrow` to select additional cells above
+1. Perform batch operations on selected cells with **play** button or with `ctrl + enter`.
 
-![Multpile selected cells](../assets/select_mult_cells.png)
+![Multpile selected cells](../assets/select_mult_cells.gif)
 
-*Multiple selected cells are surrounded by a blue highlighted box*
+*Selected cells will have a blue background*
 
 ---
 
-### Select a Code Cell in Edit Mode
-- Click inside a cell
+### **Select Cell (Edit Mode)**
+- Click inside a cell block.
 
 ![Selected code cell in edit mode](../assets/select_cell_edit_mode.png) 
 
-*A selected cell in non-edit mode is surrounded by a box with a green left edge*
+For live demonstration, please refer to the [_code cells_](#code-cells) section.
+
+**NB**: The edit mode cell will no longer display green edges.
 
 ---
  
-### Select a Markdown Cell in Edit Mode
-- Double click inside a cell
+### **Select a Markdown Cell (Edit Mode)**
+- Double click inside a cell.
 
 ![Markdown cell in edit mode](../assets/markdown_cell_edit_mode.png) 
 
-*A markdown cell in edit mode is surrounded by a box with a green left edge*
+
+For live demonstration, please refer to the [_Markdown cells_](#markdown-cells) section.
+
+**NB**: The edit mode cell will no longer display green edges.
 
 ---
  
- 
-## Running Cells
-![Clicking the Run button to run a cell](../assets/cell_numbers.png)
+## **Running Cells**
+Because you can run code cells in any order, each cell generates a number in the order they ran.
 
-*Since code cells may be run in any order, they are numbered in the order they ran.*
+![Clicking the Run button to run a cell](../assets/cell_numbers.png)
 
 --- 
 
-### Run a Single Code or Markdown Cell
+### **Run a Single Cell**
 #### With the Run Button
-1. Select a cell in edit or non-edit mode
-1. Click the Run button
+1. Select any cell you wish to run. 
+1. Do one of the following:
+    - Click `Run` button
+    - `Ctrl + Enter` to run a cell
+    - `Shift + Enter` to runs a cell and selects the cell below
+    - `Alt + Enter` to runs a cell and inserts an empty cell below
 
-![Clicking the Run button to run a cell](../assets/run_button.png)
+![Clicking the Run button to run a cell](../assets/run_cell.gif)
 
-*Click the Run button to run a selected cell*
-
- 
-#### With Hotkeys 
-- Select a cell in edit or non-edit mode
-    - `Ctrl + Enter` runs a cell
-    - `Shift + Enter` runs a cell and selects the cell below
-    - `Alt + Enter` runs a cell and inserts an empty cell below
+*Running selected cell multiple times with `ctrl + enter`*
 
 ---
 
-### Run a Cell and every Cell Above or Below It
-- Select a cell in edit or non-edit mode
-    - Select `Run All Above` from the "Cell" menu
-    - Select `Run All Below` from the "Cell" menu
+### **Run Multiple Cells**
+
+Instead of running just a single cell, you can run multiple cells at once in a following manner:
+
+- Run every cell above/below selected cell.
+- Run them in a groups of selected cell.
+- Run the entire notebook
+
+#### **Running every cell above/below:**
+
+Select a cell, then:
+
+- Select `Run All Above Selected Cell` from the _Run_ menu
+- or select `Run Selected Cell and All Below` from the _Run_ menu
+
+
+![run all above](../assets/run_above.gif)
+
+*Running all cells above selected. Note that the selected cell is ignored.*
+
+#### **Run a batch of selected cells**
+Select a group of cells, then:
+    - Use a hotkey
+    - or click the run button
+
+![run in batch](../assets/run_in_batch.gif)
+
+*Runs a group of cells in a batch using `ctrl + enter`*
     
----
+#### **Run an Entire Notebook**
 
-### Run a batch of selected cells
-- Select a group of cells
-    - Click the `Run` Button
-    - Select `Run Cells` from the "Cell" menu
-    
----
+If you wish to run the entire notebook from the get-go, you can do one of the following:
 
-### Run an Entire Notebook
-- Select `Run All` from the "Cell" menu (does not restart the kernel)
-- Select `Restart & Run All` from the "Kernel" Menu (restarts kernel)
+- Select _Run_ > _Run All Cells_
+- Select _Run_ > _Restart Kernel and Run All Cells..._
+
+The difference is that the former option preserves the values from the previous run while the latter lets you run from a new state—more on this in the next section.
+
 
 ---
 
-### Rerunning a Notebook
+### **Rerunning a Notebook**
 It is a recommended to restart the notebook kernel before rerunning a notebook. This is because any initialized variables and data structures from a previous run will be stored in memory along with their values, which can lead to unintended results.
 
 *Example of unintended results:* Consider a case where you have a Python list with date specific data, such as weather, stock prices, etc. If you were to append specific day's data, you would do something like `lst.append(today)`. However, running this cell more than once will yield unpredictable result due to duplication of today's data. 
