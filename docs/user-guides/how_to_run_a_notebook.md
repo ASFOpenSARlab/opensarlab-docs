@@ -11,10 +11,13 @@
         - [Select Multiple Cells (Non-Edit Mode)](#select-multiple-cells-non-edit-mode)
         - [Select Cell (Edit Mode)](#select-cell-edit-mode)
         - [Select a Markdown Cell (Edit Mode)](#select-a-markdown-cell-edit-mode)
+    - [Hiding a Cell](#hiding-a-cell)
+        - [Hiding via Code Cells](#hiding-via-code-cells)
     - [Running Cells](#running-cells)
         - [Run a Single Cell](#run-a-single-cell)
         - [Run Multiple Cells](#run-multiple-cells)
         - [Rerunning a Notebook](#rerunning-a-notebook)
+    - [Clearing Cell Output Before Closing](#clearing-cell-output-before-closing)
 - [Summary and Demo]()
 
 ---
@@ -137,13 +140,31 @@ For live demonstration, please refer to the [_Markdown cells_](#markdown-cells) 
 **NB**: The edit mode cell will no longer display green edges.
 
 ---
+
+## **Hiding a Cell**
+
+Sometimes, having too many cells may feel cumbersome. Below are the ways to hide the cells:
+
+### **Hiding Individual Cell**
+
+You can hide an individual code cell by clicking the blue vertical line on the left of the code cell. 
+
+![Hide One Cell](../assets/hide_one_cell.gif)
+
+### **Hiding Multiple Cells**
+
+Alternatively, you may click the dark-shaded are on left of the Markdown cells to hide all proceeding cells.
+
+![Hide All Cells](../assets/hide_all_cells.gif)
+
+---
  
 ## **Running Cells**
 Because you can run code cells in any order, each cell generates a number in the order they ran.
 
 ![Clicking the Run button to run a cell](../assets/cell_numbers.png)
 
---- 
+---
 
 ### **Run a Single Cell**
 #### With the Run Button
@@ -193,8 +214,8 @@ Select a group of cells, then:
 
 If you wish to run the entire notebook from the get-go, you can do one of the following:
 
-- Select _Run_ > _Run All Cells_
-- Select _Run_ > _Restart Kernel and Run All Cells..._
+- Select `_Run_` > `_Run All Cells_`
+- Select `_Run_` > `_Restart Kernel and Run All Cells..._`
 
 The difference is that the former option preserves the values from the previous run while the latter lets you run from a new state—more on this in the next section.
 
@@ -202,19 +223,27 @@ The difference is that the former option preserves the values from the previous 
 ---
 
 ### **Rerunning a Notebook**
-It is a recommended to restart the notebook kernel before rerunning a notebook. This is because any initialized variables and data structures from a previous run will be stored in memory along with their values, which can lead to unintended results.
+We recommend restarting the notebook kernel before rerunning it since any initialized variables and data structures from a previous run persist in memory along with their values, which can lead to unintended results.
 
-*Example of unintended results:* Consider a case where you have a Python list with date specific data, such as weather, stock prices, etc. If you were to append specific day's data, you would do something like `lst.append(today)`. However, running this cell more than once will yield unpredictable result due to duplication of today's data. 
+_For instance, consider the following case_:
 
-*e.g.* Running this cell `n` times will result in `[day_before, yesterday, today, today, today, today, ...]`.
+Assume you have a Python list with date-specific data, such as weather, stock prices, etc. If you were to run a cell that appends data from a specific date multiple times, it may yield unpredictable results due to the duplicate data. 
 
-To restart notebook, do one of the following:
 
-- Select `Restart` from the Kernel Menu
-- Select `Restart & Clear Output` from the Kernel Menu
-- Select `Restart & Run All` from the Kernel Menu
+*e.g.* 
+![running once](../assets/running_once.PNG)
+_In the above example, running the second cell once will append a new date at the end of the list._
+
+![running multi](../assets/running_multi.PNG)
+_However, running the same cell will keep appending the same value._
+
+Rerunning previous cells can cause unexpected behavior. We recommend restarting the notebook when you are running from the beginning.
+
+To restart the notebook, select any of the `Restart` options from the Kernel Menu.
+
+![restart option](../assets/restart_option.PNG)
 
 ---
 
-## Clearing Cell Output Before Closing
-It is recommended to clear every output from each code cells prior to closing or saving a notebook. Leaving the output in place can increase file size of notebook, which will use up more of your volume and cause slower notebook loading times (especially if you have a slow internet connection).
+## **Clearing Cell Output Before Closing**
+We recommend clearing every output from each code cell before closing or saving a notebook. Leaving the output in place can increase the file size of the notebook, which will use up more of your volume and cause slower notebook loading times (especially if you have a slow internet connection).
