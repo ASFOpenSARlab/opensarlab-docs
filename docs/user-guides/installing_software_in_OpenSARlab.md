@@ -2,8 +2,20 @@
 
 # Installing Software in OpenSARlab
 
-## pip
-### You can install pip packages to your `/home/jovyan/.local/lib/python3.7/site-packages` directory
+- [`pip`](#pip)
+
+---
+
+## **pip**
+
+What is _pip_?
+
+[_pip_](https://pip.pypa.io/en/stable/) is a package installer for Python.
+
+You can install `pip` packages onto your account in the following manner:
+
+**NB**: Your `pip` packages will be installed in the `/home/jovyan/.local/lib/python3.x/site-packages` directory. 
+
 1. Open a terminal and use the following command:
 
 ```bash
