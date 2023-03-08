@@ -1,6 +1,6 @@
 [Return to Table of Contents](../user.md)
 
-# Installing Software in OpenSARlab
+# **Installing Software in OpenScienceLab**
 
 - [`pip`](#pip)
     - [Install `pip` package inside conda environment](#install-pip-package-inside-of-a-conda-environment)
