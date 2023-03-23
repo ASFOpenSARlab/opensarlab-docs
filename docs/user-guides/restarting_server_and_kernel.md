@@ -88,26 +88,27 @@ Notebooks in OpenScienceLab run in a variety of [conda](https://docs.conda.io/en
 ### Overview
 ---
 
-- As you run code cells in a notebook, initialized variables and their assigned values are stored in memory. If you decide to start over and re-run a previously ran notebook without restarting the kernel, you may encounter some issues. 
+Variables and their assigned values are stored in memory as you run code cells in a notebook. As a result, rerunning a previously ran notebook without restarting the kernel may trigger some issues. 
 
-- The issues are caused by previously defined variables that persist in your memory. This is problematic for various reasons, such as:
+Uncleared variables are problematic for various reasons, such as:
 
-     - They use up instance's limited memory resources.
-     - Increase file size of notebook.
-     - Previously defined values may cause unintended results when re-runing the code.
+- Increase the file size of the notebook.
+- They occupy limited memory resources.
+- *Previously defined values may cause unexpected results during the rerun ().
 
-- *Example of unintended results:* Consider a notebook that builds a string, which starts empty and appends substrings systematically. When re-running this notebook, the string will no longer start empty and the resultant string will contain an unintended substring at its start.
+_*NB_: _Refer to the **Rerunning a Notebook** section in the **How to Run a Jupyter Notebook** section._
 
-The solution for this is to restart the kernel to clear notebook data that are stored in memory.
+The solution for this is to restart the kernel to clear notebook data.
 
-#### How?
+### **How to Clear Notebook**
 
-1. Select `Restart`, `Restart & Clear Output`, or `Restart & Run All` From The Kernel Menu
-    - `Restart` will restart the kernel but leave old code cell output in place.
-    - `Restart & Clear Output` restarts the kernel and removes old code cell output. **This is generally the preferred option.**
-    - `Restart & Run All` restarts the kernel and runs all the code cells. **This only works if the notebook does not require input from user.**
+Select one of the following from the Kernel Menu:
 
-    ![Select restart and clear all from the kernel menu](../assets/restart_clear_all.png)
+- `Restart Kernel`: Restarts the kernel but leave the old code cell output in place.
+- `Restart Kernel and Clear All Outputs...`: Restarts the kernel and removes old code cell output. **This is generally the preferred option.**
+- `Restart Kernel and Run up to Selected Cell...`: Restarts the kernel and run up to the cell where you selected.
+- `Restart Kernel and Run All Cells...`: Restarts the kernel and runs all the code cells. **This only works if the notebook does not require input from the user.** 
+
+    ![Select restart and clear all from the kernel menu](../assets/kernel_restart.PNG)
     
-    *For most use cases, select `Restart & Clear Output`*
-
+    *For most use cases, select `Restart Kernel and Clear All Outputs...`*
