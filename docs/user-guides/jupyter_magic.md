@@ -1,20 +1,17 @@
 [Return to Table of Contents](../user.md)
 
-# Jupyter Line and Cell Magics, and IPython Syntax
+# **Jupyter Line and Cell Magics, and IPython Syntax**
 
-Jupyter Notebook magic commands provide shortcuts and extra functionality to the notebooks in addition to what can be done with pure Python code. An exhaustive list of magic commands can be found in the [IPython docs](https://ipython.readthedocs.io/en/stable/interactive/magics.html). 
+In addition to running Python code, Jupyter Notebooks allows users to run [magic commands](https://ipython.readthedocs.io/en/stable/interactive/magics.html) with various functionality. While all magic commands are available to users, the below magic commands are used the most in the OpenScienceLab:
 
-While all magic commands are available to users, we tend to use a relatively small selection of them in OpenSARlab. 
-
-Magic commands that are frequently used are following:
-
-- IPython's Shell Assignment Syntax
-- Line Magics
-- Cell Magics
+- [Shell Assignment Syntax](#shell-assignment-syntax)
+- [Line Magics](#)
+- [Cell Magics](#)
 
 ---
 
-## IPython Shell Assignment with `!`
+<!-- ## IPython Shell Assignment with `!` -->
+## **Shell Assignment Syntax** 
 
 In IPython syntax, the exclamation mark (!) allows users to run shell commands from inside a Jupyter Notebook code cell.
 Simply start a line of code with `!` and it will run the command in the shell. 
