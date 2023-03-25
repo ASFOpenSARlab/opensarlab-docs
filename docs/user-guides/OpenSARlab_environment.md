@@ -29,7 +29,7 @@ OpenSARLab uses [Amazon AWS EBS volumes](https://docs.aws.amazon.com/AWSEC2/late
 #### _**Important Notes about Volume**_
 
 - **If your volume has been destroyed, the latest snapshot will regenerate a new EBS volume upon the next login. Upon successful login, your account should be identical from your previous session.**
-- When regenerating the volume from the snapshot, it can take some time (10~20+ minutes) to restore all the data. Notebooks may load slower than usual during this period.
+- When regenerating the volume from the snapshot, it can take some time (10+ minutes) to restore all the data. Notebooks may load slower than usual during this period.
 - If users occupy more space than allocated, it will trigger the `out-of-storage exception` that will prevent users from logging in.
     - It is the users' responsibility to manage their storage. Please contact an [OpenScienceLab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) if you need help logging in.
 
