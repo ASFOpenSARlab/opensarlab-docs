@@ -1,15 +1,13 @@
 [Return to Table of Contents](../user.md)
 
-# Logging Out of OpenSARlab and Shutting Down the Server
+# Logging Out of OpenScienceLab and Shutting Down the Server
 
-When you are ready to stop working in OpenSARlab, it is important to shut down
-your server and also logout.
+When you are ready to stop working in OpenScienceLab, please shut down
+your server and logout.
 
----
-
-## Why Shut Down the Server?
-
-<!--  in future, include docs regarding auto shutdown and reference it here -->
+Shutting down your server is the same as shutting down your computer. If you
+shut down your server and come back the next day (or even the next week), all
+your files will still be there and you can resume processing your data.
 
 - Logging out will **not** shut down the server on its own. While the server may
 shut down automatically after an hour of inactivity, users should not rely on
@@ -17,21 +15,24 @@ this feature.
 
 - The server will stay alive while there are any notebooks open in active
 browser tabs.
-  - *Example:* Consider a case where you ran some process, logged out, and
-  decided to log back in for the first time in a few days. Upon logging in,
-  you noticed that the Jupyter Notebook from the previous session is still
-  running. This implies that your server was running for the past few days,
-  which used up unnecessary resources.
+
+---
+
+## Why Shut Down the Server?
 
 Do your part to reduce resource use and ease the burden on the environment by
 shutting down your server when you are finished working for the day.
+
+Additionally, while OpenScienceLab is and will remain free to our users, resources
+used do incur costs, which are paid for by the Alaska Satellite Facility. Help us
+keep OpenScienceLab free by shutting down servers when they are not in use.
 
 **In some instances, you may need to leave your server running. For example, you
 have a notebook performing a very time intensive analysis and wish to let it run
 overnight. It is acceptable for you to keep your server running in cases like this.**
 
 *Summary: Unless you intend to run your server for a long period of time, make
-sure to shut it down before your leave.*
+sure to shut it down before you leave.*
 
 ---
 
