@@ -3,16 +3,17 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  - python=3.8
+  - python=3.9
   - pip
   # For documentation
-  - mkdocs
-  - mkdocs-material=6.2
-  - mkdocs-material-extensions
+  - mkdocs=1.5.3
+  - mkdocs-material=9.4.2
+  - requests
   - pip:
       # For documentation
-      - mkdocs-asf-theme>=0.2.3
+      - mkdocs-asf-theme==0.3.0
       - mkdocs-redirects
       - mkdocs-section-index
       - mkdocstrings
+      - mkdocstrings-python
       - mkdocs-macros-plugin
