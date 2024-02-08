@@ -8,6 +8,11 @@ theme:
   icon:
     repo: fontawesome/brands/github-alt
 
+extra: 
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ASFOpenSARlab
+
 repo_url: https://github.com/ASFOpenSARlab
 repo_name: ASF OpenSARlab
 edit_uri: ''
