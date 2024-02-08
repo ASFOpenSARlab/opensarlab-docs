@@ -59,7 +59,7 @@ application's "Scan QR Code" feature.
 
 ## Troubleshooting
 
-1. If the MFA Verification check is not successfull, there are two potential issues:
+1. If the MFA Code check is not successful, there are two potential issues:
     1. One of the codes was mis-typed.
     1. The secret was not properly put into the MFA application.
 1. Test again with another two *consecutive* codes, and if the verification step fails
