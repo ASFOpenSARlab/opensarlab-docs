@@ -1,14 +1,18 @@
 [Return to Table of Contents](../user.md)
 
-# Configuring Multi-Factor Authentication (MFA)
+# Configuring Multi-Factor Authentication
 
 [Watch: Log In and Set Up MFA](mfa.md#watch-log-in-and-set-up-mfa)
 
 [Before You Begin](mfa.md#before-you-begin)
 
-[Walkthrough](mfa.md#walkthrough)
+[Setup Steps](mfa.md#setup-steps)
 
 [Troubleshooting](mfa.md#troubleshooting)
+
+Multi-Factor Authentication (MFA) is required to access OpenScienceLab resources.
+Currently, we support TOTP-based authentication, with plans to add hardware
+key (ex. Yubikey) authentication in future updates.
 
 ## Watch: Log In and Set Up MFA
 
@@ -16,7 +20,7 @@
 
 ## Before You Begin
 
-A TOTP-enabled application is required to use OpenScienceLab resources.
+A TOTP-enabled MFA application is required to use OpenScienceLab resources.
 While the most widely utilized approach is through a smartphone application,
 there are also several desktop clients that provide this functionality.
 
@@ -24,8 +28,10 @@ there are also several desktop clients that provide this functionality.
 | --------------------    | --------------- | --------------- | ----------- |
 | KeePassXc               |        ✅       |       ❌        |      ❌     |
 | Enpass                  |        ✅       |       ✅        |      ✅     |
+| Cisco Duo               |        ✅       |       ✅        |      ✅     |
 | Authenticator.cc*       |        ✅       |       ✅        |      ✅     |
 | Bitwarden**             |        ✅       |       ✅        |      ✅     |
+| FreeOTP                 |        ❌       |       ✅        |      ✅     |
 | Google Authenticator    |        ❌       |       ✅        |      ✅     |
 | Microsoft Authenticator |        ❌       |       ✅        |      ✅     |
 | Aegis Authenticator     |        ❌       |       ✅        |      ❌     |
@@ -34,7 +40,7 @@ there are also several desktop clients that provide this functionality.
 
 \*\* TOTP supported in paid version only
 
-## Walkthrough
+## Setup Steps
 
 1. Log into OpenScienceLab normally. Leave the "MFA" field on the login page blank.
 1. Click "Configure New MFA Device" in the Navigation Bar at
@@ -50,15 +56,16 @@ application's "Scan QR Code" feature.
 1. If the check is successfull, navigate back to the home page by clicking "Home"
     in the Navigation Bar at the top of the page and continue using OpenScienceLab
     as normal.
-1. If the check is not successfull, there are two potential issues:
+
+## Troubleshooting
+
+1. If the MFA Verification check is not successfull, there are two potential issues:
     1. One of the codes was mis-typed.
     1. The secret was not properly put into the MFA application.
 1. Test again with another two *consecutive* codes, and if the verification step fails
     again, check that the OTP Secret on the page matches the secret in your application.
 1. If all else fails, refresh the page. This will generate a new code, which you
     can then use to follow the same steps above.
-
-## Troubleshooting
 
 For additional issues and further troubleshooting, please email
 [uso@asf.alaska.edu](mailto:uso@asf.alaska.edu)
