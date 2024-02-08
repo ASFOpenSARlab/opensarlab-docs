@@ -2,6 +2,15 @@
 
 # Troubleshooting Guide
 
+## Why don't any of the deployments appear on the OpenScienceLab home page?
+
+You most likely have not yet configured Multi-Factor Authentication (MFA). While
+any user can log in without MFA, until a user has configured their MFA device,
+they will be unable to access any OpenScienceLab resources.
+
+See [Configuring Multi-Factor Authentication](mfa.md) for more information and
+a detailed walkthrough.
+
 ## Why did the kernel die while running a notebook?
 
 ![A dead notebok kernel notification.](../assets/kernel_death.png)
