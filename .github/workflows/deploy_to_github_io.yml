@@ -10,18 +10,18 @@ jobs:
     name: Build site and deploy
     runs-on: "ubuntu-latest"
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           path: opensarlab-docs
           
-      - uses: conda-incubator/setup-miniconda@v2
+      - uses: conda-incubator/setup-miniconda@v3
         with:
           auto-update-conda: true
-          python-version: 3.8
+          python-version: 3.9
           activate-environment: opensarlab-docs
           environment-file: opensarlab-docs/environment.yml
       
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           repository: ASFOpenSARlab/ASFOpenSARlab.github.io
           path: ASFOpenSARlab.github.io

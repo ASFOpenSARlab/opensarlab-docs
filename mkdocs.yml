@@ -5,11 +5,13 @@ site_description: The Alaska Satellite Facility's OpenSARlab
 
 theme:
   name: asf-theme
-#  logo:
   icon:
     repo: fontawesome/brands/github-alt
-  features:
-    - navigation.instant
+
+extra: 
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ASFOpenSARlab
 
 repo_url: https://github.com/ASFOpenSARlab
 repo_name: ASF OpenSARlab
@@ -20,6 +22,7 @@ nav:
   - Troubleshooting Guide: user-guides/troubleshooting_guide.md
   - User Guide:
     - user.md
+    - Configuring Multi-Factor Authentication: user-guides/mfa.md
     - Running Jupyter Notebook: user-guides/how_to_run_a_notebook.md
     - Conda Environments: user-guides/conda_environments.md
     - Installing Software in OpenSARlab: user-guides/installing_software_in_OpenSARlab.md
@@ -44,3 +47,5 @@ nav:
     - June 2021: release-notes/release_06-2021.md
     - October 2021: release-notes/release_10-2021.md
     - February 2022: release-notes/release_02-2022.md
+    - February 2023: release-notes/release_02-2023.md
+    - February 2024: release-notes/release_02-2024.md
