@@ -1,6 +1,6 @@
 [Return to Developer Guide](../dev.md)
 
-# There are a few options for creating conda environments in OpenSARlab. 
+# There are a few options for creating conda environments in OpenSARLab. 
 Each option come with benefits and drawbacks.
 
 ---
@@ -25,7 +25,7 @@ Each option come with benefits and drawbacks.
     - Environments are synced, not copied, so changes made by users will persist across server restarts
 
 ### Drawbacks
-- Increases the time it takes to start an OpenSARlab server
+- Increases the time it takes to start an OpenSARLab server
     - Syncing environments from the docker image to `$HOME/.local`, registering their kernels, and running any needed setup scripts all happens at server startup
 - Large environments may overrun the 20GB root volume mounted on each EC2 instance, requiring that larger, more expensive root volumes be used.
 - By storing the environment on both user volumes and EC2 node volumes, you effectively double pay for that storage.
@@ -41,4 +41,4 @@ Each option come with benefits and drawbacks.
 ### Drawbacks
 - Users have to create their own conda environments
     - This requires some knowledge of conda and takes time.
-    - Note: There is an [ASF notebook repo](https://github.com/ASFOpenSARlab/opensarlab-envs) to aid users in building their own environments.
+    - Note: There is an [ASF notebook repo](https://github.com/ASFOpenSARLab/OpenSARLab-envs) to aid users in building their own environments.

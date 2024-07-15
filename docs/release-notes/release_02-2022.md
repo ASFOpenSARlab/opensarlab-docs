@@ -1,4 +1,4 @@
-# Welcome to the February 2022 OpenSARlab Update!
+# Welcome to the February 2022 OpenSARLab Update!
 
 ### Changes:
 - Ubuntu 20.04.3 LTS

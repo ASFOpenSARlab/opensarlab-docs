@@ -8,7 +8,7 @@
 
 - [Git](https://git-scm.com/about) - Version control systems that allow you to track changes to your files.
 - [ASF's Jupyter Notebook](https://github.com/asfadmin/asf-jupyter-notebooks) - A collection of Jupyter Notebooks used in OpenSARLab.
-- [Terminal](./OpenSARlab_terminal.md) - A built-in terminal within OpenScienceLab. The user should also have a basic understanding of Bash commands.
+- [Terminal](./OpenSARLab_terminal.md) - A built-in terminal within OpenScienceLab. The user should also have a basic understanding of Bash commands.
 
 ---
 
@@ -16,7 +16,7 @@
 
 ---
 
-A [nbgitpuller](https://jupyterhub.github.io/nbgitpuller/) pulls any changes to the [notebook repo](https://github.com/ASFOpenSARlab/opensarlab-notebooks) each time an OpenSARLab deployment server starts up. 
+A [nbgitpuller](https://jupyterhub.github.io/nbgitpuller/) pulls any changes to the [notebook repo](https://github.com/ASFOpenSARLab/opensarlab-notebooks) each time an OpenSARLab deployment server starts up. 
 
 In short words, `nbgitpuller` will automatically update the notebooks to the latest version. 
 

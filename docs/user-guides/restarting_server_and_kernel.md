@@ -1,8 +1,8 @@
 [Return to Table of Contents](../user.md)
 
-# **Restarting the OpenSARlab Server and Notebook Kernel**
+# **Restarting the OpenSARLab Server and Notebook Kernel**
 
-## **Restarting the OpenSARlab Server**
+## **Restarting the OpenSARLab Server**
 
 ### Overview
 ---
@@ -17,7 +17,7 @@ Consider a case where:
 A quick solution in either of those cases is to restart your server to run the `nbgitpuller`. 
 
 **NB**: If you are comfortable with _git_, you could do a `git pull` from 
-[the terminal](OpenSARlab_terminal.md) or in a notebook instead. However, do not push your changes as it may interfere with the `nbgitpuller`
+[the terminal](OpenSARLab_terminal.md) or in a notebook instead. However, do not push your changes as it may interfere with the `nbgitpuller`
 
 ---
 

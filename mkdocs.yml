@@ -1,7 +1,7 @@
-site_name: OpenSARlab-Docs
+site_name: OpenSARLab-Docs
 site_url: https://opensarlab-docs.asf.alaska.edu/
-site_author: ASF OpenSARlab Team
-site_description: The Alaska Satellite Facility's OpenSARlab
+site_author: ASF OpenSARLab Team
+site_description: The Alaska Satellite Facility's OpenSARLab
 
 theme:
   name: asf-theme
@@ -11,10 +11,10 @@ theme:
 extra: 
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/ASFOpenSARlab
+      link: https://github.com/ASFOpenSARLab
 
-repo_url: https://github.com/ASFOpenSARlab
-repo_name: ASF OpenSARlab
+repo_url: https://github.com/ASFOpenSARLab
+repo_name: ASF OpenSARLab
 edit_uri: ''
 
 nav:
@@ -25,19 +25,19 @@ nav:
     - Configuring Multi-Factor Authentication: user-guides/mfa.md
     - Running Jupyter Notebook: user-guides/how_to_run_a_notebook.md
     - Conda Environments: user-guides/conda_environments.md
-    - Installing Software in OpenSARlab: user-guides/installing_software_in_OpenSARlab.md
-    - OpenSARlab Servers and Kernels: user-guides/restarting_server_and_kernel.md
+    - Installing Software in OpenSARLab: user-guides/installing_software_in_OpenSARLab.md
+    - OpenSARLab Servers and Kernels: user-guides/restarting_server_and_kernel.md
     - Jupyter Magic Commands: user-guides/jupyter_magic.md
-    - OpenSARlab Terminal: user-guides/OpenSARlab_terminal.md
-    - OpenSARlab Account Details: user-guides/OpenSARlab_environment.md
-    - Git in OpenSARlab: user-guides/git_in_OpenSARlab.md
-    - S3 Bucket Access in OpenSARlab: user-guides/s3_buckets.md
+    - OpenSARLab Terminal: user-guides/OpenSARLab_terminal.md
+    - OpenSARLab Account Details: user-guides/OpenSARLab_environment.md
+    - Git in OpenSARLab: user-guides/git_in_OpenSARLab.md
+    - S3 Bucket Access in OpenSARLab: user-guides/s3_buckets.md
     - Jupyter Notebook Extensions: user-guides/jupyter_notebook_extensions.md
     - Best Practices for Writing Notebooks: user-guides/class_notebooks_best_practices.md
     - Logging Out and Server Shutdown: user-guides/logging_out_and_server_shutdown.md
   - Developer Guide:
-    - System Diagram: assets/system_diagrams/OpenSARlab_system_diagram_June_2021.png
-    - Deploy OpenSARlab to AWS: dev-guides/deploy_OpenSARlab.md
+    - System Diagram: assets/system_diagrams/OpenSARLab_system_diagram_June_2021.png
+    - Deploy OpenSARLab to AWS: dev-guides/deploy_OpenSARLab.md
     - Destroy Deployments: dev-guides/destroy_deployment.md
     - Conda Environment Options: dev-guides/conda_environments.md
     - Notifications: dev-guides/notifications.md

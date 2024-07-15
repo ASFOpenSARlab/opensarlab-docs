@@ -1,8 +1,8 @@
-# Build latest mintpy and push to custom OpenSARlab conda channel
+# Build latest mintpy and push to custom OpenSARLab conda channel
 
 Sometimes the latest version of MintPy is desired within a notebook but the official release is not current. These instructions will show how to build MintPy and push to a custom conda channel.
 
-_This assumes that the user has an Anaconda.org account and that this account is attached to a `opensarlab` conda channel. Instructions on how to do this are not provided here._
+_This assumes that the user has an Anaconda.org account and that this account is attached to a `OpenSARLab` conda channel. Instructions on how to do this are not provided here._
 
 
 A. Create working directory
@@ -77,10 +77,10 @@ cd ..
 I. After a successful build, check for artifacts in `mintpy-feedstock/build_artifacts/`
 
 
-J. Push changes to OpenSARlab conda channel.
+J. Push changes to OpenSARLab conda channel.
 
 ```bash
-# Login to individual account where you are an owner of OpenSARlab org
+# Login to individual account where you are an owner of OpenSARLab org
 anaconda login
 
 # Upload artifacts
