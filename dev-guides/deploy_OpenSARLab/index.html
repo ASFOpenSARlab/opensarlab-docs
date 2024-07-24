@@ -1,0 +1,2115 @@
+<!-- Extends https://github.com/squidfunk/mkdocs-material/blob/9.4.2/src/templates/base.html -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The Alaska Satellite Facility's OpenSARLab">
+      
+      
+        <meta name="author" content="ASF OpenSARLab Team">
+      
+      
+        <link rel="canonical" href="https://opensarlab-docs.asf.alaska.edu/opensarlab-docs/dev-guides/deploy_OpenSARLab/">
+      
+      
+        <link rel="prev" href="../../assets/system_diagrams/OpenSARLab_system_diagram_June_2021.png">
+      
+      
+        <link rel="next" href="../destroy_deployment/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
+    
+    
+      
+        <title>Deploy OpenSARLab to AWS - opensarlab-docs</title>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d451bc0e.min.css">
+      
+      
+
+
+    
+    <link rel="stylesheet" href="../../assets/stylesheets/asf.css">
+
+    
+
+      
+    
+<script src="https://fbm.earthdata.nasa.gov/for/ASF/feedback.js" type="text/javascript"></script>
+<script type="text/javascript">
+ // This prevents the FBM flyout banner from appearing on the side of the page.
+feedback.init({showIcon: false});
+</script>
+
+<script src="https://cdn.earthdata.nasa.gov/tophat2/tophat2.js"
+        id="earthdata-tophat-script"
+        data-show-fbm="true"
+        data-show-status="false"
+        data-fbm-subject-line="How can we help you?"
+        data-current-daac="ASF DAAC">
+</script>
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deploy-opensarlab-to-an-aws-account" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <!--
+  Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Adapted from https://github.com/squidfunk/mkdocs-material/blob/9.4.2/src/templates/partials/header.html -->
+
+<!-- Determine classes -->
+
+
+  
+
+
+<!-- Header -->
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="Header"
+  >
+
+    
+    <!-- Link to ASF -->
+    <a
+      href="https://asf.alaska.edu/"
+      title="ASF"
+      class="md-header__button md-logo"
+      aria-label="ASF"
+      data-md-component="logo"
+    >
+      <img src="../../assets/images/ASFLogo-Blue2.png" alt="logo" />
+    </a>
+    
+
+    <!-- Link to home -->
+    <a
+      href="../.."
+      title="opensarlab-docs"
+      class="md-header__button md-logo"
+      aria-label="opensarlab-docs"
+      data-md-component="logo"
+    >
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            opensarlab-docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Deploy OpenSARLab to AWS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color palette toggle -->
+    
+
+    <!-- Site language selector -->
+    
+
+    <!-- Button to open search modal -->
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+
+      <!-- Search interface -->
+      <div class="expert-rec-search">
+  <ci-search></ci-search>
+</div>
+    
+
+    <!-- Repository information -->
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ASFOpenSARlab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ASF OpenSARlab
+  </div>
+</a>
+      </div>
+    
+  </nav>
+
+  <!-- Navigation tabs (sticky) -->
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="opensarlab-docs" class="md-nav__button md-logo" aria-label="opensarlab-docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    opensarlab-docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ASFOpenSARlab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ASF OpenSARlab
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/troubleshooting_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to the OpenSARLab User Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/mfa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring Multi-Factor Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/how_to_run_a_notebook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running Jupyter Notebook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/conda_environments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conda Environments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/installing_software_in_OpenSARLab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing Software in OpenSARLab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/restarting_server_and_kernel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenSARLab Servers and Kernels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/jupyter_magic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jupyter Magic Commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/OpenSARLab_terminal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenSARLab Terminal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/OpenSARLab_environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenSARLab Account Details
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/git_in_OpenSARLab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git in OpenSARLab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/s3_buckets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    S3 Bucket Access in OpenSARLab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/jupyter_notebook_extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jupyter Notebook Extensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/class_notebooks_best_practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices for Writing Notebooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/logging_out_and_server_shutdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging Out and Server Shutdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Developer Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assets/system_diagrams/OpenSARLab_system_diagram_June_2021.png" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Diagram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Deploy OpenSARLab to AWS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Deploy OpenSARLab to AWS
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#take-aws-ses-out-of-sandbox" class="md-nav__link">
+    Take AWS SES out of sandbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-aws-cost-allocation-tag" class="md-nav__link">
+    Create an AWS Cost Allocation Tag
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-dockerhub-credentials-to-aws-secrets-manager" class="md-nav__link">
+    Add dockerhub credentials to AWS Secrets Manager
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-an-ical-calendar-for-notifications" class="md-nav__link">
+    Setup an iCal calendar for notifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-your-ca-certificate" class="md-nav__link">
+    Store your CA certificate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-codecommit-repos" class="md-nav__link">
+    Prepare CodeCommit Repos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-opensarlab_container-code-for-deployment" class="md-nav__link">
+    Customize opensarlab_container code for deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-opensarlab_cluster-code-for-deployment" class="md-nav__link">
+    Customize opensarlab_cluster code for deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-the-container-cloudformation-stack" class="md-nav__link">
+    Build the container CloudFormation stack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-the-cluster-cloudformation-stack" class="md-nav__link">
+    Build the cluster CloudFormation stack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#take-care-of-odds-and-ends" class="md-nav__link">
+    Take care of odds and ends
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../destroy_deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Destroy Deployments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conda_environments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conda Environment Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notifications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notifications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubelshooting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mintpy_conda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Mintpy Conda Build Instructions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Release Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/release_06-2021/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    June 2021
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/release_10-2021/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    October 2021
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/release_02-2022/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    February 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/release_02-2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    February 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/release_02-2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    February 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#take-aws-ses-out-of-sandbox" class="md-nav__link">
+    Take AWS SES out of sandbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-aws-cost-allocation-tag" class="md-nav__link">
+    Create an AWS Cost Allocation Tag
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-dockerhub-credentials-to-aws-secrets-manager" class="md-nav__link">
+    Add dockerhub credentials to AWS Secrets Manager
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-an-ical-calendar-for-notifications" class="md-nav__link">
+    Setup an iCal calendar for notifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-your-ca-certificate" class="md-nav__link">
+    Store your CA certificate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-codecommit-repos" class="md-nav__link">
+    Prepare CodeCommit Repos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-opensarlab_container-code-for-deployment" class="md-nav__link">
+    Customize opensarlab_container code for deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-opensarlab_cluster-code-for-deployment" class="md-nav__link">
+    Customize opensarlab_cluster code for deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-the-container-cloudformation-stack" class="md-nav__link">
+    Build the container CloudFormation stack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-the-cluster-cloudformation-stack" class="md-nav__link">
+    Build the cluster CloudFormation stack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#take-care-of-odds-and-ends" class="md-nav__link">
+    Take care of odds and ends
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><a href="../../dev/">Return to Developer Guide</a></p>
+<h1 id="deploy-opensarlab-to-an-aws-account">Deploy OpenSARLab to an AWS account</h1>
+<p><strong>A note about deployments:</strong> A deployment of OpenSARLab refers to a standalone instance of OpenSARLab.
+If you are setting up OpenSARLab for several classes and/or collaborative groups with disparate needs or funding sources,
+it may be useful to give them each their own standalone deployment. This separates user group authentication, 
+simplifies billing for each group, and allows for easy cleanup at the end of a project or class (just delete the deployment).
+In the following instructions, replace any occurrence of "<code>deployment_name</code>" with the deployment name you have chosen.</p>
+<p><strong>Make your deployment name lowercase and use no special characters other than dashes (-). It will be used to
+generate part of the Cognito callback URL and CloudFormation stack names also follow the same naming convention.</strong>    </p>
+<h2 id="take-aws-ses-out-of-sandbox">Take AWS SES out of sandbox</h2>
+<p><strong>The AWS Simple Email Service is used by OpenSARLab to send emails to users and administrators. These include
+authentication related notifications and storage lifecycle management messages.</strong></p>
+<p>While SES is in sandbox, you are limited to sending 1 email per second with no more than 200 in a 24 hour period, and they
+may only be sent from an SES verified address to other SES verified addresses.</p>
+<p>Note: Provide a detailed explanation of your SES use and email policies when applying to exit the sandbox or you will be denied.</p>
+<p><strong>Approval can take 24-48 hours</strong> </p>
+<ol>
+<li>Follow these <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html">instructions</a> to 
+take your SES out of sandbox.</li>
+</ol>
+<h2 id="create-an-aws-cost-allocation-tag">Create an AWS Cost Allocation Tag</h2>
+<p><strong>Note: only management accounts can create cost allocation tags</strong></p>
+<ol>
+<li>Create a cost allocation tag or have one created by someone with access<ol>
+<li>Give it an available name that makes sense for tracking deployment names associated with AWS resources<ol>
+<li>i.e. "deployment_name"</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="add-dockerhub-credentials-to-aws-secrets-manager">Add dockerhub credentials to AWS Secrets Manager</h2>
+<p><strong>This deployment uses a few publicly available docker images. Due to dockerhub rate limits (<a href="https://www.docker.com/increase-rate-limits">https://www.docker.com/increase-rate-limits</a>), 
+you will need to set up a dockerhub account. A free-tier account will suffice. CodePipeline's ip address is shared by many
+users and you will likely hit the rate limit as an anonymous user 
+(<a href="https://aws.amazon.com/blogs/containers/advice-for-customers-dealing-with-docker-hub-rate-limits-and-a-coming-soon-announcement/">details here</a>).</strong></p>
+<p>Note: By default this secret will be used for multiple deployments. Optionally, you could edit the codebuild section in the cf-cluster.yml to 
+point to a different secret.</p>
+<ol>
+<li>If you don't have a dockerhub account, create one <a href="https://hub.docker.com/signup">here</a></li>
+<li>Open the AWS Secrets Manager console</li>
+<li>Click the "Store a new secret" button<ol>
+<li>Page 1:<ol>
+<li>Select "Other type of secrets"</li>
+<li>Select the "Plaintext" tab</li>
+<li>Delete the default content</li>
+<li>Add your username and password, separated by a space<ol>
+<li>Example: <code>username password</code></li>
+</ol>
+</li>
+<li>Click the "Next" button</li>
+</ol>
+</li>
+<li>Page 2:<ol>
+<li>Secret name<ol>
+<li><code>dockerhub/creds</code></li>
+<li>Click the "Next" button</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Page 3:<ol>
+<li>Click the "Next" button</li>
+</ol>
+</li>
+<li>Page 4:<ol>
+<li>Click the "Store" button</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="setup-an-ical-calendar-for-notifications">Setup an iCal calendar for notifications</h2>
+<p><strong>Notifications are generated from iCal calendar events. ASF uses Google Calendar but any publicly accessible iCal 
+formatted calendar should work as well</strong></p>
+<ol>
+<li>Create a public iCal formatted calendar</li>
+<li>The iCal formatted url will be needed in later</li>
+<li>Notification calendar events must be properly formatted.<ol>
+<li>Formatting details available in the <a href="#Take-care-of-odds-and-ends">Take care of odds and ends</a> section</li>
+</ol>
+</li>
+</ol>
+<h2 id="store-your-ca-certificate">Store your CA certificate</h2>
+<p><strong>OpenSARLab will lack full functionality if not using https (SSL certification)</strong></p>
+<ol>
+<li>Follow these <a href="https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html">instructions</a> to import your CA certificate into the AWS Certificate Manager</li>
+</ol>
+<h2 id="prepare-codecommit-repos">Prepare CodeCommit Repos</h2>
+<p>TODO Do this differently </p>
+<p><strong>All the public OpenSARlab repos are in the <a href="https://github.com/ASFOpenSARlab">ASFOpenSARlab</a> Github Org</strong></p>
+<ol>
+<li>Create a <code>deployment_name</code>-container CodeCommit repo in your AWS account</li>
+<li>Create a <code>deployment_name</code>-cluster CodeCommit repo</li>
+<li>Clone the <code>deployment_name</code>-container and <code>deployment_name</code>-cluster repos to your local computer using ssh</li>
+<li>cd into your local <code>deployment_name</code>-container repo<ol>
+<li>add ASFOpenSARlab/opensarlab-container as a remote on your local <code>deployment_name</code>-container repo<ol>
+<li><code>git remote add github https://github.com/ASFOpenSARlab/opensarlab-container.git</code></li>
+</ol>
+</li>
+<li>Pull the remote  opensarlab-container repo into your local <code>deployment_name</code>-container repo<ol>
+<li><code>git pull github main</code></li>
+</ol>
+</li>
+<li>Create a main branch in the <code>deployment_name</code>-container repo<ol>
+<li><code>git checkout -b main</code></li>
+</ol>
+</li>
+<li>Push to the remote <code>deployment_name</code>-container repo<ol>
+<li><code>git push origin main</code></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>cd into your local <code>deployment_name</code>-cluster repo<ol>
+<li>add ASFOpenSARlab/opensarlab-cluster as a remote on your local <code>deployment_name</code>-cluster repo<ol>
+<li><code>git remote add github https://github.com/ASFOpenSARlab/opensarlab-cluster.git</code></li>
+</ol>
+</li>
+<li>Pull the remote  opensarlab-cluster repo into your local <code>deployment_name</code>-cluster repo<ol>
+<li><code>git pull github main</code></li>
+</ol>
+</li>
+<li>Create a main branch in the <code>deployment_name</code>-cluster repo<ol>
+<li><code>git checkout -b main</code></li>
+</ol>
+</li>
+<li>Push to the remote <code>deployment_name</code>-cluster repo<ol>
+<li><code>git push origin main</code></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p><strong>You should now have container and cluster repos in CodeCommit that are duplicates of those found in ASFOpenSARlab</strong> </p>
+<h2 id="customize-opensarlab_container-code-for-deployment">Customize opensarlab_container code for deployment</h2>
+<p><strong>The opensarlab-container repo contains one example image named <code>helloworld</code>, which you can reference when creating new images.
+Images can be used by multiple profiles</strong></p>
+<p>Note: It is easiest to work in your local repo and push your changes when you're done.</p>
+<ol>
+<li>Duplicate the <code>images/sar</code> directory and rename it, using your chosen image name</li>
+<li>The image name must be alpha-numeric with no whitespaces or special characters</li>
+<li>Edit the dockerfile<ol>
+<li>Adjust the packages in the 2nd apt install command to suit your image needs</li>
+<li>Add any pip packages you wish installed in the base conda environment</li>
+<li>Add any conda packages you wish installed in the base conda environment</li>
+<li>Create any conda environments you would like pre-installed before "USER jovyan"<ol>
+<li>If using environment.yml files, store them in an "envs" directory in <image_name>/jupyter-hooks, and they will be copied into the container<ol>
+<li>RUN conda env create -f /etc/jupyter-hooks/envs/<environment_name>_env.yml --prefix /etc/jupyter-hooks/envs/<environment_name></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Run any tests for this image that you added to the tests directory under <code>FROM release as testing</code></li>
+</ol>
+</li>
+<li>Remove the images/sar directory and sar.sh test script, unless you plan to use the sar image</li>
+<li>Add a test script for your image<ol>
+<li>use sar.sh as an example</li>
+<li>name it <image_namespace>.sh</li>
+</ol>
+</li>
+<li>Add, commit, and push changes to the remote CodeCommit repo</li>
+</ol>
+<h2 id="customize-opensarlab_cluster-code-for-deployment">Customize opensarlab_cluster code for deployment</h2>
+<ol>
+<li>Create and add any additional custom jupyter magic commands to the <code>opensarlab/jupyterhub/singleuser/custom_magics</code> directory Add any additional scripts you may have created for use in your image to the <code>opensarlab/jupyterhub/singleuser/hooks</code> directory</li>
+<li>Duplicate <code>opensarlab/jupyterhub/singleuser/hooks/sar.sh</code>, renaming it after your image name</li>
+<li>Edit <code>opensarlab/jupyterhub/singleuser/hooks/&lt;image_name&gt;.sh</code><ol>
+<li>Copy any additional custom Jupyter magic scripts to <code>$HOME/.ipython/image_default/startup/</code> (alongside 00-df.py)</li>
+<li>Edit the repos being pulled to suit your deployment and image needs</li>
+</ol>
+</li>
+<li>Rename <code>opensarlab/opensarlab.example.yaml</code> to  <code>opensarlab/opensarlab.yaml</code></li>
+<li>Use the example notes in <code>opensarlab/opensarlab.yaml</code> to define the required and optional fields</li>
+<li>Update <code>opensarlab/jupyterhub/helm_config.yaml</code><ol>
+<li><code>singleuser</code></li>
+<li>Add any needed extraFiles</li>
+<li><code>hub</code></li>
+<li>Add any needed extraFiles</li>
+</ol>
+</li>
+<li>Add, commit, and push changes to the remote CodeCommit repo</li>
+</ol>
+<h2 id="build-the-container-cloudformation-stack">Build the container CloudFormation stack</h2>
+<p><strong>This will create the hub image, images for each profile, and store them in namespaced ECR repos</strong></p>
+<ol>
+<li>Open CloudFormation in the AWS console<ol>
+<li>Click the "Create stack" button and select "With new resources (standard)"<ol>
+<li>Page 1 : <strong>Create stack</strong><ol>
+<li>Under "Specify template", check "Upload a template file"</li>
+<li>Use the file chooser to select <strong>cf-container.py</strong> from your local branch of the <code>deployment_name</code>-container repo </li>
+<li>Click the "Next" button</li>
+</ol>
+</li>
+<li>Page 2: <strong>Specify stack details</strong><ol>
+<li><code>Stack Name</code></li>
+<li>Use a recognizable name that makes sense for your deployment</li>
+<li><code>CodeCommitSourceRepo</code><ol>
+<li>The CodeCommit repo holding the container code (<code>deployment_name</code>-container)</li>
+</ol>
+</li>
+<li><code>CodeCommitSourceBranch</code><ol>
+<li>The name of the production branch of the <code>deployment_name</code>-container CodeCommit repo</li>
+</ol>
+</li>
+<li><code>CostTagKey</code></li>
+<li>The cost allocation key you registered for tracking deployment costs</li>
+<li><code>CostTagValue</code><ol>
+<li><code>deployment_name</code></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Page 3: <strong>Configure stack options</strong><ol>
+<li>Tags:<ol>
+<li>Key: Cost allocation tag</li>
+<li>Value: <code>deployment_name</code></li>
+</ol>
+</li>
+<li>Click the "Next" button</li>
+</ol>
+</li>
+<li>Page 4: <strong>Review <code>Stack Name</code></strong><ol>
+<li>Review and confirm correctness</li>
+<li>Check the box next to "I acknowledge that AWS CloudFormation might create IAM resources"</li>
+<li>Click the "Create Stack Button"</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Monitor the stack build for errors and rollbacks<ol>
+<li>The screen does not self-update<ol>
+<li>Use the refresh buttons</li>
+</ol>
+</li>
+<li>If the build fails and rolls back<ol>
+<li>goto the CloudFormation stacks page <ol>
+<li>select and delete the failed stack before correcting any errors and trying again</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="build-the-cluster-cloudformation-stack">Build the cluster CloudFormation stack</h2>
+<p><strong>This CloudFormation stack dynamically creates 3 additional stacks.</strong></p>
+<ol>
+<li>Open CloudFormation in the AWS console<ol>
+<li>Page 1 : <strong>Create stack</strong><ol>
+<li>Click the "Create stack" button and select "With new resources (standard)"</li>
+<li>Under "Specify template", check "Upload a template file"</li>
+<li>Use the file chooser to select <code>opensarlab/pipeline/cf-pipeline.yaml</code> from your local branch of the cluster repo </li>
+<li>Click the "Next" button</li>
+<li>Page 2: <strong>Specify stack details</strong><ol>
+<li><code>Stack Name</code></li>
+<li>Use a recognizable name that makes sense for your deployment. <strong>Do not use a stack name that ends in <code>cluster</code>, <code>jupyterhub</code>, or <code>cognito</code>. These are reserved.</strong></li>
+<li><code>CodeCommitRepoName</code><ol>
+<li>The CodeCommit repo holding the container code (<code>deployment_name</code>-cluster)</li>
+</ol>
+</li>
+<li><code>CodeCommitBranchName</code><ol>
+<li>The name of the production branch of the <code>deployment_name</code>-cluster CodeCommit repo</li>
+</ol>
+</li>
+<li><code>CostTagKey</code></li>
+<li>The cost allocation key you registered for tracking deployment costs</li>
+<li><code>CostTagValue</code><ol>
+<li><code>deployment_name</code></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Page 3: <strong>Configure stack options</strong><ol>
+<li>Tags:<ol>
+<li>Key: Cost allocation tag</li>
+<li>Value: <code>deployment_name</code></li>
+</ol>
+</li>
+<li>Click the "Next" button</li>
+</ol>
+</li>
+<li>Page 4: <strong>Review <code>Stack name</code></strong><ol>
+<li>Review and confirm correctness</li>
+<li>Check the box next to "I acknowledge that AWS CloudFormation might create IAM resources"</li>
+<li>Click the "Create Stack" button</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="take-care-of-odds-and-ends">Take care of odds and ends</h2>
+<ol>
+<li>Update <code>deployment_url</code> in the cluster repo <code>opensarlab/opensarlab.yaml</code> if you started off using <code>load balancer</code><ol>
+<li>Don't forget to update your DNS record</li>
+</ol>
+</li>
+<li>Add the cost allocation tag to the EKS cluster<ol>
+<li>Navigate to the AWS EKS console</li>
+<li>click the "Clusters" link in the sidebar menu<ol>
+<li>Click on cluster stack<ol>
+<li>Click the "Tags" tab<ol>
+<li>Click the "Manage tags" button<ol>
+<li>Click the "Add tag" button<ol>
+<li>Key: Cost allocation tag</li>
+<li>Value: <code>deployment_name</code></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Prime the Auto Scaling Group for each profile unless there are active users<ol>
+<li>Navigate to the AWS EC2 console<ol>
+<li>Select the "Auto Scaling Groups" sidebar link<ol>
+<li>Select an autoscaling group<ol>
+<li>Group details:<ol>
+<li>Click the "Edit" button<ol>
+<li>Desired capacity:<ol>
+<li>Set to 1</li>
+</ol>
+</li>
+<li>Click the "Update" button</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Create a test notification<ol>
+<li>Navigate to your notification calendar</li>
+<li>Create an event<ol>
+<li>Set the event to last as long as you wish the notification to display</li>
+<li>The event title will appear as the notification title</li>
+<li>The description includes a metadata and message section<ol>
+<li>Example:<ol>
+<li>
+<p>```
+      <meta>
+      profile: MY PROFILE, OTHER PROFILE
+      type: info</p>
+<p><message>
+  This is a notification
+                   <code>1. \&lt;meta\&gt;
+                1. profile:
+1. Holds the name or names (comma separated) of the profiles where the notification will be displayed
+                1. type:
+1. info
+    1. blue notification
+1. success
+    1. green notification
+1. warning
+    1. yellow notification
+1. error
+    1. red notification
+            1. \&lt;message\&gt;
+                1. Your notification message
+1. Sign up with your `admin_user_name` account, sign in, and add groups for each profile and sudo
+    1. Open the `deployment_url` in a web browser
+        1. Click the "Sign in" button
+            1. Click the "Sign up" link
+            1. Username:
+                1. The name used for the `admin_user_name` parameter of the `opensarlab.yaml`
+            1. Name:
+                1. Your name
+            1. Email:
+                1. Enter the email address used for the AdminEmailAddress parameter in the `deployment_name`-auth CloudFormation stack
+            1. Password:
+                1. A password
+            1. Click the "Sign up" button
+                1. Verification Code:
+1. The verification code sent to your email address
+                1. Click the "Confirm Account" button
+    1. Add a group for each profile and for sudo
+        1. After confirming your account you should be redirected to the Server Options page
+        1. Click the "Groups" link at the top of the screen
+        1. Click the "Add New Group" button
+            1. Group Name:
+                1. The group name as it appears in the helm_config.yaml group_list
+1. Note that this is not the display name and it contains underscores
+            1. Group Description:
+                1. (optional) Enter a group description
+            1. Group Type:
+                1. check "action"
+1. This has no effect, but is useful for tracking user groups vs. profile groups
+            1. All Users?:
+                1. Check if you wish the profile to be accessible to all users
+            1. Is Enabled?:
+                1. check the box
+            1. Click the "Add Group" button
+            1. Repeat for all profiles
+            1. Repeat for a group named "sudo"
+                1. Do not enable sudo for all users!
+                1. This is useful for developers but avoid giving root privileges to regular users
+            1. Click the "Home" link at the top of the screen
+    1. Start up and test each profile
+        1. Click the "Start My Server" button
+        1. Select a profile
+            1. Click the "Start" button
+        1. Confirm that the profile runs as expected
+            1. Test notebooks as needed
+            1. Confirm that notifications appear
+        1. Repeat for each profile
+1. Configure your local K8s config so you can manage your EKS cluster with kubectl
+    1. Add your AWS user to the trust relationship of the `deployment_name`-cluster-access IAM role
+        1. Navigate to the AWS IAM console
+            1. Click the "Roles" link from the sidebar menu
+                1. Select the `deployment_name`-cluster-access IAM role
+1. Click the "Trust relationships" tab
+1. Click the "Edit trust relationship" button
+    1. Add your AWS user ARN
+    1. Example json:
+        1.</code>json
+            {
+             "Version": "2008-10-17",
+             "Statement": [
+               {
+                 "Effect": "Allow",
+                 "Principal": {
+                   "AWS": [
+                     "arn:aws:iam::<account_#>:user/<username>"
+                   ]
+                 },
+                 "Action": "sts:AssumeRole"
+               }
+             ]
+            }
+           <code>1. Click the "Update Trust Policy" button          
+    1. Add an AWS profile on your local machine
+        1. Example profile:
+            1.</code>yaml
+                [profile profile_name]
+                source_profile = your_source_profile
+                region = your_region
+                role_arn = arn:aws:iam::<account_id>:role/<region_name>-<deployment_name>-cluster-user-access
+                cluster_name = <deployment_name>-cluster            <br />
+                ```
+    1. Run the helps/get_eks_kubeconfig.sh script in the opensarlab-cluster repo
+        1. Note: you will use this a lot and it may be helpful to create an alias in ~/.bash_aliases
+    1. Use kubectl</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<!-- --- -->
+
+<!-- # **Destroy Deployments**
+
+It is essential to destroy a deployment at the end of its life cycle so that no resources are left in place. With a proper destruction procedure, one can mitigate the accrued cost of AWS. 
+
+---
+
+## **WARNING:** Before deleting the deployments, developers will need to account for the following: 
+
+- When deleting the `CloudFormation` stack, the deletion order matters.
+- Delete some of the `CloudFormation` stacks before deleting ECR.
+- The name of the items you're deleting may differ depending on the deployment you are taking down. For example, your deployment's `CloudFormation` stack may not have a `region` name or may not have a `<deployment-name>-auth` stack.
+- Do **NOT** take down the `Cognito` and `CloudWatch` logs. These are used for statistical analysis later on.
+
+---
+
+## **Removing CloudFormation Stacks**
+
+---
+
+When you first go to CloudFormation, it should look something like the following:
+
+![CloudForamtion Stacks](../assets/docs-cloudFormation-stacks.PNG)
+
+
+Because the order of removing deployment is essential, you will need to take down the `CloudFormation` stacks first. Deleting the following CloudFormation stacks will kill the deployment and remove its resources:
+
+- `<deployment_name>-container`
+- `<deployment_name>-auth`
+- `<deployment_name>-cluster`
+- `deployment_name`
+
+---
+
+_**NB**_: **Do not manually delete any S3 buckets after emptying them** in the steps below.
+
+If you delete the buckets after emptying them, the `CloudFormation` stack deletions associated with those buckets will fail. To fix the issues regarding deleted buckets, you will have to recreate the empty buckets to proceed. 
+
+Therefore, let `CloudFormation` delete the S3 buckets for you once you empty them.
+
+---
+
+Follow the below instructions to properly delete these stacks.
+
+---
+
+## **Steps to Delete `CloudFormation` Stacks**
+
+---
+
+### **1. Prepare to delete the `<deployment_name>-container` CloudFormation stack**
+
+_NB: The `<deployment_name>-container` is independent of other stacks, i.e., the deletion order does not matter._
+
+1. Empty the `codepipeline-<region>-<deployment_name>-container` S3 bucket
+
+![empty container in s3](../assets/docs-s3-empty.PNG)
+
+2. Navigate to the AWS S3 console
+    1. Click the `codepipeline-<region>-<deployment_name>-container` S3 bucket option.
+    1. Click the `Empty` button
+        1. Confirm the deletion of bucket contents by typing `permanently delete` in the provided field
+        1. Click the `Empty` button
+
+### **2. Delete ECR repos for each profile**
+
+1. Navigate to the AWS Elastic Container Registry
+
+![delete ECR](../assets/docs-ecr-delete.PNG)
+
+2. Click the option next to the `<deployment_name>/<profile_namespace>` repository
+3. Click the `Delete` button
+    1. Confirm the deletion by typing `delete` in the provided field
+    1. Click the `Delete` button
+4. Repeat for each profiles
+
+
+### **3. Delete the `<deployment_name>-container` CloudFormation stack**
+1. Navigate to the AWS CloudFormation console
+
+![delete cluster stack](../assets/docs-cloudFormation-cluster-delete.PNG)
+
+1. Click the `<deployment_name>-container` stack option
+1. Click the `Delete` button
+    1. Click the `Delete Stack` button
+1. Click the `<deployment_name>-container` stack name
+    1. Click the `Events` tab
+    1. Monitor the stack deletion progress
+        1. Click the refresh button periodically since the console doesn't update events automatically
+
+_NB: Stack deletion process will be similar to above instructions for other stacks._
+
+---
+
+## **Deleting the rest of the `CloudFormation` Stacks**
+
+---
+
+Unlike the `container` stack, the deletion order matters for the rest. On the bright side, the deletion process should be similar to the `container` stacks.
+
+Specifically, you will need to delete your stacks in the following order:
+
+1. `<deployment_name>-auth` stack (if applicable)
+2. `<deployment_name>-jupyterhub` stack
+3. `<deployment_name>-cluster` stack
+4. *`<deployment_name>-cluster-pipeline` stack
+5. *`<deployment_name>` stack (if applicable)
+
+_NB:*These stacks have additional steps._
+
+**WARNING: As mentioned earlier, do NOT delete the `<deployment_name>-cognito` stack.**
+
+In above order, follow these steps (except for stack 4 and 5):
+
+1. Delete the `<deployment_name>-<stack_name>` CloudFormation stack
+    1. Navigate to the AWS CloudFormation console
+        1. Click the box next to the `<deployment_name>-<stack_name>` stack
+        1. Click the `Delete` button
+                1. Click the `Delete stack` button
+        1. Click the `<deployment_name>-<stack_name>` stack name
+            1. Click the `Events` tab
+            1. Monitor the stack deletion progress
+                1. Click the refresh button periodically since the console doesn't update events automatically
+
+
+If you are deleting stack 4 (`<deployment_name>-cluster-pipeline`), you will need to follow these steps first before deleting the stack:
+
+
+1. Navigate to the AWS S3 console
+    1. If exists, click the `<region>-<deployment_name>-lambda` S3 bucket option.
+    1. Click the `Empty` button
+        1. Confirm the deletion of bucket contents by typing `permanently delete` in the provided field
+        1. Click the `Empty` button
+
+If you are deleting stack 5 (`<deployment_name>`), you will need to follow these steps first before deleting the stack:
+
+1. Delete the `deployment_name` CloudFormation stack
+    1. Delete hub and notifications ECR repos
+        1. Navigate to the AWS Elastic Container Registry
+        1. Click the box next to the `deployment_name`/hub repository
+        1. Click the `Delete` button
+            1. Confirm the deletion by typing "delete" in the provided field
+            1. Click the `Delete` button 
+        1. Repeat the above steps for the `deployment_name`/notifications repository
+    1. Empty the `codepipeline-<region>-<deployment_name>` S3 bucket
+        1. Navigate to the AWS S3 console
+            1. Check the box next to the `codepipeline-<region>-<deployment_name>` S3 bucket
+            1. Click the `Empty` button
+                1. Confirm the deletion of bucket contents by typing `permanently delete` in the provided field
+                1. Click the `Empty` button
+---
+
+## **Delete EBS Snapshots and Volumes**
+
+To mitigate the cost associated with storage space, it is crucial to deallocate unused resources. The below steps will guide you on how to do so.
+
+---
+
+First, navigate to the AWS EC2 console - this step should be identical for both EBS snapshots and EBS volumes.
+
+![ec2 home screen](../assets/docs-ec2-snap-vol.PNG)
+
+### **Delete EBS snapshots**
+1. Click the _Snapshots_ link in the sidebar menu
+    1. Filter by osl-stackname: `<deployment_name>`
+        1. **Double check that you filtered for the correct deployment!**
+    1. Select all snapshots
+    1. Select `Delete` from the `Actions` menu
+    1. Confirm by clicking the `Yes, delete` button
+
+### **Delete EBS volumes**
+1. Navigate to the AWS EC2 console
+1. Click the _Volumes_ link in the sidebar menu
+    1. Filter by osl-stackname: `<deployment_name>`
+        1. **Double check that you filtered for the correct deployment!**
+    1. Select all volumes
+    1. Select `Delete volumes` from the `Actions` menu
+    1. Confirm by clicking the `Yes, delete` button             
+
+---
+
+## **(Optional) Delete the CodeCommit repositories**
+
+This section will guide you on how to remove the  `<deployment_name>-container` and `<deployment_name>-cluster` repositories located in the CodeCommit.
+
+_**Important Note:**_ Often, it would be in your best interest to preserve the CodeCommit repositories since the cost of maintaining them are minuscule. 
+
+If you believe that you may re-deploy the same deployment, you may want to ease future work in one of the following manners:
+
+1. Leaving these repositories in place, i.e., don't delete them.
+1. Download the zip of your repositories, store them in S3, and then delete them. 
+
+In another word, delete the CodeCommit repositories if and only if you are sure that you don't need them.
+
+---
+
+First, navigate to the AWS CodeCommit console:
+
+![CodeCommit Repos](../assets/docs-codecommit.PNG)
+
+Then delete the `<deployment_name>-container` and `<deployment_name>-cluster` in any order. The deletion process for these two repositories is following:
+
+1. Check the option next to the repository
+1. Click the `Delete repository` button
+1. Confirm the deletion by typing `delete` in the provided field     
+1. Click the `Delete` button
+
+--- 
+
+## **(Optional) Confirm that all resources have been deleted**
+
+Once you've taken down the deployment, you may want to verify the resource usage. 
+
+---
+
+![cost allocation](../assets/docs-cost-allocation.PNG)
+
+1. Wait a day for deleted resources to update in the tag editor
+1. Navigate to the AWS Resource Groups and Tag Editor console
+    1. Select the _Tag Editor_ link in the sidebar menu and fill in the following:
+        1. Regions: `<current-region>`
+        1.  Tags:
+            1. `Key`: Cost allocation tag
+            1. `Value`: `<deployment_name>`
+        1. Click the `Search resources` button
+        1. Identify and delete any remaining resources -->
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <!--
+  Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Adapted from https://github.com/squidfunk/mkdocs-material/blob/9.4.2/src/templates/partials/footer.html -->
+
+<!-- Footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!--
+  Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Adapted from https://github.com/squidfunk/mkdocs-material/blob/9.4.2/src/templates/partials/copyright.html -->
+
+<!-- Copyright and theme information -->
+<div class="md-copyright">
+  <div class="md-copyright__highlight">
+    
+      &copy; <span id="copyright-year"></span>
+      <script type="text/javascript">
+          current_year = new Date().getFullYear();
+          document.getElementById("copyright-year").innerHTML=current_year;
+      </script>
+      Alaska Satellite Facility
+    
+    <!-- ASF non-discrimination disclaimer-->
+    &nbsp;&nbsp;
+    <a href="https://www.alaska.edu/nondiscrimination"
+       target="_blank"
+       class="md-copyright-link">
+      UA is an AA/EO employer and educational institution and prohibits
+      illegal discrimination against any individual
+    </a>
+  </div>
+</div>
+
+      <!-- Social links -->
+      <!--
+  Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Adapted from https://github.com/squidfunk/mkdocs-material/blob/9.4.2/src/templates/partials/social.html -->
+
+<!-- Social links -->
+<div class="md-social">
+  
+
+    <!-- Automatically set rel=me for Mastodon -->
+    
+    
+
+    <!-- Compute title and render link -->
+    
+    
+      
+      
+    
+    <a
+      href="https://www.facebook.com/AKSatellite"
+      target="_blank" rel="noopener"
+      title="www.facebook.com"
+      class="md-social__link"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m279.14 288 14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+    </a>
+  
+
+    <!-- Automatically set rel=me for Mastodon -->
+    
+    
+
+    <!-- Compute title and render link -->
+    
+    
+      
+      
+    
+    <a
+      href="https://twitter.com/Ak_Satellite"
+      target="_blank" rel="noopener"
+      title="twitter.com"
+      class="md-social__link"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+
+    <!-- Automatically set rel=me for Mastodon -->
+    
+    
+
+    <!-- Compute title and render link -->
+    
+    
+      
+      
+    
+    <a
+      href="https://www.youtube.com/channel/UChCfI0oVWw4qDwEidnDskJQ"
+      target="_blank" rel="noopener"
+      title="www.youtube.com"
+      class="md-social__link"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+
+    <!-- Automatically set rel=me for Mastodon -->
+    
+    
+
+    <!-- Compute title and render link -->
+    
+    
+      
+      
+    
+    <a
+      href="https://github.com/ASFOpenSARlab"
+      target="_blank" rel="noopener"
+      title="github.com"
+      class="md-social__link"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+    
+      <script src="../../assets/javascripts/bundle.726fbb30.min.js"></script>
+      
+        <script src="../../search/main.js"></script>
+      
+    
+    <script src="../../assets/javascripts/expert-rec-search.js"></script>
+
+  </body>
+</html>
