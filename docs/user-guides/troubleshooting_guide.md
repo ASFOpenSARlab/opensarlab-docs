@@ -18,7 +18,7 @@ a detailed walkthrough.
 *The message that appears when a notebook kernel dies*
 
 
-- The kernel will die if you run out of available memory to complete a running process. This occurs frequently when running a time-series or change detection algorithm on data stack that is either too deep or covers too large of an area-of-interest (AOI) for OpenSARlab to handle.
+- The kernel will die if you run out of available memory to complete a running process. This occurs frequently when running a time-series or change detection algorithm on data stack that is either too deep or covers too large of an area-of-interest (AOI) for OpenSARLab to handle.
  
 - Try running the notebook on some combination of a shallower data stack and/or a smaller AOI. This may take some experimentation because memory is shared among users, *i.e.* amount of available memory fluctuates. 
 
@@ -30,7 +30,7 @@ a detailed walkthrough.
 
 ## I successfully ran a notebook earlier on the same data but now it is killing the kernel.
 
-- OpenSARlab EC2 instances are shared among 1~3 users. The memory available to each user depends on overall activity on the EC2. It is likely that there was enough memory available for your process before, but not enough memory during later attempt(s). More details on the OpenSARlab user environment can be found [here](OpenSARlab_environment.md).
+- OpenSARLab EC2 instances are shared among 1~3 users. The memory available to each user depends on overall activity on the EC2. It is likely that there was enough memory available for your process before, but not enough memory during later attempt(s). More details on the OpenSARLab user environment can be found [here](OpenSARLab_environment.md).
 
 ---
 
@@ -66,7 +66,7 @@ a detailed walkthrough.
 
 ## My notebook won't open, opens slowly, or won't save
 
-- These are all signs that the notebook contains a lot of output and is too large to easily open or save over the internet in OpenSARlab.
+- These are all signs that the notebook contains a lot of output and is too large to easily open or save over the internet in OpenSARLab.
     - If the notebook won't open or opens very slowly, remove its output by running the following command from a terminal:
         - `jupyter nbconvert --clear-output --inplace my_notebook.ipynb`
     - If the notebook is open and you can't save it, select `Restart Kernel and Clear All Outputs` from the `Kernel` menu and try saving it again.
@@ -79,14 +79,14 @@ a detailed walkthrough.
 
 ![A notebook creation Forbidden error](../assets/forbidden.png)
 
-- This can happen when you have logged out of OpenSARlab and then try to create a new notebook from an OpenSARlab browser tab that was left open.
+- This can happen when you have logged out of OpenSARLab and then try to create a new notebook from an OpenSARLab browser tab that was left open.
 - You must log back in before you can create, open, or run a notebook.
 
 ---
 
 ## I am receiving a `No space left on device` error.
 
-OpenSARlab users have access to a finite amount of storage space ([details here](OpenSARlab_environment.md)). 
+OpenSARLab users have access to a finite amount of storage space ([details here](OpenSARlab_environment.md)). 
 
 **It is up to users to manage their storage**. 
 

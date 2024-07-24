@@ -1,10 +1,10 @@
 [Return to Developer Guide](../dev.md)
 
-Deploy OpenSARlab to an AWS account
+Deploy OpenSARLab to an AWS account
 =====================
 
-**A note about deployments:** A deployment of OpenSARlab refers to a standalone instance of OpenSARlab.
-If you are setting up OpenSARlab for several classes and/or collaborative groups with disparate needs or funding sources,
+**A note about deployments:** A deployment of OpenSARLab refers to a standalone instance of OpenSARLab.
+If you are setting up OpenSARLab for several classes and/or collaborative groups with disparate needs or funding sources,
 it may be useful to give them each their own standalone deployment. This separates user group authentication, 
 simplifies billing for each group, and allows for easy cleanup at the end of a project or class (just delete the deployment).
 In the following instructions, replace any occurrence of "`deployment_name`" with the deployment name you have chosen.
@@ -15,7 +15,7 @@ generate part of the Cognito callback URL and CloudFormation stack names also fo
 Take AWS SES out of sandbox
 --------------------
 
-**The AWS Simple Email Service is used by OpenSARlab to send emails to users and administrators. These include
+**The AWS Simple Email Service is used by OpenSARLab to send emails to users and administrators. These include
 authentication related notifications and storage lifecycle management messages.**
 
 While SES is in sandbox, you are limited to sending 1 email per second with no more than 200 in a 24 hour period, and they
@@ -78,7 +78,7 @@ formatted calendar should work as well**
 
 Store your CA certificate
 --------------------
-**OpenSARlab will lack full functionality if not using https (SSL certification)**
+**OpenSARLab will lack full functionality if not using https (SSL certification)**
 
 1. Follow these [instructions](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) to import your CA certificate into the AWS Certificate Manager
 

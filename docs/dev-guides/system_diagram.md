@@ -1,5 +1,5 @@
 [Return to Table of Contents](../dev.md)
 
-# OpenSARlab System Diagram 
+# OpenSARLab System Diagram 
 
-![OpenSARlab system diagram June 2021](../assets/system_diagrams/OpenSARlab_system_diagram_June_2021.png)
+![OpenSARLab system diagram June 2021](../assets/system_diagrams/OpenSARLab_system_diagram_June_2021.png)

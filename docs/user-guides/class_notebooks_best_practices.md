@@ -4,7 +4,7 @@
 
 ## Provide a Conda Environment Capable of Running the Notebooks
 
-- Provide students with a conda environment that has everything they need. [Conda Environments in OpenSARlab.](conda_environments.md)
+- Provide students with a conda environment that has everything they need. [Conda Environments in OpenSARLab.](conda_environments.md)
 
 - Students can mimic instructor's environment by:
 
@@ -34,7 +34,7 @@
 ## Keep your Conda Environment Up to Date
 
 - Libraries and packages installed in your conda environment will be updated over time. If you are using a conda environment that was used in a previous class or training, try re-creating it first to confirm that it still builds without any conflicts.
-    - You can use the [Create_OSL_Conda_Environments notebook](https://github.com/ASFOpenSARlab/opensarlab-envs/blob/main/Create_OSL_Conda_Environments.ipynb) in OpenSARlab to create them, which is located in the `/home/jovyan/conda_environments/` directory.
+    - You can use the [Create_OSL_Conda_Environments notebook](https://github.com/ASFOpenSARlab/opensarlab-envs/blob/main/Create_OSL_Conda_Environments.ipynb) in OpenSARLab to create them, which is located in the `/home/jovyan/conda_environments/` directory.
 
 ---
 

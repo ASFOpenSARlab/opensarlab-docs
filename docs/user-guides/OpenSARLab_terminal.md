@@ -1,6 +1,6 @@
 [Return to Table of Contents](../user.md)
 
-# **Using the Terminal in OpenSARlab**
+# **Using the Terminal in OpenSARLab**
 
 ## Overview
 ---
