@@ -34,7 +34,7 @@
 ## Keep your Conda Environment Up to Date
 
 - Libraries and packages installed in your conda environment will be updated over time. If you are using a conda environment that was used in a previous class or training, try re-creating it first to confirm that it still builds without any conflicts.
-    - You can use the [Create_OSL_Conda_Environments notebook](https://github.com/ASFOpenSARLab/opensarlab-envs/blob/main/Create_OSL_Conda_Environments.ipynb) in OpenSARLab to create them, which is located in the `/home/jovyan/conda_environments/` directory.
+    - You can use the [Create_OSL_Conda_Environments notebook](https://github.com/ASFOpenSARlab/opensarlab-envs/blob/main/Create_OSL_Conda_Environments.ipynb) in OpenSARLab to create them, which is located in the `/home/jovyan/conda_environments/` directory.
 
 ---
 

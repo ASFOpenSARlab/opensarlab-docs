@@ -16,7 +16,7 @@
 
 ---
 
-A [nbgitpuller](https://jupyterhub.github.io/nbgitpuller/) pulls any changes to the [notebook repo](https://github.com/ASFOpenSARLab/opensarlab-notebooks) each time an OpenSARLab deployment server starts up. 
+A [nbgitpuller](https://jupyterhub.github.io/nbgitpuller/) pulls any changes to the [notebook repo](https://github.com/ASFOpenSARlab/opensarlab-notebooks) each time an OpenSARLab deployment server starts up. 
 
 In short words, `nbgitpuller` will automatically update the notebooks to the latest version. 
 

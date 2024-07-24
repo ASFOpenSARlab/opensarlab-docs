@@ -86,13 +86,13 @@ Prepare CodeCommit Repos
 --------------------
 TODO Do this differently 
 
-**All the public OpenSARLab repos are in the [ASFOpenSARLab](https://github.com/ASFOpenSARLab) Github Org**
+**All the public OpenSARlab repos are in the [ASFOpenSARlab](https://github.com/ASFOpenSARlab) Github Org**
 
 1. Create a `deployment_name`-container CodeCommit repo in your AWS account
 1. Create a `deployment_name`-cluster CodeCommit repo
 1. Clone the `deployment_name`-container and `deployment_name`-cluster repos to your local computer using ssh
 1. cd into your local `deployment_name`-container repo
-    1. add ASFOpenSARLab/opensarlab-container as a remote on your local `deployment_name`-container repo
+    1. add ASFOpenSARlab/opensarlab-container as a remote on your local `deployment_name`-container repo
         1. `git remote add github https://github.com/ASFOpenSARlab/opensarlab-container.git`
     1. Pull the remote  opensarlab-container repo into your local `deployment_name`-container repo
         1. `git pull github main`

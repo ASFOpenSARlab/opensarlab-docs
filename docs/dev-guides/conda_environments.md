@@ -41,4 +41,4 @@ Each option come with benefits and drawbacks.
 ### Drawbacks
 - Users have to create their own conda environments
     - This requires some knowledge of conda and takes time.
-    - Note: There is an [ASF notebook repo](https://github.com/ASFOpenSARLab/OpenSARLab-envs) to aid users in building their own environments.
+    - Note: There is an [ASF notebook repo](https://github.com/ASFOpenSARlab/opensarlab-envs) to aid users in building their own environments.

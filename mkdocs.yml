@@ -11,10 +11,10 @@ theme:
 extra: 
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/ASFOpenSARLab
+      link: https://github.com/ASFOpenSARlab
 
-repo_url: https://github.com/ASFOpenSARLab
-repo_name: ASF OpenSARLab
+repo_url: https://github.com/ASFOpenSARlab
+repo_name: ASF OpenSARlab
 edit_uri: ''
 
 nav:
