@@ -103,3 +103,8 @@
 1. Within CloudShell, check the PVC and PV of the user volume. Make sure the K8s annotation `pv.kubernetes.io/provisioned-by: ebs.csi.aws.com` is present.
 
     If not, then the JupyterHub volume managment will fail and volumes will become orpaned upon lifecycle deletion.
+
+
+## Destroy OpenSARLab Cluster
+
+To take down, consult [destroy deployment docs](../destroy_deployment.md)

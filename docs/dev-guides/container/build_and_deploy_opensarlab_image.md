@@ -1,4 +1,4 @@
-# Build and Deploy OpenSARLab Image
+# Build and Deploy OpenSARLab Image Container
 
 ## Setup Container Build in AWS
 
@@ -52,3 +52,8 @@
     A successful run will take about 20 minutes. 
     
     If it takes signitifcantly less time then the build might have failed even if CodePipeline says successful.
+
+
+## Destroy OpenSARLab Image Container
+
+To take down, consult [destroy deployment docs](../destroy_deployment.md)
