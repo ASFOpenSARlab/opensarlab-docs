@@ -1,4 +1,4 @@
-[Return to Developer Guide](../dev.md)
+[Return to Developer Guide](../../dev.md)
 
 # Create OpenSARLab Notifications 
 
@@ -27,5 +27,5 @@
             1. Turn off text automated formatting
                1. Select all the text in the message body
                1. Click the remove formatting button in the message toolbar
-        ![Image of a notification event being created in Google Calendar](../assets/notification.png)
+        ![Image of a notification event being created in Google Calendar](../../assets/notification.png)
         

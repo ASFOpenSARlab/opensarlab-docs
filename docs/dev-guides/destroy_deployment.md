@@ -11,7 +11,7 @@ It is essential to destroy a deployment at the end of its life cycle so that no 
 - When deleting the `CloudFormation` stack, the deletion order matters.
 - Delete some of the `CloudFormation` stacks before deleting ECR.
 - The name of the items you're deleting may differ depending on the deployment you are taking down. For example, your deployment's `CloudFormation` stack may not have a `region` name.
-- Do **NOT** take down the `Cognito` and `CloudWatch` logs. These are used for statistical analysis later on.
+- Do **NOT** take down the `CloudWatch` logs. These are used for statistical analysis later on.
 
 ---
 
@@ -113,8 +113,6 @@ Specifically, you will need to delete your stacks in the following order:
 
 _NB:*These stacks have additional steps._
 
-**WARNING: As mentioned earlier, do NOT delete the `<deployment_name>-cognito` stack.**
-
 In above order, follow these steps (except for stack 3):
 
 1. Delete the `<deployment_name>-<stack_name>` CloudFormation stack
@@ -135,15 +133,6 @@ If you are deleting stack 3 (`<deployment_name>-cluster-pipeline`), you will nee
     1. Delete `<deployment_name>/hub` and `<deployment_name>/notifications` repository.
 
     _NB: Refer to the **Delete ECR Repos** section for how to delete ECR repos._
-
-
-1. Empty the `codepipeline` and `lambda` S3 bucket
-    1. Navigate to the AWS S3 console
-        1. Check the box next to the `codepipeline-<region>-<deployment_name>` S3 bucket
-        1. Click the `Empty` button
-            1. Confirm the deletion of bucket contents by typing `permanently delete` in the provided field
-            1. Click the `Empty` button
-        1. Repeat the same process for the `<region>-<deployment_name>-lambda`
 
 ---
 
@@ -174,34 +163,6 @@ First, navigate to the AWS EC2 console - this step should be identical for both 
     1. Select `Delete volumes` from the `Actions` menu
     1. Confirm by clicking the `Yes, delete` button             
 
----
-
-## **(Optional) Delete the CodeCommit repositories**
-
-This section will guide you on how to remove the  `<deployment_name>-container` and `<deployment_name>-cluster` repositories located in the CodeCommit.
-
-_**Important Note:**_ Often, it would be in your best interest to preserve the CodeCommit repositories since the cost of maintaining them are minuscule. 
-
-If you believe that you may re-deploy the same deployment, you may want to ease future work in one of the following manners:
-
-1. Leaving these repositories in place, i.e., don't delete them.
-1. Download the zip of your repositories, store them in S3, and then delete them. 
-
-In another word, delete the CodeCommit repositories if and only if you are sure that you don't need them.
-
----
-
-First, navigate to the AWS CodeCommit console:
-
-![CodeCommit Repos](../assets/docs-codecommit.PNG)
-
-Then delete the `<deployment_name>-container` and `<deployment_name>-cluster` in any order. The deletion process for these two repositories is following:
-
-1. Check the option next to the repository
-1. Click the `Delete repository` button
-1. Confirm the deletion by typing `delete` in the provided field     
-1. Click the `Delete` button
-
 --- 
 
 ## **(Optional) Confirm that all resources have been deleted**
@@ -224,7 +185,7 @@ Once you've taken down the deployment, you may want to verify the resource usage
 
 ---
 
-## **Delete Calendar**
+## **(Optional) Delete Calendar**
 
 Now that you are done with taking down the deployment, you will need to delete the calendar notifications.
 
