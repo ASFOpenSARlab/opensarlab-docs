@@ -1,0 +1,15 @@
+# OpenScienceLab User Guide
+
+1. [Configuring Multi-Factor Authentication](user-guides/mfa.md)
+1. [Jupyter Notebook Intro](user-guides/how_to_run_a_notebook.md)
+1. [Running Jupyter Notebooks](user-guides/how_to_run_a_notebook.md)
+1. [Jupyter Magic Commands](user-guides/jupyter_magic.md)
+1. [OpenSARLab Account Details](user-guides/OpenSARLab_environment.md)
+1. [Git in OpenSARLab](user-guides/git_in_OpenSARLab.md)
+1. [OpenSARLab Terminal](user-guides/OpenSARLab_terminal.md)
+1. [OpenSARLab Servers and Kernels](user-guides/restarting_server_and_kernel.md)
+1. [Jupyter Notebook Extensions](user-guides/jupyter_notebook_extensions.md)
+1. [Installing Software in OpenSARLab](user-guides/installing_software_in_OpenSARLab.md)
+1. [Conda Environments](user-guides/conda_environments.md)
+1. [Logging Out and Server Shutdown](user-guides/logging_out_and_server_shutdown.md)
+1. [Troubleshooting Guide](user-guides/troubleshooting_guide.md)
