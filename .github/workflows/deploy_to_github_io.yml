@@ -25,7 +25,7 @@ jobs:
         with:
           repository: ASFOpenSARlab/ASFOpenSARlab.github.io
           path: ASFOpenSARlab.github.io
-          token: ${{ secrets.OPENSARLAB_BOT_ACCESS }}
+          token: ${{ secrets.PAT_REPO_READ_ONLY }}
 
       - name: deploy to github.io
         shell: bash -l {0}
