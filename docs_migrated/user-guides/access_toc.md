@@ -1,1 +1,1 @@
-# OpenScienceLab, OpenSARLab, and Custom Lab Access
+# OpenScienceLab and OpenSARLab Accounts

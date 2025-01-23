@@ -15,7 +15,7 @@ parts:
         - file: user-guides/opensarlab_accounts_access_toc
           sections:
           - file: user-guides/opensarlab_access
-          - file: user-guides/opensarlab_account_details
+          - file: user-guides/opensarlab_account_specs
         - file: user-guides/custom_deployment_access
         - file: user-guides/mfa
         - file: user-guides/reset_password

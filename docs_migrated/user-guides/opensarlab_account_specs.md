@@ -1,4 +1,4 @@
-# User Account Details
+# OpenSARLab Account Specifications
 
 ## **Account Lifecycle**
 - Accounts will be deactivated on the **46th** day of inactivity.
