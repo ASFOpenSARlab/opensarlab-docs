@@ -1,6 +1,7 @@
 name: Deploy to Github.io
 
 on:
+  workflow_dispatch: {}
   push:
     branches:
       - main
@@ -25,7 +26,7 @@ jobs:
         with:
           repository: ASFOpenSARlab/ASFOpenSARlab.github.io
           path: ASFOpenSARlab.github.io
-          token: ${{ secrets.PAT_REPO_READ_ONLY }}
+          token: ${{ secrets.PAT_REPO_FULL_ACCESS }}
 
       - name: deploy to github.io
         shell: bash -l {0}
