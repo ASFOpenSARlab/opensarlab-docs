@@ -1,5 +1,3 @@
-[Return to Table of Contents](../user.md)
-
 # Configuring Multi-Factor Authentication
 
 [Watch: Log In and Set Up MFA](mfa.md#watch-log-in-and-set-up-mfa)
