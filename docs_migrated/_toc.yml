@@ -12,10 +12,7 @@ parts:
       - file: user-guides/access_toc.md
         sections:
         - file: user-guides/opensciencelab_accounts
-        - file: user-guides/opensarlab_accounts_access_toc
-          sections:
-          - file: user-guides/opensarlab_access
-          - file: user-guides/opensarlab_account_specs
+        - file: user-guides/opensarlab_accounts
         - file: user-guides/custom_deployment_access
         - file: user-guides/mfa
         - file: user-guides/reset_password

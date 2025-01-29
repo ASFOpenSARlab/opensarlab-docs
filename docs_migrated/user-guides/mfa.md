@@ -1,20 +1,9 @@
 # Configuring Multi-Factor Authentication
 
-[Watch: Log In and Set Up MFA](mfa.md#watch-log-in-and-set-up-mfa)
-
-[Before You Begin](mfa.md#before-you-begin)
-
-[Setup Steps](mfa.md#setup-steps)
-
-[Troubleshooting](mfa.md#troubleshooting)
-
 Multi-Factor Authentication (MFA) is required to access OpenScienceLab resources.
 Currently, we support TOTP-based authentication, with plans to add hardware
 key (ex. Yubikey) authentication in future updates.
 
-## Watch: Log In and Set Up MFA
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2c1X9qRnsSM?si=XKHtBBzrSDgnBJNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Before You Begin
 
@@ -54,6 +43,27 @@ application's "Scan QR Code" feature.
 1. If the check is successfull, navigate back to the home page by clicking "Home"
     in the Navigation Bar at the top of the page and continue using OpenScienceLab
     as normal.
+
+## Resetting MFA
+
+On occasion, you may wish or need to reconfigure MFA for your OSL account.
+
+1. Navigate to [opensciencelab](https://opensciencelab.asf.alaska.edu/).
+   
+2. Click the "Reset MFA" link on the sign in card.
+<img src="../assets/reset_mfa.png" width="350px"/>
+
+3. Complete the MFA reset form.
+<img src="../assets/mfa_reset_form.png" width="350px"/>
+
+4. An alert will appear directing you to click an emailed verification link within 60 minutes.
+<img src="../assets/mfa_update_alert.png"/>
+
+5. Click the verification link in the email.
+<img src="../assets/mfa_reset_email.png"/>
+
+6. You may now sign into OpenScienceLab, leaving the MFA field empty.
+7. Upon successfully signing in, **follow the Setup Steps above to setup a new MFA device.** You will not be able to access any labs until you setup a new MFA device.
 
 ## Troubleshooting
 

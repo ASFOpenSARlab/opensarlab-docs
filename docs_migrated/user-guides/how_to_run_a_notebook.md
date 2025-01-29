@@ -20,13 +20,6 @@
 
 ---
 
-<!-- # How to Run a Jupyter Notebook -->
-
-<!--  I suggest we insert the contents of the notebook intro into running a notebook and move the running a notebook to before conda env. A person needs to know how to run a notebook before doing envs anyway.  -->
-
-<!-- ### Before we get started, what is Jupyter Notebook?
-- [Intro to Jupyter Notebook](jupyter_notebook_intro.md) -->
-
 # A Light Introduction to Jupyter Notebook
 [Jupyter Notebook](https://jupyter.org/) is a web application that allows users to display: 
 
