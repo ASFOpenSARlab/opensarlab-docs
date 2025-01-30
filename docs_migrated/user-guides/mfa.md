@@ -1,16 +1,24 @@
 # Configuring and Resetting MFA
 <br>
 
-[Setup Steps](mfa.md#setup-steps)
-
 Multi-Factor Authentication (MFA) is required to access OpenScienceLab resources.
 
 Currently, we support TOTP-based authentication, with plans to add hardware
 key (ex. Yubikey) authentication in future updates.
 
+- [Watch: Log In and Set Up MFA](#Watch:-Log-In-and-Set-Up-MFA)
+- [Before You Begin](#Before-You-Begin)
+- [Setup Steps](#Setup-Steps)
+- [Resetting MFA](#Resetting-MFA)
+- [Troubleshooting](#Troubleshooting)
+
+---
+
 ## Watch: Log In and Set Up MFA
 :::{iframe} https://www.youtube.com/embed/2c1X9qRnsSM?si=XKHtBBzrSDgnBJNQ
 :::
+
+---
 
 ## Before You Begin
 
@@ -62,8 +70,7 @@ On occasion, you may wish or need to reconfigure MFA for your OSL account.
 
 1. Navigate to [opensciencelab](https://opensciencelab.asf.alaska.edu/).
    
-2. 
-:::{figure} ../assets/reset_mfa.png
+2. :::{figure} ../assets/reset_mfa.png
 :align: left
 :width: 350px
 
@@ -75,7 +82,7 @@ On occasion, you may wish or need to reconfigure MFA for your OSL account.
 :align: left
 :width: 350px
 
-Complete the MFA reset form.
+<p style="font-size: 14px;">Complete the MFA reset form.</p>
 :::
 
 4.
@@ -83,14 +90,14 @@ Complete the MFA reset form.
 :align: left
 :width: 500px
 
-An alert will appear directing you to click an emailed verification link within 60 minutes.
+<p style="font-size: 14px;">An alert will appear directing you to click an emailed verification link within 60 minutes.</p>
 :::
 
 5.
 :::{figure} ../assets/mfa_reset_email.png
 :align: left
 
-Click the verification link in the email.
+<p style="font-size: 14px;">Click the verification link in the email.</p>
 :::
 
 6. Sign into OpenScienceLab, leaving the MFA field empty.

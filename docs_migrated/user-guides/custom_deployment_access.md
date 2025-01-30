@@ -1,4 +1,5 @@
 # Class and Custom Labs
+<br>
 
 Custom labs are created for specific uses, such as hosting a class or a research team working on a project.
 
