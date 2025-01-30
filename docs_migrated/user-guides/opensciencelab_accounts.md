@@ -24,7 +24,7 @@ Labs in OpenScienceLab are independent and do not share resources:
 2.
 :::{figure} ../assets/opensciencelab_login_page.png
 :align: left
-:width: 100%
+:width: 35%
 
 <p style="font-size: 14px;">Click the “Sign up” link in the “Sign In” window</p>
 :::
