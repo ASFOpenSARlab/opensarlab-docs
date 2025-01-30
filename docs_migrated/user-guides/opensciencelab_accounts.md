@@ -1,10 +1,12 @@
 # OpenScienceLab Accounts  
 <br>
 
-OpenScienceLab is a single-sign-on portal providing access to ASF-managed JupyterHubs such as OpenSARLab. OpenScienceLab hosts labs for research projects, classes, and workshops. If you are attending a class or workshop, your instructor will provide details for gaining access to the lab. 
+OpenScienceLab is a single-sign-on portal providing access to ASF-managed JupyterHubs such as OpenSARLab. OpenScienceLab also hosts labs for research projects, classes, and workshops. If you are attending a class or workshop, your instructor will provide details for gaining access to the lab. 
 
 :::{note}
-ASF provides limited access to OpenSARLab. NASA-affiliates are granted access upon request. All others may apply for access by completing the [OpenSARLab Access Application](https://forms.gle/LNBCwe8JohYitvfy6).
+ASF provides limited access to OpenSARLab. NASA-affiliates are granted access upon [request](mailto:uso@asf.alaska.edu?subject=NASA-affiliate%20OSL%20access%20request). All others may apply for access by completing the OpenSARLab Access Application
+:::{dropdown} [OpenSARLab Access Application](https://forms.gle/LNBCwe8JohYitvfy6)
+:::{iframe} https://forms.gle/LNBCwe8JohYitvfy6
 :::
 
 :::{tip}
@@ -12,7 +14,7 @@ Labs in OpenScienceLab are independent and do not share resources:
 - If you have access to multiple labs, each will have its own storage volume and you cannot copy data directly from one to another. 
 - Be mindful to use the correct lab for a given event. They are configured to support expected workflows.
 :::
-
+---
 ## Sign Up for an OpenScienceLab Account
 
 **Whether accessing OpenSARLab, a class/workshop lab, or any other ASF-hosted lab, you will need an OpenScienceLab account**
