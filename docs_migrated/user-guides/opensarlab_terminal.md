@@ -3,35 +3,45 @@
 ## Overview
 ---
 
-Users sometimes need to use an interactive shell to organize their accounts. With OpenScienceLab’s built-in terminal, users can use an interactive shell to accomplish their tasks.
+JupyterLab provides an an interactive shell in a terminal.
+
+:::{tip} Use the terminal to easily delete non-empty directories
+
+Jupyter intentionally prevents the deletion of non-empty directories from the file browser. However, you can delete full directories from the command line in a terminal.
+
+`rm -rf path/to/my/full/directory`
+:::
 
 ## **How to Open a Terminal**
 ---
 
 1. If there is no `Launcher` tab in your workspace, open one by clicking the blue `+` button at the upper left of the screen.
 
-![If there is no Launcher tab in you workspace, open one by clicking the blue + button at the upper left of the screen](../assets/launcher.png)
+:::{figure} ../assets/launcher.png
 
-1. Click the `Terminal` button in the `Launcher` tab.
+The JupyterLab `New Launcher` button
+:::
 
-![Click the Terminal button in a `Launcher` tab.](../assets/jlab_terminal.png)
 
-*Live Example*:
+2. Click the `Terminal` button in the `Launcher` tab.
 
-![open terminal live](../assets/open_terminal.gif)
+:::{figure} ../assets/jlab_terminal.png
+
+The JupyterLab `Terminal` button. 
+:::
+
+3. Use the terminal as you typically would.
+
+:::{figure} ../assets/terminal.png
+
+:::
 
 ---
- 
-## **How to Use the Terminal**
 
-Use the command line as you would in any other `Unix-like` terminal.
+:::{tip} No Root Privileges
 
-![An open terminal window.](../assets/terminal.png)
+For security, OSL users do not have root privileges.
+:::{figure} ../assets/no_sudo.png
 
----
- 
-## **No Root Privileges**
 
-Because the `jovyan` does not have a password, OpenScienceLab users cannot use the `sudo` command.
-
-![An open terminal window with unsuccessful attempt to use sudo.](../assets/no_sudo.png)
+:::
