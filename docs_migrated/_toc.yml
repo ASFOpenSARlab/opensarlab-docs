@@ -29,7 +29,7 @@ parts:
       - file: user-guides/software
       - file: user-guides/storage_git_toc
         sections:
-        - file: user-guides/ebs.md
+        - file: user-guides/opensciencelab_storage.md
         - file: user-guides/s3_buckets
         - file: user-guides/git_in_OpenSARLab
   - caption: Developer Guide
