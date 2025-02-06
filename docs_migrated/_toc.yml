@@ -25,7 +25,7 @@ parts:
         - file: user-guides/jupyter_kernels
         - file: user-guides/opensarlab_terminal
         - file: user-guides/logging_out_and_server_shutdown
-        - file: user-guides/jupyter_notebook_extensions
+        - file: user-guides/jupyterlab_extensions
       - file: user-guides/software
       - file: user-guides/storage_git_toc
         sections:

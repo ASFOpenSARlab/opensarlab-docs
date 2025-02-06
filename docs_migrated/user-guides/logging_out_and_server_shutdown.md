@@ -8,6 +8,10 @@ Please shutdown your server after each work session to help reduce cloud costs.
 While it is wise to logout of your account for reasons related to security, it will not stop any lab servers you may have left running. They will continue to run in the background, accruing costs. Please shutdown all running servers before logging out. 
 :::
 
+- [Why Shut Down the Server?](#Why-Shut-Down-the-Server)
+- [How to Shut Down The Server and Logout in Jupyter Lab](#How-to-Shut-Down-The-Server-and-Logout-in-Jupyter-Lab)
+- [How to Log Out of OpenScienceLab](#How-to-Log-Out-of-OpenScienceLab)
+
 ---
 
 ## Why Shut Down the Server?
