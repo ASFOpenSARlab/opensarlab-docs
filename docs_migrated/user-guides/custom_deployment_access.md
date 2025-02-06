@@ -13,4 +13,8 @@ Access to all custom labs is determined by the owner of each lab. Professors, in
 
 Once a user's OpenScienceLab account has been given access to a lab, a lab access card will appear in the OpenScienceLab portal after signing in. 
 
-![Screenshot of OpenScienceLab with custom lab card](../assets/opensciencelab_custom_lab.png)
+
+:::{figure} ../assets/opensciencelab_custom_lab.png
+
+OpenScienceLab with custom lab card
+:::

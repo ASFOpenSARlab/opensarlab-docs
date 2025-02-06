@@ -1,4 +1,4 @@
-# Server Terminal
+# Jupyter Terminal
 
 ## Overview
 ---
