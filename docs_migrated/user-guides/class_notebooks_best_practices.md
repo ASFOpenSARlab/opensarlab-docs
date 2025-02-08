@@ -8,32 +8,11 @@
 
 ---
 
-## Set The Notebook Metadata to Use the Correct Environment
+## Provide a Pinned `environment.yml` to Build a Conda Environment
 
-1. Open your notebook, change into your conda environment's kernel, and save the notebook.
-1. Push the update to your notebook repository.
-1. When users clone your repository, the notebooks will automatically use the correct kernel (as long as the required environment has been created).
+The open-source Python packages used in your Conda environments are routinely updated, often introducing breaking dependencies. If the `environment.yml` file does not pin packages to specific versions, the default behavior is to build the latest available versions. This can introduce new dependency conflicts at any time. 
 
----
-
-## Consider Clearing Your Notebook Output Before Saving it
-
-Saving a notebook with its output increases the file size and slows down the time it takes to open, save, and download.
-However, saving a notebook with output in place allows you to display results without the need to run the notebook. 
-
-### If you wish to clear the notebook output:
-1. Open the notebook.
-2. Select the menu option: `Kernel` -> `Restart Kernel and Clear...`
-3. Save the notebook.
-4. Push the cleared notebook to its repository.
-
----
-
-## Provide a Pinned `environment.yml` For Your Conda Environment
-
-The open-source Python packages used in your Conda environments are routinely updated, which often introduces breaking dependencies. If your `environment.yml` file does not pin packages to specific versions, the default behavior is to build the latest available package versions. This can introduce new dependency conflicts at any time. 
-
-Even if you pin every package, there is still a risk that an `environment.yml` will no longer build correctly at some point. This can happen if one of its package versions is removed due to a security risk, though this is relatively rare.
+Even if you pin every package, there is still a risk that an `environment.yml` will no longer build correctly at some point. This can occur if one of its package versions is removed due to a security risk, legal issue, or the discovery of a critical error, though this is relatively rare.
 
 ### To reduce the chances of your `environment.yml` breaking over time, provide a pinned version to your users:
 1. Open a terminal.
@@ -44,6 +23,28 @@ Even if you pin every package, there is still a risk that an `environment.yml` w
     - `prefix` is the path to the environment on your system, which will likely differ between users.
 6. Save the file.
 7. Push the file to your notebook repository.  
+
+---
+
+## Set The Notebook Metadata to Use the Correct Environment
+
+1. Open your notebook, change into your conda environment's kernel, and save the notebook.
+1. Push the update to your notebook repository.
+1. When users clone your repository, the notebooks will automatically use the correct kernel (as long as the required environment has been created).
+
+---
+
+## Consider Clearing Your Notebook Output Before Saving It, Or Not
+
+Saving a notebook with its output increases the file size and slows down the time it takes to open, save, and download. This can cause difficulty for users accessing a JupyterHub over a weak internet connection.
+
+However, saving a notebook with its output in place has benefits. It allows you to display results without running the notebook. They are also visible on GitHub.
+
+### If you wish to clear the notebook output:
+1. Open the notebook.
+2. Select the menu option: `Kernel` -> `Restart Kernel and Clear...`
+3. Save the notebook.
+4. Push the cleared notebook to its repository.
 
 ---
 
@@ -70,7 +71,7 @@ A notebook successfully runs the instructor-provided code cells but crashes the 
     
 ---
     
-## Avoid Changing Directories in Your Code
+## Avoid Changing Directories in a Notebook
 
 ### Why?
 - Users can run Jupyter Notebook code cells any number of times and in any order. If a code cell changes directories, there is no way to guarantee that the user will run it in the expected order, which can lead to unexpected behavior.
