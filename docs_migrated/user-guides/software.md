@@ -1,17 +1,17 @@
 # Installing Software in a Lab
 
-- [Conda Environments](#Conda-Environments)
-    - [Use an ASF-provided notebook and `environment.yml` to create a Conda environment](#Use-an-ASF-provided-notebook-and-environment-yml-to-create-a-Conda-environment)
-    - [Install Conda packages within a running notebook's environment](#Install-Conda-packages-within-a-running-notebook's-environment)
-    - [Install Conda packages in an existing environment from the terminal](#Install-Conda-packages-in-an-existing-environment-from-the-terminal)
-- [pip](#pip)
-    - [Install `pip` packages inside of a Conda environment from the terminal](#install-pip-packages-inside-of-a-Conda-environment-from-the-terminal)
-    - [Include pip packages in a Conda `environment.yml`](#Include-pip-packages-in-a-Conda-environment-yml)
-- [apt and apt-get](#apt-and-apt-get)
+- [Conda Environments](Conda-Environments)
+    - [Use an ASF-provided notebook and `environment.yml` to create a Conda environment](Use-an-ASF-provided-notebook-and-environment-yml-to-create-a-Conda-environment)
+    - [Install Conda packages within a running notebook's environment](Install-Conda-packages-within-a-running-notebook's-environment)
+    - [Install Conda packages in an existing environment from the terminal](Install-Conda-packages-in-an-existing-environment-from-the-terminal)
+- [pip](pip)
+    - [Install `pip` packages inside of a Conda environment from the terminal](install-pip-packages-inside-of-a-Conda-environment-from-the-terminal)
+    - [Include pip packages in a Conda `environment.yml`](Include-pip-packages-in-a-Conda-environment-yml)
+- [apt and apt-get](apt-and-apt-get)
 
 ---
 
-
+(Conda-Environments)=
 ## Conda Environments
 
 Users can install additional software in isolated Conda environments on their persistent storage volumes with [conda](https://conda.io/projects/conda/en/latest/index.html) or [mamba](https://github.com/mamba-org/mamba) (conda's faster reimplementation).
@@ -36,6 +36,7 @@ The following conda environment config files are provided by ASF:
 These environments are not pre-built; users must create their conda environments and register their kernels with `ipykernel` to make them accessible in notebooks. We provide a notebook to help install conda environments and register their kernels. **This can be done from the terminal if you are comfortable with Conda** or you can use an ASF-provided notebook to walk through the process.
 :::
 
+(Use-an-ASF-provided-notebook-and-environment-yml-to-create-a-Conda-environment)=
 ### Use an ASF-provided notebook and `environment.yml` to create a Conda environment
 
 1. Open the following notebook: [`/home/jovyan/conda_environments/Create_OSL_Conda_Environments.ipynb`](https://opensciencelab.asf.alaska.edu/lab/smce-prod-opensarlab/hub/user-redirect/lab/tree/conda_environments/Create_OSL_Conda_Environments.ipynb)
@@ -48,6 +49,7 @@ These environments are not pre-built; users must create their conda environments
 - ASF has started migrating data recipes into Jupyter Books, which are organized collections of Jupyter Notebooks with an interactive table of contents. Each Jupyter Book includes a notebook to build any required conda environments. This can be run directly from the Jupyter Book, in which case there is no need to build an environment using the `/home/jovyan/conda_environments/Create_OSL_Conda_Environments.ipynb` described above.
 :::
 
+(Install-Conda-packages-within-a-running-notebook's-environment)=
 ### Install Conda packages within a running notebook's environment
 1. Run the following command in a code cell:
    
@@ -55,6 +57,7 @@ These environments are not pre-built; users must create their conda environments
 %mamba install -c conda-forge <package_name> --yes
 ```
 
+(Install-Conda-packages-in-an-existing-environment-from-the-terminal)=
 ### Install Conda packages in an existing environment from the terminal
 1. Open a terminal and run the following commands:
 
@@ -74,19 +77,23 @@ We recommend installing Conda packages in non-base environments rather than in `
 
 ---
 
+(pip)=
 ## pip
 
 [_pip_](https://pip.pypa.io/en/stable/) is a package installer for Python.
 
 You can install `pip` packages onto your persistent volume in the following manner:
 
+(install-pip-packages-inside-of-a-Conda-environment-from-the-terminal)=
 ### Install `pip` packages inside of a Conda environment from the terminal
 1. Open a terminal and use the following commands:
 
 ```bash
 conda activate <environment_name>
 python -m pip install <package_name>
-```  
+```
+
+(Include-pip-packages-in-a-Conda-environment-yml)=
 ### Include pip packages in a Conda `environment.yml`
 1. Include `pip` in the dependency list
 2. Add a `pip` section to the bottom of the dependency list in an `environment.yaml`
@@ -111,6 +118,7 @@ This will install the package in your `/home/jovyan/.local/lib/python3.x/site-pa
 
 --- 
 
+(apt-and-apt-get)=
 ## apt and apt-get
 
 Users cannot install software in OpenScienceLab using `apt` or `apt-get`. 
