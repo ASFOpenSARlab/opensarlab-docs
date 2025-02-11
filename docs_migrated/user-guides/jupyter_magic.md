@@ -3,12 +3,13 @@
 
 In addition to running Python code, Jupyter Notebooks provide magic commands with various functions. We provide an introduction to a several, but many more are available. Plese see the [Jupyter Magics documentaion](https://ipython.readthedocs.io/en/stable/interactive/magics.html) for more information. 
 
-- [Shell Assignment Syntax](#Shell-Assignment-Syntax)
-- [Line Magics](#Line-Magics)
-- [Cell Magics](#Cell-Magics)
+- [Shell Assignment Syntax](Shell-Assignment-Syntax)
+- [Line Magics](Line-Magics)
+- [Cell Magics](Cell-Magics)
 
 ---
 
+(Shell-Assignment-Syntax)=
 ## Shell Assignment Syntax
 
 
@@ -23,6 +24,7 @@ Using `!` to run shell commands in a Jupyter Notebook.
 
 ---
 
+(Line-Magics)=
 ## Line Magics
 
 Line magics start with a single `%`. They either update a setting that affect the entire notebook or they affect only the line where `%` is used. 
@@ -44,6 +46,7 @@ Line magics start with a single `%`. They either update a setting that affect th
 
 ---
 
+(Cell-Magics)=
 ## Cell Magics
 
 Cell magics start with `%%` and affect the contents of an entire code cell. 

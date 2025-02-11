@@ -7,11 +7,12 @@ Each ASF-developed Jupyter Book of data recipes includes a notebook that creates
 
 At this time, we still have some Jupyter Notebooks that have not yet been organized into Jupyter Books. Each of these notebooks is pre-configured to use its required kernel. See our [Conda environments documentation](./conda_environments.md) for instructions on building those software environments.
 
-- [How to Switch Notebook Kernels](#How-to-Switch-Notebook-Kernels)
-- [Restarting a Jupyter Notebook Kernel](#Restarting-a-Jupyter-Notebook-Kernel)
+- [How to Switch Notebook Kernels](How-to-Switch-Notebook-Kernels)
+- [Restarting a Jupyter Notebook Kernel](Restarting-a-Jupyter-Notebook-Kernel)
 
 ---
 
+(How-to-Switch-Notebook-Kernels)=
 ## How to Switch Notebook Kernels
 
 1. Click the current kernel name in the upper right corner of a notebook. 
@@ -31,6 +32,7 @@ You need to build its Conda environment. Instructions are provided [here](./cond
 
 ---
 
+(Restarting-a-Jupyter-Notebook-Kernel)=
 ## Restarting a Jupyter Notebook Kernel
 
 1. Click in the notebook tab to select it.
