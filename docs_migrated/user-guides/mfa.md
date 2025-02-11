@@ -6,20 +6,22 @@ Multi-Factor Authentication (MFA) is required to access OpenScienceLab resources
 Currently, we support TOTP-based authentication, with plans to add hardware
 key (ex. Yubikey) authentication in future updates.
 
-- [Watch: Log In and Set Up MFA](#Watch-Log-In-and-Set-Up-MFA)
-- [Before You Begin](#Before-You-Begin)
-- [Setup Steps](#Setup-Steps)
-- [Resetting MFA](#Resetting-MFA)
-- [Troubleshooting](#Troubleshooting)
+- [Watch: Log In and Set Up MFA](Watch-Log-In-and-Set-Up-MFA)
+- [Before You Begin](Before-You-Begin)
+- [Setup Steps](Setup-Steps)
+- [Resetting MFA](Resetting-MFA)
+- [Troubleshooting](Troubleshooting)
 
 ---
 
+(Watch-Log-In-and-Set-Up-MFA)=
 ## Watch: Log In and Set Up MFA
 :::{iframe} https://www.youtube.com/embed/2c1X9qRnsSM?si=XKHtBBzrSDgnBJNQ
 :::
 
 ---
 
+(Before-You-Begin)=
 ## Before You Begin
 
 A TOTP-enabled MFA application is required to use OpenScienceLab resources.
@@ -46,6 +48,8 @@ there are also several desktop clients that provide this functionality.
 :::
 
 ---
+
+(Setup-Steps)=
 ## Setup Steps
 
 1. Log into OpenScienceLab normally. Leave the "MFA" field on the login page blank.
@@ -64,6 +68,8 @@ application's "Scan QR Code" feature.
     as normal.
 
 ---
+
+(Resetting-MFA)=
 ## Resetting MFA
 
 On occasion, you may wish or need to reconfigure MFA for your OSL account.
@@ -105,6 +111,7 @@ On occasion, you may wish or need to reconfigure MFA for your OSL account.
 7. **Follow the Setup Steps above to setup a new MFA device.** You will not be able to access any labs until you setup a new MFA device.
 
 ---
+(Troubleshooting)=
 ## Troubleshooting
 
 1. If the MFA Code check is not successful, there are two potential issues:
