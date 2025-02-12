@@ -12,4 +12,4 @@ dependencies:
   - requests
   - pip:
       # For documentation
-      - jupyter-book==1.0.0a1
+      - jupyter-book==2.0.0a1
