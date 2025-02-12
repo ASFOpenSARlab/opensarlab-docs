@@ -24,8 +24,18 @@ jobs:
       - name: Deploy test website
         shell: bash -l {0}
         run: |
+      - name: Deploy test website
+        shell: bash -l {0}
+        run: |
           cd opensarlab-docs
           # Remove conflicting CNAME for project site
           if [ -f docs/CNAME ]; then rm docs/CNAME; fi
           jupyter-book build ./docs/myst.yml
-          ghp-import -n -x opensarlab-docs -f _build/site/public
+          git fetch origin gh-pages
+          git checkout gh-pages
+          mkdir -p opensarlab-docs
+          rm -rf opensarlab-docs/*
+          cp -r _build/site/public/* opensarlab-docs/
+          git add opensarlab-docs/
+          git commit -m "Update development documentation in opensarlab-docs/"
+          git push origin gh-pages
