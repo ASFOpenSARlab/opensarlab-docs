@@ -3,6 +3,7 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
+  - ghp-import
   - texlive-core
   - latexmk 
   - mystmd
@@ -11,5 +12,4 @@ dependencies:
   - pip
   - requests
   - pip:
-      # For documentation
       - jupyter-book==2.0.0a1

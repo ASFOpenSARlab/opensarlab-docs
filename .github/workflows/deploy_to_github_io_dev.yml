@@ -28,4 +28,4 @@ jobs:
           # Remove conflicting CNAME for project site
           if [ -f docs/CNAME ]; then rm docs/CNAME; fi
           jupyter-book build ./docs/myst.yml
-          ghp-import -n -p -f _build/site/public
+          ghp-import -n -p opensarlab-docs -f _build/site/public
