@@ -1,249 +1,224 @@
-[Return to Table of Contents](../user.md)
+# Running Jupyter Notebooks
+<br>
 
-# Getting Started
-- [A Light Introduction to Jupyter Notebook](#a-light-introduction-to-jupyter-notebook)
-    - [Markdown Cells](#markdown-cells)
-    - [Code Cells](#code-cells)
-- [Detailed Instructions on Running Jupyter Notebook](#detailed-instructions-on-running-jupyter-notebook)
-    - [Selecting Cells](#selecting-cells)
-        - [Edit Mode vs Non-Edit Mode](#edit-mode-vs-non-edit-mode)
-        - [Select Individual Cell (Non-Edit Mode)](#select-individual-cell-non-edit-mode)
-        - [Select Multiple Cells (Non-Edit Mode)](#select-multiple-cells-non-edit-mode)
-        - [Select Cell (Edit Mode)](#select-cell-edit-mode)
-        - [Select a Markdown Cell (Edit Mode)](#select-a-markdown-cell-edit-mode)
-    - [Hiding a Cell](#hiding-a-cell)
-        - [Hiding via Code Cells](#hiding-via-code-cells)
-    - [Running Cells](#running-cells)
-        - [Run a Single Cell](#run-a-single-cell)
-        - [Run Multiple Cells](#run-multiple-cells)
-        - [Rerunning a Notebook](#rerunning-a-notebook)
-    - [Clearing Cell Output Before Closing](#clearing-cell-output-before-closing)
-- [Summary and Demo]()
-
----
-
-<!-- # How to Run a Jupyter Notebook -->
-
-<!--  I suggest we insert the contents of the notebook intro into running a notebook and move the running a notebook to before conda env. A person needs to know how to run a notebook before doing envs anyway.  -->
-
-<!-- ### Before we get started, what is Jupyter Notebook?
-- [Intro to Jupyter Notebook](jupyter_notebook_intro.md) -->
-
-# A Light Introduction to Jupyter Notebook
-[Jupyter Notebook](https://jupyter.org/) is a web application that allows users to display: 
+[Jupyter Notebooks](https://docs.jupyter.org/en/latest/) allow users to display: 
 
 * Interactive and runnable code cells, typically written in [Python](https://docs.python.org/3/)
 * [Markdown](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html) cells containing explanatory text, formulas, hyperlinks, tables, pseudocode, images, etc.
 
-Jupyter Notebook provides an ideal format for teaching/learning coding concepts, prototyping algorithms, and collaborating on Python projects. 
+Jupyter Notebooks provide an ideal file format for teaching/learning coding concepts and prototyping algorithms. 
 
-While Jupyter Notebook has four cell types, we use the following two for the OpenSciencelab:
+---
 
-## _Markdown Cells_
+- [Notebook Cell Types](#Notebook-Cell-Types)
+    - [Markdown Cells](#markdown-cells)
+    - [Code Cells](#code-cells)
+- [How to Run Jupyter Notebooks](#How-to-Run-Jupyter-Notebooks)
+    - [Selecting Cells](#selecting-cells)
+        - [Select an Individual Cell](#Select-an-Individual-Cell)
+        - [Select Multiple Cells](#Select-Multiple-Cells)
+    - [Hide Code Cells](#Hide-Code-Cells)
+        - [Collapse an Individual Cell](#Collapse-an-Individual-Cell)
+        - [Collapse Selected Cells or All Cells in a Notebook](#Collapse-Selected-Cells-or-All-Cells-in-a-Notebook)
+        - [Hide Sections of Code Cells beneath a Markdown Cell](#Hide-Sections-of-Code-Cells-beneath-a-Markdown-Cell)
+    - [Running Code Cells](#running-code-cells)
+        - [Run a Single Code Cell](#run-a-single-code-cell)
+        - [Run Multiple Code Cells](#Run-Multiple-Code-Cells)
+            - [Run a batch of selected cells](#Run-a-batch-of-selected-cells)
+            - [Run Every Cell Above or Below a Code Cel](#Run-Every-Cell-Above-or-Below-a-Code-Cell)
+            - [Run an Entire Notebook](#Run-an-Entire-Notebook)
+        - [Rerunning a Notebook](#rerunning-a-notebook)
+    - [Clearing Cell Output Before Closing](#clearing-cell-output-before-closing)
 
-Markdown cells contain documentation in Markdown, HTML, and/or LaTeX. They are often used to display text, images, hyperlinks, formulas, tables, pseudocode, plots, figures, etc. 
+---
 
-- To enter edit mode in a markdown cell, double-click the cell.
+(Notebook-Cell-Types)=
+## Notebook Cell Types
 
- ![An un-run markdown cell.](../assets/markdown_cell_edit_mode.gif) 
+(markdown-cells)=
+### Markdown Cells
 
-_A markdown cell in edit mode_
+Markdown cells contain documentation in Markdown, MyST Markdown, HTML, and/or LaTeX. They are often used to display text, images, hyperlinks, formulas, tables, pseudocode, plots, figures, etc. 
 
-If you wish to proceed through the notebook past the markdown cell or run a markdown cell's code to display its formatted contents, you can:
+**Markdown Edit Mode**
+
+To enter edit mode in a markdown cell, double-click the cell.
+
+:::{figure} ../assets/markdown_cell_edit_mode.gif
+
+Double-click on a markdown cell to enter edit mode
+:::
+
+**Markdown Display Mode**
+
+To render a markdown cell, select it then:
 - Click the **play** button at the top of the notebook
-- Use the `shift + enter` shortcut key.
 
+or
+
+- Use the `shift + enter` "play" shortcut.
+
+:::{figure} ../assets/markdown_run.gif
+
+
+A run markdown cell
+:::
+
+(code-cells)=
+### Code Cells
+
+Code cells contain editable and runnable Python code. You can run them sequentially or in any order, once or any number of times.
  
-![A run markdown cell.](../assets/markdown_run.gif)
+:::{figure} ../assets/code_cell.gif
 
-*A run markdown cell*
+Selecting and running a code cell
+:::
 
-**NB**: The cell will automatically move to the next cell if you are using the **play** button to run the cell.
 
-## _Code Cells_
+:::{tip}
 
-Code cells contain editable and runnable Python code. You can run them in any order for any number of times.
- 
- ![A code cell.](../assets/code_cell.gif)
-
-*A code cell*
-
-**NB**: While the ability to rerun the code cells in arbitrary order can be helpful, it can cause unexpected problems, such as:
+While the ability to rerun the code cells in arbitrary order can be helpful, it can also cause problems, such as:
 - Recycled variables may contain unexpected values if you run cells in non-sequential order.
-- Values from previous cells may trigger a different behavior when running the same cell.
+- You may skip cells that set required variables or perform necessary functions.
+- If you change directories in a code cell and run other cells in an unexpected order, you could attempt to run code in the wrong location.
+:::
 
 ---
 
-# Detailed Instructions on Running Jupyter Notebook
+(How-to-Run-Jupyter-Notebooks)=
+## How to Run Jupyter Notebooks
 
-Now that users have a basic understandings of Jupyter notebook, users can use below manual as a refernce for detailed use.
+(selecting-cells)=
+### Selecting Cells
 
-## **Selecting Cells**
+Users may select cells individually or in a batch, and then run the selected cells.
 
-Users may select cells individually or in a batch; users can then run the selected cells.
+(Select-an-Individual-Cell)=
+#### Select an Individual Cell
+- Click anywhere inside a cell to select it.
 
-### **Edit Mode vs Non-Edit Mode**
-Before we discuss cell selection, it may be helpful to learn the difference between the _edit_ mode and _non-edit_ mode.
+:::{figure} ../assets/select_cells.gif
 
-- **Edit Mode**: If you select a cell using edit mode, you may edit the code and Markdown written on that cell. You can choose the cell in the _edit_ mode by clicking inside the cell box.
+A selected cell displays a blue vertical line on the left edge.
+:::
 
-
-- **Non-Edit Mode**: If you select the cell outside of the code/Markdown box, you will be selecting the cell in a _non-edit_ mode.
-
-While the difference is subtle, it is crucial to know the different modes because some hotkeys are unavailable in the _edit_ mode. For instance, the `shift + j` command will allow you to select multiple cells in the _non-edit_ mode, but this does not work in the _edit_ mode.
-
----
-
-### **Select Individual Cell (Non-Edit Mode)**
-- Click on the left side of the cell.
-
-![Selected individual cell](../assets/select_cell_non_edit_mode.gif)
-
-A selected cell displays a blue horizontal line on the left edge. Markdown cell will have an additional shaded area that is directly next to the cell. For a visual example, please refer to the _hiding cells_ section.
-
-**NB**: It is crucial to **avoid clicking** the _blue_ edge as well as the shaded area that is directly next to the cell. We will discuss this in a later section.
-
----
- 
-### **Select Multiple Cells (Non-Edit Mode)**
-1. Select a cell in non-edit mode
-1. Select multiple cells with:
+(Select-Multiple-Cells)=
+#### Select Multiple Cells
+1. Select a cell **by clicking to the left of the text box**
+    -  Clicking inside the cell will select it but it will place you in text edit mode and you will not be able to select additonal cells. 
+1. Select additional cells using:
     - `shift + j` or `shift + Down-Arrow` to select additional cells below
     - `shift + k` or `shift + Up-Arrow` to select additional cells above
-1. Perform batch operations on selected cells with **play** button or with `ctrl + enter`.
+    - `shift + mouse click` to select batches of cells
+1. Perform batch operations on selected cells with **`▶`** button or with `Ctrl + Enter` or `Cmd + Enter` (Mac).
 
-![Multpile selected cells](../assets/select_mult_cells.gif)
+:::{figure} ../assets/select_multiple_cells.gif
 
-*Selected cells will have a blue background*
+Selected cells will be surrounded by a blue background
+:::
 
----
+(Hide-Code-Cells)=
+### Hide Code Cells
 
-### **Select Cell (Edit Mode)**
-- Click inside a cell block.
+You may occasionally wish to hide code cells to reduce clutter. 
 
-![Selected code cell in edit mode](../assets/select_cell_edit_mode.png) 
+(Collapse-an-Individual-Cell)=
+#### Collapse an Individual Cell
 
-For live demonstration, please refer to the [_code cells_](#code-cells) section.
+:::{figure} ../assets/collapse_code_cell.gif
 
-**NB**: The edit mode cell will no longer display green edges.
+You can hide an individual code cell by clicking the blue vertical line to the left of the code cell.
+:::
 
----
- 
-### **Select a Markdown Cell (Edit Mode)**
-- Double click inside a cell.
+(Collapse-Selected-Cells-or-All-Cells-in-a-Notebook)=
+#### Collapse Selected Cells or All Cells in a Notebook
 
-![Markdown cell in edit mode](../assets/markdown_cell_edit_mode.png) 
+- Select some code cells and choose the menu option: `View` -> `Collapse Selected Code`
+- Select the menu option: `View` -> `Collapse All Code`
 
+(Hide-Sections-of-Code-Cells-beneath-a-Markdown-Cell)=
+#### Hide Sections of Code Cells beneath a Markdown Cell
 
-For live demonstration, please refer to the [_Markdown cells_](#markdown-cells) section.
+:::{figure} ../assets/collapse_cells_under_md.gif
 
-**NB**: The edit mode cell will no longer display green edges.
-
----
-
-## **Hiding a Cell**
-
-Sometimes, having too many cells may feel cumbersome. Below are the ways to hide the cells:
-
-### **Hiding Individual Cell**
-
-You can hide an individual code cell by clicking the blue vertical line on the left of the code cell. 
-
-![Hide One Cell](../assets/hide_one_cell.gif)
-
-### **Hiding Multiple Cells**
-
-Alternatively, you may click the dark-shaded are on left of the Markdown cells to hide all proceeding cells.
-
-![Hide All Cells](../assets/hide_all_cells.gif)
-
----
- 
-## **Running Cells**
-Because you can run code cells in any order, each cell generates a number in the order they ran.
-
-![Clicking the Run button to run a cell](../assets/cell_numbers.png)
+Hide entire sections of code cells beneath a markdown cell by clicking the vertical blue bar to the left of the markdown cell.
+:::
 
 ---
 
-### **Run a Single Cell**
-#### With the Run Button
-1. Select any cell you wish to run. 
+(running-code-cells)=
+## Running Code Cells
+Code cells may be executed in any order. A cell execution counter to the left of each code cell indicates the order in which the cells were run.
+
+:::{figure} ../assets/cell_numbers.png
+
+
+The cell execution counter indicates the order in which code cells have run.
+:::
+
+(run-a-single-code-cell)=
+### Run a Single Code Cell
+1. Select the cell you wish to run. 
 1. Do one of the following:
-    - Click `Run` button
-    - `Ctrl + Enter` to run a cell
-    - `Shift + Enter` to runs a cell and selects the cell below
-    - `Alt + Enter` to runs a cell and inserts an empty cell below
+    - Click the `▶` button at the top of the notebook.
+    - `Ctrl + Enter` or `Cmd + Enter` (Mac) to run a cell.
+    - `Shift + Enter` to run a cell and select the cell below
+    - `Alt + Enter` to run a cell and insert an empty cell below
 
-![Clicking the Run button to run a cell](../assets/run_cell.gif)
 
-*Running selected cell multiple times with `ctrl + enter`*
+(Run-Multiple-Code-Cells)=
+### Run Multiple Code Cells
 
----
+(Run-a-batch-of-selected-cells)=
+#### Run a batch of selected cells
+1. Select a group of cells.
+1. Do one of the following:
+    - Click the `▶` button at the top of the notebook.
+    - `Ctrl + Enter` to run a cell.
+    - `Shift + Enter` to run a cell and select the cell below
+    - `Alt + Enter` to run a cell and insert an empty cell below
 
-### **Run Multiple Cells**
 
-Instead of running just a single cell, you can run multiple cells at once in a following manner:
-
-- Run every cell above/below selected cell.
-- Run them in a groups of selected cell.
-- Run the entire notebook
-
-#### **Running every cell above/below:**
+(Run-Every-Cell-Above-or-Below-a-Code-Cell)=
+#### Run Every Cell Above or Below a Code Cell
 
 Select a cell, then:
 
-- Select `Run All Above Selected Cell` from the _Run_ menu
-- or select `Run Selected Cell and All Below` from the _Run_ menu
+- Select the menu option: `Run` ->  `Run All Above Selected Cell`
+- Select the menu option: `Run` -> `Run Selected Cell and All Below`
+
+(Run-an-Entire-Notebook)=
+#### Run an Entire Notebook
+
+If you wish to run every code cell in a notebook, you can do one of the following:
+
+- Select the menu option: `Run` -> `Run All`
+- Select the menu option: `Kernel` -> `Restart Kernel and Run All Cells...`
 
 
-![run all above](../assets/run_above.gif)
+:::{tip} Restarting the Kernel and Rerunning vs. Simply Rerunning
 
-*Running all cells above selected. Note that the selected cell is ignored.*
-
-#### **Run a batch of selected cells**
-Select a group of cells, then:
-    - Use a hotkey
-    - or click the run button
-
-![run in batch](../assets/run_in_batch.gif)
-
-*Runs a group of cells in a batch using `ctrl + enter`*
-    
-#### **Run an Entire Notebook**
-
-If you wish to run the entire notebook from the get-go, you can do one of the following:
-
-- Select `_Run_` > `_Run All Cells_`
-- Select `_Run_` > `_Restart Kernel and Run All Cells..._`
-
-The difference is that the former option preserves the values from the previous run while the latter lets you run from a new state—more on this in the next section.
-
+Rerunning a notebook without restarting the kernel preserves previously defined local variables. This can potentially cause issues related to directory changes, paths, and variables containing unexpected values. It is generally safer to restart the kernel and rerun the notebook. 
+:::
 
 ---
 
-### **Rerunning a Notebook**
+(rerunning-a-notebook)=
+### Rerunning a Notebook
 We recommend restarting the notebook kernel before rerunning it since any initialized variables and data structures from a previous run persist in memory along with their values, which can lead to unintended results.
 
-_For instance, consider the following case_:
+To restart the kernel so you can begin a fresh notebook run use one of the following options:
+- Select the menu option: `Kernel` -> `Restart Kernel`
+- Select the menu option: `Kernel` -> `Restart Kernel and Clear...`
 
-Assume you have a Python list with date-specific data, such as weather, stock prices, etc. If you were to run a cell that appends data from a specific date multiple times, it may yield unpredictable results due to the duplicate data. 
+:::{tip} Clearing Notebook Output
 
-
-*e.g.* 
-![running once](../assets/running_once.PNG)
-_In the above example, running the second cell once will append a new date at the end of the list._
-
-![running multi](../assets/running_multi.PNG)
-_However, running the same cell will keep appending the same value._
-
-Rerunning previous cells can cause unexpected behavior. We recommend restarting the notebook when you are running from the beginning.
-
-To restart the notebook, select any of the `Restart` options from the Kernel Menu.
-
-![restart option](../assets/restart_option.PNG)
-
+It is easy to lose track of your position in a notebook if it contains code cell output and execution counters from a previous run. We recommend clearing any output before rerunning a notebook.  
+:::
+  
 ---
 
-## **Clearing Cell Output Before Closing**
-We recommend clearing every output from each code cell before closing or saving a notebook. Leaving the output in place can increase the file size of the notebook, which will use up more of your volume and cause slower notebook loading times (especially if you have a slow internet connection).
+(clearing-cell-output-before-closing)=
+## Clearing Cell Output Before Closing
+
+For large notebooks with a lot of plots and images, we recommend clearing all code cell output before closing or saving a notebook. Leaving the output in place can increase the file size of the notebook, which can cause slower notebook loading times (especially if you have a slow internet connection).

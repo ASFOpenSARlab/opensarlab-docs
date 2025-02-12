@@ -1,0 +1,55 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index
+parts:
+  - caption: Troubleshooting
+    chapters:
+      - file: user-guides/troubleshooting_guide
+  - caption: User Guide
+    chapters:
+      - file: user-guides/access_toc.md
+        sections:
+        - file: user-guides/opensciencelab_accounts
+        - file: user-guides/opensarlab_accounts
+        - file: user-guides/custom_deployment_access
+        - file: user-guides/mfa
+        - file: user-guides/reset_password
+      - file: user-guides/jupyterlab_toc
+        sections:
+        - file: user-guides/how_to_run_a_notebook
+        - file: user-guides/jupyter_magic
+        - file: user-guides/class_notebooks_best_practices
+        - file: user-guides/jupyter_servers
+        - file: user-guides/jupyter_kernels
+        - file: user-guides/opensarlab_terminal
+        - file: user-guides/logging_out_and_server_shutdown
+        - file: user-guides/jupyterlab_extensions
+      - file: user-guides/software
+      - file: user-guides/storage_git_toc
+        sections:
+        - file: user-guides/opensciencelab_storage.md
+        - file: user-guides/s3_buckets
+        - file: user-guides/git_in_OpenSARLab
+  - caption: Developer Guide
+    chapters:
+      - file: dev-guides/about_opensciencelab
+      - file: dev-guides/portal/build_and_deploy_portal
+      - file: dev-guides/container/build_and_deploy_opensarlab_image
+      - file: dev-guides/cluster/build_and_deploy_opensarlab_cluster
+      # - file: assets/system_diagrams/OpenSARLab_system_diagram_June_2021.png
+      - file: dev-guides/container/conda_environments
+      - file: dev-guides/portal/notifications
+      - file: dev-guides/troubleshooting
+      - file: dev-guides/container/mintpy_conda
+  - caption: Release Notes
+    chapters:
+      - file: release_notes_toc
+        sections:
+        - file: release-notes/release_06-2021
+        - file: release-notes/release_10-2021
+        - file: release-notes/release_02-2022
+        - file: release-notes/release_02-2023
+        - file: release-notes/release_02-2024
+        - file: release-notes/release_12-2024

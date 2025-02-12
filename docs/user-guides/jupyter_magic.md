@@ -1,82 +1,66 @@
-[Return to Table of Contents](../user.md)
+# Jupyter Magic Commands
+<br>
 
-# **Jupyter Line and Cell Magics, and IPython Syntax**
+In addition to running Python code, Jupyter Notebooks provide magic commands with various functions. We provide an introduction to a several, but many more are available. Plese see the [Jupyter Magics documentaion](https://ipython.readthedocs.io/en/stable/interactive/magics.html) for more information. 
 
-In addition to running Python code, Jupyter Notebooks allows users to run [magic commands](https://ipython.readthedocs.io/en/stable/interactive/magics.html) with various functionality. While all magic commands are available to users, the below magic commands are used the most in the OpenScienceLab:
-
-- [Shell Assignment Syntax](#shell-assignment-syntax)
-- [Line Magics](#line-magics)
-- [Cell Magics](#cell-magics)
-
----
-
-## **Shell Assignment Syntax** 
-
-
-In IPython syntax, the exclamation mark (!) allows users to run shell commands from inside a Jupyter Notebook code cell.
-
-Simply start a line of code with `!` and it will run the command in the shell. 
-
-*Example:* 
-
-![shell assignment syntax](../assets/magic_excl.PNG)
+- [Shell Assignment Syntax](#Shell-Assignment-Syntax)
+- [Line Magics](#Line-Magics)
+- [Cell Magics](#Cell-Magics)
 
 ---
 
-## **Line Magics**
+(Shell-Assignment-Syntax)=
+## Shell Assignment Syntax
 
-Line magics start with a single `%` sign and affect only the line where `%` is used. 
 
-The following are the most frequently used line magics:
+In Jupyter Notebooks, the exclamation mark `!` allows users to run shell commands from inside a Jupyter Notebook code cell (`/bin/bash` in OpenSARLab).
+
+Simply start a line of code with `!` and it will run the command in a shell, using the Conda environment of the currently running Python kernel. 
+
+:::{figure} ../assets/magic_excl.PNG
+
+Using `!` to run shell commands in a Jupyter Notebook.
+:::
+
+---
+
+(Line-Magics)=
+## Line Magics
+
+Line magics start with a single `%`. They either update a setting that affect the entire notebook or they affect only the line where `%` is used. 
 
 ### `%matplotlib inline`
-- Allows **non-interactive** `matplotlib plots` to be displayed in a notebook.
-
-*Example*: 
-
-![inline magic](../assets/magic_inline.PNG)
+- Display **non-interactive** `matplotlib plots` in code cell output.
+- Turns on inline plotting for the entire notebook
 
 ### `%matplotlib widget`
-- Allows **interactive** `matplotlib plots` to be displayed and interacted with inside a Jupyter Notebook. 
+- Display **interactive** `matplotlib plots` in code cell output.
+- Turns on interactive plotting for the entire notebook.
 
-*Example*:
+### `%time`
+- Time the execution of a Python expression.
+- Times only the line containing the `%time` magic command.
 
-![widget magic](../assets/magic_widget.PNG)
+### Find information on many more line magics [here](https://ipython.readthedocs.io/en/stable/interactive/magics.html#:~:text=IPython%20trove%20classifier.-,Line%20magics,-%EF%83%81).
 
-### `%df`
-This is a custom magic written specifically for OpenScienceLab. It uses the Python function `shutil.disk_usage()` to check the storage state of the user's volumes. 
-
-You may use the below flags to output results in a different manner:
-
-- `%df` - Returns a human-readable string in GB.
-- `%df --raw` - Returns a raw data object.
-- `%df --on` - Returns a string in GB after running every subsequent code cell.
-- `%df --off` - Turns off the `%df --on` option.
-- `%df -v` - Prints additional debugging text.
-
-*Example*:
-![df magic](../assets/magic_df.PNG)
-
-
-### _Legacy Note_ 
-
-Due to the new `url_widget` package, the user no longer needs to use the `%matplotlib notebook` and use the `%matplotlib widget` instead.
 
 ---
 
-## **Cell Magics**
+(Cell-Magics)=
+## Cell Magics
 
-Cell magics start with `%%` and affect the contents of an entire cell. 
+Cell magics start with `%%` and affect the contents of an entire code cell. 
 
-### `%%javascript` (or `%%js`)
-- Runs a JavaScript code cell. 
+### `%%javascript` or `%%js`
+- Run a JavaScript code cell. 
 
-*Note: leave a blank line above the magic command in the beginning of the code cell.*
+:::{figure} ../assets/magic_js.gif
 
-*Example*:
-![magic js](../assets/magic_js.PNG)
+Jupyter Javascript magic example.
+:::
 
 ### `%%capture`
-- Runs the cell but captures all output. We typically use this to suppress the output of a `%matplotlib plot` that the user does not wish to see. 
+- Run a code cell but capture and hide all output.
 
-![magic capture](../assets/magic_capture.PNG)
+
+### Find information on many more cell magics [here](https://ipython.readthedocs.io/en/stable/interactive/magics.html#cell-magics:~:text=True%20value%20set.-,Cell%20magics,-%EF%83%81).

@@ -1,6 +1,4 @@
-[Return to Developer Guide](../../dev.md)
-
-# Create OpenSARLab Notifications 
+# Create OpenScienceLab Notifications 
 
 1. Create a new event in your notification calendar
     1. The event title corresponds to the notification title

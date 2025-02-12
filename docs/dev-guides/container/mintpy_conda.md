@@ -1,4 +1,6 @@
-# Build latest mintpy and push to custom OpenSARLab conda channel
+# Custom MintPy Conda Build
+
+## Build latest mintpy and push to custom OpenSARLab conda channel
 
 Sometimes the latest version of MintPy is desired within a notebook but the official release is not current. These instructions will show how to build MintPy and push to a custom conda channel.
 

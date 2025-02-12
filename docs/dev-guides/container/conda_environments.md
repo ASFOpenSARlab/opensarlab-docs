@@ -1,6 +1,5 @@
-[Return to Developer Guide](../../dev.md)
-
-# There are a few options for creating conda environments in OpenSARLab. 
+# Creating Conda Environments
+There are a few options for creating conda environments in OpenSARLab.
 Each option come with benefits and drawbacks.
 
 ---

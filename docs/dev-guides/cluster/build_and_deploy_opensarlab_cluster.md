@@ -1,4 +1,4 @@
-# Build and Deploy OpenSARLab Cluster
+# Build and Deploy: Cluster
 
 1. Build the docker images first based off `opensarlab-container`.
 

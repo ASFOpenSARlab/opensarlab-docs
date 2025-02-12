@@ -1,4 +1,6 @@
-# Welcome to the June 2021 OpenSARlab Upgrade!
+# June 2021
+
+Welcome to the June 2021 OpenSARlab Upgrade!
 
 ### Changes:
 - conda environments **(BREAKING CHANGE ALERT: please read details below)**
