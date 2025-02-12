@@ -28,16 +28,14 @@ jobs:
         shell: bash -l {0}
         run: |
           cd opensarlab-docs
-          # Remove conflicting CNAME for project site
           if [ -f docs/CNAME ]; then rm docs/CNAME; fi
           jupyter-book build ./docs/myst.yml
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "GitHub Actions"
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
           git fetch origin gh-pages
           git checkout gh-pages
-          mkdir -p opensarlab-docs
-          rm -rf opensarlab-docs/*
-          cp -r _build/site/public/* opensarlab-docs/
-          git add opensarlab-docs/
-          git commit -m "Update development documentation in opensarlab-docs/"
-          git push origin gh-pages
+          git rm -rf .
+          cp -r _build/site/public/* .
+          git add .
+          git commit -m "Deploy updated Jupyter Book site"
+          git push origin gh-pages --force
