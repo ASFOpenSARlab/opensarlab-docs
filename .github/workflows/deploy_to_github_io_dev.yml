@@ -31,6 +31,8 @@ jobs:
           # Remove conflicting CNAME for project site
           if [ -f docs/CNAME ]; then rm docs/CNAME; fi
           jupyter-book build ./docs/myst.yml
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
           git fetch origin gh-pages
           git checkout gh-pages
           mkdir -p opensarlab-docs
