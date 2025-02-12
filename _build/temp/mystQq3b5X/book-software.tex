@@ -1,0 +1,149 @@
+\subsection{Installing Software in a Lab}
+
+\begin{itemize}
+\item Conda~Environments\begin{itemize}
+\item Use~an~ASF-provided~notebook~and~environment.yml~to~create~a~Conda~environment
+\item Install~Conda~packages~within~a~running~notebook’s~environment
+\item Install~Conda~packages~in~an~existing~environment~from~the~terminal
+\end{itemize}
+
+
+\item pip\begin{itemize}
+\item Install~pip~packages~inside~of~a~Conda~environment~from~the~terminal
+\item Include~pip~packages~in~a~Conda~environment.yml
+\end{itemize}
+
+
+\item apt~and~apt-get
+\end{itemize}
+
+
+\bigskip
+\centerline{\rule{13cm}{0.4pt}}
+\bigskip
+
+\subsubsection{Conda Environments}\label{Conda-Environments}
+
+Users can install additional software in isolated Conda environments on their persistent storage volumes with \href{https://conda.io/projects/conda/en/latest/index.html}{conda} or \href{https://github.com/mamba-org/mamba}{mamba} (conda's faster reimplementation).
+
+OpenSARLab user images include a default \texttt{base} conda environment with a minimal amount of software installed. Users may create additional conda environments on their persistent user volumes to support workflows in Jupyter Notebooks or Python scripts.
+
+\begin{framed}
+\textbf{ASF-provided Conda Environments}\\
+The following conda environment config files are provided by ASF:
+
+\begin{itemize}
+\item \texttt{ARIA-tools}
+\item \texttt{autorift}
+\item \texttt{earthscope\_insar}
+\item \texttt{isce3\_rtc}
+\item \texttt{machine learning}
+\item \texttt{rtc\_analysis}
+\item \texttt{minimal\_notebook}
+\item \texttt{nisar\_se}
+\end{itemize}
+
+These environments are not pre-built; users must create their conda environments and register their kernels with \texttt{ipykernel} to make them accessible in notebooks. We provide a notebook to help install conda environments and register their kernels. \textbf{This can be done from the terminal if you are comfortable with Conda} or you can use an ASF-provided notebook to walk through the process.
+\end{framed}
+
+\paragraph{Use an ASF-provided notebook and \texttt{environment.yml} to create a Conda environment}\label{Use-an-ASF-provided-notebook-and-environment-yml-to-create-a-Conda-environment}
+
+\begin{enumerate}
+\item Open the following notebook: \href{https://opensciencelab.asf.alaska.edu/lab/smce-prod-opensarlab/hub/user-redirect/lab/tree/conda\_environments/Create\_OSL\_Conda\_Environments.ipynb}{\texttt{/home/jovyan/conda\_environments/Create\_OSL\_Conda\_Environments.ipynb}}
+\item Run the notebook to select and build one of the available environments.\begin{itemize}
+\item Alternatively, the notebook allows you to point to a custom \texttt{environment.yml} that you provide.
+\end{itemize}
+\end{enumerate}
+
+\begin{framed}
+\textbf{Note}\\
+\begin{itemize}
+\item Once an environment is created and its kernel is registered, it may take another couple of minutes for Jupyter to recognize it and display it as an available kernel option.
+\item ASF has started migrating data recipes into Jupyter Books, which are organized collections of Jupyter Notebooks with an interactive table of contents. Each Jupyter Book includes a notebook to build any required conda environments. This can be run directly from the Jupyter Book, in which case there is no need to build an environment using the \texttt{/home/jovyan/conda\_environments/Create\_OSL\_Conda\_Environments.ipynb} described above.
+\end{itemize}
+\end{framed}
+
+\paragraph{Install Conda packages within a running notebook's environment}\label{Install-Conda-packages-within-a-running-notebooks-environment}
+
+\begin{enumerate}
+\item Run the following command in a code cell:
+\end{enumerate}
+
+\begin{verbatim}
+%mamba install -c conda -forge <package_name> - -yes
+\end{verbatim}
+
+\paragraph{Install Conda packages in an existing environment from the terminal}\label{Install-Conda-packages-in-an-existing-environment-from-the-terminal}
+
+\begin{enumerate}
+\item Open a terminal and run the following commands:
+\end{enumerate}
+
+\begin{verbatim}
+mamba activate <environment_name>
+mamba install <package_name>
+\end{verbatim}
+
+\begin{framed}
+\textbf{Avoid installing software in the \texttt{base} Conda environment}\\
+Packages installed in the \href{https://conda.io/projects/conda/en/latest/user-guide/getting-started.html\#managing-envs}{base conda environment} will not persist after an OpenScienceLab server shuts down. The \texttt{base} environment is located in a Docker container that will be replaced with a container using a freshly pulled copy of its image on server startup.
+
+We recommend installing Conda packages in non-base environments rather than in \texttt{base}. These environments are stored in the \texttt{{\textasciitilde}/.local/env} directory on persistent storage volumes and they will remain after the server restarts.
+\end{framed}
+
+
+\bigskip
+\centerline{\rule{13cm}{0.4pt}}
+\bigskip
+
+\subsubsection{pip}\label{pip}
+
+\href{https://pip.pypa.io/en/stable/}{\textit{pip}} is a package installer for Python.
+
+You can install \texttt{pip} packages onto your persistent volume in the following manner:
+
+\paragraph{Install \texttt{pip} packages inside of a Conda environment from the terminal}\label{install-pip-packages-inside-of-a-Conda-environment-from-the-terminal}
+
+\begin{enumerate}
+\item Open a terminal and use the following commands:
+\end{enumerate}
+
+\begin{verbatim}
+conda activate <environment_name>
+python -m pip install <package_name>
+\end{verbatim}
+
+\paragraph{Include pip packages in a Conda \texttt{environment.yml}}\label{Include-pip-packages-in-a-Conda-environment-yml}
+
+\begin{enumerate}
+\item Include \texttt{pip} in the dependency list
+\item Add a \texttt{pip} section to the bottom of the dependency list in an \texttt{environment.yaml}
+\end{enumerate}
+
+\begin{verbatim}
+name: environment name
+channels:
+  - conda -forge
+dependencies:
+  - package_1
+  - package_2
+  - package_3
+  - pip
+  - pip:
+    - pip_package_1
+    - pip_package_2
+\end{verbatim}
+
+\begin{framed}
+\textbf{We recommend against pip installations with the \texttt{--user} argument in OpenSARLab}\\
+This will install the package in your \texttt{/home/jovyan/.local/lib/python3.x/site-packages} directory and will supersede any installations of the same package in a Conda environment. This can cause issues and confusion when a user installs a specific required package version in a Conda environment, but a previously installed version in an unexpected location is used instead.
+\end{framed}
+
+
+\bigskip
+\centerline{\rule{13cm}{0.4pt}}
+\bigskip
+
+\subsubsection{apt and apt-get}\label{apt-and-apt-get}
+
+Users cannot install software in OpenScienceLab using \texttt{apt} or \texttt{apt-get}.

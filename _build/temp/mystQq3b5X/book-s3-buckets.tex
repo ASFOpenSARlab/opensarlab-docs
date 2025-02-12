@@ -1,0 +1,43 @@
+\subsubsection{Accessing S3 Buckets}
+
+\newline
+OpenScienceLab user servers typically run in AWS region \texttt{us-west-2}, which houses all public NASA data. This provides cheap, low-latency data access.
+
+You may access any public AWS S3 bucket or private bucket to which you have permission with either the \texttt{aws-cli} (command line interface) or \texttt{boto3} (Python package).
+
+\begin{framed}
+\textbf{Configure the AWS Client in your OpenScienceLab account for non-public bucket access.}\\
+\textit{Prerequisite: an AWS access key that provides access to the S3 bucket}
+
+\begin{enumerate}
+\item Open a terminal
+\item Run the command: \texttt{aws configure}
+\item When prompted, provide:\begin{itemize}
+\item \texttt{AWS Access Key ID}
+\item \texttt{AWS Secret Access Key}
+\item \texttt{Default region name}: ``us-west-2''
+\item \texttt{Default output format}: ``json''
+\end{itemize}
+\end{enumerate}
+\end{framed}
+
+\begin{framed}
+\textbf{Warning}\\
+If accessing a public S3 bucket anonymously, you must either:
+
+\begin{itemize}
+\item Provide the \texttt{--no-sign-request} argument to AWS-cli
+or
+\item Provide an \texttt{UNSIGNED} config to the boto3 S3 bucket resource:\begin{itemize}
+\item \texttt{s3 = boto3.resource('s3', config=Config(signature\_version=UNSIGNED))}
+\end{itemize}
+\end{itemize}
+\end{framed}
+
+\paragraph{Example Notebook Demonstrating S3 Bucket Access with \texttt{AWS-cli} and \texttt{boto3}}
+
+\href{https://github.com/ASFOpenSARlab/NISAR-Early-Adopters-Workshop-Oct-2024/blob/main/S3\_Buckets\_Upload\_Download.ipynb}{S3\_Buckets\_Upload\_Download.ipynb}
+
+\begin{verbatim}
+
+\end{verbatim}

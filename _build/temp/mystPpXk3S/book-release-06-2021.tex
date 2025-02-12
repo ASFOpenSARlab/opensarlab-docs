@@ -1,0 +1,112 @@
+\subsubsection{June 2021}
+
+Welcome to the June 2021 OpenSARlab Upgrade!
+
+\subparagraph{Changes:}
+
+\begin{itemize}
+\item conda environments \textbf{(BREAKING CHANGE ALERT: please read details below)}
+\item nbgitpuller patch
+\item installed jupyter-resource-usage
+\item profile identifier
+\end{itemize}
+
+\paragraph{Conda Environments}
+
+\subparagraph{What is conda and what are conda environments?}
+
+\href{https://docs.conda.io/en/latest/}{Conda} is an open-source package and environment manager. It identifies and attempts to handle dependency related issues when installing multiple software packages. Users create conda environments, in which multiple software packages may be installed. This allows a user to setup a variety of environments, each containing an assortment of software suited to a particular use-case. If a user needs to install software that would conflict with a previously installed package, they can create a new environment in which to install it and avoid the conflict. They can then switch between environments to handle various use-cases.
+
+\subparagraph{How did OpenSARlab use conda previously?}
+
+OpenSARlab previously had conda installed but it was only used as a package manager. Conda was not initialized.
+
+\subparagraph{What problems did this cause?}
+
+\begin{itemize}
+\item Not initializing conda made it difficult for users to create and use conda environments effectively
+\item All notebooks ran in the same environment, which involved a delicate balance of software installations, making the OpenSARlab docker image very brittle
+\item All user accounts had every package installed regardless of individual need, making the OpenSARlab docker image unnecessarily large and slow to build
+\item Changes to the conda environment made by users did not persist after server shutdowns
+\item Packages such as ISCE, MintPY, TRAIN, and ARIA-Tools were installed in an area to which users lacked access, making updates and development of those packages difficult
+\end{itemize}
+
+\subparagraph{What has changed?}
+
+\begin{itemize}
+\item All notebooks now run in one of 5 conda environments, each suited different use-cases\begin{itemize}
+\item rtc\_analysis
+\item insar\_analysis
+\item machine\_learning
+\item hydrosar
+\item Python 3 (the base conda environment containing minimal software)
+\end{itemize}
+
+
+\item Conda environments are stored in /home/jovyan/.local/envs\begin{itemize}
+\item this location is on the user volume, so changes persist after server restarts
+\end{itemize}
+
+
+\item New OpenSARlab users are prompted to select the environments they would like pre-built for them when signing up for an account\begin{itemize}
+\item unselected environments may always be added later
+\end{itemize}
+
+
+\item Current users must build their own environments using the provided \href{https://github.com/ASFOpenSARlab/opensarlab-envs/blob/main/Create\_OSL\_Conda\_Environments.ipynb}{notebook} and accompanying environment.yml files
+\item Python kernels from the appropriate environments have been pre-selected for all notebooks and saved in their metadata\begin{itemize}
+\item if the needed environment doesn't yet exist, users will be prompted to change the kernel to one that does
+\item Note that an incorrect environment will likely be missing needed software and be incapable of running a notebook for which it was not intended\begin{itemize}
+\item Instead, create the needed environment using this \href{https://github.com/ASFOpenSARlab/opensarlab-envs/blob/main/Create\_OSL\_Conda\_Environments.ipynb}{notebook}
+\end{itemize}
+\end{itemize}
+
+
+\item Code has been added to each notebook to check that it is running in the correct environment\begin{itemize}
+\item Warnings explain how to change to the correct environment if it has been created but the notebook isn't using it
+\item Warnings direct users to a \href{https://github.com/ASFOpenSARlab/opensarlab-envs/blob/main/Create\_OSL\_Conda\_Environments.ipynb}{notebook} to create the environment if it does not yet exist
+\end{itemize}
+
+
+\item There is also a minimal environment called ``scratch'' that is intended for user adaptation and experimentation\begin{itemize}
+\item This has been added for quick and easy access but users may add as many custom environments as they like
+\end{itemize}
+\end{itemize}
+
+\subparagraph{What will happen if I don't create any new environments?}
+
+You will encounter environment warnings in the notebooks. You will not have access to the software needed to run the notebooks, which will trigger errors (ModuleNotFoundError).
+
+\subparagraph{I don't want to wait for the notebooks to yell at me and give me environment warnings. How can I create the environments I'd like right now?}
+
+Good choice! Head over to \href{https://github.com/ASFOpenSARlab/opensarlab-envs/blob/main/Create\_OSL\_Conda\_Environments.ipynb}{Create\_OSL\_Conda\_Environments.ipynb} and run the notebook. You will be prompted to select an environment from a list of options. Rerun the notebook for every environment you wish to add.
+
+\paragraph{nbgitpuller Patch}
+
+\subparagraph{What is nbgitpuller?}
+
+\href{https://github.com/jupyterhub/nbgitpuller}{nbgitpuller} performs automatic merging of git repositories in a class-like setting. It handles merging in situations where instructor provided files may be edited both by students and/or the instructor. Its goal is to pull in an instructor's changes while preserving any edits a student has made. Where a conflict exists, it saves the student altered file with a timestamp appended to the filename and pulls in the instructor update.
+
+\subparagraph{What was wrong with nbgitpuller?}
+
+nbgitpuller did not successfully handle all scenarios encountered in OpenSARlab. When it failed, users were locked out of their accounts. They had to login using a purpose-built profile that would skip the nbgitpuller. They could then identify and manually rectify the git state that caused the nbgitpuller to fail.
+
+\subparagraph{How was this issue addressed?}
+
+We have populated user accounts with an altered version of nbgitpuller/pull.py
+
+\begin{itemize}
+\item The nbgitpuller will no longer attempt to checkout files that have been removed from a remote branch
+\item If the user has changed to a branch other than main in the \href{https://github.com/ASFOpenSARlab}{opensarlab-notebooks} git repository, the merge will be aborted
+\item Users can still merge other branches from the command line
+\end{itemize}
+
+\paragraph{Installed jupyter-resource-usage}
+
+\subparagraph{What is jupyter-resource-usage?}
+
+\href{https://github.com/jupyter-server/jupyter-resource-usage}{jupyter-resource-usage} is an extension that displays how much memory a notebook server is using. The information is displayed at the top-right of every running Jupyter Notebook. It indicates the total memory used by all running notebooks, kernels, terminals, etc.
+
+\paragraph{Added profile identifier}
+
+The name of the current profile now appears to the left of the ``Logout'' button on the home page.

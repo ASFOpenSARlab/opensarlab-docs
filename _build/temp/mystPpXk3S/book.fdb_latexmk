@@ -1,0 +1,12 @@
+# Fdb version 4
+["xdvipdfmx"] 1739391348 "book.xdv" "book.pdf" "book" 1739391348 2
+  "book.xdv" 0 -1 0 "xelatex"
+  (generated)
+  "book.pdf"
+  (rewritten before read)
+["xelatex"] 1739391348 "book.tex" "book.xdv" "book" 1739391348 2
+  (generated)
+  "book.aux"
+  "book.log"
+  "book.xdv"
+  (rewritten before read)

@@ -1,0 +1,138 @@
+\subsection{Build and Deploy: Cluster}
+
+\begin{enumerate}
+\item Build the docker images first based off \texttt{opensarlab-container}.
+
+
+\item Deploy the following in the same AWS account and region as the previous container images.
+
+
+\item Create new GitHub repo
+
+To organize repos, use the naming convention: \texttt{deployment-\{location/owner\}-\{maturity?\}-cluster}
+
+
+\item Copy canonical \texttt{opensarlab-cluster} and commit.
+
+Either copy/paste or use \texttt{git remote add github https://github.com/ASFOpenSARlab/opensarlab-cluster.git}
+
+Make sure any hidden files (like .gitignore, .yamllint, etc.) are properly copied.
+
+
+\item Within AWS add GitHub Connections. If done before, the app should show your GitHub app name.
+
+\href{https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create-github.html}{https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create-github.html}
+
+Make sure you are in the right region of your AWS account.
+
+Once Connections is setup, save the Connection arn for later.
+
+
+\item Remember to add the current GitHub repo to the Connection app
+
+GitHub \textgreater  Settings \textgreater  GitHub Apps \textgreater  AWS Connector for GitHub \textgreater  Repository Access
+
+Add GitHub repo
+
+
+\item Add a SSL certificate to AWS Certification Manager.
+
+You will need the ARN of the certificate.
+
+
+\item Update \texttt{opensciencelab.yaml} within the code. See explaination of the various parts \href{../opensciencelab\_yaml.md}{here}.
+
+
+\item Deploy the CloudFormation template found at \texttt{pipeline/cf-setup-pipeline.yaml}.
+
+Use the following parameters:
+
+\bigskip\noindent
+\begin{tabular}{p{\dimexpr 0.500\linewidth-2\tabcolsep}p{\dimexpr 0.500\linewidth-2\tabcolsep}}
+\toprule
+Parameter & Description \\
+\hline
+Stack name & The CloudFormation stack name. For readablity, append \texttt{-pipeline} to the end. \\
+CodeStarConnectionArn & The ARN of the Connection made eariler. \\
+CostTagKey & Useful if using billing allocation tags. \\
+CostTagValue & USeful if using billing allocation tags. Note that many resources will have this in their name for uniqueness. It needs to be short in length. \\
+GitHubBranchName & The branch name of the GitHub repo where the code resides. \\
+GitHubFullRepo & The GitHub repo name. Needs to be in the format \texttt{\{GitHub organization\}/\{GitHub repo\}} from \texttt{https://github.com/OrgName/RepoName}. \\
+ &  \\
+\bottomrule
+\end{tabular}
+
+\bigskipThe pipeline will take a few seconds to form.
+
+If the cloudformation stack fails to fully form it will need to be fully deleted and the template will need to be re-uploaded.
+
+
+\item The pipeline will start to build automatically in CodePipeline.
+
+A successful run will take about 12 minutes.
+
+If it takes signitifcantly less time then the build might have failed even if CodePipeline says successful.
+
+Sometimes the final buld stage will error with something like ``build role not found''. In this case, just retry the stage. There is sometimes a race condtion for AWS role creations.
+
+During the course of the build, other CloudFormation stacks will be created. One of these is for the cluster. Within Outputs will be the Load Balancer url which can be used within external DNS.
+
+
+\item Add the Portal SSO Token to Secrets Manager.
+
+Update \texttt{sso-token/\{region\}-\{cluster name\}}.
+
+
+\item Add deployment to Portal
+
+Update \texttt{labs.\{maturity\}.yaml} and re-build Portal.
+
+Within the Portal Access page, create lab sheet with the \texttt{lab\_short\_name} found in \texttt{opensciencelab.yaml}.
+
+Within the Portal Access page, add usernames and profiles as needed.
+
+
+\item Add CloudShell access
+
+From the AWS console, start CloudShell (preferably in it's own browser tab)
+
+CloudShell copy and paste are not shifted like a normal terminal. They are your normal keyboard operations.
+
+If needed, update default editor:
+
+\begin{itemize}
+\item Append to {\textasciitilde}/.bashrc the command \texttt{export EDITOR=vim}
+\end{itemize}
+
+Setup access to the K8s cluster
+
+\begin{itemize}
+\item From the AWS EKS page, get the cluster name for below.
+
+
+\item From the AWS IAM page, get the ARN of the role \texttt{\{region namwe\}-\{cluster name\}-user-full-access}
+
+
+\item On the CloudShell terminal, run \texttt{aws eks update-kubeconfig --name \{EKS clsuter name\} --role-arn \{role ARN\}}
+
+
+\item Run \texttt{kubectl get pods -A}. You should see any user and hub pods.
+\end{itemize}
+
+
+\item Bump the AutoScaling Groups
+
+For reasons unknown, fresh brand-new ASGs need to be ``primed'' by setting the desired number to one. JupyterHub's autoscaler will scale the groups back down to zero if there is no use. This normally has to only be done once.
+
+
+\item Start a JupyterLab server to make sure one works
+
+
+\item Within CloudShell, check the PVC and PV of the user volume. Make sure the K8s annotation \texttt{pv.kubernetes.io/provisioned-by: ebs.csi.aws.com} is present.
+
+If not, then the JupyterHub volume managment will fail and volumes will become orpaned upon lifecycle deletion.
+\end{enumerate}
+
+\subsubsection{Destroy OpenSARLab Cluster}
+
+To take down, consult \href{/destroy\_deployment-6f6158ca5a80c78044e8f318e61a1a66.md}{destroy deployment docs}

@@ -1,0 +1,16 @@
+name: opensarlab-docs
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - ghp-import
+  - texlive-core
+  - latexmk
+  - mystmd
+  - myst-nb
+  - myst-parser
+  - pip
+  - requests
+  - pip:
+      - jupyter-book==2.0.0a1
+  - python=3.12

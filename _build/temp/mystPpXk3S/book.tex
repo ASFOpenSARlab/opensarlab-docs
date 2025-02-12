@@ -1,0 +1,156 @@
+% Created with jtex v.1.0.20
+\documentclass[a4paper,11pt,oneside]{book}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{changepage}
+\usepackage{framed}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\bibliographystyle{abbrvnat}
+
+% Make list items more compact
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%  imports  %%%%%%%%%%%%%%%%%%%
+\usepackage{booktabs}
+\usepackage{url}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\hypersetup{
+  colorlinks,
+  linkcolor={black},
+  citecolor={black},
+  urlcolor={black}
+}
+
+% Style quotes
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
+\definecolor{quoteshade}{rgb}{0.95, 0.95, 1}
+\renewenvironment{quote}{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{darkblue}\vrule width 2pt}%
+    {\color{quoteshade}\vrule width 4pt}%
+    \colorbox{quoteshade}%
+  }%
+  \MakeFramed {\advance\hsize-\width \FrameRestore}%
+  \noindent\hspace{-8pt}% disable indenting first paragraph
+  \begin{adjustwidth}{0pt}{0pt}% adjust as needed
+  \vspace{2pt}\vspace{2pt}%
+}
+{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+\title{\Huge \textbf{OpenScienceLab Documentation}}
+\author{\textsc{The ASF Services Team}}
+
+\begin{document}
+\sloppy
+
+\frontmatter
+\maketitle
+
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+\mainmatter
+
+% \include{preface.tex}
+% \include{acknowledgements.tex}
+
+\section{Troubleshooting}
+
+\include{book-troubleshooting-guide}
+
+\section{User Guide}
+
+\include{book-access-toc}
+
+\include{book-opensciencelab-accounts}
+
+\include{book-opensarlab-accounts}
+
+\include{book-custom-deployment-access}
+
+\include{book-mfa}
+
+\include{book-reset-password}
+
+\include{book-jupyterlab-toc}
+
+\include{book-how-to-run-a-notebook}
+
+\include{book-jupyter-magic}
+
+\include{book-class-notebooks-best-practices}
+
+\include{book-jupyter-servers}
+
+\include{book-jupyter-kernels}
+
+\include{book-opensarlab-terminal}
+
+\include{book-logging-out-and-server-shutdown}
+
+\include{book-jupyterlab-extensions}
+
+\include{book-software}
+
+\include{book-storage-git-toc}
+
+\include{book-opensciencelab-storage}
+
+\include{book-s3-buckets}
+
+\include{book-git-in-opensarlab}
+
+\section{Developer Guide}
+
+\include{book-about-opensciencelab}
+
+\include{book-build-and-deploy-portal}
+
+\include{book-build-and-deploy-opensarlab-image}
+
+\include{book-build-and-deploy-opensarlab-cluster}
+
+\include{book-conda-environments}
+
+\include{book-notifications}
+
+\include{book-troubleshooting}
+
+\include{book-mintpy-conda}
+
+\section{Release Notes}
+
+\include{book-release-notes-toc}
+
+\include{book-release-06-2021}
+
+\include{book-release-10-2021}
+
+\include{book-release-02-2022}
+
+\include{book-release-02-2023}
+
+\include{book-release-02-2024}
+
+\include{book-release-12-2024}
+
+
+
+
+
+\end{document}

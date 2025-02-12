@@ -1,0 +1,72 @@
+\subsection{Build and Deploy: Container}
+
+\subsubsection{Setup Container Build in AWS}
+
+\begin{enumerate}
+\item Create AWS account if needed
+
+
+\item Gain GitHUb access if needed
+
+
+\item Create new GitHub repo
+
+To organize repos, use the naming convention: \texttt{deployment-\{location/owner\}-\{maturity?\}-container}
+
+
+\item Copy canonical \texttt{opensarlab-container} and commit
+
+Either copy/paste or use \texttt{git remote add github https://github.com/ASFOpenSARlab/opensarlab-container.git}
+
+
+\item Within AWS add GitHub Connections. If done before, the app should show your GitHub app name.
+
+\href{https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create-github.html}{https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create-github.html}
+
+Make sure you are in the right region of your AWS account.
+
+Once Connections is setup, save the Connection arn for later.
+
+
+\item Remember to add the current GitHub repo to the Connection app
+
+GitHub \textgreater  Settings \textgreater  GitHub Apps \textgreater  AWS Connector for GitHub \textgreater  Repository Access
+
+Add GitHub repo
+
+
+\item Within AWS CloudFormation, upload the template file \texttt{cf-container.yaml} and build.
+
+When prompted, use the Parameters:
+
+\bigskip\noindent
+\begin{tabular}{p{\dimexpr 0.500\linewidth-2\tabcolsep}p{\dimexpr 0.500\linewidth-2\tabcolsep}}
+\toprule
+Parameter & Description \\
+\hline
+Stack name & The CloudFormation stack name. For readablity, append \texttt{-pipeline} to the end. \\
+CodeStarConnectionArn & The ARN of the Connection made eariler. \\
+ContainerNamespace & The ECR prefix acting as a namespace for the images. This will be needed for the cluster's \texttt{opensarlab.yaml}. \\
+CostTagKey & Useful if using billing allocation tags. \\
+CostTagValue & USeful if using billing allocation tags. Note that many resources will have this in their name for uniqueness. It needs to be short in length. \\
+GitHubBranchName & The branch name of the GitHub repo where the code resides. \\
+GitHubFullRepo & The GitHub repo name. Needs to be in the format \texttt{\{GitHub organization\}/\{GitHub repo\}} from \texttt{https://github.com/OrgName/RepoName}. \\
+ &  \\
+\bottomrule
+\end{tabular}
+
+\bigskipThe pipeline will take a few seconds to form.
+
+If the cloudformation stack fails to fully form it will need to be fully deleted and the template will need to be re-uploaded.
+
+
+\item The pipeline will start to build automatically in CodePipeline.
+
+A successful run will take about 20 minutes.
+
+If it takes signitifcantly less time then the build might have failed even if CodePipeline says successful.
+\end{enumerate}
+
+\subsubsection{Destroy OpenSARLab Image Container}
+
+To take down, consult \href{/destroy\_deployment-6f6158ca5a80c78044e8f318e61a1a66.md}{destroy deployment docs}
