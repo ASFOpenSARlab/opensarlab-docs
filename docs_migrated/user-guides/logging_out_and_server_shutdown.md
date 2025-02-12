@@ -14,6 +14,7 @@ While it is wise to logout of your account for reasons related to security, it w
 
 ---
 
+(Why-Shut-Down-the-Server)=
 ## Why Shut Down the Server?
 
 Cloud computing is expensive.
@@ -27,12 +28,14 @@ overnight. It is acceptable for you to keep your server running in cases like th
 
 ---
 
+(How-to-Shut-Down-The-Server-and-Logout-in-Jupyter-Lab)=
 ## How to Shut Down The Server and Logout in Jupyter Lab
 
 See the [Jupyter Server Documentation](jupyter_servers.md)
 
 ---
 
+(How-to-Log-Out-of-OpenScienceLab)=
 ## How to Log Out of OpenScienceLab
 
 1. Select `Hub Control Panel` from the `File` menu.

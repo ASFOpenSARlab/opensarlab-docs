@@ -4,7 +4,7 @@
 format: jb-book
 root: index
 parts:
-  - caption: Troublshooting
+  - caption: Troubleshooting
     chapters:
       - file: user-guides/troubleshooting_guide
   - caption: User Guide

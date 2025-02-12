@@ -4,9 +4,9 @@
 OpenSARLab is a cloud-hosted JupyterHub configured for working with SAR data. It is deployed next to NASA data in AWS region us-west-2 for low-latency access to large SAR datasets.
 
 
-- [Access to OpenSARLab](Access-to-OpenSARLab)
-- [Account Lifecycle](Account-Lifecycle)
-- [OpenSARLab Environment](OpenSARLab-Environment)
+- [Access to OpenSARLab](#Access-to-OpenSARLab)
+- [Account Lifecycle](#Account-Lifecycle)
+- [OpenSARLab Environment](#OpenSARLab-Environment)
 
 ---
 

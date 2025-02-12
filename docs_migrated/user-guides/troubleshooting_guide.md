@@ -1,20 +1,21 @@
 # Troubleshooting Guide
 <br>
 
-- [Why don't any labs appear on the OpenScienceLab home page?](Why-don't-any-labs-appear-on-the-OpenScienceLab-home-page)
-- [Why did the kernel die while running a notebook?](Why-did-the-kernel-die-while-running-a-notebook)
-- [I successfully ran a notebook earlier on the same data but now it is killing the kernel.](I-successfully-ran-a-notebook-earlier-on-the-same-data-but-now-it-is-killing-the-kernel)
-- [I receive a `Kernel not found` message when I open a notebook.](I-receive-a-Kernel-not-found-message-when-I-open-a-notebook)
-- [My notebook won't open, opens slowly, or won't save.](My-notebook-won't-open-opens-slowly-or-won't-save)
-- [I am receiving a `No space left on device` error.](I-am-receiving-a-No-space-left-on-device-error)
-- [My server won't start and I cannot access OpenSARlab.](My-server-won't-start-and-I-cannot-access-OpenSARlab)
-- [The edits I made to an ASF notebook have disappeared since the last time I used OpenSARlab.](The-edits-I-made-to-an-ASF-notebook-have-disappeared-since-the-last-time-I-used-OpenSARlab)
-- [One of my notebooks looks like it has a mix of code from various versions of the notebook.](One-of-my-notebooks-looks-like-it-has-a-mix-of-code-from-various-versions-of-the-notebook)
-- [I am having trouble setting up a web server and developing my web app in OpenSARlab.](I-am-having-trouble-setting-up-a-web-server-and-developing-my-web-app-in-OpenSARlab)
-- [A notebook won't load. A new browser tab opens and shows the JupyterHub header, but no notebook appears.](A-notebook-won't-load-A-new-browser-tab-opens-and-shows-the-JupyterHub-header-but-no-notebook-appears)
-- [My issue is not on this list](My-issue-is-not-on-this-list)
+- [Why don't any labs appear on the OpenScienceLab home page?](#Why-dont-any-labs-appear-on-the-OpenScienceLab-home-page)
+- [Why did the kernel die while running a notebook?](#Why-did-the-kernel-die-while-running-a-notebook)
+- [I successfully ran a notebook earlier on the same data but now it is killing the kernel.](#I-successfully-ran-a-notebook-earlier-on-the-same-data-but-now-it-is-killing-the-kernel)
+- [I receive a `Kernel not found` message when I open a notebook.](#I-receive-a-Kernel-not-found-message-when-I-open-a-notebook)
+- [My notebook won't open, opens slowly, or won't save.](#My-notebook-wont-open-opens-slowly-or-wont-save)
+- [I am receiving a `No space left on device` error.](#I-am-receiving-a-No-space-left-on-device-error)
+- [My server won't start and I cannot access OpenSARlab.](#My-server-wont-start-and-I-cannot-access-OpenSARlab)
+- [The edits I made to an ASF notebook have disappeared since the last time I used OpenSARlab.](#The-edits-I-made-to-an-ASF-notebook-have-disappeared-since-the-last-time-I-used-OpenSARlab)
+- [One of my notebooks looks like it has a mix of code from various versions of the notebook.](#One-of-my-notebooks-looks-like-it-has-a-mix-of-code-from-various-versions-of-the-notebook)
+- [I am having trouble setting up a web server and developing my web app in OpenSARlab.](#I-am-having-trouble-setting-up-a-web-server-and-developing-my-web-app-in-OpenSARlab)
+- [A notebook won't load. A new browser tab opens and shows the JupyterHub header, but no notebook appears.](#A-notebook-wont-load-A-new-browser-tab-opens-and-shows-the-JupyterHub-header-but-no-notebook-appears)
+- [My issue is not on this list](#My-issue-is-not-on-this-list)
 
-(Why-don't-any-labs-appear-on-the-OpenScienceLab-home-page)=
+
+(Why-dont-any-labs-appear-on-the-OpenScienceLab-home-page)=
 ## Why don't any labs appear on the OpenScienceLab home page?
 
 You most likely have not yet configured Multi-Factor Authentication (MFA). While
@@ -71,7 +72,7 @@ The message that appears when an expected notebook kernel cannot be found
 
 ---
 
-(My-notebook-won't-open-opens-slowly-or-won't-save)=
+(My-notebook-wont-open-opens-slowly-or-wont-save)=
 ## My notebook won't open, opens slowly, or won't save.
 
 - These are all signs that the notebook contains a lot of output and is too large to easily open or save over the internet in OpenSARLab.
@@ -99,7 +100,7 @@ OpenSARLab users have access to a finite amount of storage space ([details here]
 
 ---
 
-(My-server-won't-start-and-I-cannot-access-OpenSARlab)=
+(My-server-wont-start-and-I-cannot-access-OpenSARlab)=
 ## My server won't start and I cannot access OpenSARlab.
 
 This issue is typically due either to an unexpected behavior of [nbgitpuller](https://jupyterhub.github.io/nbgitpuller/) or to having used up all space on your storage volume.
@@ -140,7 +141,7 @@ Notebook previously edited by user, now with a timestamp appended to the name: `
 
 ---
 
-(A-notebook-won't-load-A-new-browser-tab-opens-and-shows-the-JupyterHub-header-but-no-notebook-appears)=
+(A-notebook-wont-load-A-new-browser-tab-opens-and-shows-the-JupyterHub-header-but-no-notebook-appears)=
 ## A notebook won't load. A new browser tab opens and shows the JupyterHub header, but no notebook appears. 
 
 - This is due to slow loading time caused by a large notebook. 

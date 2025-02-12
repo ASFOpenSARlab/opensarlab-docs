@@ -32,8 +32,10 @@ Jupyter Notebooks provide an ideal file format for teaching/learning coding conc
 
 ---
 
+(Notebook-Cell-Types)=
 ## Notebook Cell Types
 
+(markdown-cells)=
 ### Markdown Cells
 
 Markdown cells contain documentation in Markdown, MyST Markdown, HTML, and/or LaTeX. They are often used to display text, images, hyperlinks, formulas, tables, pseudocode, plots, figures, etc. 
@@ -62,7 +64,7 @@ or
 A run markdown cell
 :::
 
-
+(code-cells)=
 ### Code Cells
 
 Code cells contain editable and runnable Python code. You can run them sequentially or in any order, once or any number of times.
@@ -83,14 +85,15 @@ While the ability to rerun the code cells in arbitrary order can be helpful, it 
 
 ---
 
+(How-to-Run-Jupyter-Notebooks)=
 ## How to Run Jupyter Notebooks
 
-
+(selecting-cells)=
 ### Selecting Cells
 
 Users may select cells individually or in a batch, and then run the selected cells.
 
-
+(Select-an-Individual-Cell)=
 #### Select an Individual Cell
 - Click anywhere inside a cell to select it.
 
@@ -98,7 +101,8 @@ Users may select cells individually or in a batch, and then run the selected cel
 
 A selected cell displays a blue vertical line on the left edge.
 :::
- 
+
+(Select-Multiple-Cells)=
 #### Select Multiple Cells
 1. Select a cell **by clicking to the left of the text box**
     -  Clicking inside the cell will select it but it will place you in text edit mode and you will not be able to select additonal cells. 
@@ -113,10 +117,12 @@ A selected cell displays a blue vertical line on the left edge.
 Selected cells will be surrounded by a blue background
 :::
 
+(Hide-Code-Cells)=
 ### Hide Code Cells
 
 You may occasionally wish to hide code cells to reduce clutter. 
 
+(Collapse-an-Individual-Cell)=
 #### Collapse an Individual Cell
 
 :::{figure} ../assets/collapse_code_cell.gif
@@ -124,11 +130,13 @@ You may occasionally wish to hide code cells to reduce clutter.
 You can hide an individual code cell by clicking the blue vertical line to the left of the code cell.
 :::
 
+(Collapse-Selected-Cells-or-All-Cells-in-a-Notebook)=
 #### Collapse Selected Cells or All Cells in a Notebook
 
 - Select some code cells and choose the menu option: `View` -> `Collapse Selected Code`
 - Select the menu option: `View` -> `Collapse All Code`
 
+(Hide-Sections-of-Code-Cells-beneath-a-Markdown-Cell)=
 #### Hide Sections of Code Cells beneath a Markdown Cell
 
 :::{figure} ../assets/collapse_cells_under_md.gif
@@ -137,7 +145,8 @@ Hide entire sections of code cells beneath a markdown cell by clicking the verti
 :::
 
 ---
- 
+
+(running-code-cells)=
 ## Running Code Cells
 Code cells may be executed in any order. A cell execution counter to the left of each code cell indicates the order in which the cells were run.
 
@@ -147,6 +156,7 @@ Code cells may be executed in any order. A cell execution counter to the left of
 The cell execution counter indicates the order in which code cells have run.
 :::
 
+(run-a-single-code-cell)=
 ### Run a Single Code Cell
 1. Select the cell you wish to run. 
 1. Do one of the following:
@@ -156,8 +166,10 @@ The cell execution counter indicates the order in which code cells have run.
     - `Alt + Enter` to run a cell and insert an empty cell below
 
 
+(Run-Multiple-Code-Cells)=
 ### Run Multiple Code Cells
 
+(Run-a-batch-of-selected-cells)=
 #### Run a batch of selected cells
 1. Select a group of cells.
 1. Do one of the following:
@@ -167,6 +179,7 @@ The cell execution counter indicates the order in which code cells have run.
     - `Alt + Enter` to run a cell and insert an empty cell below
 
 
+(Run-Every-Cell-Above-or-Below-a-Code-Cell)=
 #### Run Every Cell Above or Below a Code Cell
 
 Select a cell, then:
@@ -174,7 +187,7 @@ Select a cell, then:
 - Select the menu option: `Run` ->  `Run All Above Selected Cell`
 - Select the menu option: `Run` -> `Run Selected Cell and All Below`
 
-    
+(Run-an-Entire-Notebook)=
 #### Run an Entire Notebook
 
 If you wish to run every code cell in a notebook, you can do one of the following:
@@ -190,6 +203,7 @@ Rerunning a notebook without restarting the kernel preserves previously defined 
 
 ---
 
+(rerunning-a-notebook)=
 ### Rerunning a Notebook
 We recommend restarting the notebook kernel before rerunning it since any initialized variables and data structures from a previous run persist in memory along with their values, which can lead to unintended results.
 
@@ -204,6 +218,7 @@ It is easy to lose track of your position in a notebook if it contains code cell
   
 ---
 
+(clearing-cell-output-before-closing)=
 ## Clearing Cell Output Before Closing
 
 For large notebooks with a lot of plots and images, we recommend clearing all code cell output before closing or saving a notebook. Leaving the output in place can increase the file size of the notebook, which can cause slower notebook loading times (especially if you have a slow internet connection).

@@ -3,9 +3,9 @@
 
 In addition to running Python code, Jupyter Notebooks provide magic commands with various functions. We provide an introduction to a several, but many more are available. Plese see the [Jupyter Magics documentaion](https://ipython.readthedocs.io/en/stable/interactive/magics.html) for more information. 
 
-- [Shell Assignment Syntax](Shell-Assignment-Syntax)
-- [Line Magics](Line-Magics)
-- [Cell Magics](Cell-Magics)
+- [Shell Assignment Syntax](#Shell-Assignment-Syntax)
+- [Line Magics](#Line-Magics)
+- [Cell Magics](#Cell-Magics)
 
 ---
 

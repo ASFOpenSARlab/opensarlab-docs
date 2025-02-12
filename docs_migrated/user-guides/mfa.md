@@ -6,11 +6,11 @@ Multi-Factor Authentication (MFA) is required to access OpenScienceLab resources
 Currently, we support TOTP-based authentication, with plans to add hardware
 key (ex. Yubikey) authentication in future updates.
 
-- [Watch: Log In and Set Up MFA](Watch-Log-In-and-Set-Up-MFA)
-- [Before You Begin](Before-You-Begin)
-- [Setup Steps](Setup-Steps)
-- [Resetting MFA](Resetting-MFA)
-- [Troubleshooting](Troubleshooting)
+- [Watch: Log In and Set Up MFA](#Watch-Log-In-and-Set-Up-MFA)
+- [Before You Begin](#Before-You-Begin)
+- [Setup Steps](#Setup-Steps)
+- [Resetting MFA](#Resetting-MFA)
+- [Troubleshooting](#Troubleshooting)
 
 ---
 

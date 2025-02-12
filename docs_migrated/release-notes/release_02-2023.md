@@ -3,15 +3,15 @@
 Welcome to the February 2023 OpenScienceLab Update!
 
 ### Changes:
-- [OpenScienceLab](opensciencelab)
-- [Single Sign On](single-sign-on)
-- [Automatic Authentication](automatic-authentication)
-- [User Access](user-access)
-- [IP Filter](ip-filter)
-- [User Request](user-resquest)
-- [Multi Download](multi-download)
-- [Kernel Usage](kernel-usage)
-- [Recommended Jupyter Notebook Changes](recommended-jupyter-notebook-changes)
+- [OpenScienceLab](#opensciencelab)
+- [Single Sign On](#single-sign-on)
+- [Automatic Authentication](#automatic-authentication)
+- [User Access](#user-access)
+- [IP Filter](#ip-filter)
+- [User Request](#user-resquest)
+- [Multi Download](#multi-download)
+- [Kernel Usage](#kernel-usage)
+- [Recommended Jupyter Notebook Changes](#recommended-jupyter-notebook-changes)
 
 ---
 
@@ -64,6 +64,7 @@ Welcome to the February 2023 OpenScienceLab Update!
 
 
 ![kernel usage](../assets/kernel_usage.PNG)
+
 
 (recommended-jupyter-notebook-changes)=
 ## **Recommended Jupyter Notebook Changes**

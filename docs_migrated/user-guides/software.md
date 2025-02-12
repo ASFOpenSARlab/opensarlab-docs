@@ -1,13 +1,13 @@
 # Installing Software in a Lab
 
-- [Conda Environments](Conda-Environments)
-    - [Use an ASF-provided notebook and `environment.yml` to create a Conda environment](Use-an-ASF-provided-notebook-and-environment-yml-to-create-a-Conda-environment)
-    - [Install Conda packages within a running notebook's environment](Install-Conda-packages-within-a-running-notebook's-environment)
-    - [Install Conda packages in an existing environment from the terminal](Install-Conda-packages-in-an-existing-environment-from-the-terminal)
-- [pip](pip)
-    - [Install `pip` packages inside of a Conda environment from the terminal](install-pip-packages-inside-of-a-Conda-environment-from-the-terminal)
-    - [Include pip packages in a Conda `environment.yml`](Include-pip-packages-in-a-Conda-environment-yml)
-- [apt and apt-get](apt-and-apt-get)
+- [Conda Environments](#Conda-Environments)
+    - [Use an ASF-provided notebook and `environment.yml` to create a Conda environment](#Use-an-ASF-provided-notebook-and-environment-yml-to-create-a-Conda-environment)
+    - [Install Conda packages within a running notebook's environment](#Install-Conda-packages-within-a-running-notebooks-environment)
+    - [Install Conda packages in an existing environment from the terminal](#Install-Conda-packages-in-an-existing-environment-from-the-terminal)
+- [pip](#pip)
+    - [Install `pip` packages inside of a Conda environment from the terminal](#install-pip-packages-inside-of-a-Conda-environment-from-the-terminal)
+    - [Include pip packages in a Conda `environment.yml`](#Include-pip-packages-in-a-Conda-environment-yml)
+- [apt and apt-get](#apt-and-apt-get)
 
 ---
 
@@ -49,7 +49,7 @@ These environments are not pre-built; users must create their conda environments
 - ASF has started migrating data recipes into Jupyter Books, which are organized collections of Jupyter Notebooks with an interactive table of contents. Each Jupyter Book includes a notebook to build any required conda environments. This can be run directly from the Jupyter Book, in which case there is no need to build an environment using the `/home/jovyan/conda_environments/Create_OSL_Conda_Environments.ipynb` described above.
 :::
 
-(Install-Conda-packages-within-a-running-notebook's-environment)=
+(Install-Conda-packages-within-a-running-notebooks-environment)=
 ### Install Conda packages within a running notebook's environment
 1. Run the following command in a code cell:
    

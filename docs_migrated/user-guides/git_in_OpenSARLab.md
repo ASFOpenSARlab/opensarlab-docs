@@ -1,4 +1,4 @@
-# Git Best Practices
+# Git
 
 ## **Prerequisite** 
 

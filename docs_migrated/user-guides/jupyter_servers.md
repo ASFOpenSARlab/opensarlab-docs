@@ -22,6 +22,7 @@ Depending on the lab, users typically have access to multiple server profiles, d
 
 ---
 
+(What-happens-when-a-server-is-started)=
 ## What happens when a server is started?
 
 When a user starts a server, they are assigned a compute pod on a node in the lab's Kubernetes cluster. A Docker container runs JupyterLab on the pod and the user's volume is mounted. Next, a shell script runs making some final adjustments to the environment and updating any lab-provided Jupyter Notebook repositories with the notebook repository synching tool, `nbgitpuller`. Finally, the user accesses their server and Jupyter Lab instance via a web browser.
@@ -37,6 +38,7 @@ When a user starts a server, they are assigned a compute pod on a node in the la
 
 ---
 
+(How-to-Start-and-Stop-a-Server)=
 ## How to Start and Stop a Server
 
 :::{important} Please shut down you server after use 
