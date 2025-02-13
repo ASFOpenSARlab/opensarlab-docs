@@ -24,7 +24,7 @@ jobs:
       - name: Deploy test website
         shell: bash -l {0}
         run: |
-          cd docs
+          cd opensarlab-docs/docs
           if [ -f CNAME ]; then rm CNAME; fi
           myst build --all
           cd ..
