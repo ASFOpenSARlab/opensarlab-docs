@@ -24,18 +24,20 @@ jobs:
       - name: Deploy test website
         shell: bash -l {0}
         run: |
-      - name: Deploy test website
-        shell: bash -l {0}
-        run: |
-          cd opensarlab-docs
-          if [ -f docs/CNAME ]; then rm docs/CNAME; fi
-          jupyter-book build ./docs/myst.yml
+          cd docs
+          if [ -f CNAME ]; then rm CNAME; fi
+          myst build --all
+          cd ..
           git config user.email "github-actions@github.com"
           git config user.name "GitHub Actions"
           git fetch origin gh-pages
           git checkout gh-pages
-          git rm -rf .
-          cp -r _build/site/public/* .
-          git add .
-          git commit -m "Deploy updated Jupyter Book site"
+          mkdir -p opensarlab-docs
+          rm -rf opensarlab-docs/public
+          rm -rf opensarlab-docs/content
+          cp -r docs/_build/site/public opensarlab-docs
+          cp -r docs/_build/site/content opensarlab-docs
+          git add opensarlab-docs
+          git commit -m "Deploy updated dev site"
           git push origin gh-pages --force
+          

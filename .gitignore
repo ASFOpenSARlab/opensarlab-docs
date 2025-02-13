@@ -1,2 +1,4 @@
-docs_migrated/_build
 .ipynb_checkpoints/
+
+# MyST build outputs
+_build
