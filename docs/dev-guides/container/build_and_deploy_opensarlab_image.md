@@ -1,4 +1,4 @@
-# Build and Deploy OpenSARLab Image Container
+# Build and Deploy: Container
 
 ## Setup Container Build in AWS
 

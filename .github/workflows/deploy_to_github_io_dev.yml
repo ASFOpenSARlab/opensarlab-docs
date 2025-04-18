@@ -17,7 +17,7 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           auto-update-conda: true
-          python-version: 3.9
+          python-version: 3.12
           activate-environment: opensarlab-docs
           environment-file: opensarlab-docs/environment.yml
 
@@ -26,7 +26,6 @@ jobs:
         run: |
           cd opensarlab-docs
           # Remove conflicting CNAME for project site
-          rm docs/CNAME
-          # Set site URL for dev site
-          sed -i 's|site_url: https://opensarlab-docs.asf.alaska.edu/|site_url: https://opensarlab-docs.asf.alaska.edu/opensarlab-docs/|' mkdocs.yml
-          mkdocs gh-deploy --force
+          if [ -f docs/CNAME ]; then rm docs/CNAME; fi
+          jupyter-book build ./docs/myst.yml
+          ghp-import -n -p -f _build/site/public

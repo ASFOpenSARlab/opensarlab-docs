@@ -3,17 +3,13 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  - python=3.9
+  - texlive-core
+  - latexmk 
+  - mystmd
+  - myst-nb
+  - myst-parser      
   - pip
-  # For documentation
-  - mkdocs=1.5.3
-  - mkdocs-material=9.4.2
   - requests
   - pip:
       # For documentation
-      - mkdocs-asf-theme==0.3.0
-      - mkdocs-redirects
-      - mkdocs-section-index
-      - mkdocstrings
-      - mkdocstrings-python
-      - mkdocs-macros-plugin
+      - jupyter-book==1.0.0a1

@@ -1,4 +1,6 @@
-# Welcome to the February 2024 OpenScienceLab Update!
+# February 2024
+
+Welcome to the February 2024 OpenScienceLab Update!
 
 ### Changes:
 
@@ -6,6 +8,7 @@
 
 ---
 
+(multi-factor-authentication)=
 ## **Multi-Factor Authentication**
 
 - OpenScienceLab now requires users to set up Multi-Factor Authentication (MFA)
