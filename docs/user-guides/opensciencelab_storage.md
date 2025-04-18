@@ -11,7 +11,7 @@ Much of this ephemeral storage is locked down, and users cannot write to it.
 
 :::{warning} 
 
-Nothing written to directories above the user `home` directory (`/home/jovyan`) will persist across server restarts.
+Anything written to directories contained in the user `home` directory (`/home/jovyan`) will persist across server restarts. Anything written outside of `/home/jovyan` will be lost with a server restart.
 :::
 
 ---

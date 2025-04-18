@@ -18,11 +18,11 @@ parts:
         - file: user-guides/reset_password
       - file: user-guides/jupyterlab_toc
         sections:
+        - file: user-guides/jupyter_servers
+        - file: user-guides/jupyter_kernels
         - file: user-guides/how_to_run_a_notebook
         - file: user-guides/jupyter_magic
         - file: user-guides/class_notebooks_best_practices
-        - file: user-guides/jupyter_servers
-        - file: user-guides/jupyter_kernels
         - file: user-guides/opensarlab_terminal
         - file: user-guides/logging_out_and_server_shutdown
         - file: user-guides/jupyterlab_extensions
