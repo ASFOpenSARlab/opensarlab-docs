@@ -8,11 +8,13 @@
 
 ---
 
-## Provide a Pinned `environment.yml` to Build a Conda Environment
+## Also, Provide a Pinned `environment.yml` So Users Can Run the Notebook in the Expected Software Environment and Reduce the Chance of Dependency Conflicts 
 
 The open-source Python packages used in your Conda environments are routinely updated, often introducing breaking dependencies. If the `environment.yml` file does not pin packages to specific versions, the default behavior is to build the latest available versions. This can introduce new dependency conflicts at any time. 
 
 Even if you pin every package, there is still a risk that an `environment.yml` will no longer build correctly at some point. This can occur if one of its package versions is removed due to a security risk, legal issue, or the discovery of a critical error, though this is relatively rare.
+
+Provide both a pinned and an unpinned `environment.yml`. An unpinned or minimally pinned config is helpful if you need to make an environment update. A pinned `environment.yml` is very long, and the pinned packages will interfere with the Conda Package Manager's ability to find the latest complementary dependencies. It is much easier to start developing an environment update from a shorter unpinned config.  
 
 ### To reduce the chances of your `environment.yml` breaking over time, provide a pinned version to your users:
 1. Open a terminal.
@@ -26,7 +28,7 @@ Even if you pin every package, there is still a risk that an `environment.yml` w
 
 ---
 
-## Set The Notebook Metadata to Use the Correct Environment
+## Set the Notebook Metadata to Use the Correct Environment
 
 1. Open your notebook, change into your conda environment's kernel, and save the notebook.
 1. Push the update to your notebook repository.
@@ -76,7 +78,7 @@ A notebook successfully runs the instructor-provided code cells but crashes the 
 ### Why?
 - Users can run Jupyter Notebook code cells any number of times and in any order. If a code cell changes directories, there is no way to guarantee that the user will run it in the expected order, which can lead to unexpected behavior.
 
-:::{tip} Example (Don't do this)
+:::{warning} Example (Don't do this)
 
 Consider a code cell that creates a new directory, changes into it, and outputs a new file:
 ```Python
