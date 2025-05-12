@@ -1,0 +1,43 @@
+name: deploy-docs
+# Adapted from https://jupyterbook.org/en/stable/publish/gh-pages.html
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  deploy-book:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+    - uses: actions/checkout@v4
+
+    # Install dependencies
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: pip # Implicitly uses requirements.txt for cache key
+
+    - name: Install dependencies
+      run: make install-deps
+
+    # Build the book
+    - name: Build the book
+      run: |
+        make build
+
+    # Upload the book's HTML as an artifact
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: "_build/html"
+
+    # Deploy the book's HTML to GitHub Pages
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
