@@ -1,1 +1,1 @@
-jupyter-book=="1.0.4.post1"
+jupyter-book==1.0.4.post1
