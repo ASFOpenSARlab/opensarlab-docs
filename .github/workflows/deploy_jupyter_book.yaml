@@ -24,7 +24,7 @@ jobs:
         cache: pip # Implicitly uses requirements.txt for cache key
 
     - name: Install dependencies
-      run: make install-deps
+      run: make pip-install-deps
 
     # Build the book
     - name: Build the book
