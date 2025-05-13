@@ -2,6 +2,7 @@ name: deploy-docs
 # Adapted from https://jupyterbook.org/en/stable/publish/gh-pages.html
 
 on:
+  workflow_dispatch: {}
   push:
     tags:
       - "v*.*.*"
@@ -12,6 +13,8 @@ jobs:
     permissions:
       pages: write
       id-token: write
+    environment:
+      name: github-pages
 
     steps:
     - uses: actions/checkout@v4
