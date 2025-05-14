@@ -2,7 +2,8 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: OpenScienceLab Documentation
-author: The ASF Services Team
+author: The ASF Science Enabling Services Team
+copyright: 2025
 
 # Define the name of the latex output file for PDF builds
 latex:
