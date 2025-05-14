@@ -11,5 +11,5 @@ build:
 	jupyter-book build opensarlab-docs-jupyterbook
 
 .PHONY := local-deploy
-local-deploy:
+local-deploy: build
 	-python3 -m http.server -d opensarlab-docs-jupyterbook/_build/html
