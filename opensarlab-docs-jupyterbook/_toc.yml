@@ -5,7 +5,7 @@ format: jb-book
 root: index
 chapters:
  - file: user-guides/troubleshooting_guide
- - file: user
+ - file: user.md
    sections:
    - file: user-guides/mfa
    - file: user-guides/how_to_run_a_notebook
@@ -20,7 +20,7 @@ chapters:
    - file: user-guides/jupyter_notebook_extensions
    - file: user-guides/class_notebooks_best_practices
    - file: user-guides/logging_out_and_server_shutdown
- - file: dev
+ - file: dev.md
    sections:
    - file: dev-guides/about_opensciencelab
    - file: dev-guides/portal/build_and_deploy_portal
@@ -31,7 +31,7 @@ chapters:
    - file: dev-guides/portal/notifications
    - file: dev-guides/troubleshooting
    - file: dev-guides/container/mintpy_conda
- - file: release_notes
+ - file: release_notes.md
    sections:
    - file: release-notes/release_06-2021
    - file: release-notes/release_10-2021
