@@ -1,6 +1,4 @@
-[Return to Table of Contents](../user.md)
-
-# **Git in OpenScienceLab**
+# Git
 
 ## **Prerequisite** 
 

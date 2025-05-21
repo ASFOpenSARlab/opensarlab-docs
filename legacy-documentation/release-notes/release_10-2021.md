@@ -1,4 +1,6 @@
-# Welcome to the October 2021 OpenSARlab Upgrade!
+# October 2021
+
+Welcome to the October 2021 OpenSARlab Upgrade!
 
 ### Changes:
 - Pull in the [GEOS657_MRS repository](https://github.com/uafgeoteach/GEOS657_MRS)

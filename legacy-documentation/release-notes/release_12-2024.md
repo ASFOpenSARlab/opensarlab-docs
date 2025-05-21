@@ -1,4 +1,6 @@
-# Welcome to the February 2024 OpenScienceLab Update!
+# December 2024
+
+Welcome to the December 2024 OpenScienceLab Update!
 
 ### Changes:
 

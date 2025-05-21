@@ -1,0 +1,15 @@
+name: opensarlab-docs
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - texlive-core
+  - latexmk 
+  - mystmd
+  - myst-nb
+  - myst-parser      
+  - pip
+  - requests
+  - pip:
+      # For documentation
+      - jupyter-book==1.0.0a1

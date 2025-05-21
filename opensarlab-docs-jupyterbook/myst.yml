@@ -1,0 +1,63 @@
+version: 1
+project:
+  title: OpenScienceLab Documentation
+  authors:
+    - name: The ASF Services Team
+  github: ASFOpenSARlab/opensarlab-docs
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      output: exports/book.pdf
+  toc:
+    - file: index.md
+    - title: Troubleshooting
+      children:
+        - file: user-guides/troubleshooting_guide.md
+    - title: User Guide
+      children:
+        - file: user-guides/access_toc.md
+          children:
+            - file: user-guides/opensciencelab_accounts.md
+            - file: user-guides/opensarlab_accounts.md
+            - file: user-guides/custom_deployment_access.md
+            - file: user-guides/mfa.md
+            - file: user-guides/reset_password.md
+        - file: user-guides/jupyterlab_toc.md
+          children:
+            - file: user-guides/how_to_run_a_notebook.md
+            - file: user-guides/jupyter_magic.md
+            - file: user-guides/class_notebooks_best_practices.md
+            - file: user-guides/jupyter_servers.md
+            - file: user-guides/jupyter_kernels.md
+            - file: user-guides/opensarlab_terminal.md
+            - file: user-guides/logging_out_and_server_shutdown.md
+            - file: user-guides/jupyterlab_extensions.md
+        - file: user-guides/software.md
+        - file: user-guides/storage_git_toc.md
+          children:
+            - file: user-guides/opensciencelab_storage.md
+            - file: user-guides/s3_buckets.md
+            - file: user-guides/git_in_OpenSARLab.md
+    - title: Developer Guide
+      children:
+        - file: dev-guides/about_opensciencelab.md
+        - file: dev-guides/portal/build_and_deploy_portal.md
+        - file: dev-guides/container/build_and_deploy_opensarlab_image.md
+        - file: dev-guides/cluster/build_and_deploy_opensarlab_cluster.md
+        - file: dev-guides/container/conda_environments.md
+        - file: dev-guides/portal/notifications.md
+        - file: dev-guides/troubleshooting.md
+        - file: dev-guides/container/mintpy_conda.md
+    - title: Release Notes
+      children:
+        - file: release_notes_toc.md
+          children:
+            - file: release-notes/release_06-2021.md
+            - file: release-notes/release_10-2021.md
+            - file: release-notes/release_02-2022.md
+            - file: release-notes/release_02-2023.md
+            - file: release-notes/release_02-2024.md
+            - file: release-notes/release_12-2024.md
+site:
+  options: {}
+  template: book-theme

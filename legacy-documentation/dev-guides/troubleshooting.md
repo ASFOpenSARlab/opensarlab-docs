@@ -1,7 +1,7 @@
-[Return to Developer Guide](../dev.md)
+# Troubleshooting
 
-# A. Users #
-## 1. OSL Servers Time Out ##
+## A. Users
+### 1. OSL Servers Time Out ##
 
 **Problem**: An user's server consistently times out while other users have no difficulty starting a server.
 
