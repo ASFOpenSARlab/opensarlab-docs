@@ -49,16 +49,15 @@ project:
         - file: dev-guides/troubleshooting.md
         - file: dev-guides/container/mintpy_conda.md
     - title: Release Notes
+      file: release-notes/release_notes_toc.md
       children:
-        - file: release-notes/release_notes_toc.md
-          children:
-            - file: release-notes/release_06-2021.md
-            - file: release-notes/release_10-2021.md
-            - file: release-notes/release_02-2022.md
-            - file: release-notes/release_02-2023.md
-            - file: release-notes/release_02-2024.md
-            - file: release-notes/release_12-2024.md
-            - file: release-notes/release_07-2025.md
+        - file: release-notes/release_06-2021.md
+        - file: release-notes/release_10-2021.md
+        - file: release-notes/release_02-2022.md
+        - file: release-notes/release_02-2023.md
+        - file: release-notes/release_02-2024.md
+        - file: release-notes/release_12-2024.md
+        - file: release-notes/release_07-2025.md
 site:
   template: book-theme
   options: {
