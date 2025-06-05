@@ -59,5 +59,7 @@ project:
             - file: release-notes/release_02-2024.md
             - file: release-notes/release_12-2024.md
 site:
-  options: {}
   template: book-theme
+  options: {
+    logo_text: "ASF OpenScienceLab"
+  }
