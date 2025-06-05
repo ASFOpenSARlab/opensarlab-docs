@@ -2,6 +2,10 @@
 install-deps:
 	python3 -m pip install -r requirements.txt
 
+.PHONY := serve
+serve:
+	jupyter book start
+
 .PHONY := build
 build:
 	myst build --html
