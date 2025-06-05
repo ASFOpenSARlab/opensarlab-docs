@@ -11,7 +11,7 @@ Welcome to the February 2023 OpenScienceLab Update!
 - [User Request](#user-resquest)
 - [Multi Download](#multi-download)
 - [Kernel Usage](#kernel-usage)
-- [Recommended Jupyter Notebook Changes](#recommended-jupyter-notebook-changes)
+- [Recommended Jupyter Notebook Changes](#notebook-changes)
 
 ---
 
@@ -66,7 +66,7 @@ Welcome to the February 2023 OpenScienceLab Update!
 ![kernel usage](../assets/kernel_usage.PNG)
 
 
-(recommended-jupyter-notebook-changes)=
+(notebook-changes)=
 ## **Recommended Jupyter Notebook Changes**
 
 The following bullet points cover code changes you may need to make to your notebooks for them to work in JupyterLab:

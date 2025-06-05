@@ -50,7 +50,7 @@ project:
         - file: dev-guides/container/mintpy_conda.md
     - title: Release Notes
       children:
-        - file: release_notes_toc.md
+        - file: release-notes/release_notes_toc.md
           children:
             - file: release-notes/release_06-2021.md
             - file: release-notes/release_10-2021.md
@@ -58,6 +58,7 @@ project:
             - file: release-notes/release_02-2023.md
             - file: release-notes/release_02-2024.md
             - file: release-notes/release_12-2024.md
+            - file: release-notes/release_07-2025.md
 site:
   template: book-theme
   options: {
