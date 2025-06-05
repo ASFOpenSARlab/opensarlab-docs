@@ -1,15 +1,11 @@
-.PHONY := pip-install-deps
-pip-install-deps:
+.PHONY := install-deps
+install-deps:
 	python3 -m pip install -r requirements.txt
-
-.PHONY := conda-install-deps
-conda-install-deps:
-	conda install --file requirements.txt
 
 .PHONY := build
 build:
-	jupyter-book build opensarlab-docs-jupyterbook
+	myst build --html
 
 .PHONY := local-deploy
 local-deploy: build
-	-python3 -m http.server -d opensarlab-docs-jupyterbook/_build/html
+	-python3 -m http.server -d _build/html

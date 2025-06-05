@@ -1,1 +1,2 @@
-opensarlab-docs-jupyterbook/_build
+.ipynb_checkpoints/
+_build
