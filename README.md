@@ -3,8 +3,8 @@
 ## Deployment
 
 This repo is configured to deploy to GitHub Pages via the
-[`.github/workflows/deploy_pages.yml`](.github/workflows/deploy_pages.yml) Action, and
-includes a custom domain in the Pages settings in the repo.
+[`.github/workflows/deploy_jupyter_book.yaml`](.github/workflows/deploy_jupyter_book.yaml)
+Action, and includes a custom domain in the Pages settings in the repo.
 
 ## Development
 
