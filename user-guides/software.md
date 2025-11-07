@@ -16,7 +16,7 @@
 
 Users can install additional software in isolated Conda environments on their persistent storage volumes with [conda](https://conda.io/projects/conda/en/latest/index.html) or [mamba](https://github.com/mamba-org/mamba) (conda's faster reimplementation).
 
-OpenSARLab user images include a default `base` conda environment with a minimal amount of software installed. Users may create additional conda environments on their persistent user volumes to support workflows in Jupyter Notebooks or Python scripts.
+OpenScienceLab user images include a default `base` conda environment with a minimal amount of software installed. Users may create additional conda environments on their persistent user volumes to support workflows in Jupyter Notebooks or Python scripts.
 
 :::{note} ASF-provided Conda Environments
 
