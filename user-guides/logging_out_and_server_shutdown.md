@@ -19,7 +19,7 @@ While it is wise to logout of your account for reasons related to security, it w
 
 Cloud computing is expensive.
 
-Please help us keep OpenSARLab available to as many users as possible and reduce costs for custom lab owners by shutting down servers when they are not in use.
+Please help us keep OpenScienceLab available to as many users as possible and reduce costs for custom lab owners by shutting down servers when they are not in use.
 
 **In some instances, you may need to leave your server running. For example, you
 have a notebook performing a very time intensive analysis and wish to let it run

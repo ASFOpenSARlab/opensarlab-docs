@@ -8,7 +8,7 @@ As an OpenScienceLab user, you have limited access to third-party extensions.
 
 :::{note} Request an extension
 
-If you feel that OpenSARLab is lacking an important Jupyter Lab extension, please contact us to request it at <uaf-jupyterhub-asf@alaska.edu>
+If you feel that OpenScienceLab is lacking an important Jupyter Lab extension, please contact us to request it at <uaf-jupyterhub-asf@alaska.edu>
 
 If you would like an extension added to a custom lab, we will need approval from the lab owner before installing it.
 :::

@@ -13,7 +13,7 @@ In addition to running Python code, Jupyter Notebooks provide magic commands wit
 ## Shell Assignment Syntax
 
 
-In Jupyter Notebooks, the exclamation mark `!` allows users to run shell commands from inside a Jupyter Notebook code cell (`/bin/bash` in OpenSARLab).
+In Jupyter Notebooks, the exclamation mark `!` allows users to run shell commands from inside a Jupyter Notebook code cell (`/bin/bash` in OpenScienceLab).
 
 Simply start a line of code with `!` and it will run the command in a shell, using the Conda environment of the currently running Python kernel. 
 
