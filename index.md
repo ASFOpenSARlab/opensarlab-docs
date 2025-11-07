@@ -33,7 +33,6 @@ OpenSARLab alleviates some of the pitfalls commonly encountered when teaching so
 ## How is OpenSARLab different from Binder?
 
 - Authenticated user accounts
-- User group management 
 - Persistent user storage
 - Cost reducing storage management features
 - Customizable server resources (pick your EC2 size)
@@ -45,10 +44,6 @@ OpenSARLab alleviates some of the pitfalls commonly encountered when teaching so
 ### As a Paid Service Managed by Alaska Satellite Facility Enterprise
  
 Contact ASF-E (<uaf-jupyterhub-asf@alaska.edu>) to discuss options for setting up an OpenSARLab deployment to suit your needs.
-
-### Deploy OpenSARLab to Your Own AWS Account _(Coming Soon)_
-
-Take our publicly accessible codebase and create your own, self-managed deployments in Amazon AWS.
 
 ## Contact Us
 
