@@ -10,9 +10,7 @@ project:
       output: exports/book.pdf
   toc:
     - file: index.md
-    - title: Troubleshooting
-      children:
-        - file: user-guides/troubleshooting_guide.md
+    - file: user-guides/troubleshooting_guide.md
     - title: User Guide
       children:
         - file: user-guides/access_toc.md
