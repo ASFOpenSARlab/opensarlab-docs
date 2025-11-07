@@ -7,10 +7,10 @@
 - [I receive a `Kernel not found` message when I open a notebook.](#I-receive-a-Kernel-not-found-message-when-I-open-a-notebook)
 - [My notebook won't open, opens slowly, or won't save.](#My-notebook-wont-open-opens-slowly-or-wont-save)
 - [I am receiving a `No space left on device` error.](#I-am-receiving-a-No-space-left-on-device-error)
-- [My server won't start and I cannot access OpenSARlab.](#My-server-wont-start-and-I-cannot-access-OpenSARlab)
+- [My server won't start and I cannot access OpenScienceLab.](#My-server-wont-start-and-I-cannot-access-OpenScienceLab)
 - [The edits I made to an ASF notebook have disappeared since the last time I used OpenSARlab.](#The-edits-I-made-to-an-ASF-notebook-have-disappeared-since-the-last-time-I-used-OpenSARlab)
 - [One of my notebooks looks like it has a mix of code from various versions of the notebook.](#One-of-my-notebooks-looks-like-it-has-a-mix-of-code-from-various-versions-of-the-notebook)
-- [I am having trouble setting up a web server and developing my web app in OpenSARlab.](#I-am-having-trouble-setting-up-a-web-server-and-developing-my-web-app-in-OpenSARlab)
+- [I am having trouble setting up a web server and developing my web app in OpenScienceLab.](#I-am-having-trouble-setting-up-a-web-server-and-developing-my-web-app-in-OpenScienceLab)
 - [A notebook won't load. A new browser tab opens and shows the JupyterHub header, but no notebook appears.](#A-notebook-wont-load-A-new-browser-tab-opens-and-shows-the-JupyterHub-header-but-no-notebook-appears)
 - [My issue is not on this list](#My-issue-is-not-on-this-list)
 
@@ -90,22 +90,22 @@ Select `Restart Kernel and Clear All Outputs` from the `Kernel` menu and try sav
 (I-am-receiving-a-No-space-left-on-device-error)=
 ## I am receiving a `No space left on device` error.
 
-OpenSARLab users have access to a finite amount of storage space ([details here](OpenSARlab_environment.md)). 
+OpenScienceLab users have access to a finite amount of storage space ([details here](OpenSARlab_environment.md)). 
 
 **It is up to users to manage their storage**. 
 
-- If you receive a storage space warning while logged into OpenSARlab, it is highly recommended to free up your space immediately by deleting unnecessary files. If your server shuts down without any available space, it will not have enough space on your volume to restart again and you will be locked out of your account.
+- If you receive a storage space warning while logged into OpenScienceLab, it is highly recommended to free up your space immediately by deleting unnecessary files. If your server shuts down without any available space, it will not have enough space on your volume to restart again and you will be locked out of your account.
 
-- If you do get locked out from your account, contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
+- If you do get locked out from your account, contact an [OpenScienceLab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
 
 ---
 
-(My-server-wont-start-and-I-cannot-access-OpenSARlab)=
-## My server won't start and I cannot access OpenSARlab.
+(My-server-wont-start-and-I-cannot-access-OpenScienceLab)=
+## My server won't start and I cannot access OpenScienceLab.
 
 This issue is typically due either to an unexpected behavior of [nbgitpuller](https://jupyterhub.github.io/nbgitpuller/) or to having used up all space on your storage volume.
 
-Please contact an [OpenSARlab Administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
+Please contact an [OpenScienceLab Administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
 
 
 ---
@@ -134,10 +134,10 @@ Notebook previously edited by user, now with a timestamp appended to the name: `
 
 ---
 
-(I-am-having-trouble-setting-up-a-web-server-and-developing-my-web-app-in-OpenSARlab)=
-## I am having trouble setting up a web server and developing my web app in OpenSARlab.
+(I-am-having-trouble-setting-up-a-web-server-and-developing-my-web-app-in-OpenScienceLab)=
+## I am having trouble setting up a web server and developing my web app in OpenScienceLab.
 
-- This cannot be done in OpenSARlab. You will need to do this elsewhere.
+- This cannot be done in OpenScienceLab. You will need to do this elsewhere.
 
 ---
 
@@ -162,6 +162,6 @@ Notebook previously edited by user, now with a timestamp appended to the name: `
     - We are training it on SAR domain knowledge.
     - When questioned on a topic for which it lacks knowledge, it defaults to saying it doesn't know over generating hallucinations and providing inaccurate information
     - It is not yet available inside individual labs, only on the OpenScienceLab portal.
-- If the chatbot is unable to answer to your questions, please contact an [OpenSARlab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
+- If the chatbot is unable to answer to your questions, please contact an [OpenScienceLab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
 
 <!-- TODO: add documentation in regards to server timeouts -->

@@ -5,7 +5,7 @@ OpenSciencLabs are JupyterHubs running on Kubernetes clusters in the cloud. When
 
 Depending on the lab, users typically have access to multiple server profiles, designed to suit the needs of a given workflow. Cloud computing is expensive, so it important to select a server that is powerful enough while avoiding an oversized, wasteful configuration.
 
-:::{note} OpenSARLab offers 2 default server profiles
+:::{note} OpenScienceLab offers 2 default server profiles
 **m6a.large Server:**
 - RAM Guarantee: 5G
 - RAM limit: 8G
