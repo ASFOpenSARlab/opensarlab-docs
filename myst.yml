@@ -28,7 +28,6 @@ project:
             - file: user-guides/jupyter_servers.md
             - file: user-guides/jupyter_kernels.md
             - file: user-guides/opensarlab_terminal.md
-            - file: user-guides/logging_out_and_server_shutdown.md
             - file: user-guides/jupyterlab_extensions.md
         - file: user-guides/software.md
         - file: user-guides/storage_git_toc.md

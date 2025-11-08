@@ -45,6 +45,10 @@ When a user starts a server, they are assigned a compute pod on a node in the la
 
 Cloud computing is expensive. Keeping a dormant server running impacts the budget, reducing available funding for a lab and its users. Please act as a steward for you labs' resources by shutting down your servers when not in use. 
 :::
+:::{tip} Logging out of OpenScienceLab does not shutdown your lab servers.
+
+While it is wise to logout of your account for reasons related to security, it will not stop any lab servers you may have left running. They will continue to run in the background, accruing costs. Please shutdown all running servers before logging out. 
+:::
 
 ### Starting a Server
 
