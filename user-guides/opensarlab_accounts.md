@@ -25,7 +25,7 @@ ASF provides limited access to OpenSARLab.
 (Account-Lifecycle)=
 ## Account Lifecycle
 - Accounts will be deactivated on the **30th** day of inactivity.
-- Warning emails are sent to inactive users after **29**, **27**, and **24** days.
+- Warning emails are sent to inactive users after **24**, **27**, and **29** days.
 - The user volume and snapshot are **permanently destroyed** upon account deactivation.
 
 *Lifecycle periods for custom labs may differ.*

@@ -25,7 +25,7 @@ Assuming a lab has persistent storage, it occupies the user's `home` directory (
 :::{note} Storage in OpenSARLab
 
 - OpenSARLab users have access to 500GB of persistent storage
-- Persistent storage is permanently deleted after 30 days of inactivity. Warning emails are sent to inactive users after 29, 27, and 24 days.
+- Persistent storage is permanently deleted after 30 days of inactivity. Warning emails are sent to inactive users after 24, 27, and 29 days.
 :::
 
 :::{tip} Keep track of available persistent storage space with the storage monitor
