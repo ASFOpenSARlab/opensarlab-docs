@@ -16,7 +16,7 @@ project:
         - file: user-guides/access_toc.md
           children:
             - file: user-guides/opensciencelab_accounts.md
-            - file: user-guides/opensarlab_accounts.md
+            - file: user-guides/opensarlab.md
             - file: user-guides/custom_deployment_access.md
             - file: user-guides/mfa.md
             - file: user-guides/reset_password.md
