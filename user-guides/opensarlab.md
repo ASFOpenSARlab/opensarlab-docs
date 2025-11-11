@@ -5,7 +5,7 @@ OpenSARLab is a cloud-hosted JupyterHub configured for working with SAR data. It
 
 
 - [Access to OpenSARLab](#Access-to-OpenSARLab)
-- [Access Lifecycle](#Access-Lifecycle)
+- [Storage Lifecycle](#Storage-Lifecycle)
 - [OpenSARLab Environment](#OpenSARLab-Environment)
 
 ---
@@ -22,9 +22,9 @@ ASF provides limited access to OpenSARLab.
 :::
 
 ---
-(Access-Lifecycle)=
-## Access Lifecycle
-- Access will be revoked on the **30th** day of inactivity.
+(Storage-Lifecycle)=
+## Storage Lifecycle
+- User storage will be deleted on the **30th** day of inactivity.
 - Warning emails are sent to inactive users after **24**, **27**, and **29** days.
 - The user volume and snapshot are **permanently destroyed** upon access revocation.
 
