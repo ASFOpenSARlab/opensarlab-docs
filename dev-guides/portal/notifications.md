@@ -1,4 +1,9 @@
-# Create OpenScienceLab Notifications 
+> **Notice:** \
+> This documentation is *out of date* \
+> It is being retained for future reference and may become relevant again in the future \
+> **Last reviewed:** Nov 2025
+
+# [DEPRECATED] Create OpenScienceLab Notifications 
 
 1. Create a new event in your notification calendar
     1. The event title corresponds to the notification title
