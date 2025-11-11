@@ -1,11 +1,11 @@
-# OpenSARLab Accounts
+# OpenSARLab
 <br>
 
 OpenSARLab is a cloud-hosted JupyterHub configured for working with SAR data. It is deployed next to NASA data in AWS region us-west-2 for low-latency access to large SAR datasets.
 
 
 - [Access to OpenSARLab](#Access-to-OpenSARLab)
-- [Account Lifecycle](#Account-Lifecycle)
+- [Storage Lifecycle](#Storage-Lifecycle)
 - [OpenSARLab Environment](#OpenSARLab-Environment)
 
 ---
@@ -22,11 +22,11 @@ ASF provides limited access to OpenSARLab.
 :::
 
 ---
-(Account-Lifecycle)=
-## Account Lifecycle
-- Accounts will be deactivated on the **30th** day of inactivity.
+(Storage-Lifecycle)=
+## Storage Lifecycle
+- User storage will be deleted on the **30th** day of inactivity.
 - Warning emails are sent to inactive users after **24**, **27**, and **29** days.
-- The user volume and snapshot are **permanently destroyed** upon account deactivation.
+- The user volume and snapshot are **permanently destroyed** upon access revocation.
 
 *Lifecycle periods for custom labs may differ.*
 
