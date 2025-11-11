@@ -26,7 +26,7 @@ ASF provides limited access to OpenSARLab.
 ## Storage Lifecycle
 - User storage will be deleted on the **30th** day of inactivity.
 - Warning emails are sent to inactive users after **24**, **27**, and **29** days.
-- The user volume and snapshot are **permanently destroyed** upon access revocation.
+- The user volume and snapshot are **permanently destroyed** after the final day of inactivity in the lifecycle window.
 
 *Lifecycle periods for custom labs may differ.*
 
