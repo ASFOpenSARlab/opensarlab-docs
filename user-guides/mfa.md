@@ -73,10 +73,8 @@ This is currently a manual process. Please email us at [uaf-jupyterhub-admin@ala
     1. One of the codes was mis-typed.
     1. The secret was not properly put into the MFA application.
     1. The time on your device is not synchronized correctly (Or an incorrect time-zone is set).
-1. Test again with another two *consecutive* codes, and if the verification step fails
+1. Test again with another code, and if the verification step fails
     again, check that the OTP Secret on the page matches the secret in your application.
-1. If all else fails, refresh the page. This will generate a new code, which you
-    can then use to follow the same steps above.
 
 For additional issues and further troubleshooting, please email
 [uso@asf.alaska.edu](mailto:uso@asf.alaska.edu)
