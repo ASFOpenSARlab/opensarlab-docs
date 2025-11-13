@@ -63,7 +63,7 @@ there are also several desktop clients that provide this functionality.
 (Resetting-MFA)=
 ## Resetting MFA
 
-This is currently a manual process. Please email us at `uaf-jupyterhub-admin@alaska.edu` **from the account** that you need MFA resetting, and we'll get back to you shortly.
+This is currently a manual process. Please email us at [uaf-jupyterhub-admin@alaska.edu](mailto:uaf-jupyterhub-admin@alaska.edu) **from the email** of the account that you need MFA resetting, and we'll get back to you shortly.
 
 ---
 (Troubleshooting)=
