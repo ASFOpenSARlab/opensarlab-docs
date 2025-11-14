@@ -1,4 +1,6 @@
 version: 1
+extends:
+  - https://raw.githubusercontent.com/ASFOpenSARlab/asf-myst-config/main/asf_myst.yml
 project:
   title: OpenScienceLab Documentation
   authors:
