@@ -1,6 +1,6 @@
 # Contents of `opensciencelab.yaml`
 
-Schema for the egress config can be found [../egress_config.md](here).
+Schema for the egress config can be found [here](./egress_config.md).
 
 ```yaml
 ---

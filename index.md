@@ -10,7 +10,7 @@ While OpenScienceLab was designed with SAR data science in mind, it is not limit
 development scenario involving large datasets and/or the need for complicated development environments
 can benefit from working in an OpenScienceLab deployment.
 
-[Sign in or create an account to try OpenScienceLab](https://opensarlab.asf.alaska.edu/hub/login)
+[Sign in or create an account to try OpenScienceLab](https://opensciencelab.asf.alaska.edu/)
 
 ## How will OpenScienceLab benefit my work as a SAR scientist?
 OpenScienceLab addresses the following issues that often arise when developing SAR data science techniques, especially in

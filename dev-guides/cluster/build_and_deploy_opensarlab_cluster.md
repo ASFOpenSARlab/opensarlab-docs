@@ -32,7 +32,7 @@
 
     You will need the ARN of the certificate.
 
-1. Update `opensciencelab.yaml` within the code. See explaination of the various parts [here](../opensciencelab_yaml.md). 
+1. Update `opensciencelab.yaml` within the code. See explaination of the various parts [here](./opensciencelab_yaml.md). 
 
 1. Deploy the CloudFormation template found at `pipeline/cf-setup-pipeline.yaml`.
 
@@ -107,4 +107,4 @@
 
 ## Destroy OpenSARLab Cluster
 
-To take down, consult [destroy deployment docs](../destroy_deployment.md)
+To take down, consult {doc}`SUPER destroy deployment docs<../destroy_deployment>`

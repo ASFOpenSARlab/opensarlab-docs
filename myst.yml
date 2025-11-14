@@ -47,6 +47,7 @@ project:
         - file: dev-guides/portal/notifications.md
         - file: dev-guides/troubleshooting.md
         - file: dev-guides/container/mintpy_conda.md
+        - file: dev-guides/destroy_deployment.md
     - title: Release Notes
       file: release-notes/release_notes_toc.md
       children:

@@ -1,5 +1,3 @@
-[Return to Developer Guide](../dev.md)
-
 # **Destroy Deployments**
 
 It is essential to destroy a deployment at the end of its life cycle so that no resources are left in place. With a proper destruction procedure, one can mitigate the accrued cost of AWS. 

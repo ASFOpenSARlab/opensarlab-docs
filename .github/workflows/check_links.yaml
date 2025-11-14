@@ -1,0 +1,16 @@
+name: check-links
+
+permissions:
+  contents: read
+
+on:
+  pull_request: {}
+  workflow_dispatch: {}
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: lycheeverse/lychee-action@v2

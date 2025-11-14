@@ -55,7 +55,7 @@ Every OpenSARLab user has access to a JupyterHub server running on an AWS EC2 in
 
 - *500GB of EBS volume storage per user. 
 
-OpenSARLab uses [Amazon AWS EBS volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes.html) mounted on user servers' home directories for persistent storage. 
+OpenSARLab uses [Amazon AWS EBS volumes](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes.html) mounted on user servers' home directories for persistent storage. 
 
 - If a volume is full when a user shuts down their server, it will trigger an `out-of-storage exception` that will prevent users from starting a server again.
   - Please contact an [OpenScienceLab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) if this occurs.
