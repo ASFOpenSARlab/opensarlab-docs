@@ -47,7 +47,7 @@ The message that appears when a notebook kernel dies
 (I-successfully-ran-a-notebook-earlier-on-the-same-data-but-now-it-is-killing-the-kernel)=
 ## I successfully ran a notebook earlier on the same data but now it is killing the kernel.
 
-- OpenSARLab EC2 instances are shared among 1~3 users. The memory available to each user depends on overall activity on the EC2. It is likely that there was enough memory available for your process before, but not enough memory during later attempt(s). More details on the OpenSARLab user environment can be found [here](OpenSARLab_environment.md).
+- OpenSARLab EC2 instances are shared among 1~3 users. The memory available to each user depends on overall activity on the EC2. It is likely that there was enough memory available for your process before, but not enough memory during later attempt(s). More details on the OpenSARLab user environment can be found [here](opensarlab.md).
 
 ---
 
@@ -90,7 +90,7 @@ Select `Restart Kernel and Clear All Outputs` from the `Kernel` menu and try sav
 (I-am-receiving-a-No-space-left-on-device-error)=
 ## I am receiving a `No space left on device` error.
 
-OpenScienceLab users have access to a finite amount of storage space ([details here](OpenSARlab_environment.md)). 
+OpenScienceLab users have access to a finite amount of storage space ([details here](opensarlab.md)). 
 
 **It is up to users to manage their storage**. 
 
@@ -103,7 +103,7 @@ OpenScienceLab users have access to a finite amount of storage space ([details h
 (My-server-wont-start-and-I-cannot-access-OpenScienceLab)=
 ## My server won't start and I cannot access OpenScienceLab.
 
-This issue is typically due either to an unexpected behavior of [nbgitpuller](https://jupyterhub.github.io/nbgitpuller/) or to having used up all space on your storage volume.
+This issue is typically due either to an unexpected behavior of [nbgitpuller](https://nbgitpuller.readthedocs.io/en/latest/) or to having used up all space on your storage volume.
 
 Please contact an [OpenScienceLab Administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
 
@@ -113,7 +113,7 @@ Please contact an [OpenScienceLab Administrator](mailto:uaf-jupyterhub-asf@alask
 (The-edits-I-made-to-an-ASF-notebook-have-disappeared-since-the-last-time-I-used-OpenSARlab)=
 ## The edits I made to an ASF notebook have disappeared since the last time I used OpenSARlab.
 
-- When your OpenSARlab server starts up, `nbgitpuller` runs and pulls in any updates made to the [asf-jupyter-notebooks](https://github.com/asfadmin/asf-jupyter-notebooks) and other Jupyter Book GitHub repositories provided in OpenSARLab. If a change has been made to a notebook by both the user and the author, both changes will be saved. The author's updated version will retain its original name while the user's version will have a timestamp appended to its name. 
+- When your OpenSARlab server starts up, `nbgitpuller` runs and pulls in any updates made to the [asf-jupyter-notebooks](https://github.com/ASFOpenSARlab/opensarlab-notebooks) and other Jupyter Book GitHub repositories provided in OpenSARLab. If a change has been made to a notebook by both the user and the author, both changes will be saved. The author's updated version will retain its original name while the user's version will have a timestamp appended to its name. 
 
 :::{tip} Example file naming format for updated notebooks synched with `nbgitpuller`
 
@@ -130,7 +130,7 @@ Notebook previously edited by user, now with a timestamp appended to the name: `
 (One-of-my-notebooks-looks-like-it-has-a-mix-of-code-from-various-versions-of-the-notebook)=
 ## One of my notebooks looks like it has a mix of code from various versions of the notebook.
 
-- We have seen this happen occasionally and it is caused by [nbgitpuller](https://jupyterhub.github.io/nbgitpuller/). The best option is to delete the notebook and [restart your OpenSARlab server](restarting_server_and_kernel.md). The notebook will be replaced with a fresh copy from its nbgitpuller-managed repository. 
+- We have seen this happen occasionally and it is caused by [nbgitpuller](https://nbgitpuller.readthedocs.io/en/latest/). The best option is to delete the notebook and restart your OpenSARlab server. The notebook will be replaced with a fresh copy from its nbgitpuller-managed repository. 
 
 ---
 

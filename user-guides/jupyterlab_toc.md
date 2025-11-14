@@ -6,5 +6,4 @@
 - [JupyterLab Servers](jupyter_servers.md)
 - [Jupyter Notebook Kernels](jupyter_kernels.md)
 - [Jupyter Terminal](opensarlab_terminal.md)
-- [Server/Logout Shutdown Best Practices](logging_out_and_server_shutdown.md)
 - [JupyterLab Extensions](jupyterlab_extensions.md)

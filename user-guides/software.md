@@ -14,7 +14,7 @@
 (Conda-Environments)=
 ## Conda Environments
 
-Users can install additional software in isolated Conda environments on their persistent storage volumes with [conda](https://conda.io/projects/conda/en/latest/index.html) or [mamba](https://github.com/mamba-org/mamba) (conda's faster reimplementation).
+Users can install additional software in isolated Conda environments on their persistent storage volumes with [conda](https://docs.conda.io/projects/conda/en/latest/index.html) or [mamba](https://github.com/mamba-org/mamba) (conda's faster reimplementation).
 
 OpenScienceLab user images include a default `base` conda environment with a minimal amount of software installed. Users may create additional conda environments on their persistent user volumes to support workflows in Jupyter Notebooks or Python scripts.
 
@@ -68,7 +68,7 @@ mamba install <package_name>
 
 :::{warning} Avoid installing software in the `base` Conda environment
 
-Packages installed in the [base conda environment](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-envs) will not persist after an OpenScienceLab server shuts down. The `base` environment is located in a Docker container that will be replaced with a container using a freshly pulled copy of its image on server startup. 
+Packages installed in the [base conda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-envs) will not persist after an OpenScienceLab server shuts down. The `base` environment is located in a Docker container that will be replaced with a container using a freshly pulled copy of its image on server startup. 
 
 We recommend installing Conda packages in non-base environments rather than in `base`. These environments are stored in the `~/.local/env` directory on persistent storage volumes and they will remain after the server restarts.
 :::
