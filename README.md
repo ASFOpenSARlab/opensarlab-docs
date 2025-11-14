@@ -27,3 +27,14 @@ directory.
 
 Links between pages will be broken, but adding `.html` to the end of the url should
 render the page.
+
+The intention of `make local-deploy` is to precisely mimic the behaviour of the
+deployment action in case there's something broken that doesn't show up with `make serve`.
+
+### Development Workflow
+
+While developing locally, run `make serve` in the background and watch the local Jupyter
+Book server for updates as you work (the Book will update when you save!). Once you've
+completed the work, run `make local-deploy` to check that the actual content that will
+be served on the Pages site looks as you expect, then open your PR to be reviewed and
+merged.
