@@ -37,6 +37,7 @@ project:
             - file: user-guides/opensciencelab_storage.md
             - file: user-guides/s3_buckets.md
             - file: user-guides/git_in_OpenSARLab.md
+        - file: user-guides/v2-migration.md
     - title: Developer Guide
       children:
         - file: dev-guides/about_opensciencelab.md
