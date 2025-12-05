@@ -12,8 +12,9 @@ Action, and includes a custom domain in the Pages settings in the repo.
 
 ### Local Development
 
-Create a virtual environment with the tool of your choice, then you can install the
-dependencies (from `requirements.txt`) with `make install-deps`.
+With [`mamba`](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html)
+installed, `make install-deps` will create a local environment `docs` with all the
+dependencies installed.
 
 `make serve` will start a Jupyter Book server, which includes hot reload on file save,
 so after you open the local server page in your browser, saving a file will
