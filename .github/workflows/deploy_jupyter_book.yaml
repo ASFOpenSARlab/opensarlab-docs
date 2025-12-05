@@ -22,28 +22,27 @@ concurrency:
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v5
+    - uses: actions/setup-python@v6
       with:
-        python-version: '3.11'
-        cache: pip # Implicitly uses requirements.txt for cache key
+        python-version: '3.14'
 
-    - name: Install dependencies
-      run: make install-deps
+    - uses: mamba-org/setup-micromamba@v2
+      with:
+        environment-file: environment.yaml
 
-    - name: Build the book
-      run: |
-        make build
+    - run: make build
 
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
+    - uses: actions/upload-pages-artifact@v4
       with:
         path: "_build/html"
 
