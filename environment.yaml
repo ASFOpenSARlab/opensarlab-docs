@@ -3,5 +3,6 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
+  - python==3.14
   - jupyter-book==2.1.0
   - mystmd==1.7.0
