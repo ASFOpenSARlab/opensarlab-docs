@@ -6,7 +6,9 @@ December 8th, 2025.
 
 1. On the day of the migration, you will receive this email:  
 
-    ![](../assets/osl-temp-email.png)  
+    ```{image} ../assets/osl-temp-email.png
+    :width: 642
+    ```
     Clicking the link will take you to the new OpenScienceLab landing page.
 
 1. On the OpenScienceLab landing page, click the log in button:
