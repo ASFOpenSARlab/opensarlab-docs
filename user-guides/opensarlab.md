@@ -16,6 +16,7 @@ OpenSARLab is a cloud-hosted JupyterHub configured for working with SAR data. It
 ASF provides limited access to OpenSARLab. 
 - NASA-affiliates are granted access upon [request](mailto:uso@asf.alaska.edu?subject=NASA-affiliate%20OSL%20access%20request).
 - All others may apply for access by completing the [OpenSARLab Access Application](https://forms.gle/LNBCwe8JohYitvfy6).
+  - Applications are reviewed weekly.
 
 :::{dropdown} [OpenSARLab Access Application](https://forms.gle/LNBCwe8JohYitvfy6)
 :::{iframe} https://forms.gle/LNBCwe8JohYitvfy6
