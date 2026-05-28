@@ -1,36 +1,33 @@
 # Notebook Development Best Practices
 <br>
 
-## Provide a Conda Environment Capable of Running the Notebooks
+## Provide a Pixi Environment Capable of Running the Notebooks
 
-- Include an `environment.yml` in your GitHub repository that can be used to build a Conda environment that supports the notebook.
+- Include a `pixi.toml` in your GitHub repository that can be used to build a Pixi environment that supports the notebook.
+    - Alternatively you can provide an `environment.yml` to build a Conda environment.
 - Learn how to [Install software in a lab](software.md).
 
 ---
 
-## Also, Provide a Pinned `environment.yml` So Users Can Run the Notebook in the Expected Software Environment and Reduce the Chance of Dependency Conflicts 
+## Also, Provide a Pinned `pixi.lock` So Users Can Run the Notebook in the Expected Software Environment and Reduce the Chance of Dependency Conflicts 
 
-The open-source Python packages used in your Conda environments are routinely updated, often introducing breaking dependencies. If the `environment.yml` file does not pin packages to specific versions, the default behavior is to build the latest available versions. This can introduce new dependency conflicts at any time. 
+The open-source Python packages used in your Pixi environments are routinely updated, often introducing breaking dependencies. If the `pixi.lock` (or`environment.yml` if using Conda) file does not pin packages to specific versions, the default behavior is to build the latest available versions. This can introduce new dependency conflicts at any time. 
 
-Even if you pin every package, there is still a risk that an `environment.yml` will no longer build correctly at some point. This can occur if one of its package versions is removed due to a security risk, legal issue, or the discovery of a critical error, though this is relatively rare.
+Even if you pin every package, there is still a risk that a `pixi.lock` will no longer build correctly at some point. This can occur if one of its package versions is removed due to a security risk, legal issue, or the discovery of a critical error, though this is relatively rare.
 
-Provide both a pinned and an unpinned `environment.yml`. An unpinned or minimally pinned config is helpful if you need to make an environment update. A pinned `environment.yml` is very long, and the pinned packages will interfere with the Conda Package Manager's ability to find the latest complementary dependencies. It is much easier to start developing an environment update from a shorter unpinned config.  
+Provide both a pinned `pixi.lock` and an unpinned `pixi.toml`. An unpinned or minimally pinned config is helpful if you need to make an environment update. A pinned `pixi.lock` is very long, and the pinned packages will interfere with the Pixi Package Manager's ability to find the latest complementary dependencies. It is much easier to start developing an environment update from a shorter unpinned config.  
 
-### To reduce the chances of your `environment.yml` breaking over time, provide a pinned version to your users:
+### To reduce the chances of your `pixi.toml` breaking over time, provide a pinned version to your users:
 1. Open a terminal.
-2. Create the conda environment if it does not yet exist.
-3. Run the command `mamba env export -n your_environement_name > environement.yml`
-4. Open the newly created `environment.yml` in a text editor.
-5. Remove the `prefix` line at the bottom of the file
-    - `prefix` is the path to the environment on your system, which will likely differ between users.
-6. Save the file.
-7. Push the file to your notebook repository.  
+1. Navigate to the folder with your `pixi.toml` file
+1. Run `pixi shell`
+1. Push the created `pixi.lock` file to your notebook repository.  
 
 ---
 
 ## Set the Notebook Metadata to Use the Correct Environment
 
-1. Open your notebook, change into your conda environment's kernel, and save the notebook.
+1. Open your notebook, change into your pixi environment's kernel, and save the notebook.
 1. Push the update to your notebook repository.
 1. When users clone your repository, the notebooks will automatically use the correct kernel (as long as the required environment has been created).
 
