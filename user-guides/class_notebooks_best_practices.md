@@ -11,7 +11,7 @@
 
 ## Also, Provide a Pinned `pixi.lock` So Users Can Run the Notebook in the Expected Software Environment and Reduce the Chance of Dependency Conflicts 
 
-The open-source Python packages used in your Pixi environments are routinely updated, often introducing breaking dependencies. If the `pixi.lock` (or`environment.yml` if using Conda) file does not pin packages to specific versions, the default behavior is to build the latest available versions. This can introduce new dependency conflicts at any time. 
+The open-source Python packages used in your Pixi environments are routinely updated, often introducing breaking dependencies. If the `pixi.lock` (or `environment.yml` if using Conda) file does not pin packages to specific versions, the default behavior is to build the latest available versions. This can introduce new dependency conflicts at any time. 
 
 Even if you pin every package, there is still a risk that a `pixi.lock` will no longer build correctly at some point. This can occur if one of its package versions is removed due to a security risk, legal issue, or the discovery of a critical error, though this is relatively rare.
 
