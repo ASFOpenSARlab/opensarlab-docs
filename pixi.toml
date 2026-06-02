@@ -1,0 +1,12 @@
+[workspace]
+authors = ["ASFOpenSARLab <uaf-jupyterhub-asf@alaska.edu>"]
+channels = ["conda-forge", "nodefaults"]
+name = "docs"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+jupyter-book = "==2.1.0"
+mystmd = "==1.7.0"

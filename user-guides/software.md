@@ -1,5 +1,9 @@
 # Installing Software in a Lab
 
+- [Pixi Environments](#Pixi-Environments)
+    - [Use an ASF-provided notebook and `pixi.toml` to create a Pixi environment](#Use-an-ASF-provided-notebook-and-environment-yml-to-create-a-Pixi-environment)
+    - [Install Pixi packages within a running notebook's environment](#Install-Pixi-packages-within-a-running-notebooks-environment)
+    - [Install Pixi packages in an existing environment from the terminal](#Install-Pixi-packages-in-an-existing-environment-from-the-terminal)
 - [Conda Environments](#Conda-Environments)
     - [Use an ASF-provided notebook and `environment.yml` to create a Conda environment](#Use-an-ASF-provided-notebook-and-environment-yml-to-create-a-Conda-environment)
     - [Install Conda packages within a running notebook's environment](#Install-Conda-packages-within-a-running-notebooks-environment)
@@ -11,8 +15,47 @@
 
 ---
 
+(Pixi-Environments)=
+## Pixi Environments
+
+(Use-an-ASF-provided-notebook-and-environment-yml-to-create-a-Pixi-environment)=
+### Use an ASF-provided notebook and `pixi.toml` to create a Pixi environment
+
+1. Open the following notebook: [`/home/jovyan/conda_environments/Create_OSL_Pixi_Environments.ipynb`](https://opensciencelab.asf.alaska.edu/lab/smce-prod-opensarlab/hub/user-redirect/lab/tree/conda_environments/Create_OSL_Pixi_Environments.ipynb)
+2. Run the notebook to select and build one of the available environments.
+    - Alternatively, the notebook allows you to point to a custom `pixi.toml` that you provide.
+  
+:::{note}
+
+- Once an environment is created and its kernel is registered, it may take another couple of minutes for Jupyter to recognize it and display it as an available kernel option.
+- ASF has started migrating data recipes into Jupyter Books, which are organized collections of Jupyter Notebooks with an interactive table of contents. Each Jupyter Book includes a notebook to build any required pixi environments. This can be run directly from the Jupyter Book, in which case there is no need to build an environment using the `/home/jovyan/conda_environments/Create_OSL_Pixi_Environments.ipynb` described above.
+:::
+
+(Install-Pixi-packages-within-a-running-notebooks-environment)=
+### Install Pixi packages within a running notebook's environment
+The following only works if your `pixi.toml` file is in the same directory as your notebook. This is not the case for OpenScienceLab provided environments, but can be done through the `Custom Environment` option in `/home/jovyan/conda_environments/Create_OSL_Pixi_Environments.ipynb`
+1. Run the following command in a code cell:
+   
+```bash
+!pixi add <package_name>
+```
+
+(Install-Pixi-packages-in-an-existing-environment-from-the-terminal)=
+### Install Pixi packages in an existing environment from the terminal
+1. Open a terminal and navigate to where your `pixi.toml` file is
+1. Run the following command
+
+```bash
+pixi add <package_name>
+```
+
+---
+
 (Conda-Environments)=
 ## Conda Environments
+:::{warning}
+Moving into the future, Conda environments will be deprecated in favor of Pixi environments. It is recommended to use Pixi.
+:::
 
 Users can install additional software in isolated Conda environments on their persistent storage volumes with [conda](https://docs.conda.io/projects/conda/en/latest/index.html) or [mamba](https://github.com/mamba-org/mamba) (conda's faster reimplementation).
 
