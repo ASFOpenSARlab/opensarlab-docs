@@ -1,5 +1,5 @@
 [workspace]
-authors = ["OpenScienceLab <uaf-jupyterhub-asf@alaska.edu>"]
+authors = ["ASFOpenSARLab <uaf-jupyterhub-asf@alaska.edu>"]
 channels = ["conda-forge", "nodefaults"]
 name = "docs"
 platforms = ["linux-64"]
