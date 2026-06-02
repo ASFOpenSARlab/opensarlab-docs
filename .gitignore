@@ -1,3 +1,6 @@
 .ipynb_checkpoints/
 _build
 .venv
+# pixi environments
+.pixi/*
+!.pixi/config.toml

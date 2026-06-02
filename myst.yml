@@ -59,6 +59,7 @@ project:
         - file: release-notes/release_02-2024.md
         - file: release-notes/release_12-2024.md
         - file: release-notes/release_07-2025.md
+        - file: release-notes/release_06-2026.md
 site:
   template: book-theme
   options: {

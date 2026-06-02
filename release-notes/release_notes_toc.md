@@ -7,3 +7,4 @@
 - [February 2024]( release_02-2024.md )
 - [December 2024]( release_12-2024.md )
 - [June 2025]( release_07-2025.md )
+- [June 2026]( release_06-2026.md )
