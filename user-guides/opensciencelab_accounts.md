@@ -20,40 +20,33 @@ Labs in OpenScienceLab are independent and do not share resources:
 **Whether accessing OpenSARLab, a class/workshop lab, or any other ASF-hosted lab, you will need an OpenScienceLab account**
 
 1. Open a web browser and navigate to https://opensciencelab.asf.alaska.edu/
-   
-2.
-:::{figure} ../assets/opensciencelab_login_page.png
-:align: left
-:width: 35%
 
-<p style="font-size: 14px;">Click the “Sign up” link in the “Sign In” window</p>
-:::
+1. On the OpenScienceLab landing page, click the `Create Account` button:
+    <figure>
+    <img src="../assets/opensciencelab_create_account.png" style="height: 300px;">
+    </figure>
 
-3.
-:::{figure} ../assets/opensciencelab_sign_up_page.png
-:align: left
-:width: 35%
+1. Complete the Sign Up form
+    <figure>
+    <img src="../assets/opensciencelab_sign_up_page.png" style="height: 300px;">
+    </figure>
 
-<p style="font-size: 14px;">Complete the Sign Up form</p>
-:::
+1. Click the confirmation link in your email
+    <figure>
+    <img src="../assets/opensciencelab_confirm_account.png" style="height: 300px;">
+    </figure>
 
-4.
-:::{figure} ../assets/opensciencelab_signup_success.png
-:align: left
-:width: 35%
+1. After your account has been confirmed, sign into your account
+    <figure>
+    <img src="../assets/opensciencelab_sign_in.png" style="height: 300px;">
+    </figure>
 
-<p style="font-size: 14px;">A message will appear, indicating that your account was created and that email authorization is required. Locate the email and click the link within 60 minutes. If you don't click the link in time, you can start the sign up process over with a different username or contact OpenScienceLab admin and request a reset so you can try again with the same username.</p>
-:::
+1. Set up your MFA. OpenScienceLab will appear as `portalcdkstack-prod.auth.us-west-2.amazoncognito.com`
+    <figure>
+    <img src="../assets/opensciencelab_setup_mfa.png" style="height: 300px;">
+    </figure>
 
-
-5.
-:::{figure} ../assets/opensciencelab_auth_message.png
-:align: left
-:width: 100%
-
-The authorization link will open to a message indicating successful account authorization. You can click the include link to login.
-:::
-
-6. Do not provide an MFA code the first time you login; leave the field blank. You will be required to setup MFA after signing in the first time in order to access any labs. [MFA setup instructions](./mfa.md#troubleshooting).
-
-
+1. Fill out your profile and your account creation will be completed
+    <figure>
+    <img src="../assets/opensciencelab_profile.png" style="height: 300px;">
+    </figure>
