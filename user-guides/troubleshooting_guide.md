@@ -158,10 +158,6 @@ Notebook previously edited by user, now with a timestamp appended to the name: `
 (My-issue-is-not-on-this-list)=
 ## My issue is not on this list
 
-- Try asking our LLM chatbot available on the [OpenScienceLab portal page](https://opensciencelab.asf.alaska.edu/).
-    - We are training it on SAR domain knowledge.
-    - When questioned on a topic for which it lacks knowledge, it defaults to saying it doesn't know over generating hallucinations and providing inaccurate information
-    - It is not yet available inside individual labs, only on the OpenScienceLab portal.
-- If the chatbot is unable to answer to your questions, please contact an [OpenScienceLab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
+- Please contact an [OpenScienceLab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
 
 <!-- TODO: add documentation in regards to server timeouts -->
