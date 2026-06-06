@@ -13,17 +13,29 @@ OpenSARLab is a cloud-hosted JupyterHub configured for working with SAR data. It
 (Access-to-OpenSARLab)=
 ## Access to OpenSARLab
 
-ASF provides limited access to OpenSARLab. 
-- Anyone working on a NASA-funded project will be granted access upon [request](mailto:uso@asf.alaska.edu?subject=NASA-affiliate%20OSL%20access%20request).
-  - Request access using your NASA email address if you have one.
-  - If you do not have a NASA email, please provide details on your NASA-funded project, including the name of the PI and their contact information.
-- All others may apply for access by completing the [OpenSARLab Access Application](https://forms.gle/LNBCwe8JohYitvfy6).
+ASF provides limited access to OpenSARLab.
+- Access is provided through the [OpenSARLab Access Application](#opensarlab-access-application).
+  - Anyone working on a NASA-funded project will have their application approved.
+    - Request access using your NASA email address if you have one.
+    - If you do not have a NASA email, please provide details on your NASA-funded project, including the name of the PI and their contact information.
+  - All others will be evaluated based on their application. More descriptive answers for your situation make the application process easier and more likely to be accepted.
+    - Access for non-NASA affiliates is month-to-month and as-budget-allows. If your access is set to be revoked, we will get in touch to ensure that you are able to download any workflows and results before you lose access.
   - Applications are reviewed weekly.
-  - Access for non-NASA affiliates is month-to-month and as-budget-allows. If your access is set to be revoked, we will get in touch to ensure that you are able to download any workflows and results before you lose access.
 
-:::{dropdown} [OpenSARLab Access Application](https://forms.gle/LNBCwe8JohYitvfy6)
-:::{iframe} https://forms.gle/LNBCwe8JohYitvfy6
-:::
+### OpenSARLab Access Application
+Applications to OpenSARLab are done through the OpenScienceLab Portal.
+
+1. In the home page of OpenScienceLab Portal, click on the `Apply for Access` button.
+    <figure>
+    <img src="../assets/opensarlab_application_button.png" style="height: 300px;">
+    </figure>
+
+1. Fill all required application questions, then click `Submit Application`.
+    <figure>
+    <img src="../assets/opensarlab_application_form.png" style="height: 300px;">
+    </figure>
+
+1. You will get an email on the status of your application within a week.
 
 ---
 (Storage-Lifecycle)=
