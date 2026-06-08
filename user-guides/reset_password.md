@@ -4,7 +4,7 @@
     <figure>
     <img src="../assets/opensciencelab_reset_password_logged_out.png" style="height: 300px;">
     </figure>
-   If you are loggin in, click on your username in the upper right corner, then click on the `Reset Password` button.
+   If you are logged in, click on your username in the upper right corner, then click on the `Reset Password` button.
     <figure>
     <img src="../assets/opensciencelab_reset_password_logged_in.png" style="height: 300px;">
     </figure>
