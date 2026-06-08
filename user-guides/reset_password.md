@@ -1,34 +1,25 @@
 # Resetting Your OpenScienceLab Password
 
-1. 
-:::{figure} ../assets/opensciencelab_pass_reset_link.png
-:align: left
-:width: 350px
+1. If you are logged out, click the `Forgot Password` button.
+    <figure>
+    <img src="../assets/opensciencelab_reset_password_logged_out.png" style="height: 300px;">
+    </figure>
+   If you are loggin in, click on your username in the upper right corner, then click on the `Reset Password` button.
+    <figure>
+    <img src="../assets/opensciencelab_reset_password_logged_in.png" style="height: 300px;">
+    </figure>
 
-<p style="font-size: 14px;">Navigate to <a href="https://opensciencelab.asf.alaska.edu/" target="_blank">OpenScienceLab</a> and click the "Forgot password?" link on the sign in section.</p>
-:::
+1. Enter your usename, this will send a code to your email.
+    <figure>
+    <img src="../assets/forgot_password.png" style="height: 300px;">
+    </figure>
 
-2. 
-:::{figure} ../assets/opensciencelab_change_password_form.png
-:align: left
-:width: 350px
+1. Enter the code you recieved in your email, and type in your new password.
+    <figure>
+    <img src="../assets/reset_password.png" style="height: 300px;">
+    </figure>
 
-<p style="font-size: 14px;">Complete and submit the Change Password form.</p>
-:::
-
-3.
-:::{figure} ../assets/opensciencelab_pass_change_alert.png
-:align: left
-:width: 500px
-
-<p style="font-size: 14px;">An alert will appear directing you to click the emailed verification link within 60 minutes.</p>
-:::
-
-4. 
-:::{figure} ../assets/opensciencelab_password_change_verify.png
-:align: left
-
-<p style="font-size: 14px;">Open the email and click the verification link.</p>
-:::
-
-5. Log into OpenScienceLab with your new credentials.
+1. Sign in with your new password.
+    <figure>
+    <img src="../assets/sign_in.png" style="height: 300px;">
+    </figure>
