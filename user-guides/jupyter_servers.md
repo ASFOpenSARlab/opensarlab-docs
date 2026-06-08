@@ -25,14 +25,12 @@ Depending on the lab, users typically have access to multiple server profiles, d
 (What-happens-when-a-server-is-started)=
 ## What happens when a server is started?
 
-When a user starts a server, they are assigned a compute pod on a node in the lab's Kubernetes cluster. A Docker container runs JupyterLab on the pod and the user's volume is mounted. Next, a shell script runs making some final adjustments to the environment and updating any lab-provided Jupyter Notebook repositories with the notebook repository synching tool, `nbgitpuller`. Finally, the user accesses their server and Jupyter Lab instance via a web browser.
+When a user starts a server, they are assigned a compute pod on a node in the lab's Kubernetes cluster. A Docker container runs JupyterLab on the pod and the user's volume is mounted. Next, a shell script runs making some final adjustments to the environment. Finally, the user accesses their server and Jupyter Lab instance via a web browser.
 
 
 :::{tip} Reasons you may wish to restart a running lab server
 
 - Your workflows require additional resources, so you shut down the current server and select a more robust server profile.
-- You accidentally delete or change a notebook and wish to retrieve a fresh copy.
-  - You can also run `nbgitpuller` from the terminal if you wish, but restarting the server is any easy way to pull in updates.
 :::
 
 
