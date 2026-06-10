@@ -14,12 +14,14 @@
 
 ---
 
-A [nbgitpuller](https://nbgitpuller.readthedocs.io/en/latest/) pulls any changes to your tracked notebook repositories through a jupyter extension `nbgitpuller-jl-interface`.
+[nbgitpuller](https://nbgitpuller.readthedocs.io/en/latest/) pulls any changes to your tracked notebook repositories through a jupyter extension `nbgitpuller-jl-interface`.
 
 The nbgitpuller-jl-interface extension will check for any pending updates and alert you to it's status.
 - <span style="color: #5cb85c">Green</span>: Everything is up to date
 - <span style="color: #f29339">Orange</span>: One or more repositories need to be updated, click the button to pull the updates
 - <span style="color: #d63124">Red</span>: An error has occured. Either double check your extensions settings, the failed repository, or contact the site admins.
+
+### Gitpuller Merge Conflicts
 
 If a user has made changes to a notebook and the same notebook has been updated in its repo, the following will occur:
 
@@ -35,6 +37,8 @@ _Before Edit_
 _After Edit_
 - Updated by user: `sample_notebook__20210616165846.ipynb`
 - Updated by ASF: `sample_notebook.ipynb`
+
+You can read more about the merging behavior of nbgitpuller [here](https://nbgitpuller.readthedocs.io/en/latest/topic/automatic-merging.html)
 
 <!--  So is this saying that if one file is missing from remote then none of the files from remote will be pulled? Thus removing one remote file will sabotage the whole thing? -->
 
