@@ -103,7 +103,7 @@ OpenScienceLab users have access to a finite amount of storage space ([details h
 (My-server-wont-start-and-I-cannot-access-OpenScienceLab)=
 ## My server won't start and I cannot access OpenScienceLab.
 
-This issue is typically due either to an unexpected behavior of [nbgitpuller](https://nbgitpuller.readthedocs.io/en/latest/) or to having used up all space on your storage volume.
+This issue is typically due to having used up all space on your storage volume.
 
 Please contact an [OpenScienceLab Administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
 
@@ -113,7 +113,7 @@ Please contact an [OpenScienceLab Administrator](mailto:uaf-jupyterhub-asf@alask
 (The-edits-I-made-to-an-ASF-notebook-have-disappeared-since-the-last-time-I-used-OpenSARlab)=
 ## The edits I made to an ASF notebook have disappeared since the last time I used OpenSARlab.
 
-- When your OpenSARlab server starts up, `nbgitpuller` runs and pulls in any updates made to the [asf-jupyter-notebooks](https://github.com/ASFOpenSARlab/opensarlab-notebooks) and other Jupyter Book GitHub repositories provided in OpenSARLab. If a change has been made to a notebook by both the user and the author, both changes will be saved. The author's updated version will retain its original name while the user's version will have a timestamp appended to its name. 
+- When you update repositories using `nbgitpuller`, if a change has been made to a notebook by both the user and the author, both changes will be saved. The author's updated version will retain its original name while the user's version will have a timestamp appended to its name. Read more about how gitpuller works in OpenSARLab [here](git_in_OpenSARLab.md#gitpuller-merge-conflicts)
 
 :::{tip} Example file naming format for updated notebooks synched with `nbgitpuller`
 
