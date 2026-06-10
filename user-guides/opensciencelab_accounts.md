@@ -5,6 +5,7 @@ OpenScienceLab is a single-sign-on portal providing access to ASF-managed Jupyte
 
 :::{note}
 ASF provides limited access to OpenSARLab. \
+Creating an OpenScienceLab account does not guarantee access to OpenSARLab. \
 Applications to OpenSARLab can be completed by following the [OpenSARLab Access Application](opensarlab.md) instructions. \
 NASA-affiliates are given priority on applications.
 
@@ -40,7 +41,7 @@ Labs in OpenScienceLab are independent and do not share resources:
     <img src="../assets/opensciencelab_sign_in.png" style="height: 300px;">
     </figure>
 
-1. Set up your MFA. OpenScienceLab will appear as `portalcdkstack-prod.auth.us-west-2.amazoncognito.com`
+1. Set up your MFA. OpenScienceLab will likely appear as `portalcdkstack-prod.auth.us-west-2.amazoncognito.com`
     <figure>
     <img src="../assets/opensciencelab_setup_mfa.png" style="height: 300px;">
     </figure>
