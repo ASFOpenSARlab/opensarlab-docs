@@ -1,9 +1,9 @@
 # Lab Management
 <br>
 
-## What Does Being a Lab Manager Mean
+## What Can a Lab Manager Do
 
-It means you have been given admin permissions for a particular lab.
+A lab manager has been given admin permissions for a particular lab
 
 ### Lab Manager Permissions
 
@@ -80,3 +80,21 @@ In the `Users` portion of the page, you will see a list of users with access to 
 1. Lab manager permission button, if the user is not a lab manager you will be able to grant manager permissions. If the user is a lab manager you will be able to remove their lab manager permissions here.
 
 ## Lab Management in JupyterHub
+
+In the JupyterHub interface, lab managers will have access to the `Admin` tab in the navigation bar. You can reach the JupyterHub interface by clicking the `Go to Lab` button in OpenScienceLab.
+
+<figure>
+<img src="../assets/jupyterhub_admin_location.png" style="height: 300px;">
+</figure>
+
+The JupyterHub admin interface as a lot of features, here are some of the most notable ones.
+
+<figure>
+<img src="../assets/jupyterhub_admin.png" style="height: 300px;">
+</figure>
+
+1. Start any users server with this button
+
+1. Stop any users server
+
+1. Access any users running server, useful for debugging.
