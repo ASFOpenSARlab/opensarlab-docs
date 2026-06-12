@@ -75,7 +75,9 @@ In the `Users` portion of the page, you will see a list of users with access to 
 
 #### Managing Permissions
 
-5. Remove button, pressing this button will remove the user from the lab.
+5. Users available profiles. If the profile is green the user has access to that profile, if the profile is red the user does not have access to that profile. In order to update the users allowed profiles you must re-add the user with the new labs. You do not need to remove the user before re-adding them.
+
+1. Remove button, pressing this button will remove the user from the lab.
 
 1. Lab manager permission button, if the user is not a lab manager you will be able to grant manager permissions. If the user is a lab manager you will be able to remove their lab manager permissions here.
 
@@ -87,7 +89,7 @@ In the JupyterHub interface, lab managers will have access to the `Admin` tab in
 <img src="../assets/jupyterhub_admin_location.png" style="height: 300px;">
 </figure>
 
-The JupyterHub admin interface as a lot of features, here are some of the most notable ones.
+The JupyterHub admin interface has a lot of features, here are some of the most notable ones.
 
 <figure>
 <img src="../assets/jupyterhub_admin.png" style="height: 300px;">
