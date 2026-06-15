@@ -75,7 +75,7 @@ In the `Users` portion of the page, you will see a list of users with access to 
 
 5. Users available profiles: If the profile is green the user has access to that profile, if the profile is red the user does not have access to that profile. In order to update the users allowed profiles you must re-add the user with the new labs. You do not need to remove the user before re-adding them.
 
-1. Remove button, pressing this button will remove the user from the lab.
+1. Remove button: Pressing this button will remove the user from the lab.
 
 1. Lab manager permission button, if the user is not a lab manager you will be able to grant manager permissions. If the user is a lab manager you will be able to remove their lab manager permissions here.
 
