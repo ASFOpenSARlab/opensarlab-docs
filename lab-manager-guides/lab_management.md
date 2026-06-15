@@ -3,9 +3,7 @@
 
 ## What Can a Lab Manager Do
 
-A lab manager has been given admin permissions for a particular lab
-
-### Lab Manager Permissions
+A lab manager has all admin permissions for a particular lab:
 
 - Add and remove users from the lab
 - Manage a users allowed profiles
