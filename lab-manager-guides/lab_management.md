@@ -9,7 +9,7 @@ A lab manager has all admin permissions for a particular lab:
 - Manage a users allowed profiles
 - Grant and remove Lab Manager permissions
 - Generate and revoke tokens
-- Be an admin on JupyterHub
+- Administrate users servers and permissions via their lab's JupyterHub interface
 
 ## Lab Manager Page
 
