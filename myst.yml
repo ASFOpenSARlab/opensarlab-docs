@@ -38,9 +38,7 @@ project:
             - file: user-guides/s3_buckets.md
             - file: user-guides/git_in_OpenSARLab.md
         - file: user-guides/v2-migration.md
-    - title: Lab Manager Guide
-      children:
-        - file: lab-manager-guides/lab_management.md
+    - file: lab-manager-guides/lab_management.md
     - title: Developer Guide
       children:
         - file: dev-guides/about_opensciencelab.md
