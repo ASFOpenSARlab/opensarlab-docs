@@ -61,7 +61,7 @@ In the `Users` portion of the page, you will see a list of users with access to 
 
 #### Adding/Updating Users
 
-1. Username field, this must match the username of the user you are trying to add. The user does not need to have an account made at this point, but the next user who creates an account with that username will have access to the lab.
+1. Username field: This must match the username of the user you are trying to add. The user does not need to have an account made at this point, but the next user who creates an account with that username will have access to the lab.
 
 1. Lab profiles field, a comma separated list of profiles the user should have access to. Ex: `m6a.large, m6a.xlarge`. By default the field will be prepopulated with the labs default set of profiles.
 
