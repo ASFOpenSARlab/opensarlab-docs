@@ -77,7 +77,7 @@ In the `Users` portion of the page, you will see a list of users with access to 
 
 1. Remove button: Pressing this button will remove the user from the lab.
 
-1. Lab manager permission button, if the user is not a lab manager you will be able to grant manager permissions. If the user is a lab manager you will be able to remove their lab manager permissions here.
+1. Lab manager permission button: If the user is not a lab manager you will be able to grant manager permissions. If the user is a lab manager you will be able to remove their lab manager permissions here.
 
 ## Lab Management in JupyterHub
 
