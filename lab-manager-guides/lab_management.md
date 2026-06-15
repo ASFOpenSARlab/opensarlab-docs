@@ -45,7 +45,7 @@ If the lab has tokens enabled, you will see the following user interface
 
 #### Token Options
 
-4. Token, a random 13 character long token. Share this with your users to allow them to join your lab with a token.
+4. Token: A random 13 character long token. Share this with your users to allow them to join your lab with a token via the [Access Token page](https://opensciencelab.asf.alaska.edu/portal/access/token).
 
 1. Token settings. Displays the settings the token was generated with. These cannot be changed after creation.
 
