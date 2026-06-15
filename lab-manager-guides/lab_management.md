@@ -37,7 +37,7 @@ If the lab has tokens enabled, you will see the following user interface
 
 #### Creating Token
 
-1. Lab profiles field, a comma separated list of profiles a user who uses this token will have access to. Ex: `m6a.large, m6a.xlarge`. By default the field will be prepopulated with the labs default set of profiles.
+1. Lab profiles field: A comma separated list of profiles a user who uses this token will have access to, for example: `m6a.large, m6a.xlarge`. By default the field will be pre-populated with the lab's default set of profiles.
 
 1. Date range fields. Optional fields that allow you to set a start and/or end date for when your tokens are valid.
 
