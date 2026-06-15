@@ -65,7 +65,7 @@ In the `Users` portion of the page, you will see a list of users with access to 
 
 1. Lab profiles field, a comma separated list of profiles the user should have access to. Ex: `m6a.large, m6a.xlarge`. By default the field will be prepopulated with the labs default set of profiles.
 
-1. Add button, adds a user to the lab with the requested set of profiles. If the user was already added to the lab, it will overwrite their previous profiles with the provided profiles.
+1. Add button: Adds a user to the lab with the requested set of profiles. If the user was already added to the lab, it will overwrite their previous profiles with the provided profiles.
 
 #### Filtering Users
 
