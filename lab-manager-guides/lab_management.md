@@ -41,7 +41,7 @@ If the lab has tokens enabled, you will see the following user interface
 
 1. Date range fields: Optional fields that allow you to set a start and/or end date for when your tokens are valid.
 
-1. Add button. Generates a random token with your provided token settings.
+1. Add button: Generates a random token with your provided token settings.
 
 #### Token Options
 
