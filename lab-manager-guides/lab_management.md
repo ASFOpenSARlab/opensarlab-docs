@@ -6,7 +6,7 @@
 A lab manager has all admin permissions for a particular lab:
 
 - Add and remove users from the lab
-- Manage a users allowed profiles
+- Manage a user's allowed profiles
 - Grant and remove Lab Manager permissions
 - Generate and revoke tokens
 - Administrate users servers and permissions via their lab's JupyterHub interface
@@ -93,8 +93,8 @@ The JupyterHub admin interface has a lot of features, here are some of the most 
 <img src="../assets/jupyterhub_admin.png" style="height: 300px;">
 </figure>
 
-1. Start any users server with this button
+1. Start any user's server with this button
 
-1. Stop any users server
+1. Stop any user's server
 
-1. Access any users running server, useful for debugging.
+1. Access any user's running server, useful for debugging.
