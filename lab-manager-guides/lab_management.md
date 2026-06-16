@@ -16,24 +16,23 @@ A lab manager has all admin permissions for a particular lab:
 ### Accessing Management Page
 
 In OpenScienceLab, there will be a new `Manage` button on the lab card you have lab manager permissions for.
-
-<figure>
-<img src="../assets/manage_button.png" style="height: 300px;">
-</figure>
+:::{figure} ../assets/manage_button.png
+:height: 400px
+:::
 
 ### Tokens
 
 If the lab does not have tokens enabled you will see a message in the `Tokens` section indicating as such.
 
-<figure>
-<img src="../assets/manage_tokens_disabled.png" style="height: 300px;">
-</figure>
+:::{figure} ../assets/manage_tokens_disabled.png
+:height: 400px
+:::
 
 If the lab has tokens enabled, you will see the following user interface
 
-<figure>
-<img src="../assets/manage_tokens.png" style="height: 300px;">
-</figure>
+:::{figure} ../assets/manage_tokens.png
+:height: 400px
+:::
 
 #### Creating Token
 
@@ -55,9 +54,9 @@ If the lab has tokens enabled, you will see the following user interface
 
 In the `Users` portion of the page, you will see a list of users with access to the lab and their permissions.
 
-<figure>
-<img src="../assets/manage_lab_users.png" style="height: 300px;">
-</figure>
+:::{figure} ../assets/manage_lab_users.png
+:height: 300px
+:::
 
 #### Adding/Updating Users
 
@@ -83,15 +82,15 @@ In the `Users` portion of the page, you will see a list of users with access to 
 
 In the JupyterHub interface, lab managers will have access to the `Admin` tab in the navigation bar. You can reach the JupyterHub interface by clicking the `Go to Lab` button in OpenScienceLab.
 
-<figure>
-<img src="../assets/jupyterhub_admin_location.png" style="height: 300px;">
-</figure>
+:::{figure} ../assets/jupyterhub_admin_location.png
+:height: 400px
+:::
 
 The JupyterHub admin interface has a lot of features, here are some of the most notable ones.
 
-<figure>
-<img src="../assets/jupyterhub_admin.png" style="height: 300px;">
-</figure>
+:::{figure} ../assets/jupyterhub_admin.png
+:height: 400px
+:::
 
 1. Start any user's server with this button
 
