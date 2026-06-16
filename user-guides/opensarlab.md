@@ -26,14 +26,14 @@ ASF provides limited access to OpenSARLab.
 Applications to OpenSARLab are done through the OpenScienceLab Portal.
 
 1. In the home page of OpenScienceLab Portal, click on the `Apply for Access` button.
-    <figure>
-    <img src="../assets/opensarlab_application_button.png" style="height: 300px;">
-    </figure>
+    :::{figure} ../assets/opensarlab_application_button.png
+    :height: 400px
+    :::
 
 1. Fill all required application questions, then click `Submit Application`.
-    <figure>
-    <img src="../assets/opensarlab_application_form.png" style="height: 300px;">
-    </figure>
+    :::{figure} ../assets/opensarlab_application_form.png
+    :height: 400px
+    :::
 
 1. You will get an email on the status of your application within a week.
 
