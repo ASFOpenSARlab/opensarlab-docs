@@ -66,17 +66,21 @@ In the `Users` portion of the page, you will see a list of users with access to 
 
 1. Add button: Adds a user to the lab with the requested set of profiles. If the user was already added to the lab, it will overwrite their previous profiles with the provided profiles.
 
+1. Export all users button: Will export all users of the lab as a csv file.
+
 #### Filtering Users
 
-4. If your lab has a large amount of users, the amount displayed will be truncated. You can filter users by username or email. After typing your filter, press enter to apply it.
+5. If your lab has a large amount of users, the amount displayed will be truncated. You can filter users by username or email. After typing your filter, press enter to apply it.
 
 #### Managing Permissions
 
-5. Users available profiles: If the profile is green the user has access to that profile, if the profile is red the user does not have access to that profile. In order to update the users allowed profiles you must re-add the user with the new labs. You do not need to remove the user before re-adding them.
+6. Users available profiles: If the profile is green the user has access to that profile, if the profile is red the user does not have access to that profile. In order to update the users allowed profiles you must re-add the user with the new labs. You do not need to remove the user before re-adding them.
 
 1. Remove button: Pressing this button will remove the user from the lab.
 
-1. Lab manager permission button: If the user is not a lab manager you will be able to grant manager permissions. If the user is a lab manager you will be able to remove their lab manager permissions here.
+1. Grant lab manager button: Grant a user lab manager permissions.
+
+1. Revoke lab manager button: Only available if the user is a lab manager. Will remove the users lab manager permission.
 
 ## Lab Management in JupyterHub
 
