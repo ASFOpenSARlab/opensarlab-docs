@@ -1,11 +1,11 @@
 # Troubleshooting Guide
 <br>
 
-- [Why don't any labs appear on the OpenScienceLab home page?](#Why-dont-any-labs-appear-on-the-OpenScienceLab-home-page)
 - [Why did the kernel die while running a notebook?](#Why-did-the-kernel-die-while-running-a-notebook)
 - [I successfully ran a notebook earlier on the same data but now it is killing the kernel.](#I-successfully-ran-a-notebook-earlier-on-the-same-data-but-now-it-is-killing-the-kernel)
 - [I receive a `Kernel not found` message when I open a notebook.](#I-receive-a-Kernel-not-found-message-when-I-open-a-notebook)
 - [My notebook won't open, opens slowly, or won't save.](#My-notebook-wont-open-opens-slowly-or-wont-save)
+- [My notebook is formatted incorrectly, missing widgets, or won't let me add new cells.](#My-notebook-is-formatted-incorrectly-missing-widgets-or-wont-let-me-add-new-cells)
 - [I am receiving a `No space left on device` error.](#I-am-receiving-a-No-space-left-on-device-error)
 - [My server won't start and I cannot access OpenScienceLab.](#My-server-wont-start-and-I-cannot-access-OpenScienceLab)
 - [The edits I made to an ASF notebook have disappeared since the last time I used OpenSARlab.](#The-edits-I-made-to-an-ASF-notebook-have-disappeared-since-the-last-time-I-used-OpenSARlab)
@@ -14,16 +14,6 @@
 - [A notebook won't load. A new browser tab opens and shows the JupyterHub header, but no notebook appears.](#A-notebook-wont-load-A-new-browser-tab-opens-and-shows-the-JupyterHub-header-but-no-notebook-appears)
 - [My issue is not on this list](#My-issue-is-not-on-this-list)
 
-
-(Why-dont-any-labs-appear-on-the-OpenScienceLab-home-page)=
-## Why don't any labs appear on the OpenScienceLab home page?
-
-You most likely have not yet configured Multi-Factor Authentication (MFA). While
-any user can log in without MFA, until a user has configured their MFA device,
-they will be unable to access any OpenScienceLab resources.
-
-See [Configuring Multi-Factor Authentication](mfa.md) for more information and
-a detailed walkthrough.
 
 (Why-did-the-kernel-die-while-running-a-notebook)=
 ## Why did the kernel die while running a notebook?
@@ -84,6 +74,17 @@ The message that appears when an expected notebook kernel cannot be found
 
 Select `Restart Kernel and Clear All Outputs` from the `Kernel` menu and try saving it again.
 :::
+
+---
+
+(My-notebook-is-formatted-incorrectly-missing-widgets-or-wont-let-me-add-new-cells)=
+## My notebook is formatted incorrectly, missing widgets, or won't let me add new cells.
+
+In some cases, notebook state can be corrupted. Refreshing the browser tab is sufficient
+to resolve some of these issues. After refreshing the page, it may be necessary to also
+re-run the broken code cell to fix the issue.
+
+If your issue persists, please contact an [OpenScienceLab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
 
 ---
 
