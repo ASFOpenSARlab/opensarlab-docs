@@ -81,7 +81,8 @@ Select `Restart Kernel and Clear All Outputs` from the `Kernel` menu and try sav
 ## My notebook is formatted incorrectly, missing widgets, or won't let me add new cells.
 
 In some cases, notebook state can be corrupted. Refreshing the browser tab is sufficient
-to resolve some of these issues. 
+to resolve some of these issues. After refreshing the page, it may be necessary to also
+re-run the broken code cell to fix the issue.
 
 If your issue persists, please contact an [OpenScienceLab administrator](mailto:uaf-jupyterhub-asf@alaska.edu) for help.
 
