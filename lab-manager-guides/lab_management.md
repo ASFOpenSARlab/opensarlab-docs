@@ -49,9 +49,9 @@ If access needs to be re-granted to a user after they have been removed post tok
 1. Add button: Generates a random token with your provided token settings.
 
 ```{important}
-Expiration date of tokens control only when the token can be used, **not** when they are valid.
+Expiration date of tokens control only when the token can be applied, **not** when user access is valid.
 
-After expiration of a token, it can no longer be applied for access. A user granted access with a token does not lose access after the token expires. 
+After expiration of a token, it can no longer be applied for access. However, a user granted access with a token does not lose access after the token expires. 
 ```
 
 #### Token Options
