@@ -34,13 +34,25 @@ If the lab has tokens enabled, you will see the following user interface
 :height: 400px
 :::
 
+```{important}
+While there is no limit to the number of users who may use a specific token, any single user may only use a token **once**. If access is removed after a user has applied a token, they will not be able to reapply the same token.
+
+If access needs to be re-granted to a user after they have been removed post token application, they may still be added following the process in [Adding/Updating Users](#adding-updating-users) below.
+```
+
 #### Creating Token
 
-1. Lab profiles field: A comma separated list of profiles a user who uses this token will have access to, for example: `m6a.large, m6a.xlarge`. By default the field will be pre-populated with the lab's default set of profiles.
+1. Lab profiles field: A comma separated list of profiles a user who uses this token will have access to, for example: `m6a.large, m6a.xlarge`. By default, the field will be pre-populated with the lab's default set of profiles.
 
 1. Date range fields: Optional fields that allow you to set a start and/or end date for when your tokens are valid.
 
 1. Add button: Generates a random token with your provided token settings.
+
+```{important}
+Expiration date of tokens control only when the token can be used, **not** when they are valid.
+
+After expiration of a token, it can no longer be applied for access. A user granted access with a token does not lose access after the token expires. 
+```
 
 #### Token Options
 
@@ -62,7 +74,7 @@ In the `Users` portion of the page, you will see a list of users with access to 
 
 1. Username field: This must match the username of the user you are trying to add. The user does not need to have an account made at this point, but the next user who creates an account with that username will have access to the lab.
 
-1. Lab profiles field: A comma separated list of profiles the user should have access to. Ex: `m6a.large, m6a.xlarge`. By default the field will be prepopulated with the labs default set of profiles.
+1. Lab profiles field: A comma separated list of profiles the user should have access to. Ex: `m6a.large, m6a.xlarge`. By default, the field will be prepopulated with the labs default set of profiles.
 
 1. Add button: Adds a user to the lab with the requested set of profiles. If the user was already added to the lab, it will overwrite their previous profiles with the provided profiles.
 

@@ -38,15 +38,15 @@
 
     Use the following parameters:
 
-    | Parameter | Description |
-    |-----------|-------------|
-    | Stack name | The CloudFormation stack name. For readablity, append `-pipeline` to the end. |
-    | CodeStarConnectionArn | The ARN of the Connection made eariler. |
-    | CostTagKey | Useful if using billing allocation tags. |
-    | CostTagValue | USeful if using billing allocation tags. Note that many resources will have this in their name for uniqueness. It needs to be short in length. |
-    | GitHubBranchName | The branch name of the GitHub repo where the code resides. |
-    | GitHubFullRepo | The GitHub repo name. Needs to be in the format `{GitHub organization}/{GitHub repo}` from `https://github.com/OrgName/RepoName`. |
-    | | |
+    | Parameter | Description                                                                                                                                    |
+    |-----------|------------------------------------------------------------------------------------------------------------------------------------------------|
+    | Stack name | The CloudFormation stack name. For readablity, append `-pipeline` to the end.                                                                  |
+    | CodeStarConnectionArn | The ARN of the Connection made eariler.                                                                                                        |
+    | CostTagKey | Useful if using billing allocation tags.                                                                                                       |
+    | CostTagValue | Useful if using billing allocation tags. Note that many resources will have this in their name for uniqueness. It needs to be short in length. |
+    | GitHubBranchName | The branch name of the GitHub repo where the code resides.                                                                                     |
+    | GitHubFullRepo | The GitHub repo name. Needs to be in the format `{GitHub organization}/{GitHub repo}` from `https://github.com/OrgName/RepoName`.              |
+    | |                                                                                                                                                |
 
     The pipeline will take a few seconds to form.
 

@@ -1,6 +1,7 @@
 # Troubleshooting Guide
 <br>
 
+- [I have an access token, but I don't see my class's lab available. How do I use the token?](#How-do-I-use-a-lab-access-token)
 - [Why did the kernel die while running a notebook?](#Why-did-the-kernel-die-while-running-a-notebook)
 - [I successfully ran a notebook earlier on the same data but now it is killing the kernel.](#I-successfully-ran-a-notebook-earlier-on-the-same-data-but-now-it-is-killing-the-kernel)
 - [I receive a `Kernel not found` message when I open a notebook.](#I-receive-a-Kernel-not-found-message-when-I-open-a-notebook)
@@ -14,6 +15,21 @@
 - [A notebook won't load. A new browser tab opens and shows the JupyterHub header, but no notebook appears.](#A-notebook-wont-load-A-new-browser-tab-opens-and-shows-the-JupyterHub-header-but-no-notebook-appears)
 - [My issue is not on this list](#My-issue-is-not-on-this-list)
 
+
+(How-do-I-use-a-lab-access-token)=
+## How do I use a lab access token?
+
+:::{figure} ../assets/apply_token.png
+Link to apply token
+:::
+
+- After creating an OpenScienceLab user, and logging into the portal, access the actions menu by clicking your username in the upper right hand corner
+
+- Click the "**Apply Access Token**" link to go to the token application form
+
+- Enter provided token value and click **Apply Token**
+
+- If token is valid, you will immediately be granted access to the lab, and the lab will be available from the portal landing page.
 
 (Why-did-the-kernel-die-while-running-a-notebook)=
 ## Why did the kernel die while running a notebook?
