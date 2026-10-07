@@ -1,10 +1,9 @@
+---
 version: 1
 extends:
   - https://raw.githubusercontent.com/ASFOpenSARlab/asf-myst-config/main/asf_myst.yml
 project:
   title: OpenScienceLab Documentation
-  authors:
-    - name: The ASF Services Team
   github: ASFOpenSARlab/opensarlab-docs
   exports:
     - format: pdf
@@ -61,8 +60,7 @@ project:
         - file: release-notes/release_12-2024.md
         - file: release-notes/release_07-2025.md
         - file: release-notes/release_06-2026.md
+    - file: citations.md
 site:
   template: book-theme
-  options: {
-    logo_text: "ASF OpenScienceLab"
-  }
+  options: {logo_text: "ASF OpenScienceLab"}
