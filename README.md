@@ -1,4 +1,4 @@
-[![Check Links](https://github.com/ASFOpenSARlab/opensarlab-docs/actions/workflows/links.yml/badge.svg)](https://github.com/ASFOpenSARlab/opensarlab-docs/actions/workflows/check-links.yml)
+[![Check Links](https://github.com/ASFOpenSARlab/opensarlab-docs/actions/workflows/links.yml/badge.svg)](https://github.com/ASFOpenSARlab/opensarlab-docs/actions/workflows/check_links.yaml)
 
 # OpenScienceLab Docs
 
